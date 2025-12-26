@@ -1,0 +1,582 @@
+/* ============================================
+   تصميم نهائي محسّن للفصل السادس
+   ألوان حيوية ومشرقة - تنسيق جمالي متقن
+   ============================================ */
+
+/* ===== الألوان الأساسية الجديدة ===== */
+:root {
+    /* ألوان دافئة ومشرقة */
+    --primary-gradient-start: #FF6B95;
+    --primary-gradient-end: #FFA07A;
+    
+    --secondary-gradient-start: #667eea;
+    --secondary-gradient-end: #764ba2;
+    
+    /* ألوان للاقتباسات - ألوان فاتحة ومريحة */
+    --quran-bg-start: #E8F5E9;
+    --quran-bg-end: #C8E6C9;
+    --quran-border: #4CAF50;
+    
+    --hadith-bg-start: #FFF3E0;
+    --hadith-bg-end: #FFE0B2;
+    --hadith-border: #FF9800;
+    
+    --scholar-bg-start: #E3F2FD;
+    --scholar-bg-end: #BBDEFB;
+    --scholar-border: #2196F3;
+    
+    --scientific-bg-start: #F3E5F5;
+    --scientific-bg-end: #E1BEE7;
+    --scientific-border: #9C27B0;
+    
+    /* ألوان للصناديق الخاصة */
+    --story-box-bg: #FFF9C4;
+    --story-box-border: #FBC02D;
+    
+    --activity-box-bg: #FFEBEE;
+    --activity-box-border: #E91E63;
+    
+    --image-desc-bg: #E0F2F1;
+    --image-desc-border: #00897B;
+    
+    /* ألوان النصوص */
+    --text-dark: #1A237E;
+    --text-medium: #37474F;
+    --text-light: #546E7A;
+}
+
+/* ===== محتوى الفصل ===== */
+.chapter-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 25px;
+    font-family: 'Tajawal', Arial, sans-serif;
+    line-height: 2.4;
+    color: var(--text-medium);
+    background: linear-gradient(to bottom, #FAFAFA 0%, #FFFFFF 100%);
+}
+
+/* ===== العناوين الرئيسية ===== */
+.section-heading {
+    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+    color: white;
+    padding: 25px 30px;
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 50px 0 35px 0;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(255, 107, 149, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-heading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    pointer-events: none;
+}
+
+.section-heading:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 107, 149, 0.45);
+}
+
+/* ===== العناوين الفرعية ===== */
+.subsection-heading {
+    background: linear-gradient(135deg, var(--secondary-gradient-start) 0%, var(--secondary-gradient-end) 100%);
+    color: white;
+    padding: 18px 25px;
+    border-radius: 15px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 35px 0 25px 0;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+.subsection-heading:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* ===== الفقرات ===== */
+.chapter-content p {
+    margin: 20px 0;
+    text-align: justify;
+    font-size: 1.15rem;
+    line-height: 2.4;
+    color: var(--text-medium);
+    text-indent: 0;
+    padding: 0 10px;
+}
+
+/* ===== الآيات القرآنية ===== */
+.quran-verse {
+    background: linear-gradient(135deg, var(--quran-bg-start) 0%, var(--quran-bg-end) 100%);
+    border-right: 6px solid var(--quran-border);
+    padding: 25px 30px;
+    margin: 30px 0;
+    border-radius: 15px;
+    font-family: 'Amiri', serif;
+    font-size: 1.35rem;
+    line-height: 2.6;
+    font-weight: 700;
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.quran-verse::before {
+    content: '﴿';
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 2.5rem;
+    color: var(--quran-border);
+    opacity: 0.3;
+}
+
+.quran-verse::after {
+    content: '﴾';
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    font-size: 2.5rem;
+    color: var(--quran-border);
+    opacity: 0.3;
+}
+
+.quran-verse:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+}
+
+.quran-verse p {
+    margin: 10px 0;
+    text-align: center;
+    line-height: 2.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== الأحاديث النبوية ===== */
+.hadith-quote {
+    background: linear-gradient(135deg, var(--hadith-bg-start) 0%, var(--hadith-bg-end) 100%);
+    border-right: 6px solid var(--hadith-border);
+    padding: 25px 30px;
+    margin: 30px 0;
+    border-radius: 15px;
+    font-family: 'Amiri', serif;
+    font-size: 1.25rem;
+    line-height: 2.4;
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.hadith-quote::before {
+    content: '🕌';
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 2rem;
+    opacity: 0.2;
+}
+
+.hadith-quote:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.3);
+}
+
+.hadith-quote p {
+    margin: 12px 0;
+    line-height: 2.4;
+}
+
+/* ===== اقتباسات العلماء ===== */
+.scholar-quote {
+    background: linear-gradient(135deg, var(--scholar-bg-start) 0%, var(--scholar-bg-end) 100%);
+    border-right: 6px solid var(--scholar-border);
+    padding: 25px 30px;
+    margin: 30px 0;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    line-height: 2.4;
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.scholar-quote::before {
+    content: '📚';
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 2rem;
+    opacity: 0.2;
+}
+
+.scholar-quote:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.3);
+}
+
+.scholar-quote p {
+    margin: 12px 0;
+    line-height: 2.4;
+}
+
+/* ===== الاقتباسات العلمية ===== */
+.scientific-quote {
+    background: linear-gradient(135deg, var(--scientific-bg-start) 0%, var(--scientific-bg-end) 100%);
+    border-right: 6px solid var(--scientific-border);
+    padding: 25px 30px;
+    margin: 30px 0;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    line-height: 2.4;
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px rgba(156, 39, 176, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.scientific-quote::before {
+    content: '🔬';
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 2rem;
+    opacity: 0.2;
+}
+
+.scientific-quote:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 6px 20px rgba(156, 39, 176, 0.3);
+}
+
+.scientific-quote p {
+    margin: 12px 0;
+    line-height: 2.4;
+}
+
+/* ===== صندوق القصص ===== */
+.story-box {
+    background: var(--story-box-bg);
+    border: 3px solid var(--story-box-border);
+    border-radius: 20px;
+    padding: 25px 30px;
+    margin: 30px 0;
+    box-shadow: 0 6px 20px rgba(251, 192, 45, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.story-box::before {
+    content: '📖';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;
+    opacity: 0.2;
+}
+
+.story-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(251, 192, 45, 0.3);
+}
+
+.story-box h4 {
+    color: var(--text-dark);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.story-box p {
+    line-height: 2.4;
+    margin: 12px 0;
+}
+
+/* ===== صندوق الأنشطة ===== */
+.activity-box {
+    background: var(--activity-box-bg);
+    border: 3px dashed var(--activity-box-border);
+    border-radius: 20px;
+    padding: 25px 30px;
+    margin: 30px 0;
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.activity-box::before {
+    content: '✨';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;
+    opacity: 0.3;
+}
+
+.activity-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
+}
+
+.activity-box h4 {
+    color: var(--text-dark);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.activity-box p, .activity-box ul {
+    line-height: 2.4;
+    margin: 12px 0;
+}
+
+.activity-box ul {
+    padding-right: 30px;
+}
+
+.activity-box li {
+    margin: 10px 0;
+    line-height: 2.2;
+}
+
+/* ===== وصف الصور ===== */
+.image-description {
+    background: var(--image-desc-bg);
+    border: 3px solid var(--image-desc-border);
+    border-radius: 15px;
+    padding: 25px 30px;
+    margin: 30px 0;
+    box-shadow: 0 4px 15px rgba(0, 137, 123, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.image-description::before {
+    content: '🖼️';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+    opacity: 0.2;
+}
+
+.image-description:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 137, 123, 0.3);
+}
+
+.image-description p {
+    margin: 10px 0;
+    line-height: 2.2;
+    text-align: center;
+    font-style: italic;
+    color: var(--text-medium);
+}
+
+.image-description strong {
+    color: var(--image-desc-border);
+    font-size: 1.15rem;
+}
+
+/* ===== القوائم ===== */
+.chapter-content ul {
+    margin: 20px 0;
+    padding-right: 30px;
+    line-height: 2.2;
+}
+
+.chapter-content li {
+    margin: 12px 0;
+    line-height: 2.4;
+    color: var(--text-medium);
+}
+
+.chapter-content ol {
+    margin: 20px 0;
+    padding-right: 30px;
+    line-height: 2.2;
+}
+
+.chapter-content ol li {
+    margin: 12px 0;
+    line-height: 2.4;
+}
+
+/* ===== العناوين داخل المحتوى ===== */
+.chapter-content h3 {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 30px 0 20px 0;
+    padding-right: 15px;
+    border-right: 5px solid var(--primary-gradient-start);
+    line-height: 1.8;
+}
+
+.chapter-content h4 {
+    color: var(--text-dark);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 25px 0 15px 0;
+    padding-right: 10px;
+    line-height: 1.8;
+}
+
+/* ===== زر العودة للأعلى ===== */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 6px 20px rgba(255, 107, 149, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#backToTop:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(255, 107, 149, 0.5);
+}
+
+/* ===== تحسينات للشاشات الصغيرة ===== */
+@media (max-width: 768px) {
+    .chapter-content {
+        padding: 25px 15px;
+    }
+    
+    .section-heading {
+        font-size: 1.6rem;
+        padding: 20px 20px;
+        margin: 35px 0 25px 0;
+    }
+    
+    .subsection-heading {
+        font-size: 1.35rem;
+        padding: 15px 20px;
+        margin: 25px 0 20px 0;
+    }
+    
+    .chapter-content p {
+        font-size: 1.1rem;
+        line-height: 2.2;
+    }
+    
+    .quran-verse,
+    .hadith-quote,
+    .scholar-quote,
+    .scientific-quote {
+        padding: 20px 20px;
+        font-size: 1.15rem;
+        line-height: 2.2;
+    }
+    
+    .story-box,
+    .activity-box,
+    .image-description {
+        padding: 20px 20px;
+    }
+    
+    #backToTop {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        left: 20px;
+        font-size: 1.3rem;
+    }
+}
+
+/* ===== تحسينات إضافية للطباعة ===== */
+@media print {
+    .section-heading,
+    .subsection-heading {
+        page-break-after: avoid;
+    }
+    
+    .quran-verse,
+    .hadith-quote,
+    .scholar-quote,
+    .scientific-quote,
+    .story-box,
+    .activity-box {
+        page-break-inside: avoid;
+    }
+    
+    #backToTop {
+        display: none;
+    }
+}
+
+/* ===== تأثيرات إضافية للحيوية ===== */
+.chapter-content > * {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== تحسين الظلال والعمق ===== */
+.section-heading,
+.subsection-heading,
+.quran-verse,
+.hadith-quote,
+.scholar-quote,
+.scientific-quote,
+.story-box,
+.activity-box,
+.image-description {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== إضافة خطوط فاصلة جمالية ===== */
+.chapter-content hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to left, transparent, var(--primary-gradient-start), transparent);
+    margin: 40px 0;
+    border-radius: 5px;
+}
+
+/* ===== تنسيق خاص للنصوص المهمة ===== */
+.chapter-content strong {
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.chapter-content em {
+    color: var(--text-dark);
+    font-style: italic;
+}
