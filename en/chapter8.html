@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Eight: Experiences of the Conscious Universe in the Islamic Tradition</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fdfbf7;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #d35400;
+            padding-bottom: 20px;
+            margin-top: 40px;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #8e44ad;
+            border-left: 5px solid #8e44ad;
+            padding-left: 15px;
+            margin-top: 60px;
+            font-size: 2em;
+            background-color: #f4ecf7;
+            padding: 10px 15px;
+        }
+        h3 {
+            color: #2980b9;
+            margin-top: 40px;
+            font-size: 1.5em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        h4 {
+            color: #16a085;
+            font-style: italic;
+            margin-top: 25px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        /* Box Styles */
+        .box {
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        
+        /* Quranic Verses - Green */
+        .quran-box {
+            background-color: #e8f8f5;
+            border: 2px solid #1abc9c;
+            border-right: 8px solid #1abc9c;
+        }
+        .quran-box::before {
+            content: "Quranic Verse";
+            font-size: 0.85em;
+            font-weight: 800;
+            color: #16a085;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* Hadith - Gold/Yellow */
+        .hadith-box {
+            background-color: #fef9e7;
+            border: 2px solid #f1c40f;
+            border-right: 8px solid #f1c40f;
+        }
+        .hadith-box::before {
+            content: "Prophetic Tradition / Athar";
+            font-size: 0.85em;
+            font-weight: 800;
+            color: #d4ac0d;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* Scholar Quotes - Blue */
+        .scholar-box {
+            background-color: #ebf5fb;
+            border: 2px solid #3498db;
+            border-right: 8px solid #3498db;
+        }
+        .scholar-box::before {
+            content: "Scholar Insight / Analysis";
+            font-size: 0.85em;
+            font-weight: 800;
+            color: #2980b9;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* Poetry - Purple */
+        .poetry-box {
+            background-color: #f5eef8;
+            border: 2px solid #9b59b6;
+            border-right: 8px solid #9b59b6;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
+            white-space: pre-line;
+        }
+        .poetry-box::before {
+            content: "Poetic Verse";
+            font-size: 0.85em;
+            font-weight: 800;
+            color: #8e44ad;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* Table of Contents */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #34495e;
+            color: white;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Description Box */
+        .desc-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 25px;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 40px;
+            border-left: 5px solid #7f8c8d;
+        }
+        
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 40px 0;
+        }
+
+        /* Enhanced Box Styling */
+        .box {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Navigation Buttons */
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #d35400;
+        }
+        .nav-btn {
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-home {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-home:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .btn-next {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        .btn-next:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switch Button -->
+    <div style="position: fixed; top: 80px; right: 20px; z-index: 9999;">
+        <a href="../chapter8.html" style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;">
+            <span>🌐</span>
+            <span>النسخة العربية</span>
+        </a>
+    </div>
+
+    <!-- Language Switcher -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <a href="../chapter8.html" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-family: 'Segoe UI', sans-serif; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fas fa-language"></i> العربية
+        </a>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <h1>Chapter Eight<br>Experiences of the Conscious Universe in the Islamic Tradition</h1>
+
+    <div class="desc-box">
+        <strong>Description:</strong> This chapter explores how Muslims throughout history have sensed the reality of a conscious, praising universe, starting with the Companions, (Alsahaba) who experienced prophetic miracles that revealed to them the consciousness of inanimate objects, such as the nostalgia of the stump, through to the followers and predecessors who developed a deep understanding of the praise of creatures based on Qur'anic and prophetic texts. The chapter also discusses the insights of leading scholars and exegetes such as Ibn Kathir, al-Tabari, Al-Qurtubi, and Ibn Taymiyya, as well as the theories of Muslim philosophers such as Ibn Sina and Ibn Rushd on cosmic consciousness. The chapter devotes an extensive space to the Sufi experience of such luminaries as Junayd, Rabaa Al-Adawiya, Ibn Arabi, and Jalal al-Din al-Rumi, with a critical examination of these experiences in the balance of Ahl al-Sunnah. Finally, the chapter highlights how this cosmic vision influenced Muslim behavior and ethics, from existential humility and compassion for creatures to spiritual inspiration and creativity in science, art, and literature.
+    </div>
+
+    <h3>Table of contents</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Topic title</th>
+                <th>Page number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Research I: Muslims Sensing the Reality of the Conscious Universe Throughout History</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>The Conscious Universe Between Positive Use and Excess</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Research II: The Companions' Experiences with the Conscious Universe</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Research III: The Experiences of the Companions and Salaf with the Conscious Universe</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Research IV: The Conscious Universe in the Heritage of Scholars and Interpreters</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>Research Five: Sufi Experience and Sensing the Consciousness of the Universe</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>The Sufi experience in the balance of Ahl al-Sunnah</td>
+                <td>53</td>
+            </tr>
+            <tr>
+                <td>The sixth research: The Impact of Cosmic Awareness on Muslim Behavior</td>
+                <td>55</td>
+            </tr>
+            <tr>
+                <td>Conclusion of the chapter</td>
+                <td>57</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Introduction</h2>
+    <p>In the Islamic vision, the universe is not just an inanimate substance subject to rigid physical laws, but a living, praising, conscious, obedient being that is responsive to God. This unique vision of existence represents a differentiating point between the Islamic conceptualization and the modern materialist conceptualization that reduces the universe to its physical dimensions only.</p>
+
+    <div class="quran-box box">
+        Allah says: “The seven heavens and the earth and whatever is in them exalt Him. And there is not a thing except that it exalts [Allah] by His praise, but you do not understand their [way of] exalting. Indeed, He is ever Forbearing and Forgiving.” (Al-Israa' 44)
+    </div>
+
+    <p>In this chapter, we review how Muslims throughout history - from the Companions to the Salaf, the followers, Sufis and thinkers - sensed the reality of the conscious universe, how they dealt with it as a living spiritual and faith experience, and how this vision influenced their behavior and understanding of the world and their relationship with the Creator.</p>
+    <p>Before proceeding, we must warn against excess and excessiveness.</p>
+
+    <h2>Part I: Muslims' Sensitization to the Reality of the Conscious Universe Throughout History</h2>
+    <p>In the great book of Islamic history, a profound cosmic vision echoes that this vast existence, including inanimate objects, plants and animals, is not silent but a conscious entity, praising its Creator. This vision was not just an abstract theory, but a living spiritual experience that shaped the consciousness and behavior of Muslims throughout the ages.</p>
+
+    <h3>The Companions and early predecessors: Witnesses to the praise of existence</h3>
+    <p>The understanding of the universe was characterized by the Companions and the righteous predecessors. They saw the entire universe as a witness to the greatness of God, praising Him. Their spiritual experience had its origins in the Qur'an, which points out that everything in the universe praises God.</p>
+    <p>The Companions lived in a state of direct witnessing, where the relationship with nature was one of deep contemplation and meditation. Some of the righteous predecessors were known for their keen awareness of the praise of the creatures, and they used to sense it with their enlightened hearts. This deep realization made them deal with the universe as a living creature praising God, which created a deep respect for nature and beings.</p>
+
+    <div class="scholar-box box">
+        The commandment of the righteous predecessors, "contemplate the signs of Allah and do not contemplate the Self of Allah" is an eloquent approach in this context. It calls for contemplation of the manifestations of the universe, the splendor of God's creation, and the greatness of His signs, as a way to know the Creator, while refraining from delving into the essence of God's self, which is beyond the comprehension of the mind.
+    </div>
+
+    <h3>Sufis and Islamic mysticism</h3>
+    <p>The Islamic conceptualization of the conscious universe reached its peak in the Sufi experience, which sought revelation and witnessing. Sufis see the universe as a manifestation of the divine names, and that every creature reflects one of God's attributes, making the entire universe a proof of the Creator's existence and greatness.</p>
+
+    <div class="scholar-box box">
+        Muhyiddin Ibn Arabi describes the universe as the "mirror of truth" in which God's names and attributes are reflected, so that looking at existence becomes worship and reflection.
+    </div>
+
+    <p>Jalaluddin Rumi is one of the most prominent poets and mystics who expressed the concept of the universe as a mirror in which God's names and attributes are manifested, as the movement of existence is harmonized in one of his poems:</p>
+
+    <div class="poetry-box box">
+        "O day, shine! The atoms of the universe are dancing.
+        Thanks to him, the whole universe is dancing …filled with ecstasy, free from body and mind."
+    </div>
+
+    <p>This poetic imagery highlights how every part of the universe, from atoms to planets, participates in a cosmic dance as an expression of divine love. Rumi points out that the movement and regularity of the universe, its harmony and beauty, is an expression of the creatures' love for their Creator and their response to His command. This view made Sufis see every cosmic phenomenon as a divine message and a symbol of deep spiritual truths.</p>
+
+    <h3>Muslim thinkers and philosophers</h3>
+    <p>Great Muslim philosophers such as Avicenna, Al-Farabi and Ibn Rushd developed philosophical theories linking cosmic consciousness to the concept of active mind. Avicenna believed that the souls in the planets are alive and conscious.</p>
+    
+    <div class="scholar-box box">
+        In his exegesis of The Keys of the Unseen, Imam Fakhr al-Din al-Razi highlights a profound concept about the creatures' perception and praise of God. In his interpretation of verses such as "The seven heavens and the earth and whatever is in them praise Him," Razi points out that this praise is not a metaphor or a symbolic sign, but a real praise from the creatures, even if we do not understand how.
+    </div>
+
+    <p>Razi emphasizes that every creature has a type of perception commensurate with its nature, which makes it capable of praising its creator. This praise expresses the creatures' awareness of God's greatness and oneness, and shows that the entire universe is in a constant state of remembrance and praise. Thus, Razi believes that looking at the signs of the universe and contemplating the praise of creatures is a way to deepen faith and appreciate the greatness of the Creator, as the universe becomes an open book in which to read the signs of monotheism and divine creativity.</p>
+
+    <h3>The impact of this vision on behavior and understanding</h3>
+    <p>This profound vision of a conscious universe has profoundly influenced Muslims' behavior and understanding of the world throughout history:</p>
+    <ul>
+        <li><strong>A sense of cosmic servitude:</strong> The realization that all the components of the universe are praising Allah made the Muslim feel that he is part of a great system of cosmic worship, neither separated from it nor alienated from it.</li>
+        <li><strong>Compassion for the environment and creatures:</strong> The concepts of animal and plant welfare and economy in the use of resources have taken root.</li>
+    </ul>
+
+    <div class="hadith-box box">
+        The Prophet said: "Allah has written benevolence on everything" (Sahih Muslim).
+    </div>
+    
+    <p>This concept extended to all creatures, and Muslims used to feel that the universe is a witness to their actions, as in the hadiths that show that animals may testify against those who oppress them on the Day of Judgment.</p>
+    <p><strong>Encouraging scientific research:</strong> Research into the secrets and laws of the universe became a form of worship and closeness to God, which encouraged the flourishing of natural sciences in Islamic civilization, as scientists viewed the universe as an open book leading to the knowledge of the Creator.</p>
+    <p>Throughout their long history, Muslims have sensed the reality of the conscious universe as a living spiritual experience, based on the verses of the Qur'an and the Sunnah. This understanding evolved from the direct simplicity of the Companions to the philosophical depth of the thinkers and the spiritual witness of the mystics. This vision influenced their relationship with the universe and the Creator, making them live in a state of harmony with the surrounding world, sensing the creatures' awareness and praise, which enhanced their sense of moral responsibility and spiritual connection to the Creator.</p>
+
+    <h2>The Conscious Universe Between Positive Utilization and Excess</h2>
+    <h3>Exaggeration and overuse of the concept of a conscious universe</h3>
+    <p>Scientists have warned against some exaggerations in this area, such as Exaggerating the hearing of praise.</p>
+    
+    <div class="scholar-box box">
+        The statements of the Salaf confirm that all creatures praise God, but this praise is not perceived by humans with their ordinary senses, and can only be heard with God's permission. Therefore, claiming to hear the praise of creatures without legitimate evidence or divine revelation is contrary to the understanding of the righteous Salaf.
+    </div>
+
+    <div class="scholar-box box">
+        "In his criticism of the issues of philosophical mysticism, Shaykh al-Islam Ibn Taymiyyah emphasizes that some of those who exaggerated the understanding of the praise of the creatures and its connotations have deviated to the point of falling into the doctrine of pantheism. He emphasizes that this is a great misguidance and deviation from pure monotheism, explaining that although the creatures praise God, they are not the eye of God or His attributes, but are distinguished from Him by the limits of creatureliness and servitude."<br>
+        (See: Dodging the Conflict of Reason and Transmission, by Ibn Taymiyyah, in several places in the book that deal with the critique of pantheism).
+    </div>
+
+    <p>Muslim scholars emphasize that awareness of the praise of the universe and its magnificent creations should not turn into reverence for nature itself. Although creatures praise and testify to the greatness of the Creator, they are in essence worshipful creatures, not sacred idols. Pure monotheism requires that worship and reverence be reserved for God alone, glorified and exalted, who created everything and made it praiseworthy.</p>
+    <p>The understanding of the universe as a conscious system of praise in the Islamic tradition represents a wide door for spiritual contemplation and deepening human awareness of self and existence. The Muslim's perception of the universe as a living, conscious creation inspires a sense of belonging to an integrated system and motivates him to be in spiritual harmony with the universe and the Creator.</p>
+
+    <h2>Research II: The Companions' Experiences with the Conscious Universe</h2>
+    <p>The Companions experienced the reality of the conscious universe as a direct spiritual experience. The understanding of the honorable companions and the righteous predecessors of the conscious universe was characterized by simplicity and depth at the same time. They saw the entire universe as a witness to God's greatness, praising Him. Their spiritual experience drew its origins from the Holy Qur'an, which points out that everything in the universe praises God.</p>
+    <p>The honorable companions lived a unique experience, characterized by being witnesses to miraculous prophetic miracles that revealed to them an aspect of the universe's consciousness and response. They sensed this deep awareness in their dealings with inanimate objects.</p>
+
+    <h3>The trunk's yearning</h3>
+    <div class="hadith-box box">
+        In the book "Zuhd" by Imam Abdullah bin al-Mubarak, it is narrated on the authority of al-Hasan al-Basri, may Allah have mercy on him, that he said: "O people of the Muslims, the wood is longing for the Messenger of Allah, may Allah bless him and grant him peace, but are not the men who hope to meet him more worthy of longing for him?"
+    </div>
+    <p>This statement shows that al-Hasan al-Basri was influenced by the hadith of the log's longing, and expresses the feelings of longing and love for the Prophet, may Allah bless him and grant him peace, citing the inanimate object's longing for him and indicating that humans are more worthy of this longing.</p>
+
+    <h3>Thunder Praise</h3>
+    <div class="hadith-box box">
+        Ibn Abbas (may Allah be pleased with them both), when he heard the thunder, used to say: "Praise be to Him to Whom the thunder praises and the angels fear" [Ibn Abi Shayba, The Workbook].
+    </div>
+    <p>This shows how they were evoking the Qur'anic meaning that natural phenomena themselves praise God.</p>
+
+    <h3>The companions' relationship with nature and animals</h3>
+    <p>The Companions sensed the awareness of nature, which was reflected in their relationship with it and their behavior towards it. One of the most wonderful examples of their sensing the consciousness of inanimate objects is what the Prophet (peace be upon him) reported about Mount Uhud in Medina:</p>
+    
+    <div class="hadith-box box">
+        "This is a mountain that loves us and we love it." (Sahih Muslim)
+    </div>
+    
+    <p>This hadith establishes the idea of mutual love between humans and inanimate objects, which the Companions were aware of and experienced.</p>
+
+    <h3>With camels and animals</h3>
+    <p>The companions sensed the consciousness of nature and the love of animals, which was reflected in their relationship with them and their behavior towards them.</p>
+    
+    <div class="hadith-box box">
+        Al-Musayyib ibn Dar narrated that he saw 'Umar ibn al-Khattab beating a camel and said, "Why do you put on your camel what it cannot bear?" (Awn al-Wadud to facilitate what is in the correct chain of benefits and responses - Modern Comprehensive Library)
+    </div>
+
+    <div class="hadith-box box">
+        Ibn Sirin reported that 'Umar saw a man dragging a sheep to be slaughtered, so he hit him with a dura and said: "Take it to death in a beautiful way." In another situation showing his sensitivity to the suffering of animals, he saw a man sharpening his blade during slaughter, so 'Umar hit him with a dura and said: "Do you torture the soul? Didn't you do this before you took it?"
+    </div>
+
+    <div class="hadith-box box">
+        'Abdullah ibn 'Umar saw a shepherd in an ugly place and saw a better place, so Ibn 'Umar said: "O shepherd, turn it around, for I heard the Prophet (peace be upon him) say: 'Every shepherd is responsible for his flock'"... When he saw children who had taken a live bird as a target to throw stones at, he said, "May Allah curse the one who takes this as an object" [Narrated by Muslim].
+    </div>
+
+    <p>This mercy was also evident in Abu al-Darda's relationship with his camel called "Damon", as when he lent it to the companions he would say: "Do not burden him with anything but such and such, for he cannot bear more than that." When he was about to die, he said:</p>
+    
+    <div class="hadith-box box">
+        "O Damon, do not argue with me tomorrow before my Lord, for I did not burden you with anything more than you can bear."
+    </div>
+
+    <p>This moral awareness reached the just Caliph 'Umar ibn 'Abd al-'Aziz, who had a boy who worked on a mule for him and brought him a dirham every day, and one day he brought him a dirham and a half. He said, "The market has died." Umar said, "No, but you tired the mule, so rest it for three days."</p>
+    <p>The Companions used to name all their beasts, weapons and objects with affectionate names, indicating emotional attachment and responsibility towards them. This treatment was not just human mercy, but stemmed from a deep understanding of the nature of a conscious universe praising God, and the belief that every being in this universe has a consciousness and realization that deserves respect and mercy.</p>
+    <p>These attitudes show how the Companions translated their understanding of the universe into sophisticated practical behavior, combining legitimate use of animals with compassion for them, and reflecting their deep realization that they are part of an integrated cosmic system, every element of which praises its Creator and deserves to be treated with dignity.</p>
+
+    <h2>Research III: Experiences of the Followers and Predecessors with the Conscious Universe</h2>
+    <p>The experiences of sensing the conscious universe continued with the followers and scholars of the Salaf, who lived this reality with their souls and hearts. After the light of prophecy shone on the hearts of the honorable Companions, and they saw the universe with new eyes, this light did not cease with the end of their era, but was inherited by a generation of followers and the righteous ancestors, who carried the trust of faith and deepened their understanding of the mysteries of existence.</p>
+    <p>These great men realized that the entire universe praises the praise of its Creator, and that this praise is not just a mechanical act, but a living melody, a subtle realization that manifests itself to those whose soul is pure and whose vision is deep.</p>
+    <p>This vision was embodied in their behavior, words, and reflections, forming a spiritual and cognitive legacy that inspires successive generations. Sensing the consciousness of the universe and translating it into a life of piety and benevolence is a central aspect of their understanding of religion and existence.</p>
+
+    <h3>The depth of insight and transcendence</h3>
+    <div class="scholar-box box">
+        Ikrima stated that "the cylinder swims, the tree swims," and that "the creaking of the door is his praise and the squeaking of water is his praise." (Tafsir Ibn Kathir).
+    </div>
+
+    <p>This expansion of the understanding of tasbih to include inanimate objects indicates that every part of the universe, whether animate or inanimate, possesses its own form of worship, revealing the vitality of the universe and its constant interaction with its Creator. The Qur'anic phrase "but you do not understand their praise" carries a profound implication that the cosmic praise is done in a language or manner beyond normal human comprehension.</p>
+    <p>This understanding opens the way to the realization that "consciousness" in the universe is not limited to material or human definitions, but is a broader manifestation of the all-encompassing divine consciousness that encompasses every atom of existence. Consequently, the quest to realize this tasbih requires spiritual refinement and purification of the heart, which makes the journey towards understanding the universe an internal and spiritual journey par excellence.</p>
+    
+    <p>The Salaf realized the praise of inanimate objects through prophetic incidents and miracles, which they regarded as great lessons that deepened their faith.</p>
+    
+    <div class="scholar-box box">
+        <strong>The incident of the log bending:</strong> Al-Hasan al-Basri was deeply moved by this incident and said: "O people of the Muslims, the wood is yearning for the Messenger of Allah (peace be upon him) out of longing for him, are not the men who hope to meet him more worthy of longing for him?"
+    </div>
+
+    <div class="scholar-box box">
+        Imam Mujahid ibn Jabr is reported to have said: "All things praise God, whether living, dead or inanimate, and their praise is: SubhanAllah and Baha'u'llah." In his interpretation of the Almighty saying: {And We made the mountains and the birds praise with David}, Mujahid is reported to have emphasized that the praise of the mountains and the birds with David was a real praise, not a mere sign or indication. It is said that he interpreted the Almighty saying: {Everyone knows his prayer and praise} by saying: "Prayer is for mankind and praise is for everything else." (Tafsir al-Baghawi)
+    </div>
+
+    <div class="scholar-box box">
+        Imam Qatada ibn Da'amah al-Sudusi is reported to have said, "Everything that has a soul in it praises; a tree, or something that has a soul in it." It is said that Qatadah saw praise as related to life and growth, which explains his reported statement: "It means: Animals and growing things." He limits tasbih to anything that has life or growth, whether it is a plant or an animal. (Tafsir al-Baghawi)
+    </div>
+
+    <div class="scholar-box box">
+        Hudayr Abu al-Khattab recounted an interesting experience of al-Hasan al-Basri with Yazid al-Raqashi: "We were with Yazid al-Raqashi and al-Hasan at a meal, and they served the khawan, and Yazid al-Raqashi said: 'O Abu Sa'id, is this khawan swimming?' He said: It used to swim once." It is said that al-Hasan al-Basri understood that the tree in its time of growth and moderation used to swim, but when it became a greased khwan, it became inanimate and did not swim. This shows that for him, praise is associated with life and growth. (Narrated by Ibn Jarir)
+    </div>
+
+    <p>This may be supported by the hadith of Ibn Abbas regarding the two graves, where the Prophet placed a wet newspaper split in half on them, saying "Perhaps they will be relieved if they do not dry out." Some scholars interpreted that they praise as long as they are green, but if they are dry, their praise will be interrupted.</p>
+    
+    <div class="hadith-box box">
+        It is reported that al-Hasan al-Basri used to recite: "O son of Adam, your shadow prostrates to Allah, but you do not prostrate to Allah." (Reported in al-Nakkat and al-Ayun)
+    </div>
+
+    <div class="scholar-box box">
+        Ibrahim al-Nukha'i is quoted as saying, "Every inanimate object praises Allah, even the squeak of a door and the creak of a roof." He was one of the few who realized that even the sounds of simple things such as a door creak or the sounds of a roof are in fact praising Him. (Tafsir al-Baghawi)
+    </div>
+
+    <p>Although the followers differed on the details of the cosmic praise, they agreed that the praise was real and not metaphorical. This unanimity indicates that they had real experiences with the praising universe. Mujahid and Ibrahim al-Nakha'i are said to have believed that the tasbih was inclusive of all creatures, while al-Hasan al-Basri and Qarada are said to have limited the tasbih to that which has life and growth.</p>
+    <p>It has been reported that some of the followers inferred the reality of tasbih by the words of Almighty God in relation to the Prophet David (peace be upon him): {And We made the mountains with David to praise the mountains and the birds}, so if their praise with him was an indicative praise, as some of them say, David (peace be upon him) would have no special privilege over others.</p>
+    <p>Thus, the wisdom of the followers and the depth of their understanding of the praising universe is evident, and how they realized that all existence speaks of the oneness of God and praises Him, which invites us to contemplate the greatness of the Creator and harmonize with this praising universe in mentioning and praising God.</p>
+
+    <h2>Research IV: The Conscious Universe in the Heritage of Scholars and Interpreters</h2>
+    <h3>Imam Ibn Kathir and the Cosmic Praise</h3>
+    <p>Imam Ibn Kathir emphasized that the creatures' praise of God is real and not metaphorical.</p>
+    
+    <div class="scholar-box box">
+        In his exegesis of the Qur'anic saying: "There is nothing but praise in praise of Allah, but you people do not understand their praise, because it is different from your languages, and this is general in animals, inanimate objects, and plants."
+    </div>
+
+    <p>This interpretation demonstrates a firm commitment to the apparent meaning of the Qur'anic text, emphasizing that everything in existence, including inanimate objects, possesses a form of consciousness and praise of its own. This vision is reinforced by examples from the Sunnah and relics of the Salaf, such as what Ibn Mas'ud is reported to have said: "We used to hear the praise of food while it was being eaten." Ibn Kathir also quotes some of the Salaf, such as Ikrimah, who said, "The cylinder swims, the tree swims," and others who considered the squeaking of a door and the gurgling of water as part of its tasbih.</p>
+
+    <h3>Imam al-Tabari and the interpretation of cosmic consciousness</h3>
+    <p>Imam al-Tabari provides confirmation of the consciousness of beings and their response to God's command.</p>
+
+    <div class="scholar-box box">
+        In his interpretation of the verse: "They said, 'We came willingly,'" which refers to the response of the heavens and the earth to God's command, Tabari explains that they said, "We came by what you have created in us, responding to your command and not disobeying it."
+    </div>
+
+    <p>This interpretation shows that the Qur'anic discourse gives inanimate objects a kind of perception and the ability to respond. The use of the masculine form of "obedient" for the heavens and the earth, which are feminine, indicates that they are treated as those who are sane and speak, or that it includes the sane beings in them. This linguistic expression in the Qur'anic text, and al-Tabari's interpretation of it, highlights that the submission of the universe is not a mere mechanical process, but a conscious response to the will of the Creator, emphasizing the interactive and submissive nature of the universe.</p>
+
+    <h3>Imam al-Qurtubi and the praise of inanimate objects</h3>
+    <p>Imam al-Qurtubi recognizes the fact that inanimate objects praise, and strongly responds to those who deny it.</p>
+
+    <div class="scholar-box box">
+        Al-Qurtubi says: "Our scholars said that this tasbih is on its face, and that Allah (swt) creates cognition and speech in them."
+    </div>
+
+    <p>Al-Qurtubi supports his position with strong evidence from proven prophetic miracles, such as hearing the praise of food being eaten, the praise of pebbles in the palm of the Prophet and the palms of Abu Bakr, Umar and Uthman, the longing of the stump for him, and the love of the mountain for him and his companions. He emphasizes that "all this can only be denied by those who deny the ability of God Almighty."</p>
+    <p>"It is true that all things praise the Qur'an because of the reports indicating this. If this praise was a sign praise, there would be no specialization for David, but it is the praise of the article by creating life and enabling it to praise, as we have mentioned. The Sunnah stipulates what the Qur'an implies, that everything praises, so it is more appropriate to say it."</p>
+    <p>Al-Qurtubi's reliance on miracles as conclusive proof of the true praise of inanimate objects reinforces the doctrinal position that the universe is a living entity that interacts with its creator, and shows that this praise is not a mere symbol or signifier, but a direct act of God's creation and power.</p>
+
+    <h3>Avicenna (Ibn Sina) and Cosmic Consciousness</h3>
+    <p>Avicenna sought to reconcile the divine light contained in the Shari'ah with Greek philosophy. He introduced the concept of the "total soul" as a basis for understanding his view of cosmic consciousness.</p>
+
+    <div class="scholar-box box">
+        He stated in Al-Najat that "The ark has a total soul that longs for the first, and the soul that moves the ark is obedient to the mind" (Avicenna, Al-Najah, p. 292).
+    </div>
+
+    <p>He also stated in Al-Shifa that: "The total soul is the principle of movement and life in all parts of the world, and it emanates from the active mind" (Avicenna, Al-Shifa, c. 2, p. 414). He clearly distinguished between the total nafs and partial nafs. He said in his "Letters" "The partial (human) soul is a glimpse of the universal soul of the universe, and the universal soul does not perish."</p>
+    <p>Avicenna recognizes the existence of a cognitive power that runs through all things, but at varying levels according to the nature of each thing.</p>
+    
+    <div class="scholar-box box">
+        He says in Al-Shifa: "Every part of the world has a soul-like force, and this force is sane and cognizant, though not in the pattern of our cognition, and has responses to divine influences."
+    </div>
+
+    <p>Avicenna introduces the concept of "instinctive adoration," which he sees in all creatures. He says: "Every one of these simple inanimate identities has an instinctive adoration that never abandons it and is the cause of its existence."</p>
+    
+    <h4>The ranks of existence and consciousness in Avicenna's cosmological system:</h4>
+    <ul>
+        <li><strong>Separate Minds:</strong> The highest rank, with full and comprehensive perception (Angels).</li>
+        <li><strong>Aflak souls:</strong> They have a wide perception, but less than that of the minds.</li>
+        <li><strong>The human talking soul:</strong> It has mental and sensory perception.</li>
+        <li><strong>The animal soul:</strong> It has sensory and imaginative perception.</li>
+        <li><strong>Plant psyche:</strong> They have simple cognition related to their basic functions.</li>
+        <li><strong>Inanimate:</strong> They have a kind of innate cognition associated with their natural characteristics.</li>
+    </ul>
+
+    <p><strong>Properties of Stones and Minerals:</strong> Avicenna mentions the properties of gemstones and minerals, and believes that they have properties and powers that indicate a kind of response and realization. He says in "The Law in Medicine" about some stones: "Precious stones have wondrous properties that indicate an intelligent response to stimuli."</p>
+    
+    <p><strong>Impact & Criticism:</strong> Avicenna's theory influenced al-Ghazali, Suhrawardi, and Western philosophers like Thomas Aquinas. However, it faced criticism from scholars like Al-Ghazali and Ibn Taymiyyah, particularly regarding the theory of "fayyad and sadr" (emanation), which they considered contrary to the Islamic conception of direct creation.</p>
+
+    <h3>Imam al-Ghazali and the Living Vision of the Universe</h3>
+    <p>Al-Ghazali addressed the concept of the praise of beings in several places in his books.</p>
+
+    <div class="scholar-box box">
+        In his book Ihya al-'Ulum al-Din, al-Ghazali notes that "every atom of the world speaks of God's monotheism... and is a true witness to His existence... but only the people of true faith understand its praise" (Ihya al-'Ulum al-Din, 4/302).
+    </div>
+
+    <p><strong>Epistemological basis:</strong> Al-Ghazali bases his conceptualization on: 1) Critical basis (Quranic verses), 2) Rational basis (everything reflects God's names), 3) Revealing basis (those with high heart knowledge recognize praise).</p>
+    <p>Al-Ghazali tends to argue that the praise of inanimate objects is real and not metaphorical. He says: "It is not unlikely that inanimate objects have a hidden life that is not perceived by the senses, so their praise is a real praise, but our ignorance of how it is does not negate its reality."</p>
+    <p>Al-Ghazali develops a comprehensive theory of the universe as a mirror reflecting God's names and attributes. "The sun reflects His Name of Light, the earth reflects His Name of Raziq... every creature praises in its own tongue one of the names of Allah."</p>
+    
+    <h4>Ranks of creatures' awareness and praise:</h4>
+    <ol>
+        <li><strong>Angels:</strong> Highest creatures in praise and awareness.</li>
+        <li><strong>Man:</strong> Characterized by voluntary awareness.</li>
+        <li><strong>Animals:</strong> Have a share of awareness suitable to their nature.</li>
+        <li><strong>Plants and inanimate objects:</strong> Have their own praise. "Do not think that inanimate objects are lifeless, for their praise of their Creator indicates a kind of life and realization, even if it is hidden from us."</li>
+    </ol>
+    
+    <p><strong>Spiritual secrets:</strong> Al-Ghazali links the realization of praise to high spiritual positions. He says in "The Alchemy of Happiness": "He whose heart is pure and whose soul is pure, he hears the praise of stones, trees and animals, and this is a position that only the righteous and saints can attain."</p>
+
+    <h3>Ibn al-Qayyim and the concept of praising the universe to God</h3>
+    <p>Ibn al-Qayyim believes that the entire universe is a living, conscious entity that praises its Lord. He emphasizes that "God has told about His creatures in such a way as to indicate that they are living, talking, knowing, and aware."</p>
+    
+    <div class="scholar-box box">
+        "The praise of creatures to God is of two kinds: Optional praise, which is the praise of the rational people, and self-praise, which is the praise of all creatures" (Madaraj al-Salikin, 1/429).
+    </div>
+
+    <div class="scholar-box box">
+        He says in "The Key to Dar al-Sa'adah": "Every atom of the world bears witness to the oneness of Allah, speaks of His praise, and praises His majesty and greatness" (Miftah Dar al-Sa'ada, 1/214).
+    </div>
+
+    <p>In Al-Wabil al-Sayyib, he explains that "everything praises its Lord in the manner that suits it, so the praise of the animal is different from the praise of the plant...". Ibn al-Qayyim links the praise of creatures to the orderliness of the universe. He believes that the praise of creatures is a manifestation of their obedience to God's command.</p>
+
+    <h3>Ibn Taymiyyah and the Praise of the Conscious Universe</h3>
+    <p>Ibn Taymiyyah states that "all creatures praise their Lord, testifying to His monotheism, indicating His wisdom and power."</p>
+
+    <div class="scholar-box box">
+        He says in his book "Dodging the Conflict of Reason and Transmission": "The speech, praise and prostration of inanimate objects is proven by the texts, and it is not a metaphor, but it is real as Allah Almighty has told us."
+    </div>
+
+    <p>He responds to those who interpret texts metaphorically: "Some of them may interpret Allah's saying... as an indicative praise... and this is contrary to the appearance of the text."</p>
+    <p><strong>Theory of life and consciousness:</strong> He develops a theory about the life of inanimate objects: "Every existence has a life and cognition appropriate to it... it is not necessary for the life of an inanimate object to be like the life of an animal."</p>
+    
+    <h4>Types of Tasbih according to Ibn Taymiyyah:</h4>
+    <ol>
+        <li><strong>Optional verbal praise:</strong> Belongs to creatures that are charged (humans, jinn, angels).</li>
+        <li><strong>Innate praise:</strong> Includes all creatures, including inanimate objects.</li>
+    </ol>
+
+    <p><strong>Relationship to Instinct (Fitrah):</strong> Ibn Taymiyyah links the praise of creatures to God's instinct. "God has placed in every creature that which makes its affairs straight... including acknowledging its Creator."</p>
+    <p><strong>Response to deniers:</strong> Ibn Taymiyyah strongly responds to those who deny the reality of the praise of inanimate objects. He says: "One of the wonders of these philosophers and speakers is that they deny the praise of inanimate objects and their life, although the Qur'an declares this."</p>
+    <p><strong>Educational Impact:</strong> He draws implications such as Consideration and reflection, and Reverence and humility. "If a slave knows that inanimate objects praise their Lord and bow down to Him, he is the first to do so."</p>
+
+    <h3>Averroes (Ibn Rushd) and qualitative consciousness</h3>
+    <p>Ibn Rushd addressed the question of the praise of beings within the framework of his general philosophical approach. In his book, Fasl al-Maqal, he indicates his approach to dealing with legal texts that appear contrary to rational proof: "If the Shari'ah has mentioned these observable senses and attributed to them actions that are not of their nature, then we know that the Shari'ah has set an example and should not be taken at face value."</p>
+    <p>Ibn Rushd argues that this praise can be understood as the creatures' indication of the greatness and wisdom of their Creator, rather than a true praise in the sense of speech. He says: "What appears from the matter of the animal is that it has only partial perception and imagination... while inanimate objects have none of these."</p>
+    <p>However, he states that "The Almighty Maker is intrinsically connected to his artifacts... Rather, its existence is always inextricably linked to His presence." He believes that the precise order in the universe is evidence of the Creator's existence and wisdom (Proof of Providence).</p>
+
+    <h3>Ibn Tufail and Hayy ibn Yaqzan</h3>
+    <p>In his philosophical story "Hayy ibn Yaqzan", Ibn Tufail presents a model of a human discovering the universe. Hayy believes that all creatures possess varying degrees of consciousness.</p>
+    <p><strong>Gradual Consciousness:</strong> Hayy notes that plants possess a kind of perception, animals possess a more developed consciousness, and human beings are at the top. Through his meditations, Hayy reaches the idea of the integrity of existence.</p>
+    
+    <div class="scholar-box box">
+        "He knew that everything in the upper and lower worlds, both light and dark bodies, praise Him in the tongue of life, and living bodies in the tongue of speech" (Hayy ibn Yaqzan, p. 162).
+    </div>
+
+    <p><strong>Praise of Heavens:</strong> Ibn Tufail pays special attention to the praise of the heavens. "Then he was sure that those shining bodies have a perception of their Creator, and that they praise Him, and glorify Him."</p>
+    <p><strong>Integration:</strong> Ibn Tufail combines the sensory empirical approach with the Sufi mystical approach. "When he was absorbed in this state and cut off from the world of sense entirely, he saw in that place what no eye has seen."</p>
+
+    <h2>Research Five: Sufi Experience and Sensing the Consciousness of the Universe</h2>
+    <p>The Sufi experience in Islam represents a unique spiritual journey towards sensing existence and its secrets. Sufi scholars believe that the entire universe is a living, conscious entity that praises its creator.</p>
+
+    <h3>Imam al-Junayd and the concept of annihilation</h3>
+    <p>Al-Junayd's concept of cosmic consciousness was linked to "annihilation" (Fana). He says: "If the minds of the wise men wander into monotheism, they wander into confusion." For him, true monotheism is realized by direct spiritual experience.</p>
+    <p><strong>The Eternal Covenant:</strong> Al-Junayd based his philosophy on the verse "Am I not your Lord?". For him, the "charter" represents the bridge between mortality and monotheism. The charter represents the return of the soul to the original source.</p>
+
+    <h3>Rabia al-Adawiya and divine love</h3>
+    <p>For Rabia, divine love is an existential state that alters human perception. One of her most profound documented texts revealing her vision is:</p>
+    
+    <div class="scholar-box box">
+        "My God, the voices are quiet, the movements are silent, every lover is alone with his lover, and I have retreated to you" (Ibn Khalkan, Fayyat al-Ayyan, G2, p. 286).
+    </div>
+
+    <p>This text reveals a deep realization of the movement and rhythm of the universe, seeing night as a time of cosmic solitude. She used to say: "I look at the truth in these things, not at the things." This concept suggests that for Rabaa, the universe is a mirror reflecting the attributes of God.</p>
+
+    <h3>Ibn al-Farid and the Singing of Conscious Existence</h3>
+    <p>Ibn al-Farid is considered the "Sultan of the Lovers". His deepest cosmic insights are manifested in his realization of the universal unity of existence.</p>
+    
+    <div class="poetry-box box">
+        Our souls are wine and our ghosts are vineyards.
+    </div>
+
+    <p>He expresses a cosmic vision that makes man the center of the universe:</p>
+
+    <div class="poetry-box box">
+        In front of me, in truth, Valori was behind me, and it was where I directed my destination<br>
+        In my prayer, my imam sees my gaze and my heart witnesses me in front of my imams
+    </div>
+
+    <p><strong>Critical Note on Poem "My heart tells me":</strong> Despite enthusiasm for some poems, researchers note that some of Ibn al-Farid's poems address a human lover rather than the Creator, as there are clues like "you knew or did not know" which are inappropriate for divine speech. However, his "Al-Ta'iyya al-Kubra" contains deep philosophical verses depicting cosmic transformation and the annihilation of the self.</p>
+
+    <h3>Ibn Arabi and the swimming universe</h3>
+    <p>Ibn Arabi introduced the concept of "Nafs al-Rahman" (Breath of the Merciful). He says: "From the breath of the Rahman, the letters of the beings and the words of the world appeared."</p>
+
+    <div class="scholar-box box">
+        "There is nothing wet or dry, hot or cold, inanimate, plant or animal, that does not glorify or praise God with a special tongue." (Al-Futuhat al-Makkiyah)
+    </div>
+
+    <p>He affirms that the entire universe is alive. "The name of the living is the essential name of the reality that exists! ... so what you consider inanimate is actually alive."</p>
+    <p><strong>Animals and Cosmic Consciousness:</strong> Ibn Arabi devoted special attention to animals. He says: "Ibn 'Arabi asserts that bestial beasts possess high knowledge and understanding from God." He believes man is obligated to serve animals to teach him humility.</p>
+
+    <h3>Suhrawardi and the theory of radiance</h3>
+    <p>Suhrawardi presented a theory based on "light". He defines consciousness as "the radiance of the divine light" in all things.</p>
+    
+    <div class="scholar-box box">
+        "Everything other than the light of the lights is overflowing from it... and this radiance is the secret of life and consciousness."
+    </div>
+    
+    <p><strong>Levels of consciousness:</strong> 1) Compelling lights (Angels), 2) Orchestrated lights (Souls), 3) Stools (Physical bodies).</p>
+
+    <h3>Imam Shadhili and the Path to Cosmic Consciousness</h3>
+    <p>According to Imam Shazli, dhikr is the key to sensing cosmic consciousness.</p>
+
+    <div class="scholar-box box">
+        He says: "If you want to hear the praise of things, wash your heart with the water of dhikr, for only inattention can prevent you from hearing the praise of beings."
+    </div>
+
+    <h3>Ibn Atallah al-Sakandari</h3>
+    <p>Ibn Atallah believes that "spiritual awakening" is the beginning of the path to sensing the cosmic consciousness.</p>
+    
+    <div class="scholar-box box">
+        "How can a heart shine when the images of the universes are reflected in its mirror? Or how can it travel to God when it is shackled by its appetites?" (Al-Hakam al-Attiyyah)
+    </div>
+    
+    <p>"This vigilance leads to witnessing the praise of the creatures... 'If the light of certainty were to shine upon you, you would see the Hereafter closer to you than you can travel to it'."</p>
+
+    <h3>Imam al-Shirani and the Praised Universe</h3>
+    <p>Imam al-Shirani recounts a personal revelatory experience about hearing the praise of creatures, saying in his book "Latifat al-Manun wa al-Akhlaq": "One of the blessings of Allah, the Almighty, is that He revealed the veil to me: I heard the praise of inanimate objects and animals... I began to hear the praise of poles, walls, mats and tiles."</p>
+
+    <h3>Jalaluddin Rumi and Cosmic Realization</h3>
+    <p>Jalal al-Din Rumi is one of the greatest Sufi poets. His meeting with Shams al-Din Tabrizi led him to prioritize direct spiritual experience. He believes that the universe is not just deaf matter, but a living, breathing entity.</p>
+    
+    <div class="poetry-box box">
+        "God created the world as a great mirror to reflect His attributes, because it was a hidden treasure that He wished to be known"
+    </div>
+
+    <p>Rumi sees man as an integral part of this conscious universe, having both an outer world and an inner world. He uses the metaphor of the ocean: "You are not a wave in the ocean, you are the whole ocean."</p>
+    <p><strong>Beauty in Pain:</strong> Rumi believes that beauty is found in everything, even in pain. "Pain is the way to healing, and darkness is the way to light." He argues that the heart needs to be "cracked" to open to divine truths.</p>
+    
+    <div class="desc-box">
+        <strong>Personal Reflection on Elif Shafak's "The Forty Rules of Love":</strong> When I opened Turkish author Elif Shafak's The Forty Rules of Adoration, I did not expect to find myself living a spiritual experience that would transport me across the centuries to the world of Islamic mysticism... The most impactful experience was when I realized that each of the Forty Rules carries a profound wisdom that applies to my personal life, especially the idea that "love dissolves all knots while thought ties people in knots". The novel confirmed to me that true mysticism is not just a theoretical teaching but a living experience lived with the heart and soul.
+    </div>
+
+    <h2>The Sufi experience in the balance of Ahl al-Sunnah</h2>
+    <p>The Sufi experience has been criticized by Salafi scholars like Ibn Taymiyyah and Ibn al-Qayyim. Criticisms include:</p>
+    <ul>
+        <li><strong>Exaggeration in interpreting texts:</strong> Ibn Taymiyyah says: "The late Sufis have expanded the interpretation of legal texts."</li>
+        <li><strong>Relying on revelation (kashf):</strong> Ibn al-Qayyim says: "Whoever says: 'I take from where the angel takes from God, not from the Book and the Sunnah,' is a heretic."</li>
+        <li><strong>Mixing Islamic truths with foreign philosophies:</strong> As noted by Muhammad ibn Abd al-Wahhab.</li>
+        <li><strong>Falling into heresies like pantheism:</strong> Al-Shatibi warns against words implying union and dissolution.</li>
+        <li><strong>Exaggerating the life and consciousness of inanimate objects:</strong> Ibn Taymiyyah says: "As for those who say that stones and rocks speak... this is something for which no text or evidence is given."</li>
+    </ul>
+
+    <h2>The sixth research: The Impact of Cosmic Awareness on Muslim Behavior</h2>
+    <p>When a Muslim senses that every creature is praising God, this is reflected in his behavior:</p>
+    <ol>
+        <li><strong>Existential humility:</strong> Realizing every atom worships God generates humility. Abu Bakr al-Siddiq said: "We found generosity in piety, wealth in certainty, and honor in humility."</li>
+        <li><strong>Meditation and reflection on the signs of Allah:</strong> As emphasized by Ibn al-Qayyim: "The best use of breath is to contemplate the signs of Allah."</li>
+        <li><strong>Moral and Behavioral Responsibility:</strong> Modesty and commitment to obeying God. Imam al-Shafi'i said: "There is no good in life... if modesty is gone."</li>
+        <li><strong>Compassion for creatures and animals:</strong> As seen in the example of Umar ibn Abd al-Aziz ordering rest for animals and forbidding heavy loads.</li>
+        <li><strong>Spiritual and Creative Inspiration:</strong> 
+            <ul>
+                <li>In science (Al-Biruni).</li>
+                <li>In art (Islamic architecture's harmony).</li>
+                <li>In poetry (Abu Nawas).</li>
+            </ul>
+        </li>
+    </ol>
+    
+    <div class="poetry-box box">
+        Look at the plant of the earth and see the effects of the king's creation.<br>
+        The earth's plants are as delicate as gold ingots.<br>
+        At the bottom of the glass are witnesses that God is not in control. (Abu Nawas)
+    </div>
+
+    <hr>
+
+    <h2>Conclusion of the chapter</h2>
+    <p>At the end of our journey through the experiences of the conscious universe in the Islamic tradition, we find ourselves in front of a unique cosmic vision that elevates existence from mere deaf matter to a vibrant entity, praising its Creator and responding to His command.</p>
+    <p>This vision, affirmed by the Holy Qur'an, is not just a theoretical concept, but a spiritual experience lived through centuries. From the Companions who heard the stump groan, to the philosophers and mystics who developed profound theories, this vision has influenced the relationship with the universe and the Creator.</p>
+    <p>In the experiences of the followers and predecessors, this vision was deepened and rooted in daily life practices. Philosophers such as Avicenna formulated theories, while mystics like Junayd, Ibn Arabi, and Rumi explored the secrets of conscious existence.</p>
+    <p>Thus, the vision of the universe as a conscious, praising creature is not just a philosophical theory or a mystical meditation, but an integrated call to reconnect with the self, the universe and the Creator at the same time, a call that makes the Muslim a participant in a harmonious cosmic symphony heading towards the Great Creator. In essence, the universe is not deaf matter but a praising spirit, and creatures are partners in praise and worship.</p>
+    <p style="text-align: center; margin-top: 50px; font-weight: bold; color: #2c3e50;"><strong>God knows best and is the wisest.</strong></p>
+
+    <!-- Chapter Navigation -->
+    <div class="chapter-navigation">
+        <a href="index.html" class="nav-btn btn-home">
+            <i class="fas fa-home"></i> Back to Home
+        </a>
+        <a href="chapter9.html" class="nav-btn btn-next">
+            Next Chapter <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+
+</body>
+</html>

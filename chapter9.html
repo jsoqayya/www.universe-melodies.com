@@ -557,6 +557,29 @@
     </style>
 </head>
 <body>
+<!-- Language Switch Button - Added for bilingual support -->
+<a href="en/chapter9.html" style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.6)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(102, 126, 234, 0.4)'">
+    <span>🌐</span>
+    <span>English Version</span>
+</a>
+
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
@@ -1935,5 +1958,105 @@ Robert Lanza, M.D. - Biocentrism
                 });
             }
         </script>
-    </body>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b5b2bbd3d4d39c0',t:'MTc2NzAzMDk1Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
+<!-- أزرار التنقل الموحدة -->
+<div style="display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 60px auto 40px auto; padding: 25px; background: linear-gradient(135deg, #F5F7FA 0%, #E8EEF2 100%); border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); direction: rtl;">
+    <a href="chapter8.html" style="display: inline-flex; align-items: center; padding: 12px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 10px; font-family: 'Tajawal', sans-serif; font-weight: bold; font-size: 1.1em; transition: all 0.3s; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.6)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(102, 126, 234, 0.4)'">
+        ← الفصل السابق
+    </a>
+    
+    <a href="contents.html" style="display: inline-flex; flex-direction: column; align-items: center; padding: 12px 30px; background: white; color: #2C3E50; text-decoration: none; border-radius: 10px; border: 2px solid #3498DB; font-family: 'Tajawal', sans-serif; font-weight: bold; transition: all 0.3s;" onmouseover="this.style.background='#3498DB'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#2C3E50'">
+        🏠 الصفحة الرئيسية
+    </a>
+    
+    <a href="chapter10.html" style="display: inline-flex; align-items: center; padding: 12px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 10px; font-family: 'Tajawal', sans-serif; font-weight: bold; font-size: 1.1em; transition: all 0.3s; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.6)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(102, 126, 234, 0.4)'">
+        الفصل التالي →
+    </a>
+</div>
+
+<!-- قسم التعليقات الموحد -->
+<div style="max-width: 900px; margin: 60px auto; padding: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); direction: rtl;">
+    <h3 style="color: white; text-align: right; font-family: 'Amiri', 'Tajawal', serif; margin-bottom: 25px; font-size: 1.8em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
+        💬 شاركنا رأيك
+    </h3>
+    
+    <textarea 
+        id="commentBox" 
+        placeholder="اكتب تعليقك هنا..."
+        style="
+            width: 100%;
+            min-height: 150px;
+            padding: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 15px;
+            font-size: 1.1em;
+            font-family: 'Tajawal', sans-serif;
+            direction: rtl;
+            resize: vertical;
+            background: rgba(255,255,255,0.95);
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        "
+        onfocus="this.style.borderColor='#ffffff'; this.style.boxShadow='0 0 20px rgba(255,255,255,0.5)'"
+        onblur="this.style.borderColor='rgba(255,255,255,0.3)'; this.style.boxShadow='none'"
+    ></textarea>
+    
+    <button 
+        onclick="submitComment()" 
+        style="
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-family: 'Tajawal', sans-serif;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-weight: bold;
+        "
+        onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'"
+    >
+        ✉️ أرسل تعليقك
+    </button>
+    
+    <div id="commentStatus" style="margin-top: 20px; padding: 15px; border-radius: 10px; display: none; font-family: 'Tajawal', sans-serif;"></div>
+</div>
+
+<script>
+function submitComment() {
+    const commentBox = document.getElementById('commentBox');
+    const statusDiv = document.getElementById('commentStatus');
+    const comment = commentBox.value.trim();
+    
+    if (!comment) {
+        statusDiv.style.display = 'block';
+        statusDiv.style.background = 'rgba(255, 193, 7, 0.9)';
+        statusDiv.style.color = '#000';
+        statusDiv.innerHTML = '⚠️ الرجاء كتابة تعليق قبل الإرسال';
+        setTimeout(() => {
+            statusDiv.style.display = 'none';
+        }, 3000);
+        return;
+    }
+    
+    // هنا يمكن إضافة كود إرسال التعليق إلى السيرفر
+    statusDiv.style.display = 'block';
+    statusDiv.style.background = 'rgba(76, 175, 80, 0.9)';
+    statusDiv.style.color = 'white';
+    statusDiv.innerHTML = '✅ شكراً لك! تم استلام تعليقك بنجاح';
+    commentBox.value = '';
+    
+    setTimeout(() => {
+        statusDiv.style.display = 'none';
+    }, 4000);
+}
+</script>
+
+</body>
     </html>

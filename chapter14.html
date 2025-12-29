@@ -159,6 +159,29 @@
     </style>
 </head>
 <body class="font-sans leading-loose text-lg">
+<!-- Language Switch Button - Added for bilingual support -->
+<a href="en/chapter14.html" style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.6)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(102, 126, 234, 0.4)'">
+    <span>🌐</span>
+    <span>English Version</span>
+</a>
+
 
     <!-- الخلفية النجمية -->
     <div class="stars-container" id="starsContainer"></div>
@@ -492,103 +515,11 @@
                 </div>
             </section>
 
-            <!-- قسم التعليقات -->
-            <section id="comments" class="bg-slate-800/80 backdrop-blur rounded-2xl p-6 md:p-8 mt-12 border border-slate-700">
-                <h3 class="text-2xl font-bold text-nebulaBlue mb-6 border-b border-slate-600 pb-4">
-                    <i class="far fa-comments ml-2"></i>شاركنا تأملاتك
-                </h3>
-                
-                <!-- نموذج إضافة تعليق -->
-                <form class="mb-8" onsubmit="event.preventDefault(); addComment();">
-                    <div class="grid md:grid-cols-2 gap-4 mb-4">
-                        <input type="text" id="nameInput" placeholder="الاسم" class="bg-slate-900 border border-slate-600 text-white rounded p-3 focus:outline-none focus:border-nebulaBlue transition">
-                        <input type="email" placeholder="البريد الإلكتروني (اختياري)" class="bg-slate-900 border border-slate-600 text-white rounded p-3 focus:outline-none focus:border-nebulaBlue transition">
-                    </div>
-                    <textarea id="commentInput" rows="4" placeholder="اكتب تعليقك أو تأملك حول الوعي الكوني..." class="w-full bg-slate-900 border border-slate-600 text-white rounded p-3 mb-4 focus:outline-none focus:border-nebulaBlue transition"></textarea>
-                    <button type="submit" class="bg-nebulaBlue hover:bg-blue-400 text-slate-900 font-bold py-3 px-8 rounded shadow-lg transition transform hover:scale-105">
-                        إرسال التعليق
-                    </button>
-                </form>
-
-                <!-- قائمة التعليقات -->
-                <div id="commentsList" class="space-y-6">
-                    <!-- تعليق تجريبي -->
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-700">
-                        <div class="flex items-center mb-2">
-                            <div class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold ml-3">م</div>
-                            <div>
-                                <h4 class="font-bold text-white">محمد</h4>
-                                <span class="text-xs text-slate-400">منذ ساعة</span>
-                            </div>
-                        </div>
-                        <p class="text-slate-300">مقال رائع يجمع بين عمق الفلسفة وروحانية الإيمان. جزاكم الله خيراً.</p>
-                    </div>
-                </div>
-            </section>
-
-            <footer class="text-center text-slate-500 mt-16 pb-8 text-sm">
-                <p>&copy; جميع الحقوق محفوظة - بحث الكون الواعي</p>
-            </footer>
-
-        </main>
-    </div>
-
-    <script>
-        function createStars() {
-            const container = document.getElementById('starsContainer');
-            const starCount = 100;
-            
-            for (let i = 0; i < starCount; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                const x = Math.random() * 100;
-                const y = Math.random() * 100;
-                const size = Math.random() * 3 + 1;
-                const duration = Math.random() * 3 + 2;
-                
-                star.style.left = `${x}%`;
-                star.style.top = `${y}%`;
-                star.style.width = `${size}px`;
-                star.style.height = `${size}px`;
-                star.style.setProperty('--duration', `${duration}s`);
-                
-                container.appendChild(star);
-            }
-        }
-
-        // سكربت بسيط لإضافة تعليق (واجهة فقط)
-        function addComment() {
-            const name = document.getElementById('nameInput').value || 'زائر';
-            const text = document.getElementById('commentInput').value;
-            
-            if (!text) return alert('الرجاء كتابة تعليق');
-
-            const commentsList = document.getElementById('commentsList');
-            const newComment = document.createElement('div');
-            newComment.className = 'bg-slate-900 p-4 rounded-lg border border-slate-700 animate-fade-in';
-            newComment.innerHTML = `
-                <div class="flex items-center mb-2">
-                    <div class="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center text-white font-bold ml-3">${name[0]}</div>
-                    <div>
-                        <h4 class="font-bold text-white">${name}</h4>
-                        <span class="text-xs text-slate-400">الآن</span>
-                    </div>
-                </div>
-                <p class="text-slate-300">${text}</p>
-            `;
-            
-            commentsList.insertBefore(newComment, commentsList.firstChild);
-            document.getElementById('commentInput').value = '';
-            document.getElementById('nameInput').value = '';
-        }
-
-        window.onload = createStars;
-    </script>
-
     <!-- روابط التنقل بين الفصول -->
     <div class="max-w-4xl mx-auto px-6 py-8">
         <div class="flex justify-between items-center border-t border-slate-700 pt-6">
-            <a href="chapter13.html" class="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-teal-600 to-teal-700 text-white rounded-lg hover:from-teal-700 hover:to-teal-800 transition-all shadow-lg hover:shadow-teal-500/50">
+            
+    <a href="chapter13.html" class="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-teal-600 to-teal-700 text-white rounded-lg hover:from-teal-700 hover:to-teal-800 transition-all shadow-lg hover:shadow-teal-500/50">
                 <i class="fas fa-arrow-right"></i>
                 <span>الفصل السابق: التصميم الذكي في الكون</span>
             </a>
@@ -602,5 +533,89 @@
             </a>
         </div>
     </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b5b2bc52a19db3c',t:'MTc2NzAzMDk1Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<!-- قسم التعليقات الموحد -->
+<div style="max-width: 900px; margin: 60px auto; padding: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); direction: rtl;">
+    <h3 style="color: white; text-align: right; font-family: 'Amiri', 'Tajawal', serif; margin-bottom: 25px; font-size: 1.8em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
+        💬 شاركنا رأيك
+    </h3>
+    
+    <textarea 
+        id="commentBox" 
+        placeholder="اكتب تعليقك هنا..."
+        style="
+            width: 100%;
+            min-height: 150px;
+            padding: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 15px;
+            font-size: 1.1em;
+            font-family: 'Tajawal', sans-serif;
+            direction: rtl;
+            resize: vertical;
+            background: rgba(255,255,255,0.95);
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        "
+        onfocus="this.style.borderColor='#ffffff'; this.style.boxShadow='0 0 20px rgba(255,255,255,0.5)'"
+        onblur="this.style.borderColor='rgba(255,255,255,0.3)'; this.style.boxShadow='none'"
+    ></textarea>
+    
+    <button 
+        onclick="submitComment()" 
+        style="
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-family: 'Tajawal', sans-serif;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-weight: bold;
+        "
+        onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'"
+    >
+        ✉️ أرسل تعليقك
+    </button>
+    
+    <div id="commentStatus" style="margin-top: 20px; padding: 15px; border-radius: 10px; display: none; font-family: 'Tajawal', sans-serif;"></div>
+</div>
+
+<script>
+function submitComment() {
+    const commentBox = document.getElementById('commentBox');
+    const statusDiv = document.getElementById('commentStatus');
+    const comment = commentBox.value.trim();
+    
+    if (!comment) {
+        statusDiv.style.display = 'block';
+        statusDiv.style.background = 'rgba(255, 193, 7, 0.9)';
+        statusDiv.style.color = '#000';
+        statusDiv.innerHTML = '⚠️ الرجاء كتابة تعليق قبل الإرسال';
+        setTimeout(() => {
+            statusDiv.style.display = 'none';
+        }, 3000);
+        return;
+    }
+    
+    // هنا يمكن إضافة كود إرسال التعليق إلى السيرفر
+    statusDiv.style.display = 'block';
+    statusDiv.style.background = 'rgba(76, 175, 80, 0.9)';
+    statusDiv.style.color = 'white';
+    statusDiv.innerHTML = '✅ شكراً لك! تم استلام تعليقك بنجاح';
+    commentBox.value = '';
+    
+    setTimeout(() => {
+        statusDiv.style.display = 'none';
+    }, 4000);
+}
+</script>
+
 </body>
 </html>

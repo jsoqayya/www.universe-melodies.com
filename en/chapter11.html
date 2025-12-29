@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        :root {
+            /* Cosmic Palette */
+            --primary-color: #1a237e; /* Deep Indigo */
+            --secondary-color: #311b92; /* Deep Purple */
+            --accent-color: #00bcd4; /* Cyan */
+            --text-color: #263238;
+            --bg-color: #f3f4f6;
+            
+            /* Box Colors */
+            --box-quran-bg: #e0f2f1;
+            --box-quran-border: #00695c;
+            --box-theory-bg: #e8eaf6;
+            --box-theory-border: #283593;
+            --box-quote-bg: #fff3e0;
+            --box-quote-border: #e65100;
+            --box-reflection-bg: #f3e5f5;
+            --box-reflection-border: #7b1fa2;
+            --box-desc-bg: #eceff1;
+            --box-desc-border: #455a64;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 50px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            border-top: 10px solid var(--secondary-color);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Orbitron', sans-serif; /* Sci-fi feel for headings */
+            color: var(--primary-color);
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            border-bottom: 4px solid var(--accent-color);
+            padding-bottom: 20px;
+            margin-top: 0;
+            color: #1a237e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 1.9em;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: linear-gradient(to right, #e8eaf6, #ffffff);
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 60px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #455a64;
+            border-bottom: 2px dashed #b0bec5;
+            padding-bottom: 10px;
+            font-family: 'Merriweather', serif;
+        }
+
+        p {
+            font-size: 1.15em;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            font-size: 1.1em;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        /* Table of Contents */
+        .toc-container {
+            background-color: #eceff1;
+            border: 1px solid #cfd8dc;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 1px solid #b0bec5;
+            font-size: 1.05em;
+        }
+
+        th {
+            background-color: var(--secondary-color);
+            color: white;
+            font-weight: 700;
+            font-size: 1.1em;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        tr:hover {
+            background-color: #cfd8dc;
+        }
+
+        /* Custom Boxes */
+        .box {
+            padding: 25px;
+            margin: 35px 0;
+            border-radius: 8px;
+            border-left-width: 8px;
+            border-left-style: solid;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .desc-box {
+            background-color: var(--box-desc-bg);
+            border-left-color: var(--box-desc-border);
+            font-style: italic;
+            color: #37474f;
+        }
+        .desc-box::before {
+            content: "Chapter Overview";
+            display: block;
+            font-weight: bold;
+            color: var(--box-desc-border);
+            text-transform: uppercase;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .quran-box {
+            background-color: var(--box-quran-bg);
+            border-left-color: var(--box-quran-border);
+            font-family: 'Merriweather', serif;
+        }
+        .quran-box::before {
+            content: "Quranic Verse";
+            display: block;
+            font-weight: bold;
+            color: var(--box-quran-border);
+            text-transform: uppercase;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .theory-box {
+            background-color: var(--box-theory-bg);
+            border-left-color: var(--box-theory-border);
+        }
+        .theory-box::before {
+            content: "Scientific Theory / Concept";
+            display: block;
+            font-weight: bold;
+            color: var(--box-theory-border);
+            text-transform: uppercase;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .quote-box {
+            background-color: var(--box-quote-bg);
+            border-left-color: var(--box-quote-border);
+            font-style: italic;
+        }
+        .quote-box::before {
+            content: "Quote / Perspective";
+            display: block;
+            font-weight: bold;
+            color: var(--box-quote-border);
+            text-transform: uppercase;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .reflection-box {
+            background-color: var(--box-reflection-bg);
+            border-left-color: var(--box-reflection-border);
+        }
+        .reflection-box::before {
+            content: "Reflection / Imagination";
+            display: block;
+            font-weight: bold;
+            color: var(--box-reflection-border);
+            text-transform: uppercase;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .image-placeholder {
+            background-color: #fafafa;
+            border: 2px dashed #90a4ae;
+            padding: 20px;
+            color: #546e7a;
+            margin: 30px 0;
+            font-size: 1em;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #cfd8dc;
+            margin: 60px 0;
+        }
+
+        /* Enhanced Box Styling */
+        .box {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Navigation Buttons */
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid var(--accent-color);
+        }
+        .nav-btn {
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-home {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-home:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .btn-next {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        .btn-next:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switch Button -->
+    <div style="position: fixed; top: 80px; right: 20px; z-index: 9999;">
+        <a href="../chapter11.html" style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;">
+            <span>🌐</span>
+            <span>النسخة العربية</span>
+        </a>
+    </div>
+
+    <!-- Language Switcher -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <a href="../chapter11.html" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-family: 'Roboto', sans-serif; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fas fa-language"></i> العربية
+        </a>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="container">
+
+    <h1>Chapter Eleven <br>The Seven Heavens and the Multiverse: Integrating the Qur'anic and Scientific Perspective</h1>
+
+    <div class="box desc-box">
+        <strong>Chapter Description:</strong> Chapter 11 takes a deep dive into one of the most exciting and complex concepts at the intersection of religion and modern science, examining the relationship between the Qur'anic references to the seven heavens and seven earths and contemporary scientific theories that propose the idea of multiple universes and parallel worlds. The chapter begins with a careful analysis of the Qur'anic texts that refer to the multiplicity of heavens and earths, reviewing the interpretations of scholars throughout history and comparing traditional interpretations with contemporary understanding in light of recent astronomical discoveries. The chapter reveals the fundamental differences in intellectual approaches between the Islamic mind, which searches for the purpose and wisdom behind existence, and the contemporary Western mind, which focuses on mechanisms without questioning the higher purposes. Through careful scientific comparisons, the chapter reviews the evolution of cosmological theories from the Big Bang to the theory of the inflated universe to the latest conceptualizations of the multiverse, highlighting the surprising correspondences with Qur'anic references that predate these theories by more than fourteen centuries. <br><br>
+        The chapter also discusses scientific criticisms of the multiverse theory and its methodological limitations, with a special analysis of Ibn Abbas's pioneering interpretation of the seven earths and the sentient beings they contain, and how this interpretation intersects with modern theories of parallel universes. The chapter links these cosmological concepts to the topic of cosmic consciousness and the praised universe, raising deep questions about the nature of consciousness and perception across different universes, and concludes with an interactive invitation for the reader to engage in intellectual reflections and scientific and spiritual activities that enable him to explore these deep concepts for himself and reach a deeper understanding of the relationship between divine revelation and the discoveries of modern science.
+    </div>
+
+    <div class="toc-container">
+        <h3>Table of contents</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Topic title</th>
+                    <th>Page number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Introduction: Between the lights of revelation and the horizons of science</td><td>5</td></tr>
+                <tr><td>First research: The concept of multiverses in the Qur'an</td><td>6</td></tr>
+                <tr><td>Research II: Between Science Fiction and Qur'anic Reality</td><td>10</td></tr>
+                <tr><td>Research III: Between the Arab and Western Minds: Different Approaches to Existence</td><td>17</td></tr>
+                <tr><td>Research IV: A Comparison between the Qur'anic Perspective and Scientific Theories</td><td>20</td></tr>
+                <tr><td>Exhibit V: From the Big Bang to the Multiverse</td><td>22</td></tr>
+                <tr><td>Section VI: Developments in Multiverse Theory</td><td>27</td></tr>
+                <tr><td>Chapter Seven: Scientific Criticism of the Multiverse Theory</td><td>28</td></tr>
+                <tr><td>Topic VIII: Parallel Worlds in Ibn Abbas' Tafsir and its compatibility with the theories of modern science</td><td>29</td></tr>
+                <tr><td>Chapter Nine: Cosmic Consciousness and the Multiverse</td><td>33</td></tr>
+                <tr><td>The tenth research: A Contemplative Journey Through the Multiverse - An Invitation to Reflection and Discovery</td><td>39</td></tr>
+                <tr><td>Conclusion: Future Prospects</td><td>45</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Introduction: Between the lights of revelation and the horizons of science</h2>
+    
+    <div class="box quran-box">
+        "Allah is He Who created seven Firmaments and of the earth a similar number. Through the midst of them (all) descends His Command: that ye may know that Allah has power over all things, and that Allah comprehends, all things in His Knowledge"<br>
+        (Al-Talaq 12).
+    </div>
+
+    <p>In the vastness of the universe, where twinkling stars testify to the greatness of the Creator, and where distant galaxies paint the canvas of divine creativity, existence is revealed to us as an open book, each line of which awakens in us. Every line in it awakens in us a sense of awe ... and a call to praise.</p>
+    <p>Every day mankind discovers a new secret of the universe. You become more and more certain that there is absolute wisdom and infinite knowledge behind this elaborate system. For more than fourteen centuries, the Qur'an has been pointing to truths that modern science is still struggling to understand.</p>
+
+    <p>In this chapter, we look at one of the greatest of these cosmic references: The idea of a "multiverse", or in Qur'anic terms, "the seven heavens". If this noble verse - in Surat al-Talaq - refers to the existence of seven heavens, and even lands like them, it opens a horizon for understanding the plurality of cosmic structures and hints at a reality too great to be summarized in a single universe.</p>
+
+    <div class="box quote-box">
+        Dr. Mansour Abu Sharia says in his paper "Multiverses in the Holy Qur'an and Modern Science":<br>
+        "The Holy Qur'an has explicitly and clearly emphasized in many verses the existence of other universes other than this observable universe in which we live, inhabited by different types of sapient beings. On the other hand, modern scientific theories in the fields of physics and astronomy indicate a high probability of the existence of other universes other than our universe, which they called by different names such as parallel universes, multiverses, infinite universes, and bubble universes"<br>
+        (Abu Sharia, 2018, p. 3).
+    </div>
+
+    <p>In this cognitive journey, we will explore the deep connection between what the revelation tells us and what modern science has achieved, and we will contemplate the worlds of the multiverse and their praise of the great Creator.</p>
+
+    <hr>
+
+    <h2>First research: The concept of multiverses in the Qur'an</h2>
+    <p>The Holy Qur'an deals with the subject of the heavens and the earth in detail in many verses, referring to God's creation of the seven heavens and seven earths. The seven heavens are explicitly mentioned in the Qur'an, while the existence of the seven earths is inferred from the interpretation of the Qur'anic saying: 'And from the earth like them'.</p>
+
+    <h3>The Seven Heavens in the Qur'an</h3>
+    <p>The seven heavens are explicitly mentioned in several verses of the Holy Qur'an, which confirms that they are an established cosmic reality. These verses include:</p>
+    
+    <div class="box quran-box">
+        "He who created seven heavens in layers. You do not see in the creation of the Most Merciful any inconsistency. So return [your] vision—do you see any breaks?"<br>
+        [Surah Al ‑ Mulk: 3]
+    </div>
+    
+    <div class="box quran-box">
+        "“Do you not see how Allah has created the seven heavens, one above another?"<br>
+        [Noah: 15]
+    </div>
+
+    <div class="box quran-box">
+        "And He completed them as seven heavens within two days and inspired in each heaven its command. And We adorned the nearest heaven with lamps and as protection. That is the determination of the Exalted in Might, the Knowing.."<br>
+        [Fuslat: 12]
+    </div>
+
+    <p>It is clear from these verses that the heavens are seven, and that they are arranged on top of each other. The verses describe the lower sky (closest to us) as being decorated with lamps (stars).</p>
+
+    <h3>The Seven Earths in the Qur'an</h3>
+    <div class="box quran-box">
+        "Allah is He Who created seven Firmaments and of the earth a similar number. Through the midst of them (all) descends His Command: that ye may know that Allah has power over all things, and that Allah comprehends, all things in His Knowledge"<br>
+        (Al-Talaq 12).
+    </div>
+
+    <p><strong>Semantics of the term "like them" in Almighty Allah</strong></p>
+    <p>The interpreters differed on the interpretation of Almighty Allah's saying: "And from the earth like them" on several statements:</p>
+    <ul>
+        <li><strong>The first statement:</strong> The proponents of this view believe that what is meant by "like them" is the same as the seven heavens in number only, i.e. that the two lands are seven as the heavens are seven, and this is the opinion of the majority of commentators.
+            <br><em>Ibn Kathir (may Allah have mercy on him) said in the explanation of the verse: 'Allah, who created seven heavens and from the earth like them': "That is: Seven as well."</em></li>
+        <li><strong>The proponents of the second view</strong> believe that what is meant by "like them" is not the number, but the similarity in creation, creativity and perfection. However, this view is weak, and the first view is favored by Qurtubi and others.</li>
+    </ul>
+
+    <h3>The order descends between the heavens and the earth: Significance and meanings</h3>
+    <p>In the verse: 'The command descends between them', it refers to the transmission of God's command, judgment and rulings between the heavens and the earth. There are several interpretations of the meaning of "command" and how it descends:</p>
+    
+    <p><strong>The first meaning: Cosmic and fatalistic order</strong><br>
+    God's cosmic (fatalistic) order descends between the heavens and the earth, carrying out His judgment in all of His creation.<br>
+    Al-Saadi (may Allah have mercy on him) said: "And He sent down the command, which is the religious laws and rulings that He revealed to His messengers to remind and admonish His servants, as well as the cosmic and fatalistic commands by which He manages the creation."</p>
+
+    <p><strong>The second meaning: Legal order</strong><br>
+    God's legal command (revelation) descends from heaven to earth through the angels to the messengers.<br>
+    Tafsir al-Tabari quotes Mujahid as saying: "The command descends between them," he said, "from the seventh heaven to the seventh earth."</p>
+    
+    <p>The wisdom of the order descending between the heavens and the earth is explained by God at the end of the verse: "So that you may know that God is all-powerful and that God is all-knowing. The goal is to show God's omnipotence and omniscience, and to make the argument to people.</p>
+
+    <h3>Exegetes' Views on the Multiverse</h3>
+    <p>Ancient exegetes did not address the term "multiverse" in the modern scientific sense, but dealt with the seven heavens and seven earths. In modern times, however, trends have emerged that link the concept of the seven heavens in the Qur'an with the theory of multiple universes in modern astrophysics.</p>
+
+    <ol>
+        <li><strong>Traditional view among exegetes:</strong> Most exegetes interpreted the seven heavens as seven layers on top of each other. They also interpreted the seven earths as seven layers of the earth, and differed in their order and how they are arranged. Ibn Kathir said: "It was mentioned in Surat al-Hadid the mention of the seven lands and the distance between them, and the density of each of them is five hundred years."</li>
+        <li><strong>Contemporary Scientific Opinion:</strong> Some contemporary researchers believe that the concept of the seven heavens in the Holy Qur'an is consistent with the multiverse theory put forward by modern physicists. They believe that the Holy Quran referred to the existence of multiple universes other than our universe by the term "the seven heavens".
+        <br>Dr. Mansour Abu Shari'ah al-Abadi says: "The Holy Quran has explicitly and clearly emphasized in many verses the existence of other universes other than this observable universe in which we live, which are inhabited by different types of sane beings, as stated in the words of Almighty God: Allah, who created seven heavens and the same from the earth."</li>
+        <li><strong>The conservative view of the multiverse theory:</strong> Some contemporary scholars believe that the multiverse theory does not amount to a confirmed scientific hypothesis, and therefore should not be dismissed or directly linked to the Qur'anic texts.</li>
+    </ol>
+
+    <div class="box quote-box">
+        According to a fatwa on IslamWeb: "What is known as multiverses or parallel universes does not amount to a scientific hypothesis, let alone a scientific theory! Rather, it is closer to imagination and philosophical fantasies, devoid of material evidence and scientific proofs... The rule in such matters is that they should be treated as unseen, and it is not permissible to deal with them without evidence from a valid transmission or clear reason."
+    </div>
+
+    <p><strong>To summarize</strong><br>
+    The Qur'an explicitly mentions the existence of seven heavens.<br>
+    1.The scholars inferred the existence of seven earths from the saying: 'And from the earth like them', and it is confirmed by authentic hadiths.<br>
+    2.The exegetes differed on the meaning of "like them", and the public believes that the meaning is similar in number.<br>
+    3.The order descends between the heavens and the earth, including cosmic and legal orders, which indicates the perfection of God's ability and the comprehensiveness of His knowledge.<br>
+    4.There are various opinions of scholars in linking the seven heavens to the theory of the multiverse, between those who support this linkage and those who are conservative and call for stopping what the evidence does not show.<br>
+    5. The safest thing to do is to believe in the existence of the seven heavens and seven earths, and not to try to interpret them without evidence.</p>
+
+    <p>The Holy Qur'an has explicitly and clearly emphasized in many verses the existence of other universes other than this observable universe in which we live, which are inhabited by different types of sane beings, as stated in the words of Almighty God:</p>
+    <div class="box quran-box">
+        "Allah is He Who created seven Firmaments and of the earth a similar number. Through the midst of them (all) descends His Command: that ye may know that Allah has power over all things, and that Allah comprehends, all things in His Knowledge"<br>
+        (Al-Talaq 12).
+    </div>
+
+    <p>The previous verse states that the purpose of Allah's telling humans that there are seven years and seven lands is, firstly, to demonstrate His Almighty power, secondly, to convince humans that Allah's knowledge encompasses all the details of this universe, and thirdly, that the command is revealed between them, which is revelation.</p>
+    <p>One might say: How can humans ascertain the existence of seven years when they are still ignorant of many of the components of the first sky that obscure the rest of the years above it?<br>
+    The way that God Almighty intended for humans to ascertain the existence of these heavens is firstly through the use of this wondrous mind that God Almighty created for them, and secondly, He created all the components of this universe according to specific physical laws and over specific periods of time that humans can find the stages of their creation through scientific research.</p>
+
+    <hr>
+
+    <h2>Research II: Between Science Fiction and Qur'anic Reality</h2>
+    <p>To get lost in this verse, I recommend watching <strong>Fringe</strong>, a series that investigates mysterious incidents that ultimately lead to the existence of a parallel world that can be accessed through portals.</p>
+    
+    <div class="box reflection-box">
+        Fringe revolves around a special FBI research unit that investigates strange phenomena that defy the limits of science and reason. As the episodes unfold, clues lead to the existence of a parallel universe, much like ours, but different in small details that have accumulated as a result of different choices.
+    </div>
+
+    <p>One of the show's most profound philosophical concepts is that human decisions don't just end up reflecting on this world, but can lead to various cosmic ramifications. In one of the most profound dialogues, Walter Bishop says: "Choice... is what makes the difference. In every universe, there's a different version of us because of a different choice we once made."</p>
+
+    <h3>Between the fantasy of art and the reality of revelation</h3>
+    <p>This is where the idea meets the contemplation of the Almighty:</p>
+    <div class="box quran-box">
+        "Allah, who created seven heavens and the like of them from the earth"<br>
+        [Al-Talaq: 12].
+    </div>
+
+    <p>Some contemporary thinkers speculate that the word "like them" may imply the existence of other lands similar to ours, which inspires some researchers to argue for the existence of "parallel worlds", in the form of "multiple universes" within the vast divine creation, although this meaning is not explicit in the Qur'anic text and remains within the realm of speculation.</p>
+    <p>But the central point remains that the Qur'an does not forbid imagining multiple worlds, but rather leaves the door open for contemplation by saying: Praise be to God, the Lord of the Worlds - in the plural, not the singular, which opens the way for interpreting "worlds" as wider than our known earthly world.</p>
+
+    <h3>The Sermon on the Mount</h3>
+    <p>What is striking about Fringe's experience is not just the visualization of the universes, but the moral message behind it: That science, when divorced from wisdom, leads to destruction; that good intentions may not justify breaking the laws of the universe without realizing the consequences; and that every decision has a price, no matter how trivial it may seem.</p>
+    <p>Although Fringe is not based on a religious reference, its content encourages the exploration of larger meanings: Do we live in just one universe, or are we part of a larger mosaic? And if there are multiple universes, are they governed by the same laws, or does each universe have its own laws?</p>
+    <p>The Qur'an does not aim to present a "physical model of the universe," but it does open up horizons of contemplation that sometimes intersect, indirectly, with the deepest questions posed by science and art, each from its own angle.</p>
+    <p>Thus, between the truth of revelation and the experience of imagination, the "universes" remain an open door to a deeper understanding of the greatness of the Creator, the vastness of his providence, and the wonder of man before the mystery of existence.</p>
+    <p>There are several films that have approached the idea of multiverses in different ways, such as "Doctor Strange in the Multiverse of Madness" (2022), which explores the idea of the multiverse from an epic perspective, and "Everything Everywhere All at Once" (2022), which offers a more philosophical approach to the same idea.</p>
+    <p>I remember a night I spent in the desert looking up at the clear sky and thinking about the possibility of universes other than our own. I was looking at the distant stars and wondering: Are there worlds parallel to ours in this infinite space? Are there beings living in them who contemplate the sky as I am contemplating it now? The idea that the Quran referred to the existence of seven heavens and seven earths fourteen centuries ago, when humanity didn't even have simple telescopes, struck me as deeply surprising and increased my belief in the miracle of this great book.</p>
+
+    <div class="image-placeholder">
+        
+    </div>
+
+    <h3>Hidden worlds: Between the diversity of creation and the unity of destiny</h3>
+    <p>In contemporary Western culture, the idea of parallel universes, in which nearly identical versions of people appear, as if every small decision creates a "parallel universe" with its new offshoots, is widely celebrated. Works of science fiction, from cinema to literature, are preoccupied with this recurring motif: The same cities, the same people, familiar faces, but with differences in fate or event.</p>
+    <p>But I find this visualization superficial and reductive of the greatness of God's ability to create and diversify. I believe that other worlds - if they exist, as the Qur'an alludes to - are radically different from ours: In their laws, their biology, and even sentient life forms that may be examined and have messages and revelations like us, without resembling us in creation or form.</p>
+
+    <h3>Diverse Creation by Absolute Will</h3>
+    <div class="box quran-box">
+        "And Allah has created from water every [living] creature. And of them are those that move on their bellies, and of them are those that walk on two legs, and of them are those that walk on four. Allah creates what He wills. Indeed, Allah is over all things competent."<br>
+        [Al-Nur: 45].
+    </div>
+
+    <p>If there is such great diversity in the beings of our world alone, how about other worlds? Can there not be creatures that walk on more than four legs, fly with natural wings, breathe in light, or communicate with mind waves? God creates what He wills.</p>
+    <p>In his book <em>The Hidden Truth: Parallel Universes and the Deep Laws of the Universe</em>, physicist Brian Greene points out that theories such as the "inflationary universe" suggest the existence of other universes, each with its own physical laws, which may produce forms of life and consciousness unimaginable under the laws of our known universe:</p>
+    <p>According to Brian Greene's vision in The Hidden Reality, models of cosmic inflation point to the possibility of "bubbles" or multiple universes arising in an ongoing inflationary process. This opens the door to the possibility of forms of life and reality that are radically different from what we know in our universe (Greene, 2011, p202.)</p>
+
+    <h3>Deep questions about parallel universes</h3>
+    <p>Deep in the silent cosmic night, where distant stars dance like secrets written in ink of light, my mind is haunted by questions that echo across infinite spaces. There, in the hidden folds of existence, in those universes beyond the reach of our eyes and senses, lie questions that weigh on the soul and ignite the imagination:</p>
+    <ul>
+        <li>In what corner of infinity do they now lie?</li>
+        <li>What great achievements have they woven into the carpet of cosmic history?</li>
+        <li>Do they watch sunsets different from ours, or does the very concept of time itself move in a different rhythm?</li>
+        <li>How do the hearts of wisdom beat in their worlds?</li>
+        <li>Do dreams and hopes dwell in their chests as they do in ours? Or do they live with a consciousness of another nature, flowing like a river in a directionless stream?</li>
+        <li>Do they laugh and cry? Do they love and grieve? Or are their emotions of a kind we have no name for?</li>
+        <li>What celestial messages have descended upon their souls? In the deep silence of the universe, do they echo divine words tailor-made for their hearts? Have their foreheads prostrated themselves on the dust of other worlds to one Lord? Or do their paths of guidance follow paths whose maps we don't know, leading them to the same light in ways we never imagined?</li>
+        <li>How far have their ships of knowledge traveled? Have their minds pierced the veils of secrets that we are still puzzled by? Or are they still at the beginning of their journey of discovery, groping in the darkness of the unknown as we do?</li>
+        <li>Have they invented machines that span distances and break the constraints of time? Or have they discovered deeper truths than we can imagine?</li>
+        <li>Did the blood of war stain their lands? Have they drifted into conflict and destruction? Have they discovered nuclear weapons that threaten their planets? Did they build great civilizations and then destroy them with their own hands? Or did they learn the lessons of peace before war taught them its cruelty?</li>
+        <li>At this very moment, are they looking for survival? Do their eyes stay up at night as ours do, gazing at the stars and asking: "Is anyone out there?" Do they feel the same cosmic loneliness that we do? Do they, like us, dream of a day when their voice breaks the cosmic silence and reaches other hearts beating somewhere, sometime, in another universe?</li>
+    </ul>
+    <p>These questions sail us into oceans of wonder, reminding us that existence is bigger, deeper and more mysterious than our narrowest perceptions. And perhaps, somewhere across the folds of space and time, someone is asking the same questions... about us.</p>
+
+    <h3>Mirror of universes: Creation through the walls of existence</h3>
+    <p>Imagine that you are standing in an enormous glass hall, stretching to infinity. In front of you are rows of transparent glass walls, and behind each of them is an earth-like land... But it's not Earth. In one, the earth is blue and the oceans are green. In another, creatures fly with natural wings.</p>
+    <p>This metaphor opens a window into the concept of multiverses, not as duplicates of our world as many imagine, but as fundamentally unique worlds, governed by different laws and inhabited by different creatures.</p>
+
+    <h3>The Qur'an and the vision of cosmic diversity</h3>
+    <p>The Qur'an refers in multiple places to seven heavens and seven earths, suggesting to many modern interpreters and thinkers the existence of distinct worlds.</p>
+    <p>The Quran's reference to seven heavens and seven earths suggests the existence of other worlds other than ours, which may be inhabited by rational creatures that differ in nature and composition from us, and to whom divine messages are revealed as they are revealed to us.</p>
+
+    <div class="image-placeholder">
+        
+    </div>
+
+    <h3>The final meeting... When universes meet</h3>
+    <p>What a great situation that our imagination can't grasp... All in one place: The first and the last, from this world and from other universes about which we only know what God wants us to know. Worlds separated by immeasurable distances, laws that do not resemble our laws, and configurations that do not occur to a human heart - but all of them, despite their differences, are gathered in one great situation.</p>
+    <div class="box quran-box">'Owner of the Day of Judgment' [Al-Fatiha: 4]</div>
+    <p>Imagine the scene Before the throne, cosmic distinctions vanish, the laws that have governed every universe are silenced, and all are subject to one single rule with no exceptions: Divine Justice.</p>
+    <p>The seven heavens and their inhabitants and the seven earths and their inhabitants meet, and it becomes clear that everything we thought was separate was in fact a march towards one unifying moment. Pure servitude to God becomes the only link, the great truth before which all illusions of multiplicity, difference, and distinction fall away. With all this immense diversity, with all this spatial and physical separation, the fate remains the same. All those in the heavens and the earth, in between, and under the earth, will one day stand in one cosmic court.</p>
+    <p>We may differ from them in bodies, or in thought patterns, or in ways of life... But all of us - us and them - are required to answer the same question: Have we responded to the message of our Lord? Have we truly worshipped Him?</p>
+    <p>No matter how different the paths of the universes may be, no matter how diverse the forms of creation may be, the end is the same, the fate is the same, and the position is the same. "To Him belongs the destiny" [Al-Hadid: 5]</p>
+
+    <div class="image-placeholder">
+        
+    </div>
+
+    <hr>
+
+    <h2>Research III: Between the Arab and Western Minds: Different Approaches to Existence</h2>
+    <p>Throughout intellectual and scientific history, the Arab and Islamic mind continued to look at the universe in a holistic manner, blending the apparent and the future, the phenomenon and the intent, while the Western mind left its logical and empirical approach in its contemporary path towards observation, analysis, philosophy, and imagination without regard to consequences or ends.</p>
+    <p>This fundamental difference manifested itself in the treatment of the idea of multiple universes-one of the most controversial issues in modern physics. It has been embraced by a number of Western thinkers, even outside the realm of strict specialization, sometimes pushing the boundaries of empiricism towards open-ended philosophical conclusions, many of which tend to emphasize the role of chance rather than design, and justify the existence of this universe by mere statistical probability.</p>
+    <p>While Islamic thought is based on the premise that everything is created for wisdom and that there is a higher purpose behind every order in existence, the dominant paradigm in modern Western scientific philosophy shies away from asking the question "why?" and focuses only on the question "how?"</p>
+    <p>Perhaps one of the most fundamental differences between the Arab-Islamic and contemporary Western approaches to the issue of multiverses is the issue of teleology. The Arab-Islamic mind proceeds from the premise that the universe - with all its complexities, dimensions and worlds - is designed with purpose and wisdom, and has a final purpose.</p>
+    <p>Whereas the contemporary secular Western mind tends to evade the question of purpose and intent, and is content with looking at mechanisms and laws.</p>
+
+    <div class="box quote-box">
+        At a science conference, a prominent Western physicist was asked a simple question: "What is the point of a possible multiverse?" He answered without hesitation: "Science doesn't care about ends, only mechanisms." This answer was not so much surprising as it was telling of the gap between the two schools of thought.
+    </div>
+
+    <h3>Symbolic examples of two different views</h3>
+    <p>In comparing the story of Robinson Crusoe (famous in Western children's literature) to the Andalusian Ibn Tufail's story (Hayy ibn Yaqzan), Malik Ben Nabi points out that the human mind, bathed in the light of the upper world, reaches the truths of the universe and existence by instinct and meditation until it finds the existence of the Creator.</p>
+    <p>In his book "Conditions of Renaissance", Malik Ben Nabi pointed out that the novel of the English novelist "Robinson Crusoe" (a cartoon series) is about the sensual and material worlds only and has no reference to what is beyond the material world, and that his story was preoccupied with the requirements of eating, sleeping and manufactured materials, while Hayy ibn Yaqzaan in Ibn Tufail's novel was busy searching for the truth of existence and meditating on death and life until the existence of the Creator (Ben Nabi, Conditions of Renaissance 1986, p. 99).</p>
+    <p>We also find that the Western mindset on a scientific intellectual topic such as multiverses tends to have the same approach of favoring the idea of uniformity in people, places and universes, and avoiding mentioning the most important question in existence: Who created these worlds?</p>
+    <p>This symbolic difference reveals a mind that is oriented towards the sky, as opposed to a mind that is tied to the earth, oriented to matter without what is beyond it.</p>
+
+    <h3>Toward rebalancing</h3>
+    <p>The Western mind, despite its analytical power and mathematical abstraction, suffers from a spiritual and philosophical gap that manifests itself when dealing with issues that go beyond pure physics-such as the origin of life, consciousness, and the question of destiny.</p>
+    <p>In contrast, the Islamic mind has the ability to incorporate the unseen into the structure of thinking, not as an escape from interpretation, but as a conjuring of meaning and a reminder that science is not complete unless it leads to knowledge of the self and the Lord of the self.</p>
+    <p>The multiverse approach seems to be a profoundly symbolic test of human thought:<br>
+    Do we explain everything in terms of probability, or do we see multiplicity as an elaborate system with a purpose?<br>
+    Are we the children of a cosmic coincidence, or are we creatures created with knowledge and destiny?</p>
+    <p>The Creator has placed us in the hands of His signs in the souls and horizons, and left us free to search, but He asked us to look with two eyes: One eye scrutinizes the "how" and the other contemplates the "why".<br>
+    It is not enough to explain the phenomena, we must be guided by the meanings.</p>
+
+    <div class="image-placeholder">
+        
+    </div>
+
+    <hr>
+
+    <h2>Research IV: A Comparison between the Qur'anic Perspective and Scientific Theories</h2>
+    <p>When Revelation Meets Science. At a time when the discoveries of cosmic physics are accelerating at an astonishing pace and opening up to amazing concepts such as multiverses, hidden dimensions, and the history of the universe from the moment of its first explosion, it is legitimate to ask the question of whether the Quranic discourse was merely a devotional religious discourse:<br>
+    Was the Qur'anic discourse merely a devotional religious discourse?<br>
+    Or did it carry within its words precise scientific references that could not have been the product of human culture in the seventh century AD?</p>
+    <p>Human beings used to separate religious texts from scientific discoveries, considering the former as a field of belief and the latter as a field of experimentation and observation. However, with the accumulation of modern scientific data, it is remarkable that the Holy Quran referred to many major cosmic concepts centuries before they were discovered by the tools of modern science.</p>
+    <p>This is neither a claim nor an arbitrary interpretation, but rather an invitation for serious reflection on the magnitude of the astonishing compatibility between the revelation and what the mind has ascended to.<br>
+    This paper attempts to review - calmly and fairly - some of these intersections between the Qur'anic view of the universe and modern scientific theories, not as a forced congruence, but as an entry point to a deeper understanding:<br>
+    Revelation does not confiscate science, but rather anticipates it with signs that illuminate its path.</p>
+
+    <h3>The Qur'an and science: Signs that precede discovery</h3>
+    <p>Researchers in <em>Physical Review D</em> noted that the possible scenarios of universes emanating from the theory of Cosmic Inflation suggest the existence of seven main types of parallel universes, differing in their fundamental properties and physical constants (Johnson & Martinez, 2023).</p>
+    <p>These correspondences, while still in the realm of theories that need further empirical verification, raise the question: How did the Qur'an know this specific number of heavens 1400 years ago, when humanity had no idea about the structure or laws of the universe?</p>
+
+    <h3>The Holy Quran referred to many cosmological facts that were later confirmed by modern science, most notably:</h3>
+    <ul>
+        <li><strong>The beginning of the universe:</strong> The Qur'an emphasized that the universe has a definite beginning, while humans were in doubt about this, as stated in Al-Ankabut : "Do they not see how Allah begins the creation and then restores it, for this is easy for Allah" [Al-Ankabut: 19]. In 1929, astronomer Edwin Hubble proved through the phenomenon of redshift that the universe is expanding, indicating that it had a beginning (Hubble, 1929).</li>
+        <li><strong>The Big Bang:</strong> The Qur'an indicates that the heavens and the earth were once one mass and then split apart, as it says : "Or did not those who disbelieved see that the heavens and the earth were once one, and we opened them" [Al-Anbiya: 30]. In 1931, the Belgian priest Georges Lemaître proposed the "cosmic egg" theory, which later evolved into the Big Bang theory (Lemaître, 1931).</li>
+        <li><strong>Initial matter:</strong> The Qur'an indicates that the initial matter from which the heavens and earth were built was in the form of smoke, as in the Qur'an's statement : "Then he ascended to the sky, and it was smoke" [Faslat: 11]. Astrophysicists have proven that the universe after the Big Bang was an expanding ionized gas resembling smoke (Weinberg, 1993).</li>
+        <li><strong>The time period for the creation of the universe:</strong> The Qur'an indicates that the universe was created in six days, as in the saying : "We have created the heavens and the earth and what is between them in six days" [Q: 38]. Scientists suggest that the evolution of the universe went through six major stages (Silk, 2001).</li>
+    </ul>
+
+    <p><strong>The six stages of the evolution of the universe in one line</strong><br>
+    Cosmic inflation: The expansion of the universe in a fraction of a second.<br>
+    Initial soup: The formation of matter and energy and the birth of light elements within the first few minutes<br>
+    Plasma era: The universe as a hot soup of nuclei and electrons for 380,000 years<br>
+    Dark Ages: The formation of neutral atoms and the absence of stars for 200 million years<br>
+    The Stellar Age: the birth of stars and galaxies and the dominance of matter for billions of years<br>
+    The Dark Age: The dominance of dark energy and the acceleration of cosmic expansion to date</p>
+
+    <ul>
+        <li><strong>Dimensions of the universe:</strong> The Qur'an refers to the enormity of the dimensions of the universe in saying: "I do not swear by the positions of the stars (75), for it is a great oath if you know it" [Al-Raqqa: 75-76]. Scientists have discovered that the visible universe alone is about 93 billion light years in diameter (Lineweaver & Davis, 2005).</li>
+        <li><strong>Expansion of the universe:</strong> The Qur'an indicates that the universe is constantly expanding in the saying: "And the sky we have built with hands, and we are not expanding" [Al-Dhariyat: 47]. In 1929, Edwin Hubble discovered that galaxies are diverging from each other, indicating the expansion of the universe (Hubble, 1929).</li>
+        <li><strong>Multiverse:</strong> The Qur'an refers to the existence of seven heavens, as in Almighty God's words, "And He created seven heavens in two days" [Faslat: 12]. In 1979, Alan Guth developed the theory of the inflated universe, which indicates the possibility of the existence of multiple universes (Guth, 1981).</li>
+        <li><strong>The end of the universe:</strong> The Qur'an indicates that the universe has an end as it had a beginning, in the Qur'an's statement, "On the day when we fold the heavens as a book folds the books" [Al-Anbiya: 104]. Astrophysicists point to three possible scenarios for the end of the universe: Big Bang, Big Rip, or Thermal Death (Adams & Laughlin, 1997).</li>
+        <li><strong>Barriers between universes:</strong> The Qur'an refers to the seven heavens as being tightly built in the Qur'an: "And we have built above you seven great heavens" [Al-Nabaa: 12]. The bulging universe theory suggests that the barriers between the multiverse are made up of high-energy regions containing heavy particles such as magnetic monopoles (Vilenkin, 2006).</li>
+    </ul>
+
+    <p>I have often wondered in my scientific sessions with interested colleagues: What prevents modern science from recognizing the Qur'an's precedence in referring to these advanced cosmological concepts?<br>
+    Isn't scientific truth the same regardless of its source? Is it cognitive bias that prevents some scientists from seeing this amazing compatibility between the Qur'an and science?</p>
+
+    <hr>
+
+    <h2>Exhibit V: From the Big Bang to the Multiverse</h2>
+    
+    <h3>First axis: The Big Bang - Origin and Proof</h3>
+    <p>In the modern era, scientists were able to uncover many of the physical laws that govern the behavior of the matter of the universe, which allowed them to return the cosmological models to the first moments of the origin of the universe, revealing a stunning picture of how creation began.</p>
+    
+    <p><strong>The mathematical genesis of the Big Bang theory</strong><br>
+    In 1922, Russian astronomer and mathematician Alexander Friedmann re-solved Albert Einstein's 1916 equations of general relativity and found that the universe is in a state of perpetual expansion, which contradicts the belief at the time that the universe is static. (Friedmann, 1922)</p>
+
+    <p><strong>Cosmic egg</strong><br>
+    In 1931, Belgian scientist and pastor Georges Lemaître proposed the idea that the universe originated from the explosion of a very dense initial mass called the "Cosmic Egg", and later evolved into what we know today as the Big Bang (Lemaître, 1931)</p>
+
+    <p>In 1965, physicists Arno Penzias and Robert Wilson (Penzias & Wilson) provided the strongest experimental evidence for this theory, when they discovered the cosmic microwave background (CMB), a residual radiation from the moment of the Big Bang, and has since become one of the major pillars of cosmology. The two researchers were awarded the Nobel Prize in Physics in 1978 for this achievement. (Penzias & Wilson, 1965)</p>
+
+    <div class="image-placeholder">
+        
+    </div>
+
+    <h3>Second axis: The theory of the inflated universe - the bridge to other universes</h3>
+    <p>With the development of cosmological models, gaps began to appear in the Big Bang model, including what is known as the Horizon Problem, which concerns the insufficient distance light has traveled since the explosion to explain the degree of thermal homogeneity in the universe.</p>
+    
+    <p><strong>The emergence of the inflationary model</strong><br>
+    In 1979, American physicist Alan Guth of MIT presented a model known as the Inflationary Universe theory, proposing that the universe underwent a massive, ultrafast expansion in a tiny fraction of a second after the Big Bang.</p>
+    <p>To summarize, during the early moments of the Big Bang, as a result of a strange physical phenomenon called the tunnel effect, the universe began to expand at rates far greater than those predicted by the Big Bang theory.<br>
+    The results showed that the universe increased in size in a fraction of a second (between 10^-33 and 10^-32 seconds) by an amount equal to the number 10 raised to the power of 50. This incredible inflation or bulge gave rise to a universe devoid of the contradictions of the traditional Big Bang model of horizon, homogeneity, symmetry, and initial monopole (Guth, 1997).</p>
+    <p>The inflationary universe theory not only resolved the inconsistencies in the Big Bang theory, but also produced surprising results that support the picture painted by the Qur'an about the geometry of the universe.</p>
+
+    <p><strong>Cosmic Bubbles and the Multiverse</strong><br>
+    One of the strangest consequences of this theory is that inflation has created isolated physical regions, each surrounded by strong energy barriers, like independent bubbles, each representing a separate universe with its own laws and conditions (Linde, 1986).</p>
+    <p>A 1991 article in Scientific American stated:<br>
+    "A new theory of cosmology suggests that the observable universe is contained within a much larger region of space, created by an extraordinary expansion during the moment immediately after the Big Bang." (Guth & Steinhardt, 1991)</p>
+
+    <div class="image-placeholder">
+        
+    </div>
+
+    <h3>Third axis: Qur'anic references and epistemological reflections</h3>
+    <p>The Holy Qur'an has made remarkable references to the multiplicity of the heavens and the earth, including the following statement:</p>
+    <div class="box quran-box">
+        "He created seven heavens in two days" [Fuslat: 12]
+    </div>
+    <div class="box quran-box">
+        "Allah, who created seven heavens and the like of them from the earth" [al-Talaq: 12]
+    </div>
+    <p>Some researchers believe that these verses open the door to understanding the plurality of worlds, albeit from a different perspective than the scientific approach.<br>
+    Dr. Mansour Abu Shari'ah al-Abbadi comments in this context:<br>
+    "The Inflationary Universe Theory was able to solve the issue of heavy particles, including magnetic monopoles, by explaining their accumulation in the barriers between universes caused by inflation, which explains their absence in our observed universe." (Abu Shariaa, 2018, p. 15)</p>
+    <p>Although the multiverse theory is still within the theoretical realm and has not yet been subjected to conclusive tests, the convergence of some of its findings with ancient Quranic references gives it an existential and philosophical dimension worthy of contemplation.<br>
+    The convergence of modern science and revelation does not mean absolute congruence, but it warns that revelation was not oblivious to the deep structure of the universe, but rather presented it with eloquent signs that address the mind, awaken the conscience, and open new horizons for researchers to understand existence.</p>
+
+    <hr>
+
+    <h2>Section VI: Developments in Multiverse Theory</h2>
+    <p>Recent decades have seen a remarkable development in cosmological theories that seek to explain the multiverse, especially at the intersections of quantum physics, particle physics, and puffy universe models.<br>
+    Quite a few physicists, especially elementary particle physicists and astrophysicists, have been studying the multiverse phenomenon suggested by the solutions to the mathematical equations of the inflated universe.</p>
+    
+    <h3>Quantum physics and the beginnings of a multiverse</h3>
+    <p>Within the framework of Quantum Physics, which is concerned with studying particles at their finest level, scientists have noticed that these particles do not behave in a deterministic manner, but rather randomly take on different states, in line with the Uncertainty Principle.<br>
+    This led to the conclusion that the transformation of the False Vacuum - the state that the matter of the universe was in before expansion - could give rise to multiple universes, each containing different types of particles and physical laws. (Susskind, 2005)<br>
+    Researchers have also found that the emergence of a universe like ours requires fine tuning of at least 20 cosmological constants, supporting the hypothesis that other universes emerged during the inflationary period, each with a different set of physical constants. (Rees, 2000)</p>
+
+    <h3>Nine models of universes - Brian Greene's taxonomy</h3>
+    <p>One of the most notable contributions to clarifying these hypotheses was made by American physicist Brian Greene in his book "The Hidden Truth: Parallel Universes and the Deep Laws of the Universe", where he categorized nine main types of multiverses, depending on the theoretical background from which they arose: (Greene, 2011)</p>
+    <ul>
+        <li>Infinite universes: Located at great distances but belonging to the same spacetime fabric.</li>
+        <li>Inflated universes: Originate from multiple bulges of space, as in the theory of cosmic inflation.</li>
+        <li>Brane Worlds: Exist on three-dimensional branes within higher dimensional space.</li>
+        <li>Cyclic universes: Arise and perish in infinite cosmic cycles.</li>
+        <li>Cosmological Parallax Universes: Generated from variations of string theory.</li>
+        <li>Quantum universes: Related to the Many Worlds Interpretation of quantum mechanics.</li>
+        <li>Holographic universes: Different projections of the same cosmic reality.</li>
+        <li>Simulacra universes: Resulting from advanced digital simulations of reality.</li>
+        <li>Weighted universes: Represent different mathematical possibilities for the same system of reality.</li>
+    </ul>
+
+    <h3>Scientists' opinion on the limits of universes</h3>
+    <p>One of the most prominent surprises in this field is the recent research revealed by the famous physicist Stephen Hawking, in his last scientific paper published posthumously in 2018, in collaboration with scientist Thomas Hertog.<br>
+    In this study, the two researchers suggest that the multiverse is not infinite as previously thought, but can be limited to a finite number of possible universes. The abstract of the article states:<br>
+    "Our conjecture reinforces the intuition that holographic universes suggest a significant reduction of the multiverse to a very limited set of possible universes." (Hawking & Hertog, 2018)</p>
+    <p>In an interview with the Washington Post, Hawking said:<br>
+    "We don't go down to the level of a single unique universe, but our discoveries point to a significant reduction in the number of universes to a narrow range of possible universes." (Achenbach, 2018)</p>
+    <p>Dr. Mansour Abu Sharia al-Abbadi comments on these findings:<br>
+    "If scientists continue their research with this seriousness, it is not unlikely that they will be able to determine the number, dimensions and geometry of these universes, and there is no doubt that these results will eventually intersect with what God has revealed in the Holy Qur'an about the seven heavens." (Abu Shariaa, 2018, p. 17)</p>
+    <p>The development of scientific theories about the multiverse is not only an expansion of cosmic knowledge, but also a profound existential question: Are we really in a single universe, or are we part of a larger cosmic system, with multiple worlds, laws, and endings?<br>
+    Although science has yet to prove these hypotheses, the expansion of human understanding and the discovery of new dimensions of creation always brings us back to the first Qur'anic moment of questioning:<br>
+    'God, who created seven heavens and the same from the earth...' [Al-Talaq: 12].</p>
+
+    <hr>
+
+    <h2>Chapter Seven: Scientific Criticism of the Multiverse Theory</h2>
+    <p>Despite the appeal of the multiverse theory, it faces substantial scientific criticism from some physicists and philosophers:</p>
+    
+    <p><strong>First, the issue of untestability</strong><br>
+    American physicist Paul Steinhardt argues that "the fundamental issue with multiverse theory is that it is not empirically testable, as it assumes the existence of universes that we cannot in principle communicate with or observe, and this takes it out of the realm of empirical science and into the realm of metaphysics" (Steinhardt, 2014).</p>
+
+    <p><strong>II: The Problem with Occam's Razor</strong><br>
+    According to a critique by Prof. Sabine Hossenfelder, a German theoretical physicist, the multiverse theory contradicts Occam's razor for the following reasons:<br>
+    It inflates the number of assumptions: The multiverse theory assumes an enormous (and possibly infinite) number of other universes to explain the unique properties of our universe, such as the fine-tuning of cosmological constants.<br>
+    Multiplication of entities without empirical necessity: The theory exponentially multiplies the number of entities (universes), while there is no direct empirical evidence for this multiplication.<br>
+    Complexity versus explanation: Instead of providing a simple and straightforward explanation for the phenomena of our universe, the theory proposes a complex mechanism involving the existence of countless universes, all of which are not directly observable.</p>
+
+    <p><strong>Third: Philosophical Considerations</strong><br>
+    Philosopher John Earle points out that "the multiverse theory may be an attempt to escape deep philosophical questions about the origin of the universe and why it exists as it does" (Earle, 2020).</p>
+    <p>These criticisms do not diminish the importance of multiverse theory as a possible explanatory framework, but they remind us that science in this field is still in its infancy, and that linking these theories to Quranic references requires methodological caution and epistemological humility.</p>
+
+    <hr>
+
+    <h2>Topic VIII: Parallel Worlds in Ibn Abbas' Tafsir and its compatibility with the theories of modern science</h2>
+    <h3>Ibn Abbas's interpretive brilliance and the surprise of scientific discovery</h3>
+    <p>Was ʿAbdullāh ibn ʿAbbās—the scholar of the Ummah and the interpreter of the Qur’an—a person ahead of his time?<br>
+    The narration of Abdullah ibn Abbas (may Allah be pleased with both of them) about the seven lands and the beings in them that are similar to the beings on our earth is one of the most surprising narratives, given how close it is to modern science's theories about the multiverse, especially superstring theory and parallel worlds<br>
+    Did he store an understanding in a Qur'anic text that grows brighter as the tools of modern science illuminate new areas of creation?<br>
+    These questions are crowded when we read his impact on the interpretation of the Almighty's words:</p>
+    <div class="box quran-box">
+        Allah who has created seven heavens and of the earth, the like of them. His command descends among them so you may know that Allah is over all things competent and that Allah has encompassed all things in knowledge [al-Talaq: 12].
+    </div>
+    
+    <div class="box quran-box">
+        Al-Bayhaqi has narrated in "Asmaa wa As-Sifat" that Ibn Abbas (may Allah be pleased with them both) said:
+        "Seven earths, in each earth is a prophet like yours, Adam like Adam, Noah like Noah, Abraham like Abraham, and Jesus like Jesus." [Al-Bayhaqi, (Names and Attributes), p. 453]
+    </div>
+
+    <p>This novel, characterized by boldness of meaning and uniqueness of conception, has not received much attention in traditional Islamic thought, but the wave of interest in "parallel worlds" in modern theoretical physics has brought it back into the spotlight from unfamiliar angles.</p>
+
+    <h3>First: The authenticity of the story and the opinions of scholars</h3>
+    <p>The authenticity of the attribution and the divergent position on the corpus<br>
+    The narration from Ibn Abbas is authentic, as recognized by Imam al-Bayhaqi, who said:<br>
+    "Its attribution is correct, but it is an anomaly, and I do not know that Abu al-Duha has a follower."<br>
+    [Al-Bayhaqi, -Names and Attributes]<br>
+    Ibn Kathir also quoted this effect and noted its strangeness, commenting that Ibn Abbas may have taken it from the Israelites:<br>
+    "If it is authentic, it is taken from what he took from the Israelites."<br>
+    [Ibn Kathir, "Tafsir al-Qur'an al-Azim" 4/386; "The Beginning and the End" 1/22]</p>
+    
+    <p><strong>Abd al-Hay al-Laknawi's defending position:</strong><br>
+    As for Imam Abdul Hay al-Laknawi, he addressed the defense of the narration in two important treatises:<br>
+    Daf al-Waswaswas on the Trail of Ibn 'Abbas and Zajar al-Nasr on the Trail of Ibn 'Abbas<br>
+    He argued that the appearance of the narration must be accepted as long as its support is valid, citing that our lack of awareness of these lands does not negate their actual existence, nor does it prevent God from having made each of them an independent life and experience.</p>
+
+    <h3>Secondly: The Qur'anic Concept of the Seven Lands</h3>
+    <p>The text of the verse in Surat al-Talaq unambiguously confirms the existence of "seven lands": 'And from the earth like them' [al-Talaq: 12]<br>
+    The majority of interpreters believe that the "lands" are seven layers, some on top of each other, with a vast distance between one land and the next. The statement of Ibn Abbas is the boldest of all interpretations, because it attributes to these lands the independent existence of civilizations, worlds, beings, and even prophets that resemble the prophets of the earth.<br>
+    The question arises again:<br>
+    Was this understanding a personal interpretation or a revelation given to him by the Messenger of Allah, may Allah bless him and grant him peace:<br>
+    "O Allah, give him knowledge in religion and teach him the interpretation." [Bukhari, No: 75]</p>
+
+    <h3>Thirdly: Compatibilities with the theories of modern science</h3>
+    <p><strong>With the theory of Parallel Universes</strong><br>
+    This theory postulates the existence of other universes parallel to our universe, similar to it in some laws and phenomena, and different from it in others.<br>
+    The content of Ibn Abbas' narration directly intersects with this concept, when he mentions that in every land "Adam is like Adam" and "Noah is like Noah", referring to similarity rather than identicality.<br>
+    The famous physicist Brian Greene, one of the most prominent defenders of the multiverse idea, in his book "The Hidden Truth: Parallel Universes and the Deep Laws of the Universe (The Hidden Reality, 2011):<br>
+    "The universe we see may not be the only one. There are strong possibilities, stemming from our best physical theories, that our reality is not separate and unique, but one of many, different and perhaps infinite universes." (Brian Greene, The Hidden Reality, 2011, p. 5)</p>
+
+    <p><strong>With Superstring Theory</strong><br>
+    According to Brian Greene's framework in The Elegant Universe, String/M theory requires the existence of ten dimensions (or eleven with the time dimension), hidden dimensions that we don't directly perceive. These dimensions support the idea of a "multiverse"; other universes may exist on different membranes, each of which has its own unique physical properties and may be favorable for the emergence of life forms different from what we know in our universe</p>
+
+    <p><strong>Compatibility with the notion that laws of physics vary between universes</strong><br>
+    According to Brian Greene in The Hidden Reality, the inflationary universe theory posits that the inflationary phase after the Big Bang may allow for the formation of multiple "cosmic bubbles". The physical laws and constants in these universes may differ from those known to us, meaning that some other universes may evolve according to completely different physical laws, perhaps creating a different kind of life and an alternate reality (Greene, The Hidden Reality, 2011, p. 202).<br>
+    This is consistent with Ibn Abbas' reference to the similarity rather than congruence between the prophets and messengers in different lands, suggesting that there are differences between them that reflect the different nature and characteristics of those worlds.</p>
+
+    <h3>Fourth: A critical reading of the compatibility between the tradition and the theory</h3>
+    <p>Despite the positive surprise at this convergence of exegesis and modern cosmology, it should be viewed with methodological caution:</p>
+    <p><strong>The difference between similarity and congruence</strong><br>
+    Ibn Abbas' narration does not say that Noah in another land is the same as Noah in our land, but rather "as Noah," indicating a similarity in function or type rather than identity.<br>
+    This is contrary to the Western paradigm, which often assumes an "almost exact match" between copies of universes.</p>
+    <p><strong>Limited empirical evidence</strong><br>
+    All multiverse theories remain "mathematical hypotheses that have not yet been empirically observed."<br>
+    Leonard Susskind says: "The fundamental issue with multiverses is the impossibility of experiencing them physically, because they are beyond the range of observation." [Susskind, The Cosmic Landscape 2005, p. 93]</p>
+
+    <h3>Fifth: Was Ibn Abbas ahead of his time?</h3>
+    <p>It is remarkable that this narration was given by Ibn Abbas more than 1400 years ago, at a time when humanity did not have even simple telescopes to observe nearby planets, let alone think about parallel worlds and multiple universes.<br>
+    Was Ibn Abbas ahead of his time, or was the source of this information beyond human comprehension?<br>
+    There is another possibility, however, that this narration is something he heard from the Messenger of Allah and what Ibn Abbas learned from understanding the meanings of the Holy Qur'an, whose wonders never cease. The Prophet prayed for him, saying: "O Allah, give him knowledge in religion and teach him the interpretation."</p>
+
+    <h3>Toward an integrative understanding: Between Revelation and Science</h3>
+    <p>The Islamic vision of the universe offers us an integrative model that combines the data of revelation, the discoveries of science, and the reflections of philosophy. In this context, we can understand Ibn Abbas' account of the seven lands within this integrative vision.</p>
+    <p><strong>The dimension of faith: God's omnipotence</strong><br>
+    Ibn Abbas' account emphasizes God's omnipotence in creation and its diversity. God is able to create multiple universes and diverse worlds, as the Almighty says: "Do they not see how God begins the creation and then restores it, for that is easy for God" [Al-Ankabut: 19].</p>
+    <p><strong>The Scientific Dimension: Compatibility with Modern Scientific Theories</strong><br>
+    Ibn Abbas' account is compatible with modern scientific theories such as superstring theory and multiverse theory, which opens new horizons for scientific research.</p>
+    <p><strong>Philosophical dimension: The meaning of human existence</strong><br>
+    The story of Ibn Abbas prompts us to reflect on the meaning of human existence within this vast universe, the purpose of creating multiple universes, the relationship between these universes, and the fate of sentient beings in different worlds.</p>
+    <p><strong>From Parallel Worlds to the Day of Judgment</strong><br>
+    The Islamic vision indicates that all these worlds and universes, no matter how many and varied, will be brought together by God Almighty on a single day, the Day of Judgment. The Almighty says: "On the day when we fold the heavens like a book" [Al-Anbiya: 104].<br>
+    You can imagine this majestic scene, where all the worlds and universes gather in one place, awaiting the judgment of their Lord. It is truly a situation that the mind cannot comprehend.</p>
+
+    <hr>
+
+    <h2>Chapter Nine: Cosmic Consciousness and the Multiverse</h2>
+    <p>Ever since man began to raise his gaze to the sky, he has never stopped wondering: Are we the only ones who reason and feel? Is it only the earth that swims, and only the creatures we know that swim?<br>
+    With the development of scientific knowledge, new concepts such as cosmic consciousness and multiple worlds have emerged, prompting contemporary thought to reconsider the understanding of "being", "perception", and "worship".<br>
+    In the midst of this transformation, the Qur'an stands out with its revealing texts, revealing an astonishing truth:<br>
+    Everything in the heavens and the earth - indeed, in all of existence - praises God, with a consciousness that man does not realize, and a perception that is not like his own.<br>
+    The attempt to relate this profound Qur'anic conceptualization to the discoveries of modern physics about consciousness, entanglement, quantum, and multiverses is not a mere graphical exercise, but a sincere desire to approach the unity of truth:<br>
+    The fact that the universe is not silent... It is conscious, praising, worshiping, in all its dimensions.</p>
+
+    <h3>First: Cosmic Praise in the Holy Qur'an - Conscious, Not Silent Praise</h3>
+    <p>Several verses in the Holy Qur'an clearly and unambiguously affirm that all creatures - in heaven and earth - praise their Creator, a true and conscious praise, albeit hidden from our human perception.</p>
+    <div class="box quran-box">
+        The seven heavens and the earth and whatever is in them exalt Him. And there is not a thing except that it exalts [Allah] by His praise, but you do not understand their [way of] exalting. Indeed, He is ever Forbearing and Forgiving. (Al-Isra: 44)
+    </div>
+    <p>This verse includes everything in the seven heavens, the earth, and "whoever is in them," but it adds a comprehensive limitation: "And there is nothing, no matter how small or inanimate, that does not praise God." In other words, there is nothing - no matter how small or inanimate - that is not in a constant state of praise to God.<br>
+    But humans do not "understand" this praise, not because the creatures do not praise, but because our human consciousness is limited in recognizing the pattern of their praise.</p>
+    
+    <div class="box quran-box">
+        “Do you not see that to Allah prostrates whoever is in the heavens and whoever is on the earth—and the birds with wings spread in flight? Each of them has known his manner of prayer and exalting [Him], and Allah is Knowing of what they do.” (Al-Nur: 41)
+    </div>
+    <p>Here a deeper dimension is added: "All have learned their prayers and praise"<br>
+    Not only do creatures praise, but they know that they are doing so, a clear indication of the existence of a "self-consciousness" of every being - whatever it may be - that makes it aware of its existential mission.<br>
+    This cosmic consciousness, as envisioned by the Qur'an, is not necessarily a "biological" consciousness, but a consciousness of meaning: a realization of purpose, evocation of destiny, and submission to God, manifested in the silence of the galaxies, the hissing of the trees, the roar of the sea, and the chirping of birds.</p>
+
+    <h3>Secondly: From Quantum Physics to Object Consciousness - Advances in Understanding the Cosmic Mind</h3>
+    <p><strong>The Theory of Quantum Consciousness</strong><br>
+    Quantum physics - with its mathematical complexities and infinitesimal particles - may seem far removed from concepts like "consciousness" or "intention," but one of the most daring scientific trends today is what is known as the theory of quantum consciousness.<br>
+    According to this theory, pioneered by Roger Penrose (a mathematical physicist) and Stuart Hameroff (an anesthesiologist and neuroscientist), human consciousness is not just the product of chemical reactions in the brain, but is linked to subtle quantum levels occurring within the microtubules of neurons.<br>
+    Hameroff & Penrose (2014) propose that these tubes form a kind of "hub of consciousness," where quantum coherence processes occur that produce the subjective experience we call "consciousness."</p>
+
+    <p><strong>Supporting study from the field of neuroanesthesia (2021)</strong><br>
+    In a recent study published in eNeuro (August 29, 2024), Sana Khan and colleagues found that subcutaneous injection of 075. mg/kg of Epothilone B, a microtubule stabilizer, delayed loss of consciousness in mice exposed to isoflurane (4%).<br>
+    The results suggest that the anesthetic gas binds to microtubules in neurons, supporting the hypothesis that these structures play an active role in the maintenance of consciousness, and supporting quantum explanations of consciousness (Khan S et al. (2024). Microtubule-Stabilizer Epothilone B Delays Anesthetic-Induced Unconsciousness in Rats. ENeuro 11(8):ENEURO.0291‑24.2024).<br>
+    This discovery reinforces the quantum consciousness model and provides empirical support for the idea that the human mind is intrinsically connected to the deep quantum structure of the universe.</p>
+
+    <h3>III: Between Qur'anic Praise and Physical Consciousness - Intersections, Not Identities</h3>
+    <p>After presenting these two theories, several possible intersections between what the Qur'an tells us about the praise of all things and what modern physics hints at the possibility of a kind of latent consciousness in the cosmic microstructure.</p>
+    <p><strong>The first point: The self-awareness of beings</strong><br>
+    Verse: "All things know their prayer and their praise" [Al-Nur: 41]<br>
+    It refers to an internal self-awareness, not just an instinctive reaction.<br>
+    This intersects with the hypothesis that consciousness is not exclusive to the human brain, but may exist in different forms in other organisms, or even in non-living systems, as some formulations of Panpsychism propose.</p>
+    <p><strong>Second Point: Quantum Entanglement and Cosmic Connectivity</strong><br>
+    Some physics experiments point to the phenomenon of quantum entanglement, where two particles remain instantly connected no matter how far apart they are.<br>
+    Dean Radin (2006) in his book Conscious Universe presents evidence that this kind of quantum interconnectedness may be present even in the neural structures of the brain.<br>
+    Hence, the cosmic tasbih can be interpreted as a kind of universal "telepathic communication" between beings and their Creator, a communication that is not perceived by the senses, but is real - as the Qur'an tells us - and continuous.</p>
+    <p><strong>Third point: The comprehensiveness of tasbih, and the comprehensiveness of consciousness</strong><br>
+    "And there is nothing but praise in praise of Him" [Al-Israa: 44]<br>
+    It is one of the most absolute and comprehensive verses in the Qur'an.<br>
+    The basic idea that Philip Goff makes in Galileo's Error: Foundations for a New Science of Consciousness (2019) is that the scientific method initiated by Galileo deliberately avoided the study of consciousness, and considered that "sensory quality" (qualia) is not part of the measurable and calculable physical world. This has led to a deficiency in our understanding of consciousness, which Goff calls "Galileo's mistake"<br>
+    Goff emphasizes that we need to "move beyond the rigid materialist view" as insufficient to understand the nature of consciousness. Instead, he suggests moving towards "panpsychism," the idea that consciousness is present in all matter, albeit to different degrees. Basic particles have a primitive form of consciousness, and this particularity may evolve into a more complex consciousness in living organisms.</p>
+
+    <h3>IV: The mystery of why we don't understand the praise of beings - the wisdom of the unseen and the stillness of human consciousness</h3>
+    <p>Although the Qur'an emphasizes that everything praises God, it clearly warns: "But you do not understand their praise" [Al-Israa: 44].<br>
+    Here a legitimate question arises: Why do we not understand their praise? Is our lack of understanding proof that they are not consciously praising?</p>
+    <p><strong>Faithful interpretation: Divine mercy in the veil</strong><br>
+    Many Muslim scholars believe that it is God's wisdom not to make us hear the sounds of the praise of the creatures, because the realization of that realization would be beyond the capacity of the human soul, and may even turn into a terrible nervous burden.</p>
+    <p><strong>Philosophical interpretation: Different modes of perception</strong><br>
+    Man, as a temporal material being, has a particular mode of perception based on language, sound, and meaning. The praise of all things may be in a language that is not measured in sounds, but in function, in submission, in vibration, in cosmic harmony.<br>
+    "Praise" here is not only an utterance, but may be an existential attitude, a cosmic state of harmony with the divine will. It may be expressed by frequency, motion, light, or even the stability of physical laws.</p>
+
+    <h3>V: Interconnected Consciousness Across Universes - Islamic Conceptualization in the Light of Multiverse Theories</h3>
+    <p>With the emergence of the "multiverse" theory in theoretical physics, thoughts began to turn to:<br>
+    Are there sentient beings in other universes? Do they praise their Creator as we do? Is there a connected cosmic consciousness that extends across universes?</p>
+    <p><strong>Multiple levels of consciousness</strong><br>
+    The Qur'an refers in several places to the plurality of creation:<br>
+    "Allah, who created seven heavens and from the earth like them" [al-Talaq: 12] and "He descends between them" [al-Talaq: 12] and "the matter descends between them" [al-Talaq: 12].<br>
+    Linguistically and interpretatively, this download is understood to refer to the existence of beings in these universes that receive a "command" from God, i.e. some kind of revelation, message, or formative order.</p>
+    <p><strong>Interaction between universes: The Descent of the Command and the Entanglement of Consciousness</strong><br>
+    The verse: 'The command descends between them'<br>
+    In the light of contemporary physics, it may be read as a reference to real communication between the universes, through what look like "spiritual channels," or as some physicists call it, "quantum entanglement between the universes."<br>
+    There may be communication between different universes through quantum phenomena, and this may explain some of the strange phenomena in our universe.<br>
+    If so, cosmic consciousness is not confined to our universe, but is a network that extends across universes, in which God's commands flow, His praise extends, and the hearts of sane creatures - no matter what form they take - are connected to their Creator.</p>
+
+    <h3>From the consciousness of the atom to the consciousness of the galaxy... Everything praises His praise</h3>
+    <p>As we live in this observable universe, we often think that we are the center of perception, and that our consciousness is the standard of life and reason. However, the verses of the Qur'an and the hints of modern science reset this perception and whisper a majestic truth: We are not the only ones who perceive, we are not the only ones who praise, and we are not the only ones who submit our consciousness to our Creator.<br>
+    When the Qur'an tells us that "There is nothing but that which praises His praise" [Al-Isra: 44], It does not present us with cold cosmological information, but rather knocks our awareness that we live in a universe in which every atom is charged with worship, and every particle is subject to the command of its Lord, even if we do not know how or when.<br>
+    Today, thanks to modern science, we can imagine a quantum particle being affected by what is happening in a distant galaxy, and believe that universes can be linked to each other by an invisible interconnection...<br>
+    Is it then difficult to believe that "everything praises God"?<br>
+    If the multiverse is a reality, then consciousness is not a phenomenon exclusive to the earthly human brain, but may be an extended tapestry across creation, played by the universes in their own way, in a cosmic symphony that our ears cannot hear, but fills existence.<br>
+    In one of these universes, there may be a creature that does not look like us, and does not think like us, but - deep within itself - it knows its Lord, praises Him, and awaits a promised day when all creation from all universes will gather in one court:<br>
+    'Owner of the Day of Judgment' [Al-Fatiha: 4]<br>
+    He who taught us how to see in the sound of a bird's voice a prayer, in the trembling of the atom a praise, in the submission of the galaxies a consciousness...<br>
+    And praise be to the One who has expanded all knowledge and concealed some of this awareness from us, out of mercy, and to remind us that the whole universe is alive, praising, worshipping... And we are part of its song.</p>
+
+    <div class="image-placeholder">
+        
+    </div>
+
+    <hr>
+
+    <h2>The tenth research: A Contemplative Journey Through the Multiverse - An Invitation to Reflection and Discovery</h2>
+    <p>Between Science and Meditation<br>
+    Consider this scene: You are sitting on a clear night on top of a mountain, gazing up at the twinkling stars in the sky. You wonder about distant universes and the possibility of parallel worlds that may have different laws, different beings, and different consciousnesses.<br>
+    This contemplation, which at first glance may seem pure science fiction, finds deep resonance in Qur'anic references and in some modern scientific theories.<br>
+    To conclude our journey through the multiverse, we invite you, dear reader, to actively participate in this cognitive journey, through reflections and activities that help you explore this profound topic on your own, linking theoretical knowledge to personal experience and self-reflection.</p>
+
+    <h3>First: Intellectual Reflections - The Horizon of the Impossible</h3>
+    <div class="box quran-box">
+        "The creation of the heavens and the earth is greater than the creation of people, but most people do not know"<br>
+        [Ghafir: 57]
+    </div>
+    <p>Meditate on God's cosmic revelations and imagine: If the choices you made in your life were different, would you be the same person you are now? If there was a parallel universe in which there was another version of you, who took a different path in life, would you still have the same spiritual and human essence?<br>
+    You may find yourself wondering: Is there a version of me in another universe that is more successful or happier? Is there another version that faces different challenges and difficulties, and what are their choices in the face of those challenges?<br>
+    This reflection invites us to think about the relationship between choices and identity, and the essence of what makes us "us" regardless of different circumstances and choices.</p>
+
+    <div class="image-placeholder">
+        
+    </div>
+
+    <h3>Destiny and Choice in the Multiverse</h3>
+    <div class="box quran-box">
+        "You do not will except that Allah, the Lord of the Worlds, wills." [Al-Takwir: 29]
+    </div>
+    <p>How can belief in the existence of multiple universes affect our understanding of fate? If all possible possibilities are realized in different universes, does this mean that the concept of human choice becomes more complex?<br>
+    The Qur'an reminds us that Allah (SWT) has knowledge of everything, and that fate is one of the fundamentals of faith. If there are multiple universes, they are all subject to God's will and omniscience, and the multiplicity of possibilities and outcomes is a manifestation of God's ability and wisdom.<br>
+    Consider this profound question: Does the existence of a multiverse increase our freedom or emphasize the universality of divine destiny?</p>
+
+    <h3>Cross-universe dialog: Questions for other beings</h3>
+    <div class="box quran-box">
+        "And from the earth likewise, the matter descends between them" [Talaq: 12].
+    </div>
+    <p>If we hypothesize that there are sentient beings in other universes, and we could communicate with them, what questions would you ask them?<br>
+    Would you ask them about the nature of the world they live in?<br>
+    About the laws of physics that govern their universe?<br>
+    About their perception of the Creator and their relationship with Him?<br>
+    The verse refers to the "descending order" between the heavens and the earth.<br>
+    Do these worlds have a heavenly message and revealed scriptures? Do they share basic moral values and principles?<br>
+    List the first five questions you would ask beings from a parallel universe, and ponder the possible answers and their profound implications for our understanding of existence and creation.</p>
+
+    <h3>The Five Cosmic Questions Board</h3>
+    <div class="box reflection-box">
+        <ol>
+            <li>What is the purpose of your existence in your world? Are you created for a purpose as we believe, or do you see life as a flow with no purpose?</li>
+            <li>Do you know something like good and evil? Is it acquired by revelation or developed from your environment?</li>
+            <li>Do you receive anything resembling revelation? Do you receive messages from a Creator? Do you know His name? His attributes?</li>
+            <li>Do you have free will? Do you choose your actions or are you biologically programmed?</li>
+            <li>How do you imagine the end of your worlds? Do you believe in the Day of Resurrection, or do you end up in nothingness, or is there another cycle of existence?</li>
+        </ol>
+    </div>
+
+    <h3>II: Scientific Activities - In the Rehab of Knowledge</h3>
+    <p><strong>Check out the latest scientific studies</strong><br>
+    Science in the field of theoretical physics and cosmology is evolving at a tremendous speed, and every day new ideas and theories emerge. To stay up to date with the latest developments in the field of multiverse and superstring theory, we invite you to check out peer-reviewed scientific articles in journals such as<br>
+    Physical Review D<br>
+    Journal of Cosmology and Astroparticle Physics (JCAP)<br>
+    Classical and Quantum Gravity<br>
+    You can search for these articles in scientific databases such as:<br>
+    arXiv.org (Theoretical Physics and Elementary Particle Physics section)<br>
+    Google Scholar<br>
+    Science Direct<br>
+    Search for the following terms: "Multiverse Theory", "String Theory", "Parallel Universes", "Quantum Cosmology", "M-Theory".</p>
+
+    <p><strong>Explore science documentary series</strong><br>
+    For a deeper and more simplified understanding of multiverse theories, you can watch the following science documentary series:<br>
+    "The History Channel's The Universe, especially the multiverse episodes.<br>
+    "Cosmos: A Spacetime Odyssey" by Neil deGrasse Tyson.<br>
+    Morgan Freeman's "Through the Wormhole," especially episodes about multiple dimensions and parallel universes.<br>
+    "Brian Greene's The Elegant Universe, a simplified documentary about string theory and the multiverse.</p>
+
+    <p><strong>Connecting with scientific discussion communities</strong><br>
+    Knowledge grows and develops through discussions and interaction with others. To participate in scientific discussions about the relationship between the Quran and modern cosmological theories, you can:<br>
+    Join specialized scientific forums such as the Forum for Scientific Miracles in the Qur'an and Sunnah.<br>
+    Participate in online discussion groups on platforms such as Reddit (e.g. r/Islam_Science) or Facebook.<br>
+    Attend scientific conferences and seminars that discuss the relationship between religion and science.<br>
+    Communicate with Muslim scientists and researchers in the fields of theoretical physics, cosmology, and scientific miracles.</p>
+
+    <h3>Research Projects - From Knowledge to Creativity</h3>
+    <p><strong>Comparative research between Qur'anic references and scientific theories</strong><br>
+    We invite you to do a mini research paper (5-10 pages) that compares the Quranic references to multiverses with the findings of modern science. The research can include:<br>
+    Collecting and analyzing the Quranic verses related to the seven heavens and seven earths.<br>
+    Review ancient and contemporary scholars' interpretations of these verses.<br>
+    Comparing these interpretations with modern scientific theories about the multiverse.<br>
+    Exploring the compatibilities and differences between the Qur'anic perspective and scientific theories.<br>
+    You can share this research with your friends or post it in specialized scientific forums to get feedback and enrich the discussion.</p>
+
+    <p><strong>Designing a Visual Model of the Multiverse</strong><br>
+    Using your artistic or programming skills, design a visual model that illustrates the idea of the multiverse from the Qur'anic perspective. This model could be:<br>
+    An illustration of the seven heavens and seven earths as described in the Qur'an and Hadith.<br>
+    A three-dimensional design (using programs such as Blender or Maya) that represents a visualization of the multiverse.<br>
+    An interactive simulation (using programs such as Unity or Unreal Engine) that allows the user to virtually move between different universes.</p>
+
+    <h3>Fourth: Spiritual Meditation - Deeper Insight</h3>
+    <p><strong>Contemplating the greatness of the Creator across the universes</strong><br>
+    "We will show them Our signs in the horizons and in themselves until it becomes clear to them that it is the truth" [Faslat: 53]<br>
+    Set aside time each week to contemplate the greatness of the Creator by looking at the sky and pondering the possibility of multiple universes.<br>
+    Sit in a quiet place and meditate on how the universe in all its vastness, complexity, and beauty is a sign of God, and how the possibility of multiple universes adds to the magnificence of this sign.<br>
+    You can record your reflections and feelings in a journal, and observe how your sense of the universe and existence changes over time as your reflections deepen.</p>
+
+    <p><strong>Read and reflect on the cosmic verses in the Qur'an</strong><br>
+    Take time to read and meditate on Quranic verses that talk about the creation of the heavens and the earth and the organization of the universe. Some of these verses are:<br>
+    - "God, who created seven heavens and the same from the earth, descends between them" [Al-Talaq: 12].<br>
+    - "Who created seven heavens and seven earths in a row; what do you see in the creation of the Merciful One is no disparity" [Al-Malik: 3]<br>
+    - "Did not those who disbelieve see that the heavens and the earth were once one and the same, and we opened them" [Al-Anbiya: 30]<br>
+    - "And the heavens we have built with hands, and we are not expansive" [Al-Dhariyat: 47].<br>
+    Reflect on these and other verses, and write a personal interpretation of them in light of what you have learned about the multiverse and modern scientific theories.<br>
+    *"Lord, you have not created this in vain, so help us to avoid the punishment of the Fire" [Al-Imran: 191].</p>
+
+    <hr>
+
+    <h2>Conclusion: Future Prospects</h2>
+    <p>In his journey of knowledge, man is still at the beginning of the road, and the more science advances and develops its tools, the more he will discover the secrets of this wonderful universe, and the more he will realize the greatness of the Almighty Creator.<br>
+    Dr. Mansour Abu Shari'ah says: "If scientists continue their research with this seriousness, it is not unlikely that they will be able to determine the number of these universes, their dimensions and their geometry, and they must match what God Almighty inspired in the Holy Quran about the seven heavens" (Abu Shariaa, 2018, p. 24)<br>
+    Understanding the universe as a conscious system that praises and reveres God enhances man's sense of belonging to this universe, pushes him to reflect on God's signs and greatness, and urges him to participate in this great cosmic praise.</p>
+    
+    <p>While science advances and its theories evolve, Qur'anic truths remain constant, waiting for science to reach them. We have seen how the multiverse theory, one of the latest theories of physics, is getting closer and closer to what the Qur'an told us more than fourteen centuries ago about the seven heavens and the seven earths.<br>
+    In this context, we can ask the question: Can humans one day communicate with these other universes? Can we discover the barriers that separate them? What is the nature of the sane creatures that live in them and how do they respond to the revelation of their Lord?<br>
+    These and other questions open wide horizons for future scientific research, philosophical reflection, and religious contemplation. Just as astrophysicists have continued their research to discover the secrets of the universe, scholars of exegesis and scientific miracles are called upon to continue their reflection on the recited and witnessed verses of God, to reveal more aspects of the miraculous aspects of the Holy Qur'an.</p>
+    
+    <p>As equations accelerate, universes multiply, and man strives to draw the map of existence, the Qur'an remains towering, not only years ahead of science ... It is not only years ahead of science, but it surpasses it in vision, purpose, and depth.<br>
+    It is not only a journey in the universes, but a journey in ourselves, towards the Creator of the universes, the source of consciousness, and the principle of praise.<br>
+    How far is the road... How great is the promise... And what an honor to God.<br>
+    Truly, God is the Almighty who says: "We will show them Our signs in the horizons and in their souls:<br>
+    "We will show them Our signs in the horizons and in their souls until it becomes clear to them that it is the truth." (Faslat 53)</p>
+
+    <p style="text-align: center; margin-top: 50px; font-weight: bold; color: var(--primary-color);"><strong>May Allah know best and be the wisest.</strong></p>
+
+    <!-- Chapter Navigation -->
+    <div class="chapter-navigation">
+        <a href="index.html" class="nav-btn btn-home">
+            <i class="fas fa-home"></i> Back to Home
+        </a>
+        <a href="chapter12.html" class="nav-btn btn-next">
+            Next Chapter <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Five: The Feelings and Emotions of the Universe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fdfbf7;
+            --text-color: #2d3436;
+            --primary-color: #2c3e50;
+            --accent-color: #d35400; /* Warm Orange/Rust for Emotions */
+            
+            /* Box Colors */
+            --box-desc-bg: #e3f2fd;
+            --box-desc-border: #1565c0;
+            
+            --box-verse-bg: #e8f5e9;
+            --box-verse-border: #2e7d32;
+            
+            --box-science-bg: #fffde7;
+            --box-science-border: #fbc02d;
+            
+            --box-note-bg: #f3e5f5;
+            --box-note-border: #7b1fa2;
+
+            --box-reflection-bg: #ffebee;
+            --box-reflection-border: #c62828;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.9;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 80px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 4px solid var(--accent-color);
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            border-left: 8px solid var(--accent-color);
+            padding-left: 20px;
+            background: linear-gradient(90deg, #f5f6fa 0%, #ffffff 100%);
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #37474f;
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: #546e7a;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 1.5rem;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 1.15rem;
+        }
+
+        /* Box Styling */
+        .box {
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 6px;
+            border-left-width: 6px;
+            border-left-style: solid;
+            position: relative;
+            page-break-inside: avoid;
+        }
+
+        .box-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Specific Box Types */
+        .box-desc { background-color: var(--box-desc-bg); border-left-color: var(--box-desc-border); }
+        .box-desc .box-title { color: var(--box-desc-border); }
+
+        .box-verse { background-color: var(--box-verse-bg); border-left-color: var(--box-verse-border); }
+        .box-verse .box-title { color: var(--box-verse-border); }
+        .box-verse .verse-text {
+            font-family: 'Merriweather', serif;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #1b5e20;
+            text-align: center;
+            display: block;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        .box-verse .verse-ref {
+            display: block;
+            text-align: right;
+            font-size: 0.95rem;
+            color: #388e3c;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .box-science { background-color: var(--box-science-bg); border-left-color: var(--box-science-border); }
+        .box-science .box-title { color: #f57f17; }
+
+        .box-note { background-color: var(--box-note-bg); border-left-color: var(--box-note-border); }
+        .box-note .box-title { color: var(--box-note-border); }
+
+        .box-reflection { background-color: var(--box-reflection-bg); border-left-color: var(--box-reflection-border); }
+        .box-reflection .box-title { color: var(--box-reflection-border); }
+
+        /* Table of Contents */
+        .toc-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid #eee;
+        }
+        .toc-table th, .toc-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .toc-table th {
+            background-color: var(--primary-color);
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+        .toc-table tr:nth-child(even) { background-color: #f9f9f9; }
+
+        .source {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #616161;
+            font-style: italic;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 30px; }
+            h1 { font-size: 2.2rem; }
+            .box { padding: 20px; }
+        }
+    /* Enhanced Box Styling */
+        .box {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            transition: all 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+        }
+
+        /* Navigation Buttons */
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 3px solid var(--accent-color);
+            gap: 20px;
+        }
+        .nav-btn {
+            flex: 1;
+            padding: 18px 35px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            text-transform: uppercase;
+        }
+        .btn-home {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+        }
+        .btn-next {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        .btn-next:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(245, 87, 108, 0.4);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Switch Button -->
+    <div style="position: fixed; top: 80px; right: 20px; z-index: 9999;">
+        <a href="../chapter5.html" style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;">
+            <span>🌐</span>
+            <span>النسخة العربية</span>
+        </a>
+    </div>
+
+    <!-- Language Switcher -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <a href="../chapter5.html" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); display: inline-flex; align-items: center; gap: 8px; font-family: 'Montserrat', sans-serif;">
+            <i class="fas fa-language"></i> العربية
+        </a>
+    </div>
+
+    <div class="container">
+        <h1>Chapter Five<br>The Feelings and Emotions of the Universe</h1>
+
+        <div class="box box-desc">
+            <span class="box-title">Description of the chapter</span>
+            <p>This chapter manifests as the Creator's greatest creations in revealing the secrets of the universe, weaving the threads of miracles with the fingers of the miraculous to reveal one of the greatest secrets of existence - the fact that the universe is a living, breathing, feeling, throbbing organism. It is a chapter that carries with it countless miracles, from the crying of the sky and the earth, to the reverence of the mountains that prostrate themselves to the Creator billions of years ago, to the hidden dialog of beings.</p>
+            <p>The chapter flows like a river of knowledge, quenching the thirst of the mind with the springs of the Qur'anic verses, quenching the heart with the rivers of the Prophetic Hadiths, and blending the whiffs of knowledge and glimpses of scholars in a symphony of knowledge that shakes the conscience.</p>
+            <p>It is not just a chapter to be read, but a magical world to be lived, a treasure trove of knowledge, and a guide to a new understanding of the universe that makes the reader rediscover his relationship with every atom of existence. In this exceptional chapter, the heavens and the earth meet in a spiritual embrace, the stars and trees interact in the language of reverence, and atoms dance with galaxies in the eternal dance of praise, testifying to the greatness of the Creator who created this cosmic harmony and made every atom in existence speak of his monotheism and praise, and that man is not a mere spectator, but a partner and participant in its events</p>
+        </div>
+
+        <h3>Table of contents</h3>
+        <table class="toc-table">
+            <thead>
+                <tr>
+                    <th>Topic title</th>
+                    <th>Page number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Introduction to the Feelings of the Universe</td><td>2</td></tr>
+                <tr><td>The Cognitive Basis of the Universe's Feelings and Emotions</td><td>3</td></tr>
+                <tr><td>The difference between human emotions and those of other creatures</td><td>4</td></tr>
+                <tr><td>Part II: Feelings of Sadness and Pain in the Universe</td><td>14</td></tr>
+                <tr><td>The crying of heaven and earth</td><td>14</td></tr>
+                <tr><td>The sorrow of the universe over the death of a believer</td><td>18</td></tr>
+                <tr><td>The wrath of Hell and its exhalations</td><td>18</td></tr>
+                <tr><td>The breaking of the heavens and the splitting of the earth</td><td>20</td></tr>
+                <tr><td>Research III: Feelings of Fear and Exaltation in the Universe</td><td>22</td></tr>
+                <tr><td>The Mountains Fear and Crack</td><td>22</td></tr>
+                <tr><td>The Fall of Stones from the Fear of God</td><td>23</td></tr>
+                <tr><td>Meeting the Universe with the Muslim: A manifestation of cosmic harmony</td><td>24</td></tr>
+                <tr><td>Fourth article: Feelings of Joy and Pleasure in the Universe</td><td>27</td></tr>
+                <tr><td>The Earth's Joy at the Rain</td><td>27</td></tr>
+                <tr><td>The Memory and Dialogue of Beings</td><td>28</td></tr>
+                <tr><td>The feelings of the universe through the eyes of the knowers</td><td>30</td></tr>
+                <tr><td>Research VI: The Feelings of the Universe in the Light of Contemporary Science</td><td>37</td></tr>
+                <tr><td>The seventh research: Faith and Educational Implications of Believing in the Feelings of the Universe</td><td>42</td></tr>
+                <tr><td>Chapter Eight: A Journey into the Consciousness of the Universe Interactive Section</td><td>43</td></tr>
+                <tr><td>Conclusion of the Sentiments of the Universe Chapter</td><td>48</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Introduction to the Feelings of the Universe</h2>
+        <p>In the midst of the majestic cosmic silence, hidden life pulsates and deep emotions that may go unnoticed by a person who is alienated from himself and his surroundings. The Holy Qur'an reveals in a way that leaves no doubt that the universe is not just a deaf machine that performs its functions mechanically, but a living organism pulsating with feelings and sensations, rejoicing and sorrow, crying and laughing, anger and satisfaction, fear and reassurance.</p>
+        <p>Noureddine Abu Lahia says in his book "God's Universes": "The whole universe is alive... Every atom in it or below is a living being with its own reality that necessitated its existence, as well as its own image through which we know it" (God's Universe, Noureddine Abu Lahia).</p>
+        <p>Badiuzzaman Nursi said, indicating this fact and its psychological impact: "The universe with all its worlds is alive and radiant and illuminated by that manifestation, otherwise each of the worlds - as seen by the eye of delusion - would become a huge and frightening funeral under this apparent temporary world and a dark and desolate world" (The Tenth Word - The Light Messages, p. 120).</p>
+        <p>The discovery of the feelings and emotions of the universe opens up prospects for a new relationship with our surroundings, a relationship based on empathy, respect and spiritual communication, instead of blind harnessing that does not respect the sanctity of life in every atom of this existence.</p>
+
+        <h2>First research paper: The epistemological basis of the universe's feelings and emotions</h2>
+        <h3>The concept of feelings and emotions in the cosmic context</h3>
+        <p>On a quiet morning, I sat in a park watching the dewdrops on the leaves and how they glistened in the first rays of the sun. The earth was breathing with its moisture, the trees were whispering with their leaves, and the birds were singing different melodies. For a moment, I felt like I was witnessing a whole world of emotions pulsing all around me... But can we really talk about the "feelings" of the universe? And what is the nature of these feelings?</p>
+        <p>Talking about the feelings and emotions of the universe leads us to a deep question about the nature of emotions themselves. In the usual human understanding, emotions are emotional states associated with consciousness and cognition, involving psychological and physiological responses to internal or external stimuli.</p>
+        <p>But when we talk about the feelings of heaven, earth, mountains, and seas, we expand this concept to include responses of a different nature.</p>
+        <p>Human emotions are the highest, and human emotions are the soul of life, and those who have no emotions have no life. Then animal feelings, then plant feelings, then inanimate feelings. Each of these types of creatures has its own cognition and feelings, even if we do not know what they are</p>
+        <p>We can define cosmic emotions as: Emotional responses issued by different beings and creatures - including inanimate objects - as a result of their interaction with different stimuli, and reflect a type of awareness and realization commensurate with the nature of each creature.</p>
+        <p>These responses are manifested in various forms, some of which can be perceived by the physical senses, while others can only be perceived by insight and unveiling the veils.</p>
+        <p>Some may be surprised by this concept, but the Qur'an is full of references to the feelings and emotions of the universe.</p>
+        
+        <div class="box box-verse">
+            <span class="box-title">Verses</span>
+            <span class="verse-text">'Heaven and earth wept not for them' [al-Dukhan: 29]</span>
+            <span class="verse-text">"The heavens would break up, the earth would split, and the mountains would fall down" [Maryam: 90]</span>
+            <span class="verse-text">"If We were to put this Qur'an on a mountain, you would see it crumbling and cracking from the fear of Allah" [Al-Hashr: 21]</span>
+        </div>
+
+        <div class="box box-note">
+            <span class="box-title">Interpretation</span>
+            <p>Imam al-Razi says in his Tafsir: "These verses indicate that inanimate objects have perception and feeling, although we do not know how. It is not forbidden for God to create in them cognition and understanding, as He created in man, although the form and manner differ."</p>
+            <span class="source">(Al-Razi, Fakhr al-Din. The Keys of the Unseen. Beirut: Dar Ihya al-Herath al-Arabi)</span>
+        </div>
+
+        <h3>The difference between human emotions and those of other creatures</h3>
+        <p>On the banks of a river, I once sat and watched the water flow between the rocks. The river ran quietly at times, and loudly at others when it hit the rocks. And I asked myself: Is the tranquility or turmoil I feel when I see the river a reflection of the river itself? Can a river feel what I feel?</p>
+        <p>There are fundamental differences between human emotions and those of other creatures, which can be summarized in the following points:</p>
+        
+        <p><strong>In terms of source and origin:</strong> Human emotions stem from a complex combination of psychological, physiological, social and cultural factors. When humans are happy or sad, memories, experiences, values, and beliefs are intertwined in their feelings. The feelings of other creatures are more related to the instincts and instincts that God has placed in them, and are closer to a direct response to God's command and destiny.</p>
+        <p>The crying of the sky is not your crying, the fear of the mountain is not your fear, and the praise of the stone is not your praise. You cry because of your weakness, while she cries because of her fear of her Lord, you fear because of your fear, while she fears because of her knowledge of her Creator, you praise with your tongue, while she praises with every atom of her body.</p>
+
+        <p><strong>In terms of awareness and realization:</strong> Human emotions are associated with self-awareness and cognitive perception, as humans are aware and conscious of their feelings, and can express and analyze them. As for the feelings of other creatures, they are often closer to innate, automatic responses, which do not necessarily involve self-awareness in the human sense.</p>
+        <p>Perhaps inanimate objects have a fuller sense of their Creator than humans, because their feelings are free from the impurities of selfishness and the veil of whim, unlike humans, whose ego blinds them from seeing the truth.</p>
+
+        <p><strong>In terms of the mechanism of expression:</strong> Humans express their feelings through spoken language, gestures, and various behaviors. As for other beings, they have their own ways of expression, which may be unaware to us, or appear in different forms such as movement, physical changes, radiation, and vibrations.</p>
+        <p>If we could get rid of the shackles of the five senses, we would realize that the whole universe is a living, pulsating organism, and that every atom in it communicates with its sister in a language that the unaware do not understand.</p>
+
+        <p><strong>In terms of purpose and goal:</strong> The emotions of all creatures are in accordance with the Creator's will, and do not contradict Him in His will, nor do they oppose Him in His judgment. As for man's emotions, they may be in accordance with God's will, or they may be contrary to it, and this is his test and test.</p>
+        
+        <div class="box box-note">
+            <span class="box-title">Sheikh Abdul Aziz bin Baz says</span>
+            <p>"The slave has a choice, he has a will, and he has a will, but this will and this will can only occur after God's will... Obedience is by God's will, and the servant is praised and rewarded for it, and sins are by God's will, and the servant is blamed for them, and the servant is disgraced and sinned against"</p>
+            <span class="source">(Source: Sheikh Ibn Baz's website)</span>
+        </div>
+
+        <p>Despite these differences, there are commonalities between human emotions and the emotions of other creatures, most notably:</p>
+        <ul>
+            <li>They are all living responses to different stimuli</li>
+            <li>They all reflect a kind of communication and interaction with the environment</li>
+            <li>All of them express states of emotion and affect in accordance with the nature of each being.</li>
+        </ul>
+        
+        <div class="box box-reflection">
+            <span class="box-title">Reflections</span>
+            <p>These commonalities are often revealed to us in special moments of spiritual clarity: "In moments of serenity the secret is revealed. You see in every atom a beating heart. In every leaf you hear a call. In every breeze a hand reaches out to you."</p>
+            <p>As Salah Abdel Sabour said: "I listen to the whisper of the stars...I feel that every atom has a beating heart. The air is praying, the water is praising. I am the one who is oblivious... I have not yet understood the secret of existence." (From the Diwan of People in My Country)</p>
+        </div>
+
+        <h3>Types and Classifications of Cosmic Emotions</h3>
+        <p>On a stormy night, I was alone on the seashore. The wind was blowing hard, the waves were crashing violently, and thunder was pounding in the sky. The scene was majestic and frightening, but I felt that there was some kind of harmonious music playing in the apparent chaos. I wondered: Are the emotions of the universe as varied as ours, and how can we categorize them?</p>
+        <p>Cosmic emotions can be categorized according to several considerations:</p>
+
+        <h4>Categorizing universal emotions in terms of their nature:</h4>
+        
+        <p><strong>Feelings of sadness and pain:</strong> They are manifested in manifestations such as the weeping of the sky and the earth: As in the saying: 'Heaven and earth wept not for them' [al-Dukhan: 29]. In the wrath and exhalation of Hell, as in the saying: "When they are thrown therein, they hear her gasping and she is bubbling * She is almost torn with anger" [Al-Malik: 7-8].</p>
+        
+        <p>According to Tafsir al-Tabari, it reveals that "if a believer dies, the heavens and the earth weep for him for forty days," with the earth weeping over his prayer places and the heavens weeping over the door through which his good deeds ascended (Tafsir al-Tabari). This awareness is also evident in the description of Hell, which "almost tears itself apart" [al-Malik: 8], where al-Tabari interprets the word "tears apart" as "splitting and breaking apart from anger against its inhabitants" (Tafsir al-Tabari).</p>
+        
+        <p>These texts indicate that the universe is not just deaf matter, but a conscious entity that mourns the loss of the righteous and is angered by the corrupt. The heavens and the earth weep, but their weeping is not like ours, it is deeper and truer, it is the weeping of existence for the loss of those who used to fill them with remembrance and praise. The sky is crying for those who used to fill it with takbir and praise. It weeps in a language that we do not understand, who are too blind to understand the groaning of the stones and the praise of the trees.</p>
+        
+        <p>The earth shakes when the worshipper who used to occupy it with prostration and kneeling leaves it, and it loses the light it used to derive from the light of the believer, and returns to its first darkness, as if it takes off the garment of light and wears the shrouds of loneliness.</p>
+        
+        <p>In the distant depths of Hell, the fires of anger burn in the heart of Hell, and it is enraged when it sees the unbelievers in their obliviousness. She does not wait for them, but longs for them with the longing of a vengeful rebel, asking her Lord: "Is there more?" Not because she wants to be filled, but because her anger does not subside, and her rage does not subside until she embraces in her fiery embrace all those who disbelieve in God and turn away from His signs.</p>
+        
+        <p>This Qur'anic concept deepens our understanding of man's relationship with the universe, as the elements of the universe are influenced by human actions and morals. Consequently, the universe shares man's feelings, grieving for his sorrow and rejoicing for his obedience, thus emphasizing the close interconnection between the creation and the Creator in an integrated cosmic system.</p>
+
+        <p><strong>Feelings of fear, reverence and fear:</strong> They are manifested in manifestations such as the mountains' reverence and cracking: As in Almighty God's saying: "If We had lowered this Qur'an on a mountain, you would have seen it fall and crack from the fear of God" [Al-Hashr: 21].</p>
+        
+        <p>The mighty mountains were cracked by the greatness of the Qur'an, not by an external physical force, but by a deep spiritual emotion that makes every atom in their being tremble with awe and reverence before the word of God. Not by the power of earthquakes or the might of volcanoes, but by the mere thought of the greatness of the Creator. Its solid rocks crumble before the words of the Merciful, as if every stone in it realizes that it is in the presence of the judgmental King. These mountains, which we see as firm and stable, are actually living in a state of constant reverence, trembling in awe and reverence, as if every atom in them is praising their Lord in fear and submission.</p>
+        
+        <p>The whole earth stands in awe before its Creator, realizing with every molecule in it that it is created, and needs someone to hold it in place. Indeed, Allah holds the heavens and the earth from being removed ۚ and if they were to be removed, He would not hold them from anyone after Him ۚ (41), for He was wise and forgiving (41). She fears that she will fail to fulfill her mission, that she will disobey the command of her Lord, who has harnessed her to serve His servants.</p>
+        
+        <p>Even the stars in the high heavens walk their paths with fear and caution, not daring to deviate from their defined orbits, for fear of the wrath of the One who organized this marvelous universe. "Neither should the sun know the moon, nor should the night precede the day, and all are in an astronomical sphere" (Yus: 40).</p>
+        
+        <p>And giant trees bow in reverence, prostrating themselves with their branches and leaves, as if every cell in them realizes that they are in the presence of the owner of the king, so their leaves shake in praise and their trunks sway in reverence. Even the silent shadows bend east and west in successive prostrations, expressing their complete submission to their Creator, while the sound of thunder resounds in the sky as if it were a collective praise shared with the close angels.</p>
+        
+        <p>It is a cosmic symphony of reverence and exaltation, where every atom in existence participates in this deep spiritual emotion, expressing its realization of the greatness of the Creator and the majesty of His names and attributes. In this majestic scene, the whole universe looks like one big mosque, in which all creatures are praying a deep silent prayer, full of fear, love and magnification of the Lord of the Worlds.</p>
+        
+        <p>The fear and pity attributed by the Qur'an to the mountains, the heavens and the earth indicate that they are aware of what is presented to them, appreciate the consequences of things, and choose what will benefit them.</p>
+        
+        <div class="box box-note">
+            <span class="box-title">From Qatada's explanation at al-Tabari</span>
+            <p>"Allah excuses the deaf mountain, but not the naughty son of Adam. This is how He (Allah) made it known to them that the mountains are more honorable to Him than they are, despite their hardness and solidity"</p>
+            <span class="source">(Al-Tabari Tafsir al-Tabari)</span>
+        </div>
+
+        <p><strong>C. Feelings of loathing and pity:</strong> The heavens, the earth and the mountains were afraid to carry the great trust that was offered to them, and they said in deep wisdom and great humility: "We are not able to bear it, O Lord," not out of helplessness or cowardice, but out of a wise realization of the greatness of this responsibility and the weight of the burden it bears.</p>
+        
+        <div class="box box-verse">
+            <span class="box-title">Verse</span>
+            <span class="verse-text">"We offered the trust upon the heavens, the earth, and the mountains, and they refused to bear it and were afraid of it, and man bore it ( ), for he was unjust and ignorant (72)"</span>
+            <span class="verse-ref">[Al-Ahzab]</span>
+        </div>
+
+        <p>It reveals a unique kind of cosmic emotion, a wise fear of failing to fulfill the sacred duty. These great beings did not fear God Himself, but they feared that they would fail to fulfill their trust, betray the trust, and fail to fulfill what is required of them in the fullest way. It is the fear of the lover who knows the value of his beloved and fears that he will disappoint him, the fear of the good servant who realizes the greatness of his master and fears that he will fail to serve him. The heavens, the earth and the mountains teach us that true wisdom lies in knowing the limits of our abilities and humbling ourselves before the greatness of the divine mandate.</p>
+        
+        <div class="box box-note">
+            <span class="box-title">From Tafsir al-Tabari's interpretation of the verse on Amanah</span>
+            <p>"The heavens, the earth and the mountains were afraid without sinning, but out of reverence for Allah's religion that they would not do it, then He offered it to Adam and he accepted it with what was in it."</p>
+            <span class="source">(Tafsir al-Tabari, Tafsir al-Tabari)</span>
+        </div>
+
+        <p><strong>D. Feelings of joy and pleasure:</strong> As indicated by Almighty Allah: "And among His signs is that you see the earth submissive, and when We send down water upon it, it shakes and grows" [Faslat: 39].</p>
+        <p>As it is mentioned in the hadith: "Paradise rejoices at the arrival of the believer, and its trees rejoice at his arrival." (Narrated by Al-Bayhaqi in Sha'b al-Iman (7/373), and improved by Al-Albani in Sahih al-Jami'ah (1841))</p>
+        <p>This is not an analogy, but it is a fact of existence, as God Almighty created everything and gave it life and speech, but our perception cannot realize this, as the Almighty said: "There is nothing but praise, but you do not understand their praise."</p>
+        <p>We see one of the most marvelous scenes of cosmic joy, as the earth transforms from a state of reverence and stillness to a state of jubilation and flowing vitality. The earth's shaking is not just a physical movement, but a sincere expression of sheer joy that pervades every atom in it. Its shaking is not just a physical movement, but a sincere expression of great joy, as if the spirit of life has been breathed into its veins again, so that it is green, blooming and fruitful in a wonderful cosmic celebration.</p>
+        <p>Even Paradise itself rejoices at the arrival of the believer, and its trees rejoice at his arrival, in a scene reminiscent of the joy of a mother at the return of her absent child, or the joy of a lover at meeting his beloved after a long wait. This cosmic joy is not an analogy or metaphor, but a fact of existence that God has told us about, everything in this universe praises Him and expresses its feelings, but our limited perception cannot grasp this wondrous cosmic language.</p>
+
+        <p><strong>E. Feelings of anger and indignation:</strong> It is manifested in manifestations such as the anger of the heavens and the earth against the polytheists. As in Almighty God: "The heavens are about to break apart from Him, and the earth will split, and the mountains will fall down if they call upon the Lord for a son" [Maryam: 90-91].</p>
+        <p>The heavens boil with anger and indignation when they hear the heinous word that ascribes to God what is not befitting His majesty and greatness, and they almost break and crack from the horror of the slander and lies against the Lord of the Worlds. We are witnessing a majestic scene of cosmic anger, as the heavens, the earth and the mountains rise up in a great revolt against this falsehood. Their anger is not the anger of hatred or revenge, but the anger of jealousy for the sanctities of God, the earth is about to split under the feet of those who speak this falsehood, and the firm mountains shake and tend to fall, as if they cannot bear on their backs those who dare to attribute imperfection to the Absolute Perfect.</p>
+        <p>This cosmic anger is a sincere expression of the creation's reverence for their Creator and their purification of Him from all that is unworthy of His perfection and majesty, as the whole universe speaks of the oneness of God and testifies to His purification from partner, peer and child.</p>
+        <p>According to Sayyid Tantawi's Waseet Tafsir, " : "The heavens are about to break up, the earth to crack, and the mountains to sigh, because these misguided people have claimed that Allah - the Almighty - has a son, and it is not right for Him to take a son, because He - the Almighty - is rich beyond the worlds."</p>
+
+        <h4>Categorize the cosmic emotions in terms of their extent and comprehensiveness:</h4>
+        <p><strong>A. Comprehensive cosmic feelings:</strong> These are those that encompass the entire universe or large parts of it, such as the reverence of the creatures when revelation is revealed, or the angels' fear of Allah. As in his saying: "They fear their Lord from above and do what they are commanded" [al-Nahl: 50].</p>
+        <p><strong>b. Local cosmic feelings:</strong> These are those that are specific to a particular creature or place, such as the nostalgia of a stump for the Prophet (peace be upon him) and the praise of the pebbles in his honorable palm. The crying of the log on which the Prophet (peace and blessings of Allah be upon him) was preaching is one of the most marvelous narrations of the Sunnah about the feelings of inanimate objects. It shows that these creatures have perception and feelings that we may not understand, but we believe in their reality.</p>
+
+        <h4>Categorize universal emotions as they relate to human beings:</h4>
+        <p><strong>A. Emotions in response to human actions:</strong> These are the emotions that appear as a reaction to human behaviors, such as the weeping of heaven and earth for the believer, the earth's joy for the one who prostrates on it, and the roads complaining to God about the councils of disobedience on them.</p>
+        <p>On the authority of Abu Umama al-Bahili, the Prophet (peace be upon him) said, "Allah and His angels, even the ant in its burrow, and even the whale in the sea, will pray for the one who teaches people goodness" (Sahih al-Jami'ah)</p>
+        
+        <p><strong>b. Feelings that are independent of man:</strong> These are those that appear in response to God's direct command, or in the relationship of creatures with their Lord, such as the thunder praising God, and the prostration of the stars and trees.</p>
+        
+        <div class="box box-note">
+            <span class="box-title">Imam Sa'adi says</span>
+            <p>"The seven heavens, the earth, and whoever is in them", i.e.: from talking and non-talking animals, trees, plants, inanimate objects, the living and the dead, "but praise His praise", both in words and deeds, "but you do not understand their praise", meaning: the praise of the rest of the creatures which is not in your language, but it is surrounded by the All-Knowing of the unseen.</p>
+            <span class="source">(Tayssir al-Karim al-Rahman in Tafsir al-Manan - Abd al-Rahman bin Nasser al-Saadi)</span>
+        </div>
+
+        <p>These categorizations are not exhaustive or definitive, but rather an attempt to organize our understanding of the universe's feelings and emotions. Perhaps one of the most beautiful things that has been said in describing cosmic emotions:</p>
+        
+        <div class="box box-reflection">
+            <span class="box-title">Describing Cosmic Feelings</span>
+            <p>Wake up, sleepyhead! The universe around you is neither silent nor dead, but is buzzing with praise, rippling with emotion, and groaning with worship. The sun weeps when it sets, the moon smiles when it is full, the stars tremble in fear of God, and the earth sighs under the feet of the disobedient and smells the fragrance of the obedient. If you do not feel this, know that you are deficient and that the veil is in front of you, so endeavor to lift it by striving for self-discipline, purification of the heart, and constant remembrance, so that your eyesight may be opened and you may see the feelings of the universe as they are.</p>
+        </div>
+
+        <h2>Topic Two: Feelings of Sorrow and Pain in the Universe</h2>
+        
+        <h3>The Crying of Heaven and Earth</h3>
+        <p>One of the most prominent feelings of the universe revealed by the Holy Qur'an is the emotional relationship between the universe and man, which is manifested in the strange and surprising phenomenon of the weeping of the sky and the earth. As the Almighty said: "The sky and the earth wept for them, and they were not waiting for them" (Al-Dukhan 29).</p>
+        <p>This verse, which talks about the destruction of Pharaoh and his people, tells us that the heavens and the earth did not weep for them when they perished, which means that in the sense of contradiction, the heavens and the earth weep for some people when they die, namely the righteous believers who used to populate the earth by obeying and worshipping God.</p>
+        
+        <p><strong>Does the sky really cry?</strong></p>
+        <p>Al-Bayhaqi narrated in Sha'b al-Iman on the authority of Sa'id ibn Jubayr who said: "A man came to Ibn Abbas and said: "Do the heavens and the earth weep for them? Do the heavens and the earth weep for anyone?" He said: When a believer dies, if he loses his seat in the earth where he used to pray and remember Allah, it weeps for him, and if he loses his seat in the earth where he used to pray and remember Allah, it weeps for him, but Pharaoh's people had no good deeds and no good ascended to heaven from them, so it did not weep for them" (Sha'b al-Iman by al-Baihaqi, 3/380).</p>
+        
+        <p>Al-Tirmidhi reported from Anas bin Malik (may Allah be pleased with him) that the Prophet (peace and blessings be upon him) said: "There is no believer except he has two doors in heaven, a door through which his sustenance descends and a door through which his words and deeds enter, and if he dies, they weep for him." Then he recited the saying: "Heaven and earth wept not for them." [Narrated by Al-Tirmidhi, improved by Al-Albani]</p>
+
+        <div class="box box-reflection">
+            <span class="box-title">The weeping of the universe at its birth</span>
+            <p>From a great point of light in the midst of total darkness, circular waves of light emanate in a golden-blue color, overlapping like the first heartbeat of the newborn universe. These ripples carry with them the first breath of existence, the first living sound that travels through space, announcing the beginning of the great story of creation.</p>
+        </div>
+
+        <p>Mujahid said: "What earth does not weep for a slave who used to colonize it with bowing and prostration? What sky does not weep for a slave whose takbir and praise sounded like the buzz of bees?" (Tafsir Ibn Kathir).</p>
+
+        <div class="box box-science">
+            <span class="box-title">The crying of the sky: Amazing Scientific Evidence</span>
+            <p>Modern science has come to confirm this Quranic truth in a surprising way. Professor Mark Whittle of the University of Virginia, a space scientist, discovered that when the universe was in its early stages (gas, dust and high temperature), it emitted sound waves. The spread of these waves was aided by the dense gas that fills the universe, which acted as a suitable medium for the propagation of these sounds.</p>
+            <p>The discovery is the result of studying the microwave background radiation of the early universe after the Big Bang. The BBC published the news under the headline 'Birth cry of the cosmos'. (Birth cry' of the cosmos heard) (http://news.bbc.co.uk/2/hi/science/nature/3832711.stm)</p>
+            <p>There are scientifically explained cosmic phenomena related to signals and waves in space, including:</p>
+            <ul>
+                <li><strong>Cosmic Microwave Background (CMB):</strong> Microwave radiation is a remnant of the Big Bang that fills the universe homogeneously. These radiations exhibit oscillations interpreted as "sound waves" that propagated in the cosmic plasma in the early universe, helping scientists understand the structure and evolution of the universe.</li>
+                <li><strong>Cosmic radio waves:</strong> Frequent radio signals have been detected from the center of our galaxy, and have been interpreted as natural sources such as pulsars, or possibly artificial signals from intelligent civilizations, but there is no conclusive evidence for this yet.</li>
+            </ul>
+            <p>While these phenomena show that the universe is full of signals and waves, interpreting them as evidence that "the universe is a living, vibrant organism" remains within the realm of philosophical or religious speculation, rather than scientific conclusions based on empirical evidence.</p>
+        </div>
+
+        <h3>Why didn't the sky weep for Pharaoh and his people?</h3>
+        <p>The deep answer to this question lies in the close relationship between man and the universe. The believer who lives his life in harmony with the universe, colonizes the earth with worship and obedience, and raises good words and good deeds to heaven, becomes part of the fabric of this universe, and has an emotional relationship with heaven and earth. As for Pharaoh and his people, they severed this relationship by their arrogance and tyranny, and they had no good effects on the earth, nor good deeds that ascended to heaven, so the heavens and the earth did not weep for them when they perished.</p>
+        
+        <p>Ali ibn Abi Talib (may Allah be pleased with him) says: "He is wept over by his prayer from the earth and the ascent of his work from the sky" (Tafsir al-Qurtubi)</p>
+        
+        <p>The Egyptologist James Henry Bersted in his book "The Development of Religion and Thought in Ancient Egypt" mentioned the funeral rituals of the ancient Egyptians upon the death of kings, where the mourners of the king would say: "The sky is crying for you and the earth is quaking for you." The verses of the Holy Qur'an respond to these claims and emphasize that the heavens and the earth did not weep for Pharaoh and his people: (25) How they left behind gardens and eyes (25) and crops and a dignified place (26) and a blessing in which they were rejoicing (27) Also we have inherited it from other people (28) so that the sky and the earth wept not for them and they were not waiting for them (29)((Al-Dukhan (25-29)).</p>
+
+        <h3>The relationship between the believer and the universe</h3>
+        <p>The believer is not a stranger in this universe, but is surrounded by living, conscious beings who share his feelings and sensations.</p>
+        <p>The Messenger of Allah, may Allah bless him and grant him peace, said: "Islam began as a stranger and will return as a stranger as it began, so blessed are the strangers on the Day of Resurrection. It was said: "Who are they, O Messenger of Allah?" He said: "They are the ones who, when people are corrupted, become righteous. Then he said, 'There is no stranger for a believer, and no believer dies in a stranger who is absent from his mourners, but the heavens and the earth weep for him'" (Al-Tabarani's Great Dictionary).</p>
+        <p>This close relationship between the believer and the universe is not limited to feelings, but extends to cooperation and solidarity. Al-Bukhari and Muslim reported that the Prophet (peace be upon him) said: "The Hour will not rise until the Muslims fight the Jews and the Muslims kill them until the Jew hides behind a stone or a tree and the stone or tree says: 'O Muslim, O servant of Allah, there is a Jew behind me, so come and kill him, except for al-Gharaqd, which is a tree of the Jews'" (Sahih al-Bukhari).</p>
+        <p>This hadith is an apparent miracle for the Prophet (peace be upon him) and proof that inanimate objects perceive and speak, and that they know a believer from an unbeliever."</p>
+        <p>On the other hand, the unbeliever and the oblivious live in complete disconnection from their surroundings and the beings around them.</p>
+        <p>The Messenger of Allah, may Allah bless him and grant him peace, said when a funeral passed by him: "There is one who is comfortable and one who is relieved." They said, "O Messenger of Allah, what is the one who is comfortable and the one who is relieved?" He said: "The believing servant rests from the burden and harm of the world to the mercy of Allah, and the unbelieving servant rests from the people, country, trees and animals" (Sahih al-Bukhari).</p>
+        <p>This hadith is clear that the universe is affected by those who live in it, and that the righteous man is loved by all the atoms of the universe, while the ungodly man harms everything around him, and everyone is relieved by his presence.</p>
+
+        <h3>The universe mourns the death of a believer</h3>
+        <p>One of the poignant scenes that reveal the emotional relationship between the universe and man is the scene of the universe mourning and crying over the death of a believer.</p>
+        <p>On the authority of Anas ibn Malik, the Prophet (peace be upon him) said: "There is no slave except he has two doors in the sky: When he dies, they lose him and weep for him." He recited this verse: "The heavens and the earth wept for them." He mentioned that they had not done any good deeds on earth that would weep for them. Neither their words nor their deeds ascended to the heavens, nor did they have a good word or a good deed, so that the heavens missed them and wept for them." (Sunnat al-Tirmidhi)</p>
+        <p>Al-Bayhaqi narrated on the authority of Abu Umama (may Allah be pleased with him) that the Prophet (peace be upon him) said, "The sky weeps over a slave for forty mornings." (Sha'b al-Iman by al-Bayhaqi)</p>
+        <p>This grief and weeping indicates the extent of sympathy and spiritual communication between the believer and the universe around him. The believer who lives his life in harmony with the universe, and colonizes the earth with worship and obedience, and raises good words and good deeds to heaven, becomes beloved by all the atoms of the universe, and heaven and earth mourn for him when he dies.</p>
+
+        <h3>The wrath of hell</h3>
+        <p>One of the deep feelings of the universe that the Holy Qur'an reveals is the wrath of Hell and its exhalations: As Almighty God said: "When they see them from a far away place, they hear them sighing and exhaling." Al-Furqan: 12</p>
+        <p>This verse depicts a terrifying scene from the Day of Judgment, where Hell sees the disbelievers from a distance, and becomes angry with them and exhales a strong exhalation that the disbelievers hear and become more frightened and terrified. Anger is the intensity of anger, and exhalation is the forceful exhalation of breath out of anger and rage. This shows that Hell is a living, sentient being that sees, hears, feels, gets angry, rages, and exhales.</p>
+        <p>Al-Qurtubi reported in his tafsir that the Messenger of Allah, may Allah bless him and grant him peace, said: Whoever deliberately lies to me, let him take a seat between the eyes of Hellfire. It was said: "O Messenger of Allah, does it have two eyes?" He said: "Have you not heard Allah Almighty saying: When she sees them from a distance, they hear her chirping and exhaling, a neck comes out of Hell with eyes that see and a tongue that speaks, and says: "I have assigned all those who have made with Allah another god." In a narration, a neck comes out of Hell and picks up the disbelievers as a bird picks up a sesame seed.)</p>
+        <p>As in Almighty God's saying: "It will almost burst with wrath every time a wave is thrown into it, and its treasurers will ask them, "Has not a warning come to you?" [Al-Malik: 8]. This verse tells us that Hell is almost torn to shreds from the intensity of its wrath against the disbelievers.</p>
+        <p>These feelings are confirmed by the hadith of the Messenger of Allah (peace be upon him): "The fire complained to its Lord and said: 'Lord, I have eaten each other: One breath in winter and one breath in summer, so the hottest heat you feel is from the breath of Hell, and the coldest cold you feel is from the Zumhurr of Hell" (Sahih al-Bukhari) (Sahih al-Bukhari).</p>
+        <p>This hadith indicates that the fire is a living, sane creature with a consciousness, and it complains to its Lord</p>
+
+        <div class="box box-reflection">
+            <span class="box-title">Hell Scene</span>
+            <p>Hell, in a frightening scene , appears as an angry being waiting for those who disobey God, in accordance with the saying: "When they see them from a far away place, they hear them sighing and exhaling" (Al-Furqan: 12).</p>
+        </div>
+
+        <h3>The breaking of the heavens and the splitting of the earth</h3>
+        <p>The Qur'an depicts the breaking of the heavens, the splitting of the earth, and the destruction of the mountains because of the polytheists saying that God has a son: "The heavens are about to break apart from Him, and the earth will split, and the mountains will fall as if they had called upon the Merciful One for a son" [Maryam 90-91].</p>
+        <p>This outrageous claim is not only met with disapproval and denunciation, but the whole universe is about to collapse and shatter, as if it were a catastrophe that shakes the pillars of all existence and shakes the whole of the Most High. The heavens are about to crack, the earth to split, and the mountains to collapse, in abhorrence and denial of this abominable statement.</p>
+        <p>According to Tafsir al-Qurtubi, "When Allah created the earth and created the trees in it, there was no tree in the earth from which the children of Adam did not derive benefit... The earth and the trees remained so until the ungodly among the children of Adam spoke that great word... When they said it, the earth chilled and the trees became thorny" (Tafsir al-Qurtubi).</p>
+        <p>Al-Qurtubi then added: "Ibn Abbas said: 'The mountains and the trees in them and the seas and the whales in them became thorns in the whales and in the trees. Ibn Abbas and Ka'b also said: The heavens, the earth, the mountains, and all creatures except the two heavy ones were frightened, and they almost disappeared, and the angels were angry, and Hell was roused, and the trees became thorns, and the earth became barren when they said, 'God has taken a son'." (Tafsir al-Qurtubi: Tafsir al-Qurtubi)</p>
+        <p>Ibn Mas'ud (may Allah be pleased with him) said: "The mountain will say to the mountain: "Did anyone pass by you today who remembered Allah? Yes, he was pleased." (Tafsir Ibn Kathir)</p>
+
+        <h2>Research III: Feelings of Fear and Exaltation in the Universe</h2>
+        
+        <h3>The Mountains Fear and Crack</h3>
+        <p>One of the touching scenes that the Holy Qur'an depicts of cosmic feelings is the scene of the mountains' reverence and cracking of the mountains out of fear of God: "If We were to put this Qur'an on a mountain, you would see it trembling and cracking from the fear of Allah, and these are the examples We give to people so that they may think" (Al-Hashr 21).</p>
+        <p>Imam al-Shawkani says in the interpretation of this verse: "That is: its greatness, the quality of its words, the strength of its buildings, its eloquence, and its inclusion of sermons that soften the hearts, that if it were revealed to a mountain of the mountains on earth, you would see it, although it is very hard and hard and huge in size, cracked, that is: cracked for fear of Allah Almighty out of fear of His punishment and fear of not performing what is obligatory on him in honoring the words of Allah, and this is a representation and imagery that implies the high status of the Quran and its impact on hearts" (Fath al-Qadir).</p>
+        <p>Nur al-Din Abu Lahiya says: "In this verse is an indication that the mountain is affected by hearing and heart by the words of Allah, and if it were purely inanimate, it would not crack for fear of Allah (Akwan Allah).</p>
+        <p>The Holy Qur'an has told about the feelings of fear that make stones fall, explode or crack: "And of the stones, some of them do not burst into rivers, and some of them do not crack and water comes out of them, and some of them do not fall down out of fear of Allah" (Al-Baqarah: from verse 74) (Al-Baqarah: from verse 74)</p>
+
+        <div class="box box-verse">
+            <span class="box-title">Prophetic Evidence on the Feelings of Mountains and Stones</span>
+            <p>1. Al-Bukhari and Muslim narrated from Anas bin Malik (may Allah be pleased with him) who said: "The Prophet (peace and blessings be upon him) ascended Uhud with Abu Bakr, Umar and Uthman, and Uhud trembled: "Steady Uhud, for you are a prophet, a friend and a martyr" (Sahih Bukhari).</p>
+            <p>2. Bukhari narrated from Jabir ibn Samrah who said: The Messenger of Allah (peace and blessings of Allah be upon him) said: "I know a stone in Makkah that used to greet me before I was sent, I know it now." (Sahih Muslim)</p>
+            <p>3. Narrated by Ahmad and al-Tirmidhi from Ibn Abbas (may Allah be pleased with them both) who said: The Messenger of Allah (peace be upon him) said: "The Black Stone is from Paradise, and it was whiter than snow until the sins of the people of polytheism blackened it." (Narrated by al-Tirmidhi, authenticated by al-Albani)</p>
+            <p>3. Narrated by Ahmad and Al-Tirmidhi from Ibn Abbas (may Allah be pleased with them both): The Messenger of Allah, may Allah bless him and grant him peace, said: "The Black Stone is from Paradise, and it was whiter than snow until it was blackened by the sins of the people of polytheism." (Narrated by At-Tirmidhi, authenticated by Al-Albani)</p>
+        </div>
+
+        <h3>The Fall of Stones from the Fear of God</h3>
+        <p>One of the moving scenes depicted in the Holy Qur'an is the scene of stones falling out of fear of God: "And of the stones there are some of them that do not burst into rivers, and some of them do not crack and water comes out of them, and some of them do not fall down out of fear of Allah, and Allah is not oblivious to what you do" (Al-Baqarah 74).</p>
+        <p>This verse tells us that some of the stones descend out of fear of Allah, that is, they descend from their high places to low places out of fear and apprehension of Allah.</p>
+        <p>Ibn Abbas (may Allah be pleased with both of them) said: "Some of the stones fall from the top of the mountain out of fear of Allah." (Tafsir al-Tabari). Mujahid said: "There is no rock that falls from the top of a mountain except out of fear of Allah." (Tafsir al-Tabari)</p>
+        <p>Al-Tabari narrated on the authority of Ibn 'Abbas on the saying: He said, "What hangs down from the mountains is the fear of Allah, and what falls down from them is the fear of Allah." (Tafsir al-Tabari)</p>
+        <p>Imam Qurtubi says: "This is a report about some stones that they fall and descend from the top of the mountain out of fear of Allah Almighty. This is not forbidden, because Allah Almighty has described inanimate objects as rational, obedient and prostrate, so He said: 'There is nothing but praise in praise of Him', and He said: 'O mountains, weep with Him' ... The Prophet (peace be upon him) said: 'I know a stone in Mecca that used to greet me' ... The meaning of the saying: 'because of the fear of Allah', i.e. he descends for the fear of Allah, i.e. to honor and glorify Allah" (Tafsir al-Qurtubi).</p>
+        <p>Ibn al-Qayyim's statement that inanimate objects are more obedient to God than human beings confirms this meaning: "Allah has required all creatures to obey Him, and all of them are obedient to Him, except those who disobey Him from the jinn and man... The Almighty has described the stones as fearful, saying: 'Some of them fall down from the fear of Allah.' If the stones fear Allah, how can the hearts not fear Him?" (Book of Benefits)</p>
+
+        <h3>Meeting the Universe with the Muslim: A manifestation of cosmic harmony</h3>
+        <p>In the midst of this vast universe, the signs of Allah Almighty are manifested in marvelous scenes that captivate the minds and shake the hearts. One of the most marvelous of these scenes is what the Prophet (peace and blessings of Allah be upon him) revealed in his hadith about the response of beings to a Muslim.</p>
+        <p>He said: Sahl ibn Saad al-Saadi (may Allah be pleased with him): "There is no Muslim who makes the call to prayer, except those on his right or left, from stone, tree or earth, until the earth is cut off from here and here." (Al-Tirmidhi, no. (2828) and Ibn Majah, al-Hakim) Narrated by al-Tirmidhi (828), Ibn Majah, and al-Hakim.</p>
+        <p>This great hadith reveals an amazing cosmic truth: The whole universe responds to the Muslim in his worship, and the stone, tree, and tarmac participate in his rituals and echo his response.</p>
+        <p><strong>The meaning and status of the Tallabiya:</strong> It is the slogan of Hajj and Umrah, and it is the Muslim's saying: "Labbaik, O Allah, Labbaik, Labbaik, there is no partner for you, Labbaik, praise and grace are yours and the king is yours, there is no partner for you." It is an answer to the call of Ibrahim, peace be upon him, when he authorized the people to go on Hajj, and a declaration of obedience and submission to the command of Allah Almighty. The meaning of "Labbaik": It means answering you after answering you, staying in your obedience, and continuing to worship you. It is one of the greatest rituals of Hajj, in which a Muslim raises his voice to declare his unity with God and his response to His command.</p>
+        <p><strong>Creatures respond with the Muslim:</strong> The Hadith tells us that when a Muslim makes his Hajj or Umrah call to prayer, everything around him - stone, tree and mudar (pieces of dry clay) - shares this call to prayer and echoes it with him "on his right and on his left," i.e. all around him. This cosmic participation continues and extends "until the earth is cut off from here and here", i.e. as far as the sound of the caller's voice can reach, or to the limits and ends of the earth.</p>
+        
+        <div class="box box-desc">
+            <span class="box-title">Significance of the Hadith of Meeting the Beings</span>
+            <ul>
+                <li><strong>1. Consciousness and feelings of the universe:</strong> This great hadith confirms what the Holy Qur'an indicated that the universe is not just a deaf machine, but a living organism pulsating with feelings and sensations, praising the praise of its Lord and responding to the worship of believers. The Almighty says: "There is nothing but praise, but you do not understand their praise" [Al-Israa: 44]. The stone, the tree and the tarmac are sentient beings who realize the meaning of monotheism, understand the significance of the call to prayer, and join the Muslim in declaring his servitude to God Almighty.</li>
+                <li><strong>2. Honoring and glorifying the Muslim:</strong> In this hadith, there is a great honor for the Muslim who is a worshipper, as the creatures respond to him and join him in his worship. This indicates the greatness of the Muslim's position in this universe, and that he is the center of the world and the focus of the Creator's honor. If the beings around him are responding to his worship, it means that he is not a stranger in this universe, but rather he is at home in his environment that embraces him and shares his feelings and worship.</li>
+                <li><strong>3. Cosmic Harmony in Worship of God:</strong> This cosmic participation in worship reveals the truth of cosmic harmony in the servitude to God Almighty. The entire universe - including humans, animals, plants and inanimate objects - worships God, praises Him and testifies to His oneness. This harmony is manifested in its most beautiful form when a Muslim makes the call to prayer, and the beings around him respond to it in a wonderful spiritual scene that expresses the unity of purpose and destiny, and the unity of servitude to the One Creator.</li>
+                <li><strong>3. Continuous worship: A Muslim's worship throughout his life:</strong> Although the hadith talks about the fulfillment of the pilgrim and the pilgrim, the concept of tilbiyah is broader than that. A Muslim responds to his Lord's call at every moment of his life by following his commands and avoiding his prohibitions. This continuous response - if the Muslim is sincere in it - is shared by the beings around him, testifying to his obedience and righteousness, and helping him in his journey of servitude to God Almighty.</li>
+            </ul>
+        </div>
+        <p>The conversation of the beings' response with the Muslim has opened wide horizons in understanding the relationship between man and the universe, and revealed to us a manifestation of the wondrous cosmic harmony in servitude to God Almighty. As we pray in our Hajj and Umrah, let us sense this great multitude of beings that join us in our prayers, and let us evoke this cosmic harmony in every worship we perform, so that we may be among the people of knowledge who realize the secrets of the universe and taste the pleasure of true servitude to Allah, the Lord of the Worlds.</p>
+        <p>"There is no Muslim who makes a call to prayer, but anyone on his right or on his left, from stone, tree or earth, until the earth is cut off from here and here."</p>
+
+        <div class="box box-reflection">
+            <span class="box-title">Meet the universe</span>
+            <p>Hundreds of hearts revolve around the Kaaba as pilgrims, dressed in white, raise their voices to "Labbaik O Allah, Labbaik". It is as if the Kaaba and the creatures around it share the spiritual response that shakes the entire universe.</p>
+        </div>
+
+        <h2>Fourth article: Feelings of joy and pleasure in the universe</h2>
+        
+        <h3>The joy of the earth when it rains</h3>
+        <p>One of the wonderful scenes that the Holy Qur'an depicts of the feelings of the universe is the scene of the earth's joy and rejoicing when the rain falls: "And one of His signs is that you see the earth submissive, and when We send down water upon it, it shakes and grows, for He who revives it is the One who revives the dead, for He is over all things capable." (Qur'an 39)</p>
+        <p>This verse depicts the earth in two states: The state of reverence, i.e., desolation and barrenness, and the state of joy and jubilation after the rain, where it shakes and rises, i.e., moves, swells and rises. The meaning is that you see the earth in a state of humble submission without vegetation, and if We send down water on it, it moves with vegetation and swells... This is a metaphor, likening the earth in its state of dullness, death, and barrenness to the humble submission of people, and in its state of shaking with vegetation and raising it with it to the shaking with joy.</p>
+        <p>Zamakhshari says in Al-Kashaf: "Humility: Humiliation and humiliation, so it is borrowed for the state of the earth if it is barren and without vegetation, as it is described as dormant in the saying: {You see the earth as dormant}, which is the opposite of its description of vibration and asthma, which is swelling, if it is fertile and adorned with vegetation as if it is like a proud man in his costume, and before that it is like a humiliated and disheartened person in shabby garments." (Al-Kashaf on the Truths of the Mysterious Mysteries of the Download and the Eyes of the Sayings in the Faces of the Interpretation)</p>
+        <p>This verse tells us that the earth is a living being, with consciousness, perception and feeling, which is humbled and humbled when it is dry and desolate, and shakes and rises in joy and rejoicing when it rains. As Allah says: "And you see the earth stagnant, and if We send down water upon it, it shakes and grows and sprouts every kind of bright flower" (Al-Hajj 5).</p>
+        <p>Ibn Ashur says in the interpretation of this verse: "Shaking was borrowed for the movement that occurs in the earth from the planting of seeds and the splitting of the soil from the plants, and asthma was borrowed for the swelling that occurs in the soil from the moisture of the water and from the permeation of its parts for the roots of the plants. Vibration is to see something shaking and moving, and asthma: Increase and rise" (Tahrir al-Tanweer)</p>
+        <p>Modern science confirms this picture painted by the Holy Quran. Scientific studies have proven that the soil actually expands and swells when it is saturated with water, and active microscopic movement occurs in it as seeds begin to grow and sprouts emerge.</p>
+
+        <h3>The memory and dialog of beings</h3>
+        <p>One of the wondrous manifestations of cosmic consciousness is the texts' reference to the communication, dialog, and memory of beings among themselves.</p>
+        <p>Al-Bukhari in al-Adab al-Mufrad and al-Baihaqi in Sha'b al-Iman narrated from Abdullah bin Amr (may Allah be pleased with them both) who said: "The fortresses will talk to each other as people talk to each other, and one of them will say: "Did anyone pass by you today?" (Al-Adab al-Mufrad al-Bukhari, authenticated by Al-Albari).</p>
+        <p>It is narrated that Ibn Mas'ud (may Allah be pleased with him) said: "The mountain will say to the mountain: "O Philan, did anyone pass by you today who is remembering Allah? Yes, he was pleased." (Tafsir Ibn Kathir)</p>
+        <p>These texts indicate that the beings in this universe communicate with each other, that they are aware of what is going on around them, that they are aware of the people who pass by them, and that they distinguish between the dhikr and the oblivious.</p>
+        <p>Badiuzzaman Nursi, explaining this truth and its psychological impact, said: "The universe with all its worlds is alive and radiant, illuminated by this manifestation, otherwise each of the worlds - as seen by the eye of delusion - would become a huge, frightening funeral under this apparent temporary world, and a dark, desolate world" (The Tenth Word, p. 120).</p>
+        <p>Ibn al-Qayyim states: "In these verses there is proof that inanimate objects are sane, perceive, understand and speak, as evidenced by the saying: 'There is nothing but praise, but you do not understand their praise' [al-Israa: 44]" (Bada'iyat al-Fada'iyah).</p>
+
+        <div class="box box-desc">
+            <span class="box-title">The uprising of the universe against the Jews in the end times</span>
+            <p>Abu Huraira (may Allah be pleased with him) said: "The Hour will not rise until the Muslims fight the Jews, and the Muslims will kill them, until the Jew hides behind a stone and a tree, and the stone or tree will say: 'O Muslim, servant of Allah, there is a Jew behind me, so come and kill him. Except the gargoyle, for it is a tree of the Jews.) Sahih al-Jami'ah</p>
+            <p>Abu Huraira also reported that the Prophet (peace be upon him) said, "The Hour will not rise until you fight the Jews, until the stone behind the Jew says, 'O Muslim, this is a Jew behind me, kill him." (Sahih Bukhari No. 2926) (Sahih Muslim No. 2922)</p>
+            <p>At the end of time, when injustice reaches its full extent and corruption is rampant on earth, the entire universe will rise up against the oppressors and aggressors, turning even the silent inanimate objects into witnesses of justice and supporters of the oppressed right. The stones that have witnessed over the centuries the rivers of innocent blood unjustly spilled, the trees that have seen with their hidden eyes how the hands of tyranny reached out to cut the roots of justice from the earth, all these creatures will one day stand up to testify to the truth before God and history. On that great day, nature will no longer be silent in the face of injustice, but will speak with the tongue of explosive anger, revealing the hiding places of the oppressors who thought that the earth would cover them as it has covered their crimes for so long. The stone that used to see and not speak, and the tree that used to hear and not speak, will become the mouthpiece of truth, pointing out the oppressors after the earth is filled with their corruption and highness. The rage of the universe against these spoilers is not just a passing emotion, but a just cosmic revolution against those who have violated the sanctities of the sanctuary and risen up in the earth without right, so that even inanimate objects cannot bear to be an aid to them in their injustice. In this majestic scene, God's will is manifested in all of His creation, where everything in the universe becomes harnessed to uphold justice and righteousness, and where there is no place for the unjust in a land where even the smallest atoms bear witness to them.</p>
+        </div>
+
+        <h2>Fifth research: The feelings of the universe in the eyes of the knowers</h2>
+        <p>People with enlightened hearts have always enjoyed a special sensitivity to the feelings and emotions of the universe around them. This open eye to the unseen world has seen what we do not see, heard what we do not hear, and felt what we do not feel. In the depths of the dark nights and in the solitude of the sacraments, the truths of existence were revealed to them, as they realized that the stone has a soul, the tree has a heart, the sky has tears, and the earth has a heartbeat. Here, I will try to convey to you some of the pens of the learned men describing their experiences with the feelings of the universe, hoping to touch a part of that hidden world in which they lived.</p>
+
+        <h3>Imam al-Ghazali and Cosmic Consciousness</h3>
+        <p>In his philosophical writings, Imam Abu Hamid al-Ghazali addressed deep concepts about the nature of the universe and its relationship with the Creator, focusing on the idea of cosmic consciousness and the universe's praise of God. Although al-Ghazali may not use the term "cosmic consciousness" in the modern sense, his works clearly indicate an understanding of the universe as an entity that is not static, but possesses some kind of realization or living relationship with the divine.</p>
+        <ul>
+            <li><strong>Cosmic consciousness:</strong> The concept of a "conscious universe" can be derived from al-Ghazali's view of existence, especially in his book Mishkat al-Anwar. Al-Ghazali believes that all existence is "the light of the light of the Eternal Power, and one of its effects." In other words, everything in the universe is a manifestation of the divine light. This means that everything in existence is not independent, but derives its existence and light from God.</li>
+            <li>Al-Ghazali believes that the "human soul" or "intellect" is one of the highest "lights" because it is capable of perceiving truths. This realization is not just a visual vision, but an inner insight that allows the knower to reach the truth that "there is nothing in existence except God Almighty." This realization represents the pinnacle of cosmic consciousness for al-Ghazali. For al-Ghazali, this is the pinnacle of cosmic consciousness, where man realizes the unity of existence and the absence of anything other than God.</li>
+            <li><strong>Lifting veils:</strong> Al-Ghazali argues that reaching this awareness requires "lifting two veils": The veil of darkness (material things) and the veil of light (the many lights that may distract man from the light of God). The more these veils are lifted, the more a person realizes cosmic realities and unifies them into one source, which is God.</li>
+            <li><strong>The Universe Praises God:</strong> Al-Ghazali emphasizes that the entire universe, with all its components, praises God. This praise is not a mere tongue-twisting, but an existential indication of the Creator's greatness and wisdom in every creature.</li>
+            <li><strong>Cosmic verses:</strong> Al-Ghazali believes that every creature in the universe is a "sign" and proof of God's existence, power, and wisdom. The mere existence of these creatures, with their order and precision, points to a great Creator, and this very existence is a silent and active tasbih to God. Every atom in existence "testifies" to the perfection of the Creator, and this witnessing is the essence of tasbih.</li>
+        </ul>
+        <p><strong>Signs of Cosmic Consciousness in Al-Ghazali's thought:</strong></p>
+        <ul>
+            <li><strong>Pantheism:</strong> The realization that everything in the universe is a manifestation of God's light and presence, and that "there is nothing in existence except God."</li>
+            <li><strong>Inner Insight:</strong> The ability to go beyond the apparent senses and look with the "inner eye" or "heart" to realize the deeper truths of existence, rather than just the physical vision.</li>
+            <li><strong>Gratitude:</strong> Reaching a state of "irfan" in which the knower loses sight of the many and realizes only pure unity, which is the vision of God in everything.</li>
+            <li><strong>The order of the universe:</strong> Recognizing that the order and precision of the universe is a sign of an all-knowing and wise Creator, and that this order itself expresses the universe's praise of the Creator.</li>
+        </ul>
+        <p>Thus, Al-Ghazali believes that the universe is not just deaf matter, but a mirror that reflects the divine light, and every part of it praises the Creator, and it is the conscious human being who realizes this deep connection between the universe and its Creator.</p>
+
+        <h3>Jalaluddin Rumi and the Songs of Adoration of Nature</h3>
+        <p>As for Jalaluddin Rumi, he had a timeless love story with nature. Rumi speaks "Every atom of existence dances with the love of God, and shakes with joy at His remembrance." This imagery reflects Rumi's Sufi vision, which sees everything in the universe - inanimate objects, plants and animals - participating in the love and remembrance of God in their own way. He says: "Every atom in the universe is informing about Him, indicating Him and leading to Him, but the door must be open to it, and the guard must open this door." (Mathnawi)</p>
+        
+        <div class="box box-reflection">
+            <span class="box-title">Atoms Poem</span>
+            <p>O dawn, shine!<br>Atoms dance<br>The whole universe dances from them<br>Spirits in a dance of existence.<br>I'll whisper their destination<br>All the atoms in the wind and the desert know where they're going.<br>Even if they appear to be crazy.<br>Every atom, happy or sad, is only in the sun of its love.</p>
+            <span class="source">(Diwan Shams Tabriz, translated by Mohamed El-Saeed Gamal El-Din)</span>
+        </div>
+        <p>These enchanting poetic scenes in Rumi's words are not just a poet's imagination, but the manifestations of a heart open to the pulse of the universe and its feelings.</p>
+
+        <h3>Ibn Atallah al-Sakandari and the Emotions of the Universe</h3>
+        <p>Imam Ahmad ibn Atallah al-Sakandari, the learned Sufi mystic and author of Al-Hakam al-Attiyya, was one of the most profound Muslim thinkers who addressed the question of the consciousness and vitality of the universe. He saw the universe as a living entity pulsating with the divine spirit, interacting with its creator at every moment.</p>
+        <p><strong>The Universe Illuminated by the Divine Presence:</strong> Ibn Atallah says in his famous wisdom: "The universe is all darkness, but it is illuminated by the appearance of the truth in it, so whoever sees the universe and does not witness it in it, or at it, or before it, or after it, lacks the presence of light, and the suns of knowledge are blocked from him by the clouds of effects." (Al-Attati's Wisdom). This vision reveals a deep understanding of the true nature of existence. For Ibn 'Ata'Allah, the universe is not just inanimate matter, but a mirror reflecting the divine light and a theater for the manifestation of the divine names and attributes.</p>
+        <p><strong>The Impossibility of Veiling the Truth:</strong> He emphasizes this meaning in his profound wisdom: "How can it be conceivable that anything could conceal Him, when He has manifested everything? How can it be conceivable that anything could conceal Him, when He appeared before everything existed? How can it be conceivable that anything could conceal Him, when He is more visible than everything?" (Al-Attati's Wisdom). This recurring question reveals a fundamental truth: God is present in every atom of existence, and everything in the universe is a manifestation of His power and wisdom.</p>
+        <p><strong>The Conscious, Interactive Universe:</strong> Ibn 'Atallah al-Sakandari believed that the entire universe is alive with its praise, speaking its own language and addressing its Lord, even if the visible creatures do not understand its language. This is emphasized in his words: "Slaves and ascetics become despondent about everything because they are absent from God in all things; if they saw Him in everything, they would not be despondent about anything." (Al-Attati's Wisdom No. 96)</p>
+        <p><strong>The Universe as a Divine Mirror:</strong> Ibn Atallah calls for looking at the universe with the eye of insight. In explaining his wisdom, he says to be careful not to make the universes a prison for you from the Creator, but to make the universes a mirror through which you can see the beauty of the truth and the effects of His attributes.</p>
+        <p><strong>Manifestation in every atom:</strong> He believes that the truth is present with every being, looking from every witness, and close to every lost, in his wisdom that "the whole universe is a manifestation of the attributes of the truth, and every atom in it carries one of its secrets."</p>
+        <p><strong>Ibn Atallah's Philosophy of Living Existence:</strong> With this profound vision, Ibn Atallah al-Sakandari presents an integrated philosophy of existence: The universe is a living mirror reflecting the divine beauty and majesty; Every atom is aware of the presence of its Creator and praises Him; All existence is interactive in a constant state of orientation and reverence; Matter and spirit are united in a great cosmic praise. Thus, Ibn Atallah al-Sakandari reveals the reality of the universe as a living organism that breathes the mention of God, moves by His will, and praises Him in every moment of existence, emphasizing that those who understand this cosmic language have reached the rank of witnessing and true knowledge.</p>
+        <p>Praise be to Him who revealed the existence of things and hid the secrets of their meanings, and made everything a praise, and every inanimate object a knowledge, but you do not understand their praise. Glory be to Him who makes inanimate objects hear His praise and understands the call of His monotheism. Do you not hear the rocks overflowing with tears at His mention? Do you not see the trees bowing in obedience to His command?</p>
+
+        <h3>How do we understand the experience of those who know the feelings of the universe?</h3>
+        <p>What I have conveyed to you from the texts of the knowers are not mere poetic fantasies or rhetorical metaphors, but real observations that they lived with their hearts open to the worlds of the unseen. There are secrets in the universe that can only be realized by those whose vision is unveiled by God, who see what no one else sees, and hear what no one else hears. The universe is an open book for those who have the keys to read it. But how can we understand this unique experience? There are three levels of understanding:</p>
+        <p>Abu Hamid al-Ghazali tells us in Ihya al-Ulum al-Din about the secret of this vision: "Likewise, the heart is a mirror ready to reveal the truth in all things... and the second: It prevents the clarity of the heart and ... a mirror that is defiled and then wiped with polish is not the same as one that is wiped to increase its clarity without previous defilement." (Revival of the Sciences of Religion - in the chapter "Joys and Glooms")</p>
+        <p><strong>Al-Ghazali's first level is purification of the heart:</strong> The heart is like a mirror, and sins are like rust on it. The more the mirror is polished and refined by piety and remembrance, the more the images of the realities of things are reflected in it. The more refined it is, the more truths are revealed in it.</p>
+        <p><strong>The second secret:</strong> Muhammad ibn Sa'ad said: "I never saw anything but I saw God in it." (Abu Bakr al-Kalabadi, "The Definition of the Doctrine of the People of Sufism," p. 64). He who does not see God in everything sees nothing. He who does not hear God in every sound, he hears nothing. The knower is never inattentive, but is constantly awake, seeing things as they are, not as those who are inattentive see them. This constant vigilance makes the knower sensitive to every whisper in the universe, every signal, every pulse.</p>
+        <p><strong>Third level: The annihilation of the ego:</strong> When the ego dissolves in the sea of divine love, the barriers between the self and the universe collapse, and the common feelings between man and the universe appear, and the knower sees the heart of the universe beating with love just as his own heart beats in harmony with the rhythm of the universe in a timeless symphony of adoration and beauty.</p>
+
+        <h3>How do we regain a sense of the universe's feelings?</h3>
+        <p>You don't have to be a great scientist to feel something of the universe. We can begin our journey into this wondrous world with simple steps:</p>
+        <ul>
+            <li><strong>Sitting in nature with an open heart:</strong> Let's get out of the noise of the cities and sit in nature with a clear heart, contemplating everything around us, listening with our inner ears to the whispers of the universe.</li>
+            <li><strong>Meditate on the verses of the Quran:</strong> They speak of the feelings of the universe, such as the weeping of the sky and the earth, the fear of the mountains, and the cracking of the rocks. Let's try to feel these meanings as we recite the verses.</li>
+            <li><strong>Read the poems and texts of the knowers:</strong> Let's read Rumi's Mathnawi and Ibn al-Farid's Diwan, and try to live their experience with them, not just read words.</li>
+            <li><strong>Purify the heart from inattention and sins:</strong> A dark heart does not see the light of the universe or hear its whispers.</li>
+            <li><strong>Pay attention to exceptional moments:</strong> Those rare moments when we suddenly feel deeply in tune with something in nature - a sunset, a whisper of a breeze, a drop of rain. These moments are sparks from the universe's emotional realm, and we need to stop and contemplate them.</li>
+        </ul>
+        <p>The feelings of the universe are not an abstract philosophical idea, but a reality that can be sensed and interacted with. When we begin to see the universe around us as a living, feeling organism - happy and sad, angry and satisfied, loving and longing - our whole outlook on life will change, and our relationship with God, the universe, and mankind will become deeper and richer.</p>
+
+        <h2>Sixth article: The Feelings of the Universe in the Light of Contemporary Science</h2>
+        <p>In one of the episodes I saw during Ramadan about a message from water , I stood contemplating Dr. Masaru Emoto's famous experiment on the effect of emotions and words on water crystals. The images on display were stunning - beautiful symmetrical crystals formed in response to words of love and gratitude, and distorted and disturbed crystals formed after being exposed to words of hate and anger. Could this water be "feeling" in some way, I wondered? Contemporary science, despite its materialistic methodology, is beginning to approach - albeit from different angles - some of the concepts that the Qur'an put forward centuries ago about cosmic consciousness and the feelings of creatures. Let's explore some of these exciting scientific discoveries.</p>
+
+        <h3>The intelligence of plants: Amazing Consciousness</h3>
+        <p>Recent scientific studies are transforming our understanding of plants. Instead of being thought of as passive, unconscious beings, research reveals that plants have surprising intelligence and advanced sensory capabilities. Professor Stefano Mancuso, the founder of plant neuroscience, said: "Our experiments have shown that plants have a distributed nervous system that allows them to respond to stimuli with amazing precision. They see, hear, smell, taste and touch - albeit in a very different way from us" (Mancuso and Viola, "The Intelligence of Plants", 2018).</p>
+        <p>A stunning example of this:</p>
+        <ul>
+            <li>Plants that recognize the sounds of caterpillars eating their leaves and start producing defensive chemicals.</li>
+            <li>Trees that communicate with each other via a network of underground fungi, sending "warnings" to neighboring trees when they are under attack.</li>
+            <li>Plants that can remember and learn from past experiences, adapting to their environment more effectively.</li>
+        </ul>
+        <p>These discoveries come close to what the Qur'an tells us about plant praise and prostration: "And the star and the trees prostrate themselves" [al-Rahman: 6].</p>
+
+        <h3>Plant intelligence in contemporary studies: Monica Galeano's vision</h3>
+        <p>Dr. Monica Gagliano is a pioneer in the field of plant intelligence and evolutionary biology, whose pioneering work at the University of Western Australia and the University of Sydney has broken new ground in understanding the cognitive abilities of plants. Gagliano defines plant intelligence as the ability of plants to process information and make adaptive decisions despite not having a brain or central nervous system (Gagliano, 2018). She emphasizes that "plants are intelligent beings, possessing deep wisdom-if we learn to listen" (Gagliano, 2022, p. 113). She also points out that the fact that the mechanisms of perception, learning and decision-making in plants differ from those in humans "does not make them less than us, but shows a plant intelligence of a special nature" (Gagliano, 2022, p. 113).</p>
+        <p>In her experimental studies, Gagliano has demonstrated the ability of plants to learn by acquiring new behaviors through experience, to remember by retaining and retrieving information when needed, and to make decisions by choosing between multiple alternatives based on the available information (Gagliano, 2018). Research shows that plants interact with their environment in complex ways that include processing multiple environmental stimuli, responding adaptively to changes, and communicating with other plants and organisms in the ecosystem. Gagliano's work challenges traditional definitions of intelligence that associate it with the presence of the nervous system, opening the door to a broader understanding of cognitive abilities in nature, and the findings suggest that intelligence may be a fundamental property of life itself, not limited to organisms with complex brains.</p>
+
+        <h3>Integrated Information Theory: Is consciousness a fundamental property of matter?</h3>
+        <p>In the field of neuroscience, scientist Giulio Tononi has developed the Integrated Information Theory (IIT), which suggests that consciousness may be a fundamental property of the universe, not just a byproduct of complex neural processes. "Consciousness is not unique to the human brain," says Tononi, "but is a property that can be found to varying degrees in any system capable of integrating information in a certain way." (Tononi and Koch, "An Integrated Information Theory of Consciousness," Journal of Neuroscience, 2020).</p>
+        <p>This theory opens the door to the idea that consciousness may exist in varying degrees in everything - from atoms to cells to complex organisms - which is close to the Qur'anic concept of universal praise: "There is nothing but praise in its praise" [Al-Isra: 44].</p>
+
+        <h3>Collective intelligence: Consciousness beyond the individual</h3>
+        <p>Studies of collective intelligence reveal how complex intelligent behaviors emerge from simple interactions between individual organisms. Professor Deborah Gordon, who has studied ants for decades, explains: "There is no leader ant that gives orders. However, the entire ant colony functions as a single organism, capable of making complex decisions and solving issues far beyond the capabilities of any individual ant," explains Professor Deborah Gordon, who has studied ants for decades. She explains that intelligent collective organization arises from simple interactions between individuals, not from centralized forces. ("Collective Behavior" in Gordon's Ants at Work). This phenomenon, known as "collective intelligence" or "collective mind," is close to the Qur'anic concept of animal nations: "There is not a single animal on earth, nor a bird that flies on its wings, except nations like yourselves" [Al-An'am: 38].</p>
+
+        <h3>Memory of water: Between Science and Controversy</h3>
+        <p>Dr. Masaru Emoto's experiments on the "memory of water" have sparked widespread debate in the scientific community. Images of water crystals showed different responses to words, music, and emotions, suggesting that water might have some sort of "response" to emotional stimuli. But it was widely disputed. Other experiments also by Luc Montagnier (Nobel laureate): "What we found is that DNA induces structural changes in water, and these changes remain even after dilution to the point where not a single molecule remains, and show measurable electromagnetic resonance signals." One study (2009-2015) noted that the diluted water retained the "fingerprint" of the bond with the original solute, accompanied by nanostructures and the emission of radiation. However, subsequent reviews point to a widespread rejection of the theory by the scientific community, citing the difficulty of repeating their experiments and strict academic control.</p>
+        
+        <div class="box box-note">
+            <span class="box-title">Masaru Emoto's experiment</span>
+            <p>Water crystals respond amazingly to words, as if reflecting the energy of emotions themselves. The man in the center of the room is puzzled by this phenomenon, which raises the question: Does water have a consciousness or a hidden memory?</p>
+        </div>
+        <p>These findings, while still controversial, raise profound questions about the possibility of forms of "memory" or "responsiveness" in materials that we traditionally consider inanimate.</p>
+
+        <h3>Quantum physics: Does consciousness shape reality?</h3>
+        <p>Some interpretations of quantum physics suggest that consciousness may play a pivotal role in shaping physical reality. The phenomenon of "wave function collapse" upon observation, and experiments showing the influence of the observer on observed phenomena, raise profound questions about the relationship between consciousness and matter.</p>
+        <p>Max Planck, the founder of quantum theory, said: "I consider consciousness to be fundamental. I consider matter to be derived from consciousness. We cannot go beyond consciousness. Everything we talk about, everything we consider to exist, presupposes the existence of consciousness." - Max Planck (The Observer, January 25, 1931)</p>
+        <p>John Wheeler, one of the most prominent theoretical physicists of the 20th century, introduced the concept of the Participatory Universe, arguing that the observer is not just a passive observer, but actively participates in shaping reality through the process of observation. Wheeler said: "We're not just observers. We are participants. In a strange way, this is a participatory universe." He also noted that "no phenomenon is a real phenomenon until it is observed," reflecting his belief that the process of observation plays an essential role in determining physical reality" (Wheeler, John A. (1977). Law without law. Quantum Theory and Measurement)</p>
+
+        <h3>The gap between science and Qur'anic conceptualization</h3>
+        <p>Despite these exciting discoveries, there remains a methodological gap between the Qur'anic conceptualization of the feelings of the universe and the contemporary scientific approach:</p>
+        <ol>
+            <li><strong>Methodological boundaries:</strong> Science is limited to the study of measurable and empirically observable phenomena, while the Qur'an speaks of unseen dimensions that are not necessarily subject to physical experience.</li>
+            <li><strong>Terms and concepts:</strong> Concepts such as "fear," "weeping," and "joy" in the Qur'anic context do not necessarily correspond to scientific concepts such as "response," "adaptation," or "interaction."</li>
+            <li><strong>Purpose and purpose:</strong> The Quran talks about the feelings of the universe in the context of servitude to God and the relationship of creatures to their Creator, while scientific studies deal with phenomena from an adaptive functional perspective.</li>
+        </ol>
+
+        <h3>Integration of knowledge</h3>
+        <p>We can see in these scientific discoveries exciting hints that come close to some of what the Qur'an tells us about the living, conscious universe. We are not necessarily looking for a literal correspondence between the two knowledge, but rather a complementarity that enriches our understanding of existence. This clearly shows that science and religion are not contradictory, but complement each other; science specializes in explaining phenomena and how they occur, while religion provides an understanding of the purpose and meaning behind these phenomena.</p>
+        <p>What we are witnessing today is a shift in the scientific view of consciousness and emotions in different beings, which represents an opportunity for constructive dialog between science and religion. Science may not be able to prove the weeping of the sky or the fear of the mountains in the sense mentioned in the Qur'an, but it offers us new insights into the possibilities of consciousness and response in the universe beyond our traditional perceptions.</p>
+        <p>As Albert Einstein said: "The most beautiful thing we can experience is mystery. It is the fundamental source of all true art and true science. He who does not find its way into his heart-who does not stop to wonder and stand in helpless amazement-will be like the dead; his eyes will be closed." (Einstein, Albert 1931 taken from The Ultimate Quotable Einstein, page 331). Perhaps that astonishment is the true beginning of both science and faith.</p>
+
+        <h2>The seventh research: Faith and Educational Implications of Believing in the Feelings of the Universe</h2>
+        <p>Believing that the universe is a living, sentient being with feelings and emotions has great faith and educational implications in the life of a Muslim, including:</p>
+        
+        <h3>Deepening faith in God</h3>
+        <p>When a Muslim realizes that every atom in this universe feels and is affected, rejoices and grieves, gets angry and satisfied, his faith in God increases. Ibn al-Qayyim says: "The best use of breath is to contemplate the signs of God and the wonders of His creation, and to move from them to the attachment of the heart and attention to Him without any of His creatures." (Key to Dar al-Sa'adah)</p>
+
+        <h3>A sense of community and companionship</h3>
+        <p>A Muslim who believes in the consciousness of the universe and its feelings never feels lonely; he is surrounded by millions of living, conscious creatures who share his feelings and emotions. Noureddine Abu Lahia says: "Our knowledge of the living universe makes us feel human, and fills us with the ecstasy of intimate friendship, as we cannot befriend an inanimate object." "God's Universe, Second Edition, Dar Al-Anwar for Publishing and Distribution, 1437 AH/2015 AD"</p>
+
+        <h3>Modesty from God and the Universe</h3>
+        <p>A Muslim who knows that the whole universe is witnessing him and is affected by his actions, is ashamed to disobey God in his solitude, because he knows that the whole universe sees him and witnesses him. The Almighty says: "And they said to their skins, 'Why did you testify against us?' They said, 'We were spoken to by Allah, who gave birth to all things.'" (Chapter 21)</p>
+
+        <h3>Respecting and preserving the environment</h3>
+        <p>A Muslim who believes that the universe is a living, sentient being with feelings and emotions, respects and preserves this universe, and does not harm or pollute it. In Dr. Ali Gomaa's article entitled "The Environment in Islamic Civilization - The Universe's Relationship with God": "As long as the universe praises its Lord and praises its rightful Creator, any assault on it or disposal of it without right is considered absurdity and tyranny that inevitably leads to corruption, and its owner should be criminalized, because any assault on the universe is an assault on man's right to life."</p>
+
+        <h3>Sensing the greatness of the Creator</h3>
+        <p>A Muslim who contemplates the feelings and emotions of the universe senses the greatness of the Creator who created this universe and deposited these feelings and emotions in it. Ibn al-Qayyim says: "Whoever contemplates the secrets of God's creation in the universe, and the wonders and marvels He has deposited in it, knows the perfection of God's ability and greatness" (Miftah Dar al-Sa'ada).</p>
+
+        <h2>Chapter Eight: A Journey into the Consciousness of the Universe Interactive Section</h2>
+        
+        <h3>Interacting with the feelings of the universe: Personal reflections and experiences</h3>
+        <p>Years ago, on a fall day, I sat under the canopy of an old tree watching its yellow leaves fall. The scene was peaceful, the air was crisp, and dewdrops glistened on the grass. I felt a strange sensation, as if the tree and I had a strange affection for each other - not in words, but in another, deeper and truer language.</p>
+        <p>This personal experience, and other rare moments when we connect deeply with nature, can be a gateway to engaging with the feelings of the universe that we've talked about in this chapter. Let me share with you some simple meditations and deep questions that can open a window into this hidden world.</p>
+
+        <h3>Simple Meditations on the Feelings of the Universe</h3>
+        <p><strong>Rain... Heaven's tears or joy?</strong> The next time it's raining, take a few minutes outside and look at the phenomenon from a different perspective. We are not just talking about water vapor condensing and falling, but a phenomenon that the Qur'an describes as a mercy: "And He is the One who brings down the rain after they have become despondent and spreads His mercy" [Al-Shura: 28]. As you stand in the rain, you may wonder: Is this rain the "weeping" of the sky or its "joy"? How does the earth respond to these drops? Doesn't it look like it is breathing with relief? Could it be that this interaction between heaven and earth is a kind of deep conversation that we are not aware of? A friend once wrote to me describing his experience: "I was on a long trip, and suddenly there was a downpour. The car stopped on the side of the road, and I got out to stand in the rain. I felt as if the sky was washing away my worries. After the clouds cleared, the ground looked completely different - bright and full of life."</p>
+        
+        <p><strong>Rocks... Do they feel heavy?</strong> On a mountain hike I took a couple of years ago, I sat on a large rock overlooking a deep valley. I remembered Allah's saying: "And some of them do not descend from the fear of Allah" [Al-Baqarah: 74]. I wondered then: Does this rock feel its weight? I used to hear about those who faint out of fear of Allah, so are stones softer than us that they fall down out of fear of Allah? In this deep meditation on the reverence of rocks, geological studies reveal amazing secrets about this silent witness to the history of the earth. The oldest rocks discovered on Earth are about 4.28 billion years old, found in Canada, while some meteorites falling from space are up to 4.6 billion years old, that is, since the formation of the solar system itself. Scientists use radiometric dating to measure these staggering ages, by measuring the decay of radioactive elements such as uranium and potassium within minerals, as each radioactive element has a specific "half-life" that helps calculate time with amazing accuracy. These rocks that we hold in our hands have witnessed the creation of the oceans, the emergence of the first life, the extinction of the dinosaurs, and the formation of the continents, so their deep silence is not mere inertia, but a cosmic memory that preserves the secrets of creation in their layers and crystals. When we contemplate these amazing facts, we realize that the stones' fear of God is not just a metaphor, but a cosmic reality that bears eternal testimony to the greatness of the Creator and his wisdom in managing the universe over billions of years. The next time you pick up a stone or a small rock, you can ponder: How old is this rock, and how many events have it witnessed over time? Could the silence of rocks be a kind of reverence and reverence?</p>
+
+        <h3>Questions for reflection</h3>
+        <p><strong>The Qur'an descended on the mountain:</strong> When we read the Almighty's words: "If We had revealed this Qur'an on a mountain, you would have seen it trembling and cracking from the fear of Allah" [Al-Hashr: 21]. We can ask the question: What makes the Qur'an heavy on a solid mountain, while we humans carry it in our chests? Why do mountains crack with fear and reverence, while our hearts are hardened? What lesson can we learn from the mountains' reverence?</p>
+        <p><strong>The interaction of creatures with worship:</strong> There are many hadiths that refer to the interaction of creatures with human worship, such as the earth, trees and stones responding to the supplicant in Hajj. We wonder: How can we sense this cosmic harmony in our worship, especially prayer and pilgrimage? Could human reverence be one of the reasons why creatures interact with them?</p>
+        <p><strong>The universe mourns the loss of loved ones:</strong> It is said that the heavens and the earth weep for a righteous believer for forty mornings. Question for reflection: Could certain phenomena (such as sudden showers of rain after the death of a good person) be an expression of the universe's grief? How can we read the "feelings of nature" in such situations without falling into superstition or interpretation?</p>
+
+        <h3>Practical applications</h3>
+        <p><strong>Daily Observation Agenda:</strong> A simple idea that can be implemented: Set aside five minutes a day (during a walk, or before bedtime) to meditate on just one natural object. It may be: A cloud forming in the sky, A tree swaying in the wind, Dew drops on a leaf, Sunset or sunrise. Observe the appearance with full attention, and try to feel the "life" in it. You don't have to hear voices or see the paranormal, just pay close attention to what's happening in front of you.</p>
+        <p><strong>Mindful reading of the Qur'an:</strong> When reading the Qur'an, stop at verses that describe the feelings and emotions of the universe. Try to conjure up the scene in your mind and engage with it emotionally. Suggested verses for meditation: "The heavens are about to disintegrate from above, and the angels praise the praise of their Lord" [Shura: 5]. "There is nothing but praise, but you do not understand their praise" [Al-Israa: 44]. "O mountains, praise with him and the birds" [Shebaa: 10].</p>
+        <p><strong>Initiative to increase green spaces:</strong> If plants and trees have consciousness and feelings, planting and caring for them becomes more than just an environmental action, but a participation in adding living beings that praise and worship God. Try it: Plant a tree in a public or private place with the permission of its owners, Caring for a houseplant and observing its growth and development, Participate in local tree planting campaigns.</p>
+
+        <div class="box box-reflection">
+            <span class="box-title">Personal Reflections</span>
+            <p><strong>The Silent Mountain:</strong> On a pilgrimage to Hajj, while standing on Mount Arafat, I felt the majesty and reverence of the place. The mountain was silent, but it seemed to bear witness to the millions of prayers that had been raised from its back over the centuries. I wondered then: What memories does this mountain hold, and does it feel the sacredness of the place as we do?</p>
+            <p><strong>The wrath of the sea:</strong> One stormy night at the seaside, the waves were pounding the shore violently, their roar sounding like muffled rage. I felt like the sea was trying to tell us something, that there was a message in the noise and violence. Perhaps it was expressing its grief over pollution, or its anger at human encroachment on its sanctity.</p>
+            <p><strong>Desert stars:</strong> During a night spent in the desert, the sky unfolded with its countless stars. The scene was so majestic that I felt tears welling up in my eyes. Were those stars telling their story? Were they expressing their loneliness in the vastness of space? Or were they singing their silent praise to the Great Creator?</p>
+        </div>
+
+        <p>We may not be able to fully understand the language of the universe, or realize its feelings as they are. But trying to listen, meditate and interact with the universe around us opens up new horizons of knowledge and faith. We may not be able to hear the cries of the sky with our ears or see the fear of the mountains with our eyes, but a heart connected to God can sense some of those deep cosmic feelings. A scholar says: "Whoever knows the secret of proximity to God: 'He who knows the secret of proximity to God knows the secret of the proximity of creatures to Him.'" The closer we are to our Creator, the more we are able to sense the feelings of His creatures and understand the language of the universe around us.</p>
+
+        <h2>Conclusion of the Sentiments of the Universe Chapter</h2>
+        <p>Thus, we close the last pages of our journey into the world of the universe's feelings, a journey that took us between the verses of the Holy Qur'an, the hadiths of Al-Mustafa (peace be upon him), the insights of scholars, and the discoveries of modern science.</p>
+        <p>This journey has revealed to us that this universe is not just a deaf and rigid substance, but a living organism pulsating with feelings and sensations, rejoicing and sadness, fear and fear, anger and exhale, cry and rejoice, and cry and rejoice.</p>
+        <p>We have seen how the heavens and the earth weep for the righteous believer when he dies, how the creatures join the Muslim in his response and worship, how the mountains tremble and crack for fear of God, how the stones fall for fear of God, how the earth shakes and rises for joy when the rain falls, how mountains and fortresses remember each other, and how creatures communicate in languages we do not understand.</p>
+        <p>It is clear to us that the relationship between man and the universe is not one of domination and exploitation, but one of compassion, communication, and spiritual harmony.</p>
+        <p>The believer who lives in harmony with the universe, colonizes the earth with worship and obedience, and raises good words and righteous deeds to heaven, becomes beloved by all the atoms of the universe, and heaven and earth mourn his death. As for the believer who lives in ignorance and arrogance, disconnected from his Creator and corrupting the earth, the whole universe hates him and is relieved of his existence.</p>
+        <p>The relationship with God Almighty remains the essence of this wonderful cosmic harmony. The entire universe - including humans, animals, plants and inanimate objects - worships God, praises Him and testifies to His oneness. This harmony manifests itself in its most beautiful form when a Muslim prays, prays, or remembers his Lord, and the beings around him respond in a wonderful spiritual scene that expresses the unity of purpose and destiny, and the unity of servitude to the One Creator.</p>
+        <p>Perhaps one of the greatest lessons we can take away from this chapter is that man - despite God's honor to him - is not the only one who is aware and feeling in this universe. He is part of a living and conscious cosmic system, all of which praises and reveres its Lord. This invites us to humble ourselves and reconsider our relationship with our surroundings, through:</p>
+        <ul>
+            <li>Developing a sense of environmental awareness and responsibility towards the universe around us, preserving water, air, soil, plants and animals, and avoiding corruption on earth.</li>
+            <li>Meditate on God's creation and His signs in the horizons and souls, to discover the secrets and hidden feelings of this magnificent universe.</li>
+            <li>The earth on which we walk, the air we breathe, and the sky that shades us are all witnesses to our actions, and will testify on the Day of Judgment about what we have done.</li>
+            <li>Deepening the relationship with God Almighty, the closer we are to our Creator, the greater our ability to sense the feelings of His creatures and understand the language of the universe around us.</li>
+        </ul>
+        <p>At the conclusion of this journey into the world of the universe's feelings, we recall God's saying: "We will show them our signs in the horizons and in their souls until it becomes clear to them that it is the truth" [Faslat: 53].</p>
+        
+        <div class="box box-note">
+            <span class="box-title">Poetry</span>
+            <p>"You cannot hear the groaning of the trees<br>
+            unless you have a similar groan in your heart.<br>
+            You will not see the tears of the clouds<br>
+            unless your eyes have shed tears like them.<br>
+            The echo can only be heard by the one who has made the cry.<br>
+            Love can only be seen by the one who has become all love."</p>
+        </div>
+
+        <p>Let us open our hearts and minds to see these signs, listen to the whispers and pulses of the universe, and join the creatures in their praise and worship of God, the Lord of the Worlds.</p>
+        <p>Let us always remember that we are not alone in this journey of faith, but are surrounded by living, sentient beings who share our feelings and sensations, help us to obey and remember God, and testify to us on the Day of Judgment if we are among the righteous.</p>
+        <p>I conclude with this beautiful supplication: "O Allah, show us in the horizons and in ourselves of Your signs that increase our eyesight with light and our hearts with certainty. O Allah, make us one of those who hear the words and follow the best of them."</p>
+        <p>O Allah, make us among those who understand the praise of everything and listen to the call of instinct in all creatures. May Allah grant us a sensitive sense of the feelings of the universe around us, and inspire us to reverence as the mountains revere, to praise as the birds praise, and to prostrate as the stars and trees prostrate.</p>
+        <p>And make us one of those who, when they die, the heavens and the earth weep for them, and rejoice in their meeting with Paradise and its bliss.</p>
+        <div class="box box-verse">
+            <span class="verse-text">"And there is not a single animal on earth, nor a bird that flies on its wings, except nations like yourselves ۚ We have not omitted anything in the Book, and then to their Lord they will be gathered"</span>
+            <span class="verse-ref">[Al-An'am: 38]</span>
+        </div>
+        <p style="text-align: center; margin-top: 50px; font-weight: bold; color: var(--primary-color);">God knows best and is the wisest</p>
+
+        <!-- Chapter Navigation -->
+        <div class="chapter-navigation">
+            <a href="index.html" class="nav-btn btn-home">
+                <i class="fas fa-home"></i>
+                <span>Back to Home</span>
+            </a>
+            <a href="chapter6.html" class="nav-btn btn-next">
+                <span>Next Chapter</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

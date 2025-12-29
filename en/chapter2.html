@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Two: Praising and Worshiping the Universe</title>
+    <link rel="preconnect" href="://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fafafa;
+            --text-color: #2d3436;
+            --primary-color: #1e272e;
+            --accent-color: #00b894;
+            
+            /* Box Colors */
+            --box-desc-bg: #e3f2fd;
+            --box-desc-border: #1565c0;
+            
+            --box-verse-bg: #e8f5e9;
+            --box-verse-border: #2e7d32;
+            
+            --box-science-bg: #fffde7;
+            --box-science-border: #fbc02d;
+            
+            --box-note-bg: #f3e5f5;
+            --box-note-border: #7b1fa2;
+
+            --box-reflection-bg: #ffebee;
+            --box-reflection-border: #c62828;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 80px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 4px solid var(--accent-color);
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            border-left: 8px solid var(--accent-color);
+            padding-left: 20px;
+            background: linear-gradient(90deg, #f5f6fa 0%, #ffffff 100%);
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #37474f;
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: #546e7a;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 1.5rem;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Box Styling */
+        .box {
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 6px;
+            border-left-width: 6px;
+            border-left-style: solid;
+            position: relative;
+        }
+
+        .box-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Description Box */
+        .box-desc { background-color: var(--box-desc-bg); border-left-color: var(--box-desc-border); }
+        .box-desc .box-title { color: var(--box-desc-border); }
+
+        /* Verse/Hadith Box */
+        .box-verse { background-color: var(--box-verse-bg); border-left-color: var(--box-verse-border); }
+        .box-verse .box-title { color: var(--box-verse-border); }
+        .verse-text {
+            font-family: 'Merriweather', serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1b5e20;
+            text-align: center;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .verse-ref {
+            display: block;
+            text-align: right;
+            font-size: 0.9rem;
+            color: #388e3c;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        /* Scientific Box */
+        .box-science { background-color: var(--box-science-bg); border-left-color: var(--box-science-border); }
+        .box-science .box-title { color: #f57f17; }
+
+        /* Note/Quote Box */
+        .box-note { background-color: var(--box-note-bg); border-left-color: var(--box-note-border); }
+        .box-note .box-title { color: var(--box-note-border); }
+
+        /* Reflection Box */
+        .box-red { background-color: var(--box-reflection-bg); border-left-color: var(--box-reflection-border); }
+        .box-red .box-title { color: var(--box-reflection-border); }
+
+        /* Table of Contents */
+        .toc-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid #eee;
+        }
+        .toc-table th, .toc-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .toc-table th {
+            background-color: var(--primary-color);
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+        .toc-table tr:nth-child(even) { background-color: #f9f9f9; }
+
+        .source {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #616161;
+            font-style: italic;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 30px; }
+            h1 { font-size: 2.2rem; }
+            .box { padding: 20px; }
+        }
+    /* Enhanced Box Styling */
+        .box {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            transition: all 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+        }
+
+        /* Navigation Buttons */
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 3px solid var(--accent-color);
+            gap: 20px;
+        }
+        .nav-btn {
+            flex: 1;
+            padding: 18px 35px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            text-transform: uppercase;
+        }
+        .btn-home {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+        }
+        .btn-next {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        .btn-next:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(245, 87, 108, 0.4);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Switch Button -->
+    <div style="position: fixed; top: 80px; right: 20px; z-index: 9999;">
+        <a href="../chapter2.html" style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;">
+            <span>🌐</span>
+            <span>النسخة العربية</span>
+        </a>
+    </div>
+
+    <!-- Language Switcher -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <a href="../chapter2.html" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); display: inline-flex; align-items: center; gap: 8px; font-family: 'Montserrat', sans-serif;">
+            <i class="fas fa-language"></i> العربية
+        </a>
+    </div>
+
+    <div class="container">
+        <h1>Chapter Two<br>Praising and Worshiping the Universe</h1>
+
+        <div class="box box-desc">
+            <span class="box-title">Description</span>
+            <p>This chapter explores the fact that all beings in the universe praise God, from atoms to galaxies, emphasizing that this praise is not a metaphor but a real cosmic reality as stated in the Holy Qur'an. It discusses the different types of praise and explains why humans are not aware of it due to their senses' inability to understand the languages of creatures. Connects the Qur'anic texts with modern scientific discoveries about the sounds of plants and the vibrations of atoms, showing the congruence between science and religion. Highlights the theological and educational implications of understanding this truth in deepening faith and removing the feeling of loneliness. It establishes an integrated ecological vision based on respecting all creatures as praise to God. It concludes by inviting humans to consciously participate in this great cosmic symphony that praises the Creator without interruption.</p>
+        </div>
+
+        <h3>Table of contents</h3>
+        <table class="toc-table">
+            <thead>
+                <tr>
+                    <th>Topic title</th>
+                    <th>Page number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Introduction: The Symphony of the Swimming Universe</td><td>4</td></tr>
+                <tr><td>Research I: The Essence and Reality of Cosmic Praise</td><td>5</td></tr>
+                <tr><td>Between real and metaphorical praise: Resolving the controversy</td><td>13</td></tr>
+                <tr><td>The Parade of the Swimming Universe: A beautiful cosmic painting</td><td>14</td></tr>
+                <tr><td>SECOND SECTION: Praise in the Qur'an and Sunnah: Texts and manifestations</td><td>15</td></tr>
+                <tr><td>Tasbih in the Sunnah: Applications and virtues</td><td>20</td></tr>
+                <tr><td>Research III: Types and Forms of Praise in the Universe</td><td>22</td></tr>
+                <tr><td>Research IV: Why Don't We Hear the Praise of Creatures? Secrets and Discoveries</td><td>26</td></tr>
+                <tr><td>Fifth research: Implications of Believing in the Praise of Creatures</td><td>31</td></tr>
+                <tr><td>Exhibit VI: The Relationship of Cosmic Praise to Cosmic Consciousness</td><td>33</td></tr>
+                <tr><td>SEVENTH SECTION: Reflections on the Symphony of the Praising Universe</td><td>37</td></tr>
+                <tr><td>Section VIII: Reflections and Practical Interactions for Sensing the Praise of the Universe</td><td>40</td></tr>
+                <tr><td>Conclusion: Toward an Integral Vision of Cosmic Praise</td><td>43</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Introduction: The Symphony of the Praising Universe</h2>
+        <p>In the depths of the still night, behind the noise of daily life, beings play a harmonious cosmic symphony that reverberates throughout existence. It is the hymns of praise that emanate from every atom in the universe and ascend towards its Creator in a journey of worship that is silent before our ears, but loud in the unseen world that contains realities that are not perceived by our physical senses.</p>
+        <p>This cosmic symphony represents the essence of the relationship between creatures and the Creator, a relationship that transcends the limits of limited human perception, to embrace the vast spaces of existence.</p>
+        
+        <div class="box box-verse">
+            <span class="box-title">Verse</span>
+            <span class="verse-text">"The seven heavens, the earth, and whoever is in them praise Him, and there is nothing but praise in His praise, but you do not understand their praise, for He was wise and forgiving."</span>
+            <span class="verse-ref">[Al-Israa' 44]</span>
+        </div>
+
+        <p>In this chapter, we will delve into the depths of this great cosmic truth: "We will reflect on its scientific, spiritual and philosophical dimensions, and how it establishes a comprehensive vision of cosmic consciousness and the relationship of creatures to their Creator.</p>
+        <p>Try to feel the existence around you, dear reader, when your tongue is in praise of God, and you will feel a wonderful feeling and a sensation that will remain in your memory.</p>
+        <p>Try praising after the Fajr prayer until sunrise and you will feel the harmony of your remembrance with the sounds of birdsong and the rustling of the trees.</p>
+
+        <h2>Research I. The Essence and Truth of the Cosmic Tasbeeh</h2>
+        
+        <h3>Tasbih: Concept and connotation</h3>
+        <p>The word tasbih in the Arabic language has several main meanings:</p>
+        <ul>
+            <li><strong>Floating and running:</strong> "Sabah" originally means floating in water, but it also refers to the rapid running of horses and the extension of their hands in walking, and the flow of the stars in the ark.</li>
+            <li><strong>Exaltation and glorification:</strong> The most common meaning in the Qur'an is tasbeeh, which means to praise God, i.e. to purify Him from all imperfection and to glorify and sanctify Him from all that is unworthy of Him. These tasbihs include prayer and remembrance.</li>
+            <li><strong>Empty and dispose:</strong> It can also mean emptying and disposing of the earth, pursuing a livelihood, resting and sleeping, or even dispersing in the earth.</li>
+        </ul>
+
+        <div class="box box-note">
+            <span class="box-title">Scholarly Insight</span>
+            <p>It was mentioned by Ibn Abbas and other predecessors that tasbih is tanzih. The exegetes also mentioned that tasbih is tanzih.</p>
+            <span class="source">[See: Tafsir al-Tabari: 1/474, Tafsir Ibn Atiyyah: 3/472, Zad al-Masir: 1/53, Tafsir al-Qurtubi: 1/276, Tafsir al-Saadi: 48, and Tahrir and Tanweer: 1/405]</span>
+        </div>
+
+        <p>But it is not a mere negation or a pure negation, but a proof of perfection, as it is a negation that includes glorification, and the proof of its inclusion of glorification is the Prophet's saying, "When you kneel, magnify the Lord Almighty" [Narrated by Muslim: 1/348], and there is praise in the kneeling.</p>
+        
+        <p><strong>Al-Sam'ani (may Allah have mercy on him) said:</strong> Subhan: It is the exaltation of God from all evil, and its truth is to glorify God by describing Him as exaggerated, and describing Him as innocent of all deficiencies. [Tafsir al-Samaani: 3/212].</p>
+        <p><strong>Ibn Taymiyyah, may Allah have mercy on him, said:</strong> The command to praise him also requires that he be cleansed from all defects and evils, and that he be proven to be perfect; for praise requires cleansing and glorification, and glorification entails proving the praiseworthy things for which he is praised. [Fatawa: 16/125].</p>
+        <p><strong>Ibn al-Qayyim (may Allah have mercy on him) said:</strong> Tasbih is a praise that includes magnification and exaltation. [Al-Manar al-Manif: 36].</p>
+
+        <p>In the Qur'an, praise is mentioned in eighty-seven different ways in eighty-seven places, and seven surahs called the "praises" have been opened with it, namely: Al-Isra'a, Al-Hadid, Al-Hashr, Al-Saf, Al-Juma'ah, Al-Taghabin, and Al-Aliqa, and concluded with Al-Hajar, Al-Tur, Al-Waqa'a, and Al-Haqqa.</p>
+        <p>The verb "praise" may be transmitted by itself without the lam, such as the saying: {Praise him early and often} [Al-Ahzab:42], and it may be transmitted with the lam, such as the saying {Praise God} [Al-Hashr:1], so praise him and praise him are two languages such as advise him and advise him, and thank him and thank him. [Adwaat al-Bayan: 7/540].</p>
+        <p>Some scholars have said that praise is expressed in the past tense (praise) and the present tense (praise): He used the past tense and the present tense to show that praising God is the affair of the people of the heavens and the people of the earth, as well as their past and future behavior. [Adwaat al-Bayan: 7/541].</p>
+        <p>One of the wisdoms of sending a messenger is to praise Allah (We have sent you as a witness, herald and warning * so that you may believe in Allah and His messenger, honor him, revere him and praise him early and often) [Al-Fath:8-9].</p>
+        <p>He has commanded it in times of adversity (So be patient with what they say and praise the praise of your Lord before the sun rises and before the sun sets)[Q:39] and other verses.</p>
+        <p>The fact that he commanded him to praise Allah after commanding him to be patient with the harm of the disbelievers is proof that praise helps him to fulfill the commanded patience. [Adwaat al-Bayan: 7/432].</p>
+
+        <h3>Tasbih is a belief, word and deed</h3>
+        <p>The proof of this is that the prayer is called tasbih, which includes the belief and action of the heart, the saying of the tongue, and the action of the wings, as Aisha (may Allah be pleased with her) said: "I have never seen the Messenger of Allah (peace and blessings of Allah be upon him) praise the Dhuha'ah, but I would praise it." [Narrated by Bukhari: 1177]</p>
+        <p>Umm Hana'a (may Allah be pleased with her) said: "The Messenger of Allah (peace and blessings of Allah be upon him) got up for his washing, so Fatimah covered him, then he took his garment and wrapped himself in it, then prayed eight rak'ahs (the morning prayer)" [Narrated by Muslim: 336].</p>
+        <p><strong>Sheikh Ibn Uthaymeen (may Allah have mercy on him) said:</strong> The praise of Allah may be with the heart - with the creed - or it may be with the tongue, or it may be with both of them, and the point is to praise Allah with all of them with his heart and with his tongue. [Tafsir Part Am: 158].</p>
+        <p><strong>Ibn Ashur (may Allah have mercy on him) said:</strong> Praise is a saying or a combination of a saying and an action that indicates that Allah is glorified and exalted; that is why the mention of Allah is called tasbih, and prayer is called sabha, and tasbih is called saying Subhanallah because that saying is a form of exaltation. [1/405].</p>
+
+        <h3>Tasbih in the Qur'an</h3>
+        <p>Tasbih is used in the Qur'an to mean six things:</p>
+        <ol>
+            <li><strong>The first:</strong> It is the most frequently mentioned in the Qur'an, and it is what is meant when it is used, such as Allah's saying {Subhanahu 'alayhi wa ta'asim [as-Safat:159].</li>
+            <li><strong>The second:</strong> It is called prayer, Allah says: {Patience with what they say and praise the praise of your Lord before the sun rises and before its sunset and during the night, so praise and the ends of the day, that you may be satisfied} [Taha:130] [Taha:130]. It is explained by the saying of the Prophet (peace be upon him), "...if you can't be overcome by a prayer before the sun rises and before the sun sets, then do so." Then he said, "And praise the praise of your Lord before the sun rises and before the sun sets." [Narrated by Bukhari: 573, Muslim: 633] In the Muslim narration, the reciter of this prayer was Jarir bin Abdullah, the companion (may Allah be pleased with him), the narrator of the hadith.</li>
+            <li><strong>Third:</strong> It is used to call for prayer, including the saying of Allah {Their call therein is: "Praise be to Allah" [Yunus:10], and also includes the saying of Allah {Al-Nun when he went in anger and thought that we would not be able to help him, so he called out in the darkness that there is no god but You, praise be to You, I was one of the unjust} [Al-Anbiya:87]. The Prophet (peace and blessings of Allaah be upon him) said: "The call of Zaynun when he prayed while he was in the belly of the whale: 'There is no god but You, praise be to You, I was one of the unjust', for no Muslim man has ever called upon this prayer for anything but Allah will answer him." [Narrated by al-Tirmidhi: 3505].</li>
+            <li><strong>Fourth:</strong> It refers to the general mention, such as the angels' saying {We praise your praise} [Al-Baqarah:30] Al-Tabari (may Allah have mercy on him) said: Meaning: We glorify you by praising you and thanking you... Every mention of God among the Arabs is praise and prayer. A man would say: I have spent my sabbath of remembrance and prayer. It has been said that tasbih is the prayer of the angels. [1/472]. Shaykh al-Islam, may Allah have mercy on him, said: "It is said: So-and-so praises, if he mentions Allah. This includes tahlil (praise) and tahmid (praise), and it is from this that the name 'sabha' was given to the finger with which he points, even though he points it in tawhid. [Jama' al-Maqsal, T: Azir Shams: 3/292].</li>
+            <li><strong>Fifth:</strong> It is used for general worship, including the saying of Allah, "Had he not been one of the praisers, he would have remained in his belly until the day they are resurrected" [Al-Safat: 143-144] on the authority of Wahab ibn Manbah: He said: Of the worshippers. [Tafsir Abdul Razzaq: 2/103]</li>
+            <li><strong>Sixth:</strong> The sixth is to make an exception, such as the saying of Allah {When they swore that they would fast in the morning* and not make an exception [Al-Qalam:17-18], which means to say: However, the verses indicate that they were praising in its place {The middle of them said, "Did I not say to you that you would not praise [Al-Qalam:28]," according to Al-Sadi: Their exception at that time was praise [Tafsir Ibn Abi Hatim: 10/2366]. They would say: Subhanallah, instead: If Allah wills it, so the saying, "If only you would not praise," means: you would make exceptions. In the Qur'an, the exception is called dhikr in the Qur'an {and do not say to anything that I will do that tomorrow * unless God wills it, and remember your Lord when you forget} [Al-Kahf: 23-24].</li>
+        </ol>
+
+        <h3>Couple praise with other praise</h3>
+        <p>Tasbih is mentioned alone in the Qur'an in thirty-six places, including: (Subhanallah, Subhan Allah, Subhan who, Subhan your Lord, etc.) in fifteen places. In the third person (swt) in thirteen places, and in the third person (subhanak) in eight places.</p>
+        <p>As for the association of tasbih with other dhikr, it is as follows:</p>
+        <ul>
+            <li><strong>The first:</strong> It is associated with praise in fifteen places, including: {And we praise your praise} [Al-Baqarah:30], {Praise the praise of your Lord} [Al-Hajar:98] {Al-Furqan:58} Praise includes the negation of imperfections and defects, and praise includes proving the attributes of perfection for which He is praised. [Ibn Taymiyyah: 3/278]. Ibn Kathir (may Allah have mercy on him) said: Since tasbeeh includes exoneration and exoneration from imperfection by the indication of conformity, and entails proof of perfection, just as praise indicates proof of the attributes of perfection by conformity, and entails exoneration from imperfection, the two are linked in this place, and in many places in the Qur'an [7/46].</li>
+            <li><strong>The second:</strong> Coupled with praise, and it came in two places {No god but Him, praise be to Him from what they share [Al-Tawba:31] {No god but You, praise be to You, I was among the unjust} [Al-Anbiya:87].</li>
+            <li><strong>The third:</strong> In four places {they praise their Lord, believe in Him, and forgive those who believe} [Ghafir: 7] {Ghafir: 7} {And forgive your sins and praise your Lord} [Ghafir: 55] {And the angels will praise their Lord, and they will forgive those who are in the earth} [Shura: 5]:55] {Angels praise the praise of their Lord and ask forgiveness for those who are on earth} [Shura: 5] {Praise the praise of your Lord and ask for forgiveness} [Al-Nasr: 3].</li>
+        </ul>
+
+        <h3>The praisers in the Qur'an</h3>
+        <p>The praise of Allah Himself, which is abundant in the Qur'an in about thirty places, including the saying of Allah {Sabah to your Lord, the Lord of Glory, from what they describe [Al-Safat:180].</p>
+        <p>The praise of the angels, peace be upon them, is mentioned in about ten verses, including Allah's saying {They praise night and day without ceasing [Al-Anbiya:20] {If they are proud, those who are with your Lord, they praise Him day and night and are not weary, [Faslat:38] and it is mentioned that their praise is like our breath that does not distract them from their tasks just as our breath does not distract us from them. [Tafsir al-Tabari: 18/423].</p>
+        <p>Yunus said, "There is no god but You, praise be to You" [Al-Anbiya: 87]</p>
+        <p>And Moses said, "I repent to You" [Al-A'raf:143]</p>
+        <p>And about David [We have harnessed the mountains with him to praise the sunrise and sunset] [R:18].</p>
+        <p>Jesus said, "Praise be to you, I cannot say what I have no right to say" [Al-Maida: 116].</p>
+        <p>He commanded Zakariya to praise {and praise in the evening and early morning} [Al-Imran:41] and Zakariya commanded his people to praise {and he instructed them to praise in the morning and evening} [Maryam:11].</p>
+        <p>Muhammad (peace be upon him) said, "Praise Allah and I am not one of the polytheists" [Yusuf:108] and he used to say in his kneeling and prostration, "Praise your Lord" [Al-Nasr:3] in accordance with the Qur'an {Praise the praise of your Lord and forgive him that he was a repentant person} [Al-Nasr:3].</p>
+        <p>The praise of the believers is mentioned in several verses, including {They say, "Praise be to our Lord, if the promise of our Lord has been fulfilled" [Al-Israa':108].</p>
+        <p>The praise of the mountains and the birds {We made with David the mountains to praise and the birds to praise} [Al-Anbiya:79] {And the birds that fly, each knowing his prayer and his praise} [Al-Noor:41].</p>
+        <p>The praise of the thunder {and the thunder praises his praise} [Al-Ra'd:13].</p>
+        <p>The praise of all creatures {Praise be to Allah what is in the heavens and what is in the earth} [Al-Hashr: 1] {The seven heavens and the earth and whoever is in them praise Him, and there is nothing but praise in His praise, but you do not understand their praise, for He was wise and forgiving} [Al-Israa':44] This verse indicates that it is a true praise in a way that humans do not know, so they do not understand the praise of these creatures, and those who interpret their praise for a meaning other than the usual praise in the language have erred.</p>
+        <p>The praise of the people of Paradise, Allah Almighty told them, "Their call therein is: 'Your praise be to Allah' [Yunus:10]" [Yunus:10] Congratulations to those who increased the praise in this world and found pleasure in it, and joy in it, for they should enjoy the praise in Paradise as they enjoyed it in this world. It is mentioned in the authentic hadiths that the people of Paradise are inspired to praise Allah, and that they praise Him day and night.</p>
+        <p>Ibn Taymiyyah, may Allah have mercy on him: The people of Paradise enjoy looking at Allah, they enjoy mentioning Him, they enjoy praising Him, they enjoy reading the Qur'an ... and they enjoy talking to their Lord and pleading with Him, even though these things in this world are deeds for which a reward is entailed; in the Hereafter they are deeds for which the owner enjoys more than eating, drinking and marrying. [Fatawa: 4/330].</p>
+        <p>What they are in is so blissful that if they wanted to enjoy the place of supplication to their Lord, which is the place of proximity, they did not find themselves longing for something to ask for, so they replaced the question by praising their Lord, which inspired them to adhere to tasbih, because it is the clearest word for glorification and disguise. [Al-Tahrir wal-Tanweer: 11/103].</p>
+
+        <h3>Ruling on tasbih</h3>
+        <p>Tasbih is commanded in a number of verses of the Qur'an, such as Allah's saying, {Trust in the living who does not die, and praise His praise} [Al-Furqan:58] Praise the name of your Lord and be of those who prostrate [Al-Hajar:98]. And what Allah says {Praise the name of your Lord the Great} [Al-Raqi'ah:74] and what Allah says {Praise the name of your Lord the Most High} [Al-Ala'ah:1].</p>
+        <p>The command to praise is either wajib or nadab, and the Sunnah indicates both:</p>
+        <p>The Prophet (peace and blessings of Allah be upon him) ordered tasbih in prayer is obligatory, as is correct, in the hadith of 'Uqbah Ibn 'Amir (may Allah be pleased with him), who said: "When it was revealed: 'Praise the name of your Lord the Most High,' the Messenger of Allah (peace and blessings of Allah be upon him) said: 'Make it in your kneeling', and when it was revealed: 'Praise the name of your Lord the Most High', he said: 'Make it in your prostration' [reported by Abu Dawud: 869, and authenticated by Ibn Hibban: 1898].</p>
+        <p>The Prophet (peace and blessings of Allah be upon him) called for absolute praise and praise that is restricted to at the end of prayers, or in the morning and evening, and explained the rewards therein.</p>
+        <p>As for praising Allah Almighty, it is apparently not permissible to praise anyone other than Allah:</p>
+        <p>Shaykh al-Islam (may Allah have mercy on him) said The prayer with all its parts combined, as well as its parts that are worship in themselves, such as prostration, kneeling, praise, supplication, reading and standing up, are only valid for Allah alone. [Fatawa: 1/74].</p>
+        <p>Al-Izz ibn Abdul Salam (may Allah have mercy on him) said: Praise: It is not to be praised other than Allah, because it has been used in the highest level of glorification that only He deserves. [Tafsir: 1/115].</p>
+        <p>Al-Mawardi (may Allah have mercy on him) said: It is not permissible to praise anyone other than Allah, even if He is exalted, because He has become a flag in religion on the highest level of exaltation that only He deserves [Tafsir: 1/97].</p>
+        <p>Al-Sam'ani (may Allah have mercy on him) said: Subhan is a word that is forbidden to be described by anyone other than Allah, because exaggeration in glorification is not appropriate for anyone other than Allah. [Tafsir: 3/212].</p>
+        <p>Ibn Ashur (may Allah have mercy on him) said: Tasbih: It is one of the names that can only be added to the name of Allah, as well as the verbs derived from it, which can only be raised or set on the active side if it is the name of Allah, as well as the source names from it, such as: Subhanallah. [30/273].</p>
+        <p>It is narrated from Ali and Ibn Abbas (may Allah be pleased with them) that (Subhanallah) is a word that Allah is pleased with for Himself. [See: Al-Durr al-Manthur: 1/269] Al-Hasan al-Basri (may Allah have mercy on him) said: Subhanallah is a name that people cannot claim. [Narrated by Ibn Hatim: 1/81].</p>
+
+        <h3>Formulas of Qur'anic praise</h3>
+        <ol>
+            <li>{Subhanallah my Lord} [Al-Israa: 93] {Subhan our Lord} [Al-Israa: 108].</li>
+            <li>{Praise be to Allah for what they are polytheists [Al-Tur: 43].</li>
+            <li>{God be praised and exalted above all things that are polytheistic [Al-Thawra: 68].</li>
+            <li>{Blessed be Allah for what they describe [Al-Mu'minoon: 91].</li>
+            <li>{Blessing be upon your Lord, the Lord of Glory, for what they describe [Al-Safat: 180].</li>
+            <li>{Blessed be Allah, the Lord of the Throne, than what they describe [Al-Anbiya:22].</li>
+            <li>{Praise be to Him who took His slave captive} [Al-Israa':1].</li>
+            <li>{Praise be to Him in Whose hand is the kingdom of all things, and to Him you shall return [Yus:83].</li>
+            <li>{Praise be to Him who created all marriages} [Yus:36].</li>
+            <li>{Praise be to Him who made this possible for us, and we were not in favor of it} [Al-Zukhraf:13], which is Sunnah in riding.</li>
+            <li>{Blessed be the Lord of the heavens and the earth, the Lord of the Throne, than what they describe [Al-Zukhuraf:82].</li>
+        </ol>
+        <p>It is Sunnah for anyone who comes across these formulas in tasbih or any verse containing tasbih outside the prayer or in the supererogatory prayer to praise Allah Almighty.</p>
+        <p>It is noticeable that the Qur'anic formulas of praise, according to their contexts, are organized into a number of things, from which I have extracted the following:</p>
+        <p><strong>The first:</strong> Proof of the oneness of Allah and His purification from the fabrications of the polytheists who claim that He has a companion, a child and a partner, which is where the praise is most often given, including the saying of Allah, "Allah did not take a child and there was no god with Him, so that every god would go for what He created, and some of them would be superior to one another." [Al-Mu'minoon: 91] This is because He is independent of His creation, as He is the Exalted One {Sabah your Lord is the Lord of Exaltation beyond what they describe [Al-Safat: 180].</p>
+        <p><strong>The second:</strong> Proof of His creation, and that there is no other creator, and this necessitates praising Him in thanksgiving for the blessings He has bestowed on His servants, such as Allah's saying, "Praise be to Him who created all kinds of things from what the earth produces and from themselves and from what they do not know" [Yus: 36]. And the saying of Allah {Who created all kinds of couples and made for you from the elephants and cattle what you ride on * so that you can sit on their backs and then remember the grace of your Lord when you sit on them and say, "Praise be to Him who made this possible for us and we were not in favor of it" [Al-Zukhuraf:12-13].</p>
+        <p><strong>The third:</strong> Proof of God's wisdom in His actions and His prohibition of absurdity, including God's saying, "Lord, you did not create this in vain, praise be to you" [Al-Imran: 191] [Al-Imran: 191]. And that His actions are not according to the whims of His creatures, as evidenced by the command to praise Him in the Qur'an {They said, "We will not believe in You until You blow us out of the earth a spring * or have a house of decoration or ascend into the sky, and we will not believe in Your ascension until You send down to us a book that we can read." [Al-Isra'a: 93] Praise be to my Lord, was I but a human being who was a messenger?]</p>
+        <p><strong>Fourth:</strong> Proof of his justice, and his purification from injustice, including the saying of Yunus (peace be upon him) {There is no god but you, praise be to you, I was one of the unjust} [Al-Anbiya:87] Shaykh al-Islam, may Allah have mercy on him, said: This term includes glorifying and purifying the Lord and the position requires purifying him from injustice and punishment without guilt, saying: He says: "You are holy and pure from oppressing me and punishing me without guilt; rather, I am the oppressor who has wronged myself. [Al-Fatawa: 10/248].</p>
+        <p><strong>Fifth:</strong> Proof of Allah's ability and the negation of His powerlessness, including the saying of Allah, {And they have not estimated Allah as much as He is worth, and the earth is all in His grip on the Day of Resurrection, and the heavens are folded in His right hand, praise be to Him who is beyond the reach of the polytheists] [Al-Zumar: 67] and the saying of Allah, praise be to Him in Whose hand is the kingdom of all things, and to Him you shall return. Praise be to Him in Whose hand is the Kingdom of all things, and to Him you shall return [Yus:83] and Praise be to Him who sent His servant by night from the Sacred Mosque to the Great Mosque, around which We blessed him, to show him some of Our signs [Al-Israa'a:1]. Ibn Ashur (may Allah have mercy on him) said: Opening with the word tasbih without any previous words that include what Allah must be disassociated from, indicates that a wondrous news will be received by the hearers, indicating the great ability of the speaker and the high status of the speaker. [15/9]. Al-Saadi (may Allah have mercy on him) said: The Almighty exalts and magnifies His holy self because He has great deeds and great favors, one of which is that He "took His servant" [Tafsir al-Saadi: 453].</p>
+        <p><strong>Sixth:</strong> Proof of Allah's sincerity in His words and promises, and His disavowal of lying and breaking them, including Allah's saying {They say, "Praise be to our Lord, if the promise of our Lord was not fulfilled" [Al-Israa':108] and Allah's saying {The command of Allah has come, so do not hasten to hasten it, praise be to Him and transcend what they share [Al-Nahl:1].</p>
+        <p><strong>Seventh:</strong> To disassociate Allah from attributing evil to Him, such as the saying of Allah, {Only when you heard it, you said, "We would not be able to speak of this, praise be to You, this is a great insult." [Al-Nur:16] That is, to disassociate You from all evil, and from afflicting Your favored ones with terrible things. [Tafsir al-Saadi: 563].</p>
+        <p><strong>Eighth:</strong> Continuous praise of Allah from all shortcomings and partners at all times, including the saying of Allah, "Praise Allah when you go to sleep and when you wake up" [Al-Rum:17].</p>
+
+        <h3>Between real and metaphorical praise: Settling the debate</h3>
+        <p>There has been a long debate among exegetes about the nature of the praise of the creatures mentioned in the Qur'anic verses: is it real praise in the sense that these creatures actually utter the praise, although we do not understand it, or is it metaphorical praise in the sense that their existence, regularity and perfection of their workmanship indicate the greatness and integrity of the Creator?</p>
+        <p>Some believe that the tasbih is metaphorical, expressing the cosmic order, but the verses refer to a conscious act. The Qur'an was revealed in a clear Arabic language, and taking the texts at face value fulfills the purpose of revelation and guidance, as Allah has described the Qur'an as a manifestation of all things, guidance and mercy. Also, taking the texts at face value prevents division and disagreement resulting from the dispersion of understandings due to the costly interpretation.</p>
+        <p>The most likely opinion and closest to the manifestation of the Qur'anic texts is that the praise of beings is a <strong>true praise</strong>, due to the following evidence:</p>
+        <ul>
+            <li><strong>The appearance of the Qur'anic texts:</strong> Allah Almighty says: "There is nothing but praise, but you do not understand their praise," and He says: 'You do not understand their praise' is evidence that there is a real praise, but we do not understand it." (Ibn Kathir, "Tafsir al-Quran al-Azim", Dar Taiba, Riyadh, 1999, C/5, p. 79).</li>
+            <li><strong>Allah Almighty tells us that every creature knows its prayer and praise:</strong> Almighty God said: "All have learned their prayers and their praise" [Al-Nur: 41], and this indicates that praise is a voluntary and conscious act of these creatures. (Al-Zamakhshari, "Al-Kashaf on the truths of Gawamat al-Tanzil", Dar al-Kitab al-Arabi, Beirut, 1407 AH, C/3, p. 251).</li>
+            <li><strong>Allocating some creatures to mention:</strong> Such as the mountains with David, the birds, and the thunder, which indicates that their tasbeeh is special and distinctive, and this is consistent with it being a true tasbeeh.</li>
+            <li><strong>True Prophetic Hadiths:</strong> Hadiths that refer to the praise of inanimate objects such as pebbles and food, such as the hadith of the pebbles in the palm of the Prophet (peace be upon him) and the hadith of the praise of food (al-Bukhari in his Sahih, Book of Manaqib, Chapter of Signs of Prophethood in Islam, Hadith No. (3579)).</li>
+            <li><strong>Modern scientific discoveries:</strong> Recent scientific discoveries have proven that plants, trees and inanimate objects have vibrations and sound waves that humans cannot hear with their naked ears, which opens new horizons for understanding the praise of creatures. These studies are not direct evidence of praise, but only hypotheses. (Peter Tompkins & Christopher Bird, "The Secret Life of Plants", Harper & Row, 1973).</li>
+        </ul>
+
+        <div class="box box-note">
+            <span class="box-title">Ibn Taymiyyah's View</span>
+            <p>"It is not necessary for their praise to be like that of a talking animal, nor for their prostration to be like that of a talking animal, but each prostrates and worships as befits it. The inanimate objects' praise and prostration is their submission to God's will and power, and their humiliation to Him, for everything is subject to His will, subject to His power, and nothing is outside of His power and will."</p>
+            <span class="source">(A Treatise on the Qunut of All Things to Allah, The University of Letters by Ibn Taymiyyah, edited by Rashad Salem, printed by Dar al-Madani).</span>
+        </div>
+
+        <div class="box box-red">
+            <span class="box-title">The procession of the swimming universe: An exquisite cosmic painting</span>
+            <p>The Holy Qur'an paints a magnificent cosmic painting of the entire universe in a great procession praising and glorifying God. The seven heavens with their bodies, planets and stars, the earth with its mountains, seas and rivers, and all creatures, including angels, jinns, humans, animals, plants and inanimate objects, participate in this procession.</p>
+            <p>The greatness of this painting is evident in its comprehensiveness and completeness, as it is not limited to one category without another, nor to one world without another, but includes everything in existence, from the smallest atoms to the largest galaxies. This is what the Holy Qur'an has expressed by saying: "And there is nothing but praise in His praise.</p>
+            <p>It is an expression with which every atom in this great universe pulsates, and a living soul rises up to praise God. The whole universe is movement and life, and the whole existence is one single, melodious and tender praise, rising in majesty to the one great and transcendent Creator</p>
+            <p>The beauty of this painting is complemented by the variety of colors and melodies of praise, as each creature has its own praise and its own unique language in which it expresses its glorification and worship of God. The praise of angels is not the same as that of humans, the praise of birds is not the same as that of mountains, and the praise of thunder is not the same as that of trees.</p>
+            <p>It is as if this cosmic procession of praise is like a huge global orchestra, with thousands of different musical instruments, playing the timeless melodies of cosmic praise before the Creator and Sustainer of the universe.</p>
+            <p>(I always feel this beautiful feeling after the Fajr prayer when I sit down to praise, as I feel the beauty of sharing the praise while listening to the chirping of birds and the rustling of trees)</p>
+            <p>In this revelation-inspired painting, nothing is silent, nothing is oblivious. The entire universe - from the depths of the atom to the edges of the galaxy - engages in the great hymn of existence.</p>
+            <p>The mountains stand, the rivers flow, the birds fly, and man submits... All play their part in the uninterrupted symphony of praise: "There is nothing but praise in His praise, but you do not understand their praise" - [Al-Isra: 44]</p>
+        </div>
+
+        <h2>SECOND SECTION: Praise in the Qur'an and Sunnah: Texts and manifestations</h2>
+        
+        <h3>Manifestations of praise in the Qur'an</h3>
+        <p>The verses of tasbih in the Holy Quran are mentioned in many places and various contexts, which indicates the centrality of this worship in the life of the universe and man, including these contexts:</p>
+        
+        <h4>Opening Qur'anic chapters with tasbih</h4>
+        <p>Imam al-Fakhr al-Razi says: "Know that the creator, the creator and the manager of the whole world is Allah alone, and this requires that everything in the world of creatures should be praising Allah, and since praise is an attribute of all things, it is not surprising that Allah opened these surahs with praise."</p>
+        <span class="source">(Fakhr al-Din al-Razi, "The Keys of the Unseen", Dar Ihya al-Herath al-Arabi, Beirut, 1420H, c/29, p. 458)</span>
+
+        <h4>Praise of the angels</h4>
+        <div class="box box-verse">
+            <span class="verse-text">"And the angels praise the praise of their Lord and forgive those who are on earth"</span>
+            <span class="verse-ref">[Al-Shura 5]</span>
+        </div>
+        <div class="box box-verse">
+            <span class="verse-text">"Those who bear the Throne and those around it praise the praise of their Lord, believe in Him, and forgive those who have believed"</span>
+            <span class="verse-ref">[Ghafir 7]</span>
+        </div>
+        <p>One of the characteristics of the angels' praise is that it is continuous and uninterrupted: "They praise night and day without ceasing" (Al-Anbiya 20).</p>
+
+        <h4>Praise of natural phenomena</h4>
+        <div class="box box-verse">
+            <span class="verse-text">"And the thunder shall praise His praise, and the angels shall fear Him."</span>
+            <span class="verse-ref">[Al-Ra'd 13]</span>
+        </div>
+        <p>Thunder is a natural phenomenon that occurs as a result of the collision of clouds and the discharge of electrical charges, and its praise indicates that natural phenomena, although subject to specific physical laws, have a kind of awareness and realization that makes them praise and glorify God.</p>
+
+        <h4>The praise of mountains and birds</h4>
+        <div class="box box-verse">
+            <span class="verse-text">"And We harnessed with David the mountains to praise Allah and the birds, and We were the doers"</span>
+            <span class="verse-ref">[Al-Anbiya: 79]</span>
+        </div>
+        <p>He said: "We made the mountains with him to praise the sunrise and sunset" (p. 18).</p>
+        <p>This special praise has deep connotations, as David, peace be upon him, was characterized by a sweet and melodious voice, and his praise affected the mountains and the birds, which echoed with him in a unique scene of cosmic harmony.</p>
+
+        <h4>Exhortation to praise in various situations</h4>
+        <ul>
+            <li>When having patience with the harm of the disbelievers: "Be patient with what they say, and praise the praise of your Lord before the sun rises and before the sun sets." Q. 39</li>
+            <li>When you are distressed: "We know that you are narrow-minded about what they say, so praise your Lord and be one of those who prostrate." (Al-Hajar 97-98) (I have never felt distressed and then praised Allah, prayed two rak'ahs and prayed for relief in prostration, but it was an effective medicine and a magical recipe).</li>
+            <li>After victory and conquest: "When God's victory and conquest come... Praise the praise of your Lord and forgive him, for he was a repentant man." (Al-Nasr 1-3)</li>
+            <li>At specific times of the day and night: "Praise your Lord before the sun rises and before the sun sets, and during the night, praise Him, and during the day" (Taha 130).</li>
+        </ul>
+
+        <h3>The praise of the great throne bearers in the presence of the Almighty</h3>
+        <p>In the highest heavens, where distances vanish and earthly concepts dissolve before the majesty of the Creator, one of the greatest unseen truths revealed in the Holy Qur'an is revealed. It is the truth of the bearers of the Great Throne, those light creatures that God Almighty has chosen to be the closest of His creatures to Him, and entrusted them with carrying the greatest of His creations - the Throne of the Merciful, which expands the heavens and the earth.</p>
+        
+        <div class="box box-verse">
+            <span class="verse-text">"Those who bear the Throne and those around it praise the praise of their Lord, believe in Him, and forgive those who have believed, Lord, You are all-encompassing in mercy and knowledge, so forgive those who repent and follow Your way and protect them from the punishment of Hell (7). Lord, admit them into the Gardens of Eden which You have promised them and those who are righteous from their fathers, their husbands and their wives, and their offspring, for You are the Most High, the Wise, the Wise. 8 Prevent the bad deeds, and whoever avoids the bad deeds on that day, You will have mercy on him, and that is the great victory"</span>
+            <span class="verse-ref">[Ghafir: 7-9]</span>
+        </div>
+
+        <p>Thus, this verse shines with divine light, revealing a great scene beyond description and imagination, the scene of the close angels performing the most sacred rituals in the presence of the Greatest Majesty.</p>
+        <p>The Throne, this great creature that God has described as great, honorable and glorious, stands tall as the roof of all creatures, and on it is the Throne, as befits His majesty and greatness.</p>
+        <p>Under this majestic throne, the greatest of God's creatures, the angels, hover, and they are the bearers of the throne, whom God chose from among all His creatures to be the closest to Him.</p>
+        <p>The Prophet (peace and blessings of Allah be upon him) was given permission to tell his Ummah about their horror and greatness through the hadith of Jabir (may Allah be pleased with him) narrated by Abu Dawud that the Messenger of Allah (peace and blessings of Allah be upon him) said: "I was given permission to tell about a king of the throne bearers, between his earlobe and his shoulder is the distance of seven hundred years." Ibn Hajar said in Al-Fath: His attribution is on the condition of authenticity.</p>
+        <p>If this is only the distance between the earlobe and the neck, how about the size of the entire king? It is a size that human minds cannot comprehend and earthly understandings cannot comprehend.</p>
+        <p>But the number is not the most important thing, the most important thing is what they are doing in pure worship of God Almighty. They praise their Lord at every moment, purifying Him from all imperfection and praising Him for His absolute perfection, and their voices rise in a great cosmic symphony that is unrelenting and tireless. Their faith in God is pure and complete, not tainted by doubt or uncertainty, and they are the best creatures for this faith because of their proximity to the Throne of Majesty and their witnessing of God's great signs that no one else sees.</p>
+        <p>The greatest characteristic that distinguishes them is their forgiveness of the believers, a noble quality that makes them intercessors for human beings before the Lord of the Worlds. They pray for the believers with an inclusive and blessed supplication that carries with it all the meanings of mercy and forgiveness:</p>
+        
+        <div class="box box-desc">
+            <p>"Lord, You are all-encompassing in mercy and knowledge, so forgive those who repent and follow Your way and protect them from the punishment of hell."</p>
+        </div>
+
+        <p>In this blessed supplication, they first acknowledge the vastness of God's mercy, which extends to all things, and His omniscience, and then ask Him to forgive those who repent and follow His path, and pray that He will protect them from the torment of Hell and admit them to His Paradise. It is a prayer that carries in its words all the meanings of divine mercy and angelic compassion for God's faithful servants.</p>
+        <p>It is a great scene, and an impressive bond between the holders of the Throne of the Most Merciful and the believers, to the extent that the holders of the Throne pray for the believers, and the people of faith testify to the great angels on the best of the noble testimonies.</p>
+        <p>It is impressive to address God, and His greatest angels, every morning and evening, and it is great to know that the holders of the throne share this confidence and advise you from above seven heavens, and it will take your heart to know that they support you and stand by your side in satisfaction.</p>
+        <p>Mutrif ibn al-Shakhir referred to this advice and satisfaction when he said: "We found that the most advisable servants to servants are the angels, and the most deceitful servants to servants are the devils, and he recited this verse." Abu Hayyan al-Gharanati commented that "it should be said: the most advisable servants to servants are the prophets and angels."</p>
+        <p>Al-Alusi says in the interpretation of the verse: "The saying: {They praise the praise of their Lord} [Al-Zamar: 75] is designed to amuse the Messenger of Allah (peace be upon him) by explaining that the angels who are in the highest place persevere in guarding and supporting the believers with him and calling for what makes them happy in both worlds, that is, they purify him from everything that is not worthy of his exalted status... While praising Him for His endless favors."</p>
+        <p>It is a great honor for the people of faith to have the throne bearers come forward to forgive and pray for the believers on earth, as explained in the verses.</p>
+        <p>Zamakhshari says: It is as if it was said: "And they believe and forgive those who have believed" [Ghafir: 7] as if it was said: And they believe and forgive those who are in the same condition and description as them, and in it is a warning that the common faith should be the reason for advice and compassion, even if there are different races and distant places, because there is no homogeneity between a king and a man, nor between heavenly and earthly. Then, when the universal faith came, it brought with it total homogeneity and true proportion, so that those around the throne forgave those above the earth."</p>
+        <p>It is worthy of stabilizing the people of faith, binding their hearts, and elevating them far above their unbelieving enemies who are hostile to them, even if the balance of power on earth is different, the believers have advantages that no one else on earth will ever ascend to, and God has given them this great advantage, which makes forgiveness and prayer for the believers one of those tasks that fall on these great angels.</p>
+        <p>Al-Qasimi says in his Tafsir: Al-Qasimi says: "The organization of their forgiveness in the context of their duties, such as praising, glorifying, and believing, indicates the completeness of their attention to it, and indicates that it is accepted by God Almighty, which is a great honor for believers."</p>
+        <p>Ibn Atiyyah says about it: "The Almighty told a news that includes the honor of the believers and the greatest hope for them, which is that the angels who carry the throne and those around the throne - the best angels - forgive the believers and ask God Almighty for paradise and mercy for them, and this is the meaning of his words in another verse: {It was upon your Lord a responsible promise} [Al-Furqan: 16], i.e.: "The angels asked him. Al-Nahhas emphasizes the same meaning in his commentary on the Qur'an: "And they forgive those who believe and have been forgiven because Allah loves it, so they are obedient to Allah by doing so."</p>
+        <p>With this greatness, this majesty, and this honor, he forgives, and the throne bearers pray for the believers, and with this destiny, and with the majesty of the word Tawhid, the believers testify to the throne bearers that: "That you are God, there is no god but you, alone and without a partner, and that Muhammad is your slave and your messenger."</p>
+        <p>Thus, it is a lofty relationship, with the loftiness of faith that unites the throne bearers and binds them in a high-level bond that no one from the people of the earth comes close to, no matter how much he thinks that money, prestige, or power has been given to him, clothed with a false honor.</p>
+        <p>It is the faith that unites the people of faith at the throne and above the earth: {They believe in it and forgive those who have believed} [Ghafer: 7], just as faith connects the believers on earth with their different nationalities, colors, peoples and regions; it also connects them with the masses of believers in the sky, and even the people of honor and pride of the holders of the Throne of the Merciful.</p>
+        <p>In this great scene, we see the highest forms of true servitude. These great angels, despite their supernatural power, their enormous size, and their proximity to the Throne of the Most Merciful, remain submissive servants of God, sensing their great responsibility in carrying the greatest of creatures, and offering the highest forms of worship and reverence in the presence of the Great Majesty Almighty.</p>
+        <p>In this great scene, the throne bearers teach us that servitude to God is an honor and not a detraction, that praying for fellow believers is one of the greatest acts that bring us closer to God, and that humility with greatness is the characteristic of the saints and the righteous, for true greatness lies in submission to God and humility before His Majesty.</p>
+        <p>Thus, the bearers of the Great Throne remain an eternal model of servitude, submission and forgiveness for the believers, and an example to be followed in worship and humility. As we contemplate this great unseen truth, we realize the greatness of the Almighty Creator who created these honorable angels and made them the closest of His creatures to Him, and we also realize that creatures, no matter how great they are, remain in need of God's mercy and forgiveness.</p>
+        <p>Praise be to Allah, who has informed us of these great unseen worlds through His Holy Book and the words of His faithful Prophet, and has made the Throne Bearers an example for us to follow in worship, reverence and supplication for the believers. May Allah bless our Prophet Muhammad, who was authorized to tell us about these great truths that fill the heart with faith and the soul with reverence.</p>
+
+        <h3>Tasbih in the Sunnah: Applications and virtues</h3>
+        <p>There are many hadiths in the Sunnah that show the virtues of tasbih and emphasize its importance and weight in the balance of deeds. Some of these hadiths include:</p>
+        
+        <div class="box box-verse">
+            <span class="box-title">The Best Speech</span>
+            <p>Abu Dharr (may Allah be pleased with him) reported that the Messenger of Allah (peace and blessings of Allah be upon him) was asked: "What is the best speech?" He said: "That which Allah has chosen for His angels or for His servants: Praise be to Allah and praise be to Him."</p>
+            <span class="source">(Directed by Muslim in his Sahih, Book of Dhikr and Dua, Chapter on the virtues of Subhanallah and Baha'u'llah, Hadith No. 2731).</span>
+        </div>
+
+        <p>On the authority of Samra bin Jandab (may Allah be pleased with him), the Messenger of Allah (peace and blessings of Allah be upon him) said: "The most beloved words to Allah are four: Praise be to Allah, praise be to Allah, there is no god but Allah, and Allah is the greatest, and it does not matter which one you start with. (Directed by Muslim in his Sahih, Book of Dhikr and Supplication, Chapter on the virtues of Tahlil, Tasbih and Dua, Hadith No. 2137).</p>
+
+        <div class="box box-verse">
+            <span class="box-title">The weight of praise in the scale</span>
+            <p>Abu Huraira (may Allah be pleased with him) reported that the Prophet (peace be upon him) said: "Two words that are light on the tongue, heavy in the scale, and beloved to the Merciful: Praise be to Allah, Praise be to Allah and Praise be to Allah."</p>
+            <span class="source">(Bukhari, in his Sahih, Book of Supplications, chapter on the virtues of praise, Hadith No. 6406).</span>
+        </div>
+
+        <p><strong>Planting Paradise:</strong> On the authority of Jabir bin Abdullah (may Allah be pleased with them both), the Prophet (peace be upon him) said: "Whoever says: 'Praise and praise be to Allah,' a palm tree will be planted for him in Paradise." (Reported by al-Tirmidhi in his Sunnah, Book of Supplications, Chapter on the virtues of tasbih, takbir, tahlil and tahmid, Hadith No. 3464).</p>
+        <p>Abu Huraira (may Allah be pleased with him) reported that the Messenger of Allah (peace be upon him) said: "Whoever says: 'Praise be to Allah and praise be to Him' in a day one hundred times, his sins will be forgiven, even if they are like the scum of the sea" (Bukhari, in his Sahih, Book of Supplications, Chapter on the virtues of praise, Hadith No. 6405).</p>
+
+        <div class="box box-note">
+            <span class="box-title">Praise of inanimate objects</span>
+            <p>It is proven in the Sunnah that some inanimate objects used to praise with the Prophet (peace and blessings of Allah be upon him), which confirms the reality of the praise of beings. This includes:</p>
+            <p>Al-Bayhaqi narrated from Abu Dharr (may Allah be pleased with him): "We were with the Prophet (peace be upon him) while he was sitting, and he took pebbles and they swam in his hand, then he put them down and they fell silent, then Abu Bakr took them and they swam in his hand, then he put them down and they fell silent, then 'Umar took them and they swam in his hand, then he put them down and they fell silent"</p>
+            <span class="source">(Al-Bayhaqi in "Dalilat al-Nubuwwah", c. 6, p. 66).</span>
+        </div>
+
+        <p>Ibn Mas'ud (may Allah be pleased with him) said: "We used to count the verses as a blessing, and you count them as a scare, we were with the Messenger of Allah (peace be upon him) on a journey, and water was scarce: They brought a pot of water, and he inserted his hand into the pot, then said: "Hail to the blessed purification, and the blessing is from Allah." I saw the water spring up between the fingers of the Messenger of Allah. I saw water flowing from the fingers of the Messenger of Allah, may Allah bless him and grant him peace, and we could hear the praise of the food while it was being eaten." (Al-Bukhari in his Sahih, Book of Manaqib, Chapter of Signs of Prophethood in Islam, Hadith No. 3579).</p>
+        <p>These and other hadiths clarify the status of tasbih in Islam, and emphasize that it is a great worship that enjoys a special status with Allah, and that it is a means of purifying the soul and cleansing it from sins, and a reason to obtain a great reward and a high position in Paradise.</p>
+
+        <h2>Research III: Types and Forms of Praise in the Universe</h2>
+        <p>The cosmic tasbih manifests itself in a variety of forms and shapes, reflecting the diversity of creatures and their various ways of expressing their reverence and worship of God. This praise can be categorized into several types:</p>
+
+        <h3>The innate tasbih and the voluntary tasbih</h3>
+        <p><strong>Innate praise:</strong> This is the tasbih that is instilled in every creature's nature and instinct, which it performs without choice or intention, such as the tasbih of inanimate objects, plants, and non-mandated creatures. This type of tasbih never fails, because it is part of the creature's constitution and nature.</p>
+        <p>The Holy Qur'an predates the Qur'an by fourteen centuries or more by emphasizing that every one of God's creations has its own amount of perception, which helps it to speak words, to feel and sense, to communicate with its peers, to know its Creator Almighty and to submit to Him with obedience, worship, remembrance and praise. This innate realization also helps each creature to distinguish between good worshippers and negligent disobedient creatures, sympathizing with good worshippers and repulsed by their negligent disobedience.</p>
+        <p>Otherwise, Solomon's hoopoe knew that the worship of the people of Sheba to the sun is blasphemy against Allah, and that prostration is permissible only to Allah, the Lord of the Worlds. God is no god but He, the Lord of the Great Throne (Al-Naml: 25 and 26).</p>
+        <p>In a hadith narrated by Imam Ahmad on the authority of Jabir (may Allah be pleased with them both), the Messenger of Allah (peace and blessings of Allah be upon him) said: "There is nothing between heaven and earth that does not know that I am the Messenger of Allah, except the disobedient jinn and human beings.</p>
+        <p>In Sunan al-Nisa'i on the authority of Abdullah ibn 'Amr, he said: The Messenger of Allah, may Allah bless him and grant him peace, forbade killing the frog and said: "Its chirping is tasbeeh.</p>
+        
+        <p><strong>Voluntary praise:</strong> This type of praise is the praise that a creature performs with its own choice and will, such as the praise of angels, humans, and jinn. This type of tasbih varies in its owners, some of whom are frequent and some less frequent, some of whom continue tasbih and some of whom discontinue it.</p>
+        <p>Allah has combined the two types in a single verse: "Do you not see that Allah praises those in the heavens and the earth and the birds that fly, each knowing his prayer and his praise, and Allah knows what they do?" Al-Nur41</p>
+
+        <h3>Continuous praise and temporary praise</h3>
+        <p>It is the uninterrupted and unceasing praise, like the praise of the angels. The Almighty says: "They praise day and night without ceasing." Al-Anbiya 20</p>
+        <p>Al-Fakhr al-Razi, in Mufafiqat al-Ghayb - interpretation of Surah al-Anbiya, c. 22, p. 149: says: "Praise for them is like breathing for us, just as our busyness with breathing does not prevent us from speaking, so their busyness with praise does not prevent them from other actions..."</p>
+        <p>Ashi and Ishraq are two times characterized by stillness and tranquility. Ishraq (the time of sunrise) and Ashi (before sunset) are two times when the manifestations of God's ability and greatness are manifested through the change of night and day and the fluctuation of darkness and light, making them suitable times for meditation and praise.</p>
+
+        <h3>Individual Tasbih and Collective Tasbih</h3>
+        <p><strong>Individual praise:</strong> This is the tasbih that each creature performs individually, according to its type and nature. The Almighty says: "Everyone knows his prayer and his praise." Al-Nur: 41</p>
+        <p><strong>Collective praise:</strong> It is the praise that is shared by a group of creatures, such as the praise of the mountains with David, peace be upon him. The Almighty said: "We have made the mountains with him to praise in the evening and in the sunrise" (p. 18).</p>
+        <p>Here I refer to the places where collective dhikr is permissible , such as tawbia in Hajj and Umrah, takbir in the two Eids, in councils of remembrance and knowledge, and when the rain falls.</p>
+        <p>In this collective praise, the power and splendor of cosmic harmony is manifested, as the voices of different creatures unite in glorifying and honoring the Creator.</p>
+
+        <h3>Spoken Praise and Silent Praise</h3>
+        <p><strong>Spoken Praise:</strong> It is the praise that is done with audible words and phrases, such as the praise of humans, jinn and angels.</p>
+        <p><strong>Silent praise:</strong> It is the tasbih that is represented in expressions that are not audible, but in other forms of expression of exaltation and sanctification, such as the prostration of shadows. The Almighty says: "Have they not seen what Allah has created, whose shadows spread out to the right and to the left, prostrating to Allah while they are humble?" (Al-Nahl 48)</p>
+
+        <h3>The praise of inanimate objects, plants and animals: Evidence and examples</h3>
+        <p>The Qur'an is full of references to the praise of various categories of creatures:</p>
+        <p><strong>Inanimate objects:</strong></p>
+        <ul>
+            <li><strong>Mountains:</strong> The Almighty says: "And We mocked with David the mountains to praise him and the birds, and We were the doers" (Al-Anbiya, 79).</li>
+            <li><strong>Thunder:</strong> Allah says: "And the thunder will praise His praise, and the angels will praise Him from His fear." (Al-Ra'd 13)</li>
+            <li><strong>Pebbles:</strong> It is proven in the Sunnah that pebbles used to praise the Prophet's palm, as reported in the hadith narrated by Al-Bayhaqi from Abu Dharr (Al-Bayhaqi, "Evidences of Prophethood", C/6, p. 66).</li>
+            <li><strong>The stone:</strong> The stone used to greet the Prophet (peace be upon him) before the Prophethood. Jabir ibn Samarah (may Allah be pleased with him) said: The Messenger of Allah, may Allah bless him and grant him peace, said: "I know a stone in Makkah that used to greet me before I was sent, and I know it now." (Reported by Muslim in his Sahih, Book of Virtues, Chapter on the virtues of the Prophet's lineage, Hadith No. 2277) (extracted by Muslim in his Sahih, Book of Virtues, Chapter on the virtues of the Prophet's lineage).</li>
+        </ul>
+        <p>Allah, the Almighty, has referred to the mountains' fear of Allah and said: "If We had sent down this Qur'an on a mountain, you would have seen it trembling and cracking from the fear of Allah" [Al-Hashr: 21]. This indicates a kind of consciousness and realization enjoyed by these inanimate objects, which makes them capable of praise and reverence.</p>
+
+        <p><strong>Praise of plants:</strong></p>
+        <div class="box box-verse">
+            <span class="verse-text">"And the star and the trees prostrate themselves"</span>
+            <span class="verse-ref">[Al-Rahman 6]</span>
+        </div>
+        <p>The Qur'an does not explicitly mention the praise of plants, but their inclusion in the general statement: "There is nothing but praise in His praise" is a certainty. The Qur'an refers to the prostration of plants to Almighty God, which is a form of worship.</p>
+        <p>Imam al-Tabari said: "And the star: What emerges from the plant that does not have a stem, and the tree: What has a stem, he says: They both prostrate themselves to God" (Al-Tabari, "Jameh al-Bayan fi Tawseel al-Quran", Al-Risala Foundation, Beirut, 2000, C/22, p. 231).</p>
+        <p>In modern times, scientific studies have revealed the ability of plants to respond to various stimuli and emit vibrations and sound waves that can be detected by modern devices, opening new horizons for understanding how plants praise. (Monica Gagliano, "Thus Spoke the Plant", North Atlantic Books, 2018). It's a promising study, but it doesn't conclusively prove praise scientifically.</p>
+
+        <p><strong>Animal praise:</strong></p>
+        <ul>
+            <li><strong>The birds:</strong> Allah says: "Haven't you seen that Allah praises those in the heavens and the earth, and the birds, each knowing his prayer and his praise?" (Al-Nur 41) Allah has singled out the birds for mention in the context of their praise with David, peace be upon him, saying: "And the birds are gathered together, each of them has an Awwab" [R: 19]. An Awwab is one who returns to God often with praise and worship.</li>
+            <li><strong>Animals:</strong> Allah says: "Haven't you seen that those in the heavens and those in the earth, the sun, the moon, the stars, the mountains, the trees, the animals, and many of the people prostrate to Him?" (Al-Hajj 18) The animals include all animals that move on the earth, and their prostration to Allah is a form of worship and praise that befits them. (There is no animal in the earth but Allah has its sustenance, and He knows its resting place and depot ۚ all in a clear book) (Hud 6).</li>
+        </ul>
+
+        <h2>Research IV: Why Don't We Hear the Praise of Creatures? Secrets and Discoveries</h2>
+        <p>The Holy Qur'an explicitly states that we do not understand the praise of beings, saying: "But you do not understand their praise. There are several reasons for our inability to hear and understand this praise:</p>
+
+        <h3>The physical and moral veil</h3>
+        <p>Man lives in a physical world and deals with things through his limited senses. This physical veil prevents him from realizing the unseen and spiritual realities of the universe.</p>
+        <p>The human heart, in its purity and radiance, feels the praise of the entire universe, receives its rhythms and gestures, and finds in itself echoes of the melodies of existence as it praises its Lord. However, this heart is covered with mud, weighed down by the burdens of daily life, and obscured by ambitions, appetites, fears and worries, and does not feel the deep rhythm that connects the parts of all existence to its Creator and Sustainer.</p>
+
+        <h3>Limitations of the human senses</h3>
+        <p>The human ear can only hear a limited range of sounds, between 20 and 20,000 Hz, while there are higher (ultrasonic) and lower (infrasonic) sounds that the human ear cannot hear, while creatures emit vibrations outside this range. (David Howard & Jamie Angus, "Acoustics and Psychoacoustics", Focal Press, 2017.)</p>
+        <p>The rhythm of praise and the call of the heart The human heart, in a moment of serenity and tranquility, feels the praise of the whole universe ... it hears the whispers of the stars, feels the songs of the trees, and realizes that every atom is praising its Creator. But when he is covered by the impudence of mud and burdened by the illusions and fears of life, these echoes fade away, and he loses his connection to the great cosmic hymn. "And there is nothing but praise in praise of His praise</p>
+        <p>Modern science has proven that some animals such as bats and dolphins can hear much higher frequencies than humans, and use them for communication and navigation. Some insects, such as ants, communicate through chemical signals that humans cannot perceive with their naked senses.</p>
+        <p>Bats have unique bio-sonar capabilities, emitting ultra-high-frequency sounds (above 20 kHz) and receiving their reverberations to accurately locate objects. (Balcombe J. Animal Echolocation. Proc R Soc B. 2013;419-457))</p>
+        <p>Dolphins, whales, and marine fish are capable of receiving frequencies above 100 kHz underwater, suggesting that most of the sounds we hear are not within their hearing range. (Ridgway SH, Au WWL. Hearing and Echolocation in Dolphins. In: Encyclopedia of Neuroscience. Vol 4. 2010).</p>
+
+        <h3>Different languages and styles of praise</h3>
+        <p>Each creature has its own language and style of praise, and these languages can be radically different from human language. The praise of mountains is not like the praise of birds, and the praise of plants is not like the praise of inanimate objects.</p>
+        <p>Imam Razi says: "Creatures have different types of praise, but man only understands the type that is familiar to him and his kind, and the other types he does not know" (Al-Razi, "The Keys of the Unseen", C/21, p. 34).</p>
+
+        <h3>Ignorance and preoccupation with God's cosmic signs</h3>
+        <p>Most people are preoccupied with worldly affairs and concerns, oblivious to contemplating God's cosmic signs and listening to the sounds and songs of the universe. If their hearts were free of preoccupations and their souls were clear, they might be able to realize some of the secrets of this universe and hear some of its praise.</p>
+
+        <h3>Modern Scientific Discoveries and the Praise of Creatures</h3>
+        <p>In modern times, some scientific discoveries have begun to open up new horizons for understanding how creatures praise:</p>
+        
+        <div class="box box-science">
+            <span class="box-title">Plant vibrations & Sound Waves</span>
+            <p>Scientists have discovered that plants emit sound vibrations at high frequencies that are inaudible to the human ear, and these vibrations change depending on the conditions surrounding the plant, such as watering, drought, light, and darkness. Using special devices, these vibrations can be converted into audible sounds, sometimes resembling music. (Peter Wohlleben, "The Hidden Life of Trees", Greystone Books, 2016.)</p>
+            <p><strong>Study by Lilia Mitterrand (2019):</strong> Published in Cell documented that plants emit ultrasonic "clicks" when subjected to water stress or when their stems are cut. Source: Khait, I., Sharon, R., Perelman, R. et al. (2019). "Plants emit informative airborne sounds under stress". Cell, 175(4), 805-815.</p>
+            <p><strong>Monica Gagliano Research (2017-2022):</strong> Professor of Biological Ecology at the University of Western Australia proves that plants emit and respond to acoustic signals. Her book: Gagliano, M. (2018). "Thus Spoke the Plant: A Remarkable Journey of Groundbreaking Scientific Discoveries". North Atlantic Books. Her study: Gagliano, M., et al. (2017). "Tuned in plant roots use sound to locate water". Oecologia, 184(1), 151-160.</p>
+        </div>
+
+        <div class="box box-science">
+            <span class="box-title">Electromagnetic oscillations of materials (inanimate objects)</span>
+            <p><strong>Stanford University's "Memory of Materials" research (2021):</strong> A team led by Prof. Wen Shi in the Department of Materials Science discovered that some solids retain a "memory" pattern that shows up in their electromagnetic responses. Source: Shi, W., et al. (2021). "Field-induced memory effects in disordered materials". Nature Materials, 20(4), 489-494.</p>
+            <p><strong>Max Planck Institute for the Physics of Complex Systems (2020):</strong> On the electromagnetic responses of crystals and solids. Source: Schmidt, D., et al. (2020). "Quantum electrodynamical signatures in strong-field QED". Reviews of Modern Physics, 92(4), 045003.</p>
+        </div>
+
+        <div class="box box-science">
+            <span class="box-title">Animal language & Sounds of the Universe</span>
+            <p><strong>Animal language:</strong> Scientific studies have revealed the complexity and diversity of animal communication languages, from sounds to physical and chemical signals. Some animals, such as whales and dolphins, have complex communication languages that include a variety of tones and sounds. (Frans de Waal, "Are We Smart Enough to Know How Smart Animals Are?", W. W. Norton & Company, 2016)</p>
+            <p><strong>Sounds of the Universe:</strong> Astronomers have been able to capture cosmic sounds and vibrations from various objects in space, such as "star sounds" caused by vibrations on their surface, and "black hole sounds" caused by gravitational waves. After these signals are processed and converted into the auditory range, it is possible to listen to something like the "music of the universe" (Janna Levin, "Black Hole Blues and Other Songs from Outer Space", Anchor Books, 2016)</p>
+        </div>
+
+        <p><strong>Molecular resonance:</strong> Scientists have discovered that molecules and atoms vibrate at specific frequencies, producing "musical notes" at the atomic level. Using sophisticated techniques such as nuclear magnetic resonance (NMR) spectroscopy, these vibrations can be detected and studied. (Fritjof Capra, "The Tao of Physics", Shambhala Publications, 2010)</p>
+        <p>These and other discoveries offer new insights into how creatures praise, and open wide horizons for contemplating the greatness of the Creator and His creativity in His creation. They also confirm the veracity of the Qur'an's reference to this cosmic truth fourteen centuries ago, at a time when these scientific discoveries were not available.</p>
+
+        <h3>Neurobiology and the consciousness of lower organisms</h3>
+        <ul>
+            <li><strong>Cambridge Declaration on Consciousness (2012, updated 2020):</strong> The Cambridge Declaration on Consciousness 2020, signed by a group of leading neuroscientists, confirms that invertebrate animals and lower organisms possess forms of consciousness.</li>
+            <li><strong>Andrew B. Parrott's research on octopus consciousness (2021):</strong> A professor of comparative neuroscience at UC San Diego has demonstrated that octopuses possess complex neural networks that allow for advanced levels of consciousness despite evolving independently of mammals. (Barron, A.B., & Klein, C. (2021). "What insects can tell us about the origins of consciousness". Proceedings of the National Academy of Sciences, 118(21).</li>
+            <li><strong>Vanderbilt University study on single-cell consciousness (2019):</strong> Led by Prof. Kenneth Catania found that single cells exhibit a kind of "cellular intelligence" and complex adaptive responses (Catania, K. (2019). "The shocking predatory strike of the electric eel". Science).</li>
+        </ul>
+
+        <h3>Integrative studies between science and philosophy</h3>
+        <p>"The Perceived Universe: How Consciousness Creates Reality" (2020): Physicist and neuroscientist Donald Hoffman presents a scientific theory of how consciousness may be fundamental to the structure of the universe (Hoffman, D. (2020). "The Case Against Reality: Why Evolution Hid the Truth from Our Eyes" . W.W. Norton & Company)</p>
+        <p>Cognitive Science Center research at the University of Edinburgh (2018-2022): On the extension of consciousness in non-human organisms and natural systems (Chalmers, D. J., & McQueen, K. J. (2021). Consciousness and the Collapse of the Wave Function. In Oxford Studies in Philosophy of Mind, Vol. 1. Oxford University Press.</p>
+        <p>These references represent the state of the art in the study of the complex physical and biological responses of different organisms.</p>
+
+        <h2>Fifth research: Implications of Believing in the Praise of Creatures</h2>
+        <p>Believing in the truth of the praise of beings has profound faith and educational implications in the life of a Muslim, reflecting on his relationship with his Lord, himself, and the universe around him:</p>
+        <ul>
+            <li><strong>Deepening faith in God and glorifying Him:</strong> When a Muslim realizes that every atom in this universe is praising God, his faith in God increases. This universal cosmic praise emphasizes the greatness and power of the Creator and deepens the sense of His majesty and perfection.
+                <div class="box box-verse"><span class="verse-text">"Verily, in the creation of the heavens and the earth and the difference of night and day are signs for those who have the intellect (190) who remember Allah, standing and lying down and on their sides, and think about the creation of the heavens and the earth, O Lord, You have not created this in vain, O Lord, so save us from the punishment of the Fire"</span><span class="verse-ref">[Al-Imran 190-191]</span></div>
+                Ibn al-Qayyim said: "Whoever knows that everything in the universe is praising God, testifying to His oneness, indicating His perfection, his faith is great, his certainty is strong, and he finds in his heart a sense of devotion to God that the one who is oblivious to this fact does not find" (Ibn al-Qayyim, "Madaraj al-Salikin", C/1, p. 424).
+            </li>
+            <li><strong>Harmony with the rhythm and harmony of the universe:</strong> This feeling of belonging to the procession of the praising universe removes alienation and loneliness from the believer's heart, filling his heart with peace and tranquility, and making him feel that he is in constant companionship with all of God's praising creatures.</li>
+            <li><strong>Modesty towards God and constant surveillance:</strong> When a Muslim knows that everything around him is praising God and testifying to his oneness, he is ashamed to disobey God in his kingdom, among his creatures that praise and glorify him.</li>
+            <li><strong>Respecting the universe and preserving the environment:</strong> A Muslim who believes in the praise of creatures realizes that every creature in this universe, no matter how small or large, has a role and function in praising and worshipping God. Therefore, he respects these creatures and seeks to preserve them, and does not harm them except for a legitimate need, especially if we know that 28% of animal species are threatened with extinction. This respect and preservation of the environment stems from a deep cosmic vision that sees every creature as a praise to God, not just a resource to be exploited or consumed.</li>
+            <li><strong>Humility and breaking the ego:</strong> A person who thinks he is the only sane and aware person in the universe becomes arrogant and conceited. On the other hand, a person who believes that everything around him praises and worships God is humble and knows his own worth. Imam al-Shafi'i said, "The more I am disciplined by time , the more my mind decreases, and the more I learn , the more I learn of my ignorance." It is a useful knowledge for man to know that he is not alone in this universe, but that he is part of an integrated cosmic system, all of which participate in praising and glorifying God.</li>
+            <li><strong>A sense of peace and tranquility:</strong> The believer never feels lonely, even if he is alone in a desolate place, as he is surrounded by millions of creatures who join him in praising and worshipping God. Ibn Taymiyyah said: "What do my enemies do to me? I have my paradise and my garden in my chest, wherever I go, it is with me, it does not leave me." (Ibn al-Qayyim, "Al-Wabil al-Sayyib from al-Kalam al-Tayyib"). This sense of peace and tranquility stems from the deep belief that everything in the universe swims in the praise of God, and that the believer is part of this cosmic procession.</li>
+        </ul>
+
+        <h2>Exhibit VI: The Relationship of Cosmic Praise to Cosmic Consciousness</h2>
+        <p>Cosmic consciousness is a concept that suggests that the entire universe has some kind of perception and awareness, and that this awareness is rooted in the basic fabric of existence. It goes beyond the idea that consciousness is limited to organisms with developed brains, such as humans. (The content and vision of Amit Goswami's The Self-Aware Universe (1995).</p>
+        <p>The Qur'an refers to this concept through many verses that emphasize that everything in the universe praises God, and that all creatures know their prayer and praise, and fear and worship God.</p>
+        <ul>
+            <li><strong>The awareness and realization of the mountains:</strong> "If We had sent down this Qur'an on a mountain, you would have seen it trembling and cracking from the fear of Allah" [Al-Hashr: 21]</li>
+            <li><strong>Awareness and realization of the earth and the heavens:</strong> "And He said to the heavens and the earth, 'Come to us voluntarily or involuntarily,' and they said, 'We have come to us voluntarily" [Fussilat: 11]</li>
+            <li><strong>The awareness and realization of bees:</strong> "And your Lord revealed to the bees that they should make houses out of the mountains, and out of the trees, and out of what they live" [al-Nahl: 68]</li>
+            <li><strong>The consciousness and realization of ants:</strong> "O you ants, enter your dwellings, so that Solomon and his soldiers may not destroy you while they do not know it." [Ants: 18]</li>
+        </ul>
+
+        <h3>The praise of creatures as evidence of cosmic consciousness</h3>
+        <p>The praise of creatures is one of the most important evidences of cosmic consciousness, as praise is a voluntary and conscious act that stems from a realization of the greatness and majesty of the Creator. God Almighty has said that every creature knows its prayer and praise: "Every creature knows its prayer and praise" (Al-Noor 41).</p>
+        <p>This knowledge of prayer and praise requires a kind of awareness and realization, commensurate with the nature and abilities of each creature. Human consciousness is not the same as animal consciousness, animal consciousness is not the same as plant consciousness, and plant consciousness is not the same as inanimate objects, but all share the origin of consciousness and realization.</p>
+
+        <h3>Levels and Degrees of Cosmic Consciousness</h3>
+        <p>Cosmic consciousness ranges in different levels, starting from simple consciousness in inanimate objects and ending with complex consciousness in humans. Between these two extremes are all other creatures with varying degrees of consciousness and realization. The levels of cosmic consciousness can be divided into:</p>
+        <ol>
+            <li>It is embedded in the nature of every creature, represented by its automatic response to cosmic influences and laws, and its fulfillment of the function for which it was created. This level is present in all creatures without exception, from atoms to galaxies. The Almighty says: "To Allah belongs what is in the heavens and what is in the earth, and the angels, and they are not proud" (al-Nahl 49).</li>
+            <li>This is the level found in animals, which have some kind of sensory perception, the ability to distinguish between useful and harmful, the ability to learn from experiences, and to make simple decisions related to survival and reproduction. The Qur'an refers to this level in the story of the ant who warned her people about Solomon and his soldiers, in the story of the hoopoe who told Solomon about the kingdom of Sheba, and in the story of the raven who taught the son of Adam how to bury his brother.</li>
+            <li>This is the level that characterizes human beings and includes the ability to think abstractly, future planning, artistic and scientific creativity, philosophical reflection, and the search for the meaning of existence. The Almighty says: "We have honored the children of Adam and have carried them on land and sea and provided them with good things and have given them preference over many of those we have created" (Al-Israa' 70).</li>
+            <li>This is the highest level of cosmic consciousness, and is represented by direct contact with God Almighty, knowing Him truly, and worshipping Him truly. This level varies greatly among people, and reaches its peak among the prophets, apostles, and the righteous. The Almighty says: "It is the scholars who fear Allah from His servants" [Fater: 28]. The scholars here are those who know God, who are aware of His greatness and majesty.</li>
+        </ol>
+
+        <h3>The Scientific Dimension of Cosmic Consciousness</h3>
+        <p>Some contemporary scientific theories have begun to approach the concept of cosmic consciousness that the Qur'an referred to fourteen centuries ago. Some of these theories include:</p>
+        
+        <div class="box box-science">
+            <span class="box-title">Morphogenetic Field Theory</span>
+            <p>Developed by British scientist Rupert Sheldrake, it postulates the existence of a non-physical information field that connects similar beings and allows the transmission of information and experiences between them. This field represents a kind of collective memory or shared consciousness for different species. (Rupert Sheldrake, "The Presence of the Past: Morphic Resonance and the Habits of Nature", Park Street Press, 1995.)</p>
+        </div>
+
+        <div class="box box-science">
+            <span class="box-title">Quantum Consciousness Theory</span>
+            <p>Developed by physicist Roger Penrose and neurologist Stuart Hameroff, it links consciousness to quantum phenomena at the cellular level of the brain. It posits that consciousness is not just a chemical product of the brain, but a fundamental quantum phenomenon in the universe, linked to the fundamental structure of spacetime (Hameroff, Stuart and Penrose, Roger. "Consciousness in the Universe: Physics of Life Reviews, 78-39)</p>
+        </div>
+
+        <div class="box box-science">
+            <span class="box-title">Unified Cosmic Consciousness Theory</span>
+            <p>The Unified Cosmic Consciousness Theory offers an integrative vision that goes beyond the reductionist materialist paradigm prevalent in contemporary science. This theory is based on two main pillars:</p>
+            <p><strong>The fundamental unity of consciousness:</strong> Consciousness is not a by-product of matter, but a fundamental property of the fabric of the universe. This consciousness is manifested at varying levels in all creatures, from atoms to galaxies, and is connected by a fundamental unity due to the oneness of the Creator. This vision is consistent with the data of quantum physics about the role of the observer (consciousness) in shaping reality, and the entanglement that transcends the boundaries of time and space.</p>
+            <p>In quantum mechanics, the "observer effect" shows that simply observing a particle can change its state, suggesting that consciousness is not just a passive recipient, but an active element in determining physical reality.</p>
+            <p>In addition, the phenomenon of "quantum entanglement" shows that particles can be interconnected in such a way that their state is connected to each other regardless of distance, suggesting an interconnectedness that transcends time and space.</p>
+            <p>Consciousness is on a continuum from simple to complex, but it is still connected in a single network:</p>
+            <ul>
+                <li>Simple innate consciousness in inanimate objects</li>
+                <li>Bio-consciousness in plants</li>
+                <li>Instinctive consciousness in animals</li>
+                <li>Mental consciousness in humans</li>
+                <li>Spiritual consciousness that transcends the limits of the individual self</li>
+            </ul>
+            <p>This hierarchy corresponds to the Islamic concept of the orders of existence.</p>
+            <p><strong>Cosmic Harmony in the Unified Cosmic Consciousness Theory:</strong> The different levels of consciousness work in harmony, forming a unified cosmic symphony. This harmony is manifested in: The delicate balances in ecosystems, Information exchanges across different types of objects, The recurring patterns and relative relationships that appear at different levels of existence. This harmony reflects unity in diversity, and diversity in unity, as a manifestation of the Creator's creativity and wisdom.</p>
+            <p>This theory opens wide horizons for understanding and explaining various phenomena of consciousness, and provides a philosophical and scientific framework for grasping the truth of the tasbih of beings that the Holy Qur'an tells us about. It also provides a basis for developing practical applications in various fields such as medicine, environment, technology, and social sciences, and constitutes a bridge for dialogue between Islamic heritage and contemporary science.</p>
+        </div>
+
+        <p><strong>Self-organizing Systems Theory:</strong> It is a theory that studies how complex systems self-organize themselves without the need for external guidance. It suggests that living organisms, from cells to societies, have a self-organizing and adaptive capacity that resembles a kind of intelligence or simple consciousness.</p>
+        <p><strong>Universe as a Quantum Computer:</strong> Proposed by some quantum physicists, it posits that the entire universe can be thought of as a giant quantum computer, processing information on a quantum level. This information processing may be related to a kind of cosmic consciousness.</p>
+        <p>These and other theories open new horizons for understanding the nature of consciousness in the universe, and provide scientific support for the Qur'anic idea of the praise of beings and their consciousness, although they are still in the early stages of research and development.</p>
+
+        <h2>SEVENTH SECTION: Reflections on the Symphony of the Praising Universe</h2>
+        
+        <h3>The Universe as a Sanctuary of Worship</h3>
+        <p>In the Qur'anic view of the universe, the universe is transformed from deaf matter into a sanctuary of worship, an arena of praise, in which every creature turns towards its Creator with praise and reverence. This Qur'anic view of the universe is radically different from the materialistic view that has dominated Western thought for a long time, which treats the universe as a deaf mechanical machine, subject to rigid physical laws, devoid of The praises universe can be likened to an enormous cosmic mosque, in which all creatures turn towards God in praise and reverence. This cosmic mosque has no spatial or temporal boundaries; it encompasses all existence, from the smallest atoms to the largest galaxies, and from the beginning of creation to the resurrection of the hour.</p>
+        
+        <div class="box box-verse">
+            <span class="verse-text">"To Allah belongs those in the heavens and the earth who prostrate themselves voluntarily and involuntarily, and their shadows in the morning and evening."</span>
+            <span class="verse-ref">[Al-Ra'd 15]</span>
+        </div>
+
+        <h3>Harmony and harmony in the cosmic praise</h3>
+        <p>Despite the diversity of creatures and their different ways of praise, they all form a harmonious cosmic orchestra, playing the eternal symphony of praise. This harmony and harmony in the cosmic praise reflects the unity of the source and the unity of the purpose, as all creatures originate from God and return to Him, and all of them share one purpose, which is the realization of servitude to God and praise in His praise.</p>
+        <p>Perhaps the praising universe has profound lessons for the troubled, conflicting, and discordant humanity. If atoms and galaxies, inanimate objects and plants, animals and angels all harmonize and unite in praising the Creator, is it appropriate for man, God's successor on earth, to deviate from this cosmic harmony through conflict, hatred and rivalry?</p>
+        <p><strong>The state of the believer and his harmony with the universe around him:</strong> The believer in the praise of the creatures feels in harmony with the universe around him, as he is not a stranger in this world, but is part of an integrated cosmic system that praises its Lord.</p>
+
+        <h3>Man is between joining the procession of praise and separating from it</h3>
+        <p>Man stands at a dangerous crossroads: Either he joins the procession of the praising universe and becomes a servant of God like all other creatures, or he separates himself from this procession and becomes an anomaly in the universe, contrary to his nature and the nature of existence.</p>
+        <p>The Almighty says: "Haven't you seen that Allah praises those in the heavens and the earth and the birds in the sky, each knowing his prayer and his praise, and Allah is aware of what they do?" Al-Nur 41</p>
+        <p>Commenting on this verse, one of the commentators says: "The horizons of the heavens and the craters of the earth praise their Lord; so why do we deviate and not dye what the whole universe has dyed? Disobedience is a violation of a general rule, or it is a lewd tone among pure melodies, looking up to the Supreme Creator in submission, devotion and reverence."</p>
+        <p>What distinguishes man from other creatures is his freedom of choice. He can choose to join the procession of cosmic praise voluntarily and by choice, or he can refuse it and rebel against it. This freedom is the basis of duty and responsibility, and the basis of reward and punishment.</p>
+        <p>The Almighty says: "And to Allah belongs those in the heavens and the earth who prostrate themselves voluntarily and involuntarily, and their shadows in the morning and evening" [Al-Ra'd: 15]. The believing man prostrates to God voluntarily and by choice, while the disbelieving man prostrates to God involuntarily through his inevitable submission to the cosmic and innate laws that God has instilled in him.</p>
+
+        <h3>The impact of awareness of the praise of beings in renewing the relationship with the universe</h3>
+        <p>Awareness of the reality of the praise of beings can revolutionize man's view of the universe and his relationship with it. Instead of a materialistic and exploitative view that sees the universe as merely resources to be exploited and consumed, an integrative spiritual view emerges that sees the universe as a collection of praising creatures that share with man the purpose of existence, which is to worship God.</p>
+        <p>This new view establishes a relationship of respect and appreciation between humans and the universe, and pushes towards responsible environmental behavior that preserves the ecological balance, protects biodiversity, and ensures the sustainability of natural resources, as reports indicate that 30% of forests have been destroyed due to unsustainable exploitation.</p>
+
+        <h2>Section VIII: Reflections and Practical Interactions for Sensing the Praise of the Universe</h2>
+        <p>Interact with the concept of praising the universe: Dear reader, after this journey into the world of praising and worshipping the universe, we invite you to actively participate and interact with these profound concepts. Here is a set of questions and simple practical experiences that will help you to deepen your understanding of the praise of beings and relate it to your daily life:</p>
+
+        <h3>Questions for reflection and sharing</h3>
+        <ul>
+            <li><strong>Observe the cosmic order:</strong> What is the most striking aspect of nature that has drawn your attention to the subtlety of creation (e.g. the symmetry of beehives, the pattern of leaf growth, or the cycle of seasons)?</li>
+            <li><strong>The conscious and unconscious pool:</strong> How is your state of mind different when you praise God with a present heart, compared to when you praise robotically? Do you feel a deeper connection with the universe and the creatures around you?</li>
+            <li><strong>In the age of technology:</strong> In our busy digital world, how can you find moments to pause, sense the harmony of the universe, and praise it?</li>
+            <li><strong>Praise and time:</strong> Notice how creatures are meticulously punctual (sunrise, flowers blooming at specific times)... How can this regularity inspire you to organize your times of remembrance and worship?</li>
+            <li><strong>If you could hear the praise of one creature:</strong> If you had the ability to understand the praise of just one creature, which creature would you choose and why?</li>
+        </ul>
+
+        <div class="box box-note">
+            <span class="box-title">Simple Practical Experiments</span>
+            <p><strong>The Two Plants and Praise Experiment (one week):</strong></p>
+            <p>Materials required: Two plants of similar size and type, two identical pots, normal home environment</p>
+            <p>Steps: Place the two plants in a place suitable for growth, ensuring that they receive the same amount of light and water. Set aside five minutes every day to sit next to the first plant and praise God in a quiet voice (Subhanallahu bhumdulillah, Subhanallahu al-Azim). Leave the second plant unexposed to the sounds of praise and continue this experiment for one to two weeks, observing and recording: Do you notice any differences in plant freshness, amount of growth, or leaf orientation?</p>
+            <p>Share the results: Share your results with friends or family, or on social media with the hashtag #Praise and Plant Experiment</p>
+            <p>Scientific note: There are scientific studies that indicate that plants respond to sound vibrations and can be positively affected by specific sound patterns. Remember that the goal of the experiment is to observe the interaction between the objects and sense the concept of tasbih in a practical way, not absolute scientific proof.</p>
+            
+            <p><strong>Mindful Observation Week Challenge:</strong></p>
+            <p>Take a week to observe the regularity and order in the universe around you:</p>
+            <ul>
+                <li>Day One: Observe the movement of shadows as the position of the sun changes</li>
+                <li>Day two: Contemplate the patterns and shapes of clouds</li>
+                <li>Day three: Observe the sounds and timing of birds</li>
+                <li>Fourth day: Observe the behavior of insects and the regularity of their work</li>
+                <li>Fifth day: Look for geometric patterns in plants</li>
+                <li>Sixth day: Observe the accuracy and regularity of weather phenomena</li>
+                <li>Seventh day: Observe the reflection of sunlight or moonlight on water</li>
+            </ul>
+            <p>By the end of the week, write down your reflections on how this regularity and harmony reflects a kind of innate worship and praise of the Creator.</p>
+        </div>
+
+        <h3>Collective praise: A pedagogical gesture</h3>
+        <p><strong>Praise Circles in Faith-Based Education:</strong> Inculcating the concept of praising the universe in children and young people helps them develop an integrated monotheistic view of existence. Here are practical suggestions for implementing this in educational settings:</p>
+        <ul>
+            <li><strong>Morning praise circle in schools and mosques:</strong> Set aside ten minutes at the beginning of the school day for collective praise in a quiet and regular voice. Start with a short mental preparation: "Imagine that we are now joining all the creatures that praise God." Sit in a circle and praise rhythmically with deep breathing: "SubhanAllahu ba'huhamdulillah" on the inhale, "SubhanAllahu al-Azim" on the exhale. End the session with a silent meditation and encourage children to feel peaceful and in harmony with the pooled universe.</li>
+            <li><strong>Meditation and praise circle in nature:</strong> Organize weekly or monthly school trips to parks or gardens. Organize a group outdoor praise circle. Instruct children to listen attentively to the sounds of nature before beginning the praise. Share observations: "What did you hear? How do you imagine these sounds are praising God in their own way?" Conclude the circle with a harmonious group praise that mimics the rhythm of the surrounding nature.</li>
+            <li><strong>The "Praise Observatories" educational project:</strong> Assign students a class project to observe regularity and mastery in nature. Divide them into groups: Plants, weather phenomena, animals, etc. Collect observations and photos in an electronic file or a school exhibit. Relate these manifestations to the concept of cosmic praise through appropriate Qur'anic verses. Present the results at an open day for families and the local community.</li>
+            <li><strong>Dhikr of the Universe - a daily educational application:</strong> Dedicate a board in the classroom for the "Tasbeeh of the Day". Write a daily praise and relate it to a cosmic phenomenon that students observe, e.g: "Glory be to God for the number of things created" with a picture of the stars. Encourage students to repeat this praise throughout the day as they observe the associated phenomenon.</li>
+        </ul>
+        <p>Dear reader, dear educator, these interactive ideas are not just fleeting activities, but practical portals to sensing a great cosmic truth that the Holy Qur'an tells us about. Try to apply what suits you, and share your experience with others, perhaps this will enrich our collective understanding of this wonderful cosmic symphony.</p>
+        <p>Always remember the saying of Allah: 'Those who remember Allah, standing and sitting and on their sides, and reflect on the creation of the heavens and the earth, O Lord, You have not created this in vain, praise be to You, so protect us from the punishment of the Fire' [Al-Imran: 191]." [Al-Imran: 191]</p>
+
+        <h2>Conclusion: Toward an Integral Vision of Cosmic Praise</h2>
+        <p>At the conclusion of this chapter on the praise and worship of the universe, we can draw a set of conclusions and reflections:</p>
+        <ul>
+            <li><strong>Praise is a universal truth:</strong> The Qur'an emphasizes that everything in the universe, from the smallest atoms to the largest galaxies, praises and glorifies God. This praise is real and not metaphorical, even if we do not understand it.</li>
+            <li><strong>The many types and forms of praise:</strong> The cosmic tasbih varies with the diversity of creatures, and each creature has its own tasbih that suits its nature and capabilities. This praise can be categorized into several types: Innate and voluntary, continuous and temporary, individual and collective, spoken and silent.</li>
+            <li><strong>Cosmic Consciousness and Praise:</strong> The praise of beings is closely related to the concept of cosmic consciousness, which indicates that the entire universe enjoys a kind of awareness and consciousness, ranging in different levels, from simple consciousness in inanimate objects to complex consciousness in humans.</li>
+            <li><strong>Scientific discoveries and the praise of beings:</strong> Some recent scientific discoveries have begun to open new horizons for understanding how creatures praise, by monitoring the vibrations and signals emitted by different creatures, from plants to celestial bodies.</li>
+            <li><strong>Faith and educational implications:</strong> Believing in the truth of the praise of beings has profound faith and educational implications in a Muslim's life, which are reflected in his relationship with his Lord, himself, and the universe around him.</li>
+            <li><strong>Integral vision of the universe:</strong> The truth of the praise of beings establishes an integrative vision of the universe, which sees it as a sanctuary for worship and an arena for praise, and makes man at the center of this sanctuary, leading the orchestra of the praising universe, by virtue of his creation in the earth and his mandate to colonize it.</li>
+        </ul>
+        <p>This comprehensive perspective combines science and faith, matter and spirit, modernity and originality, and offers contemporary humanity a new perspective on the universe and life, bringing it out of its spiritual and environmental crisis and restoring its lost balance.</p>
+        <p>In the Qur'anic view, the universe is neither dead nor silent, but is alive and speaking, praising the praise of its Lord and testifying to His oneness. Man, God's successor on earth, must listen to this praise and join the procession of the praising universe, to be part of the eternal symphony of existence, played by the various beings, glorifying the great Creator.</p>
+
+        <p style="text-align: center; margin-top: 50px; font-weight: bold; color: var(--primary-color);">God knows best and is the wisest</p>
+
+        <!-- Chapter Navigation -->
+        <div class="chapter-navigation">
+            <a href="index.html" class="nav-btn btn-home">
+                <i class="fas fa-home"></i>
+                <span>Back to Home</span>
+            </a>
+            <a href="chapter3.html" class="nav-btn btn-next">
+                <span>Next Chapter</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

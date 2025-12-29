@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Six: The  of Living Things</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f0f4c3; /* Lime/Nature theme */
+            --text-color: #333;
+            --primary-color: #33691e;
+            --accent-color: #827717;
+            
+            /* Box Colors */
+            --box-desc-bg: #e1f5fe;
+            --box-desc-border: #0277bd;
+            
+            --box-verse-bg: #fffde7;
+            --box-verse-border: #fbc02d;
+            
+            --box-science-bg: #e0f2f1;
+            --box-science-border: #00695c;
+            
+            --box-note-bg: #f3e5f5;
+            --box-note-border: #7b1fa2;
+
+            --box-reflection-bg: #fbe9e7;
+            --box-reflection-border: #d84315;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 2.0;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 80px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 4px solid var(--accent-color);
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            border-left: 8px solid var(--accent-color);
+            padding-left: 20px;
+            background: linear-gradient(90deg, #f9fbe7 0%, #ffffff 100%);
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #558b2f;
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: #689f38;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 1.5rem;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 1.15rem;
+        }
+
+        /* Box Styling */
+        .box {
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 6px;
+            border-left-width: 6px;
+            border-left-style: solid;
+            position: relative;
+            page-break-inside: avoid;
+        }
+
+        .box-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .box-desc { background-color: var(--box-desc-bg); border-left-color: var(--box-desc-border); }
+        .box-desc .box-title { color: var(--box-desc-border); }
+
+        .box-verse { background-color: var(--box-verse-bg); border-left-color: var(--box-verse-border); }
+        .box-verse .box-title { color: var(--box-verse-border); }
+        .box-verse .verse-text {
+            font-family: 'Merriweather', serif;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #1b5e20;
+            text-align: center;
+            display: block;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        .box-verse .verse-ref {
+            display: block;
+            text-align: right;
+            font-size: 0.95rem;
+            color: #388e3c;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .box-science { background-color: var(--box-science-bg); border-left-color: var(--box-science-border); }
+        .box-science .box-title { color: #00695c; }
+
+        .box-note { background-color: var(--box-note-bg); border-left-color: var(--box-note-border); }
+        .box-note .box-title { color: var(--box-note-border); }
+
+        .box-reflection { background-color: var(--box-reflection-bg); border-left-color: var(--box-reflection-border); }
+        .box-reflection .box-title { color: var(--box-reflection-border); }
+
+        /* Table of Contents */
+        .toc-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid #eee;
+        }
+        .toc-table th, .toc-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .toc-table th {
+            background-color: var(--primary-color);
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+        .toc-table tr:nth-child(even) { background-color: #f1f8e9; }
+
+        .source {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #616161;
+            font-style: italic;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 30px; }
+            h1 { font-size: 2.2rem; }
+            .box { padding: 20px; }
+        }
+
+        /* Enhanced Box Styling */
+        .box {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Navigation Buttons */
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid var(--accent-color);
+        }
+        .nav-btn {
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-home {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-home:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .btn-next {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        .btn-next:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switch Button -->
+    <div style="position: fixed; top: 80px; right: 20px; z-index: 9999;">
+        <a href="../chapter6.html" style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;">
+            <span>🌐</span>
+            <span>النسخة العربية</span>
+        </a>
+    </div>
+
+    <!-- Language Switcher -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <a href="../chapter6.html" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fas fa-language"></i> العربية
+        </a>
+    </div>
+
+    <div class="container">
+        <h1>Chapter Six<br>The Consciousness of Living Things</h1>
+
+        <div class="box box-desc">
+            <span class="box-title">Description</span>
+            <p>This chapter deals with the Islamic concept of the consciousness of living beings as opposed to the Western materialist view that considers them as biological machines, reviewing the comprehensive Qur'anic evidence that creatures perceive and praise God with full consciousness. The chapter presents detailed Qur'anic examples of the consciousness of living beings through the story of the Hoopoe, who demonstrated exploratory abilities, knowledge, and eloquence in discourse with Solomon, peace be upon him, the story of the Ant, who warned her people with eloquent and organized speech, and the Bees, who received divine revelation in building their miraculous cells.</p>
+            <p>It reviews the miracles of turning inanimate objects into sentient beings, such as the staff of Moses, the camel of Saleh, and the tank of the end times, emphasizing the concept of animal and bird nations as organized societies. The chapter documents prophetic traditions about animals that spoke to humans, such as the wolf, the cow, the camel, and the palm tree, and relates this to modern scientific discoveries about the intelligence of animals and their abilities to communicate, learn, remember, solve issues, and self-awareness. It highlights the theological and educational implications of believing in the consciousness of beings in deepening faith in God, animal welfare, respect for the environment, and humility, and concludes with a practical interactive journey that includes activities to observe the behavior of birds and ants, communicate with animals, and build butterfly gardens and bird feeding stations, making the theoretical understanding a living experience</p>
+        </div>
+
+        <h3>Table of contents</h3>
+        <table class="toc-table">
+            <thead>
+                <tr>
+                    <th>Topic title</th>
+                    <th>Page number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>First research: The Islamic concept of the consciousness of living beings</td><td>3</td></tr>
+                <tr><td>General Qur'anic Evidence of Creature Consciousness</td><td>6</td></tr>
+                <tr><td>The Nations of Animals and Birds as portrayed in the Qur'an</td><td>8</td></tr>
+                <tr><td>Research II: Qur'anic examples of the consciousness of living beings</td><td>11</td></tr>
+                <tr><td>The story of the Hoopoe and Solomon: Exploratory and cognitive abilities</td><td>11</td></tr>
+                <tr><td>The consciousness of the warning ant: Social and linguistic abilities</td><td>15</td></tr>
+                <tr><td>Bees and Divine Revelation: Inspirational and Constructive Abilities</td><td>19</td></tr>
+                <tr><td>The staff of Moses: The miraculous transformation of an inanimate object into a sentient organism</td><td>20</td></tr>
+                <tr><td>Saleh's camel: A divine miracle</td><td>21</td></tr>
+                <tr><td>The bear that comes out at the end of time: A sign of God in the consciousness of beings</td><td>22</td></tr>
+                <tr><td>Nations of Animals and Birds</td><td>25</td></tr>
+                <tr><td>Section III: Animals that have spoken to humans</td><td>26</td></tr>
+                <tr><td>Research IV: Recent scientific discoveries about animal intelligence</td><td>27</td></tr>
+                <tr><td>Fifth research: The theological and educational implications of believing in the consciousness of living beings</td><td>30</td></tr>
+                <tr><td>The sixth research: An Interactive Journey into the World of Consciousness of Living Beings</td><td>32</td></tr>
+                <tr><td>Summary of the chapter</td><td>37</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Research I: The Islamic concept of sentience</h2>
+        
+        <h3>The Consciousness of Living Beings in the Islamic Perspective</h3>
+        <p>On a delightful morning on the banks of the valley of our village (Al-Shaheli in Hajjah), I sat watching a small bird building its nest with amazing skill and precision. It was carefully selecting branches and weaving them into a beautiful geometry that defies our understanding. The bird interrupted my meditation when it suddenly turned toward me and seemed to stare at me with a meaningful gaze, as if to say, "Don't underestimate me: "Don't underestimate me, I understand more than you think."</p>
+        <p>These moments in which we perceive the consciousness and awareness of living beings around us are not mere human projections or poetic fantasies; they are fragments of a cosmic truth confirmed by the Holy Qur'an fourteen centuries ago, and contemporary science is getting closer to it day by day.</p>
+        <p>The Islamic perspective on the consciousness of living beings is based on a fundamental and astonishing truth: All creatures - from the smallest insect to the largest whale - were not created in vain, but are conscious, aware beings who praise their Creator and fulfill their mission in the universe with awareness and intention, even if the degrees of this awareness vary.</p>
+        
+        <div class="box box-note">
+            <span class="box-title">Imam Ibn Qayyim al-Jawziyyah says</span>
+            <p>"They [i.e., animals] were given of discernment and cognition, by which their interest and the interest of those to whom they are subjected is fulfilled, and they were deprived of intellect and reason, by which man was distinguished from them, so that the virtue of discernment and specialization may also appear."</p>
+            <span class="source">(The Key to Dar al-Sa'adah and the Publication of the Wilayat of Knowledge and Will)</span>
+        </div>
+
+        <p>Yes, some scholars have called this "animal acumen" intellect, as did Ibn al-Arabi (may Allah have mercy on him) in his book "Ihkam al-Qur'an" (3/472-473).</p>
+        <p>But such a description of the animal's intellect is not intended at all: "human intellect" which is "a queen obtained by experience, by which interests and purposes are deduced, by which consequences are recognized, and by which good and bad things are distinguished," as in Sharh al-Talwih (2/312).</p>
+        <p>Rather, it refers to the aforementioned, which is the realization of the management of their livelihoods by instinct and cunning, and the realization of what Allah has inspired them and installed in the nature of their creation to guide them to their interests and livelihoods.</p>
+        <p>This is how we should understand the texts that speak of "animal guidance", whether in the Qur'an or in the Sunnah.</p>
+        <p>This is why the animal was never costly, because it does not possess the intellect that develops and realizes the consequences of things, and becomes the driver of animal action.</p>
+
+        <div class="box box-note">
+            <span class="box-title">Sarakhsi (may Allah have mercy on him) says</span>
+            <p>"The mind is the choice on which one bases one's actions and omissions, which is not perceived by the other senses, because the act or omission is considered only for wisdom and a good consequence, and that is why he is not considered a beast, because he is devoid of this meaning. The good consequence can only be realized in what a person does or does not do after contemplating it with his mind, so when his actions appear according to the laws of rational people, it is a proof for us that he is sane and distinguished, and that his actions and words are not devoid of wisdom and a good consequence."</p>
+            <span class="source">(From "The Origins of Sarakhsi" (1/347))</span>
+        </div>
+
+        <p>Al-Jahiz pointed out in his book "The Animal" - which is one of the most comprehensive books in the Islamic heritage in this field - pointed out that God Almighty took care to research the natures, instincts, conditions and habits of animals. He mentioned many examples of the innate intelligence and instinctive skills that God deposited in various types of animals.</p>
+        <p>Al-Jahiz is considered the first to address this topic in such detail in Islamic culture, as he wrote about the instincts and natures of animals and how God has deposited in them the wonders that amaze the minds.</p>
+        <p>His approach in The Animal was that, in addition to language and poetry, he was interested in researching animal natures, instincts, conditions and habits, and explained how these creatures were harnessed by their Creator.</p>
+        <p>This Islamic concept of the consciousness of living beings offers a unique vision of the relationship between humans and other creatures, a vision that goes beyond the exploitative, materialistic view that has dominated Western thought for centuries, and establishes a relationship based on respect, appreciation, and compassion.</p>
+
+        <div class="box box-desc">
+            <span class="box-title">The consciousness of beings</span>
+            <p>In a vibrant world, birds fly, ants walk regularly, bees hover over flowers, and large animals roam quietly. To emphasize that every living thing in this universe feels, perceives, and praises its Creator</p>
+        </div>
+
+        <h3>General Quranic Evidence for Creature Consciousness</h3>
+        <p>When we go through the Holy Quran, we find ourselves in front of a treasure trove of verses that talk about the consciousness and cognition of creatures, in a style that combines scientific miracle and rhetorical beauty. These verses vary between direct statements about the consciousness of creatures, and stories and parables that reveal their mental and cognitive abilities.</p>
+        
+        <div class="box box-verse">
+            <span class="box-title">Verse</span>
+            <span class="verse-text">' And there is nothing but praise in praise of Him, but you do not understand their praise '</span>
+            <span class="verse-ref">[Al-Israa: 44]</span>
+        </div>
+        <p>This great verse establishes an amazing cosmic truth: Everything in this existence - including living beings - praises and worships God in its own way.</p>
+        <p>Among other verses indicating the consciousness of creatures:</p>
+        <div class="box box-verse">
+            <span class="box-title">Verse</span>
+            <span class="verse-text">"Allah is praised by those in the heavens and the earth, and by the birds, each of which knows its own prayer and praise"</span>
+            <span class="verse-ref">[Al-Nur: 41]</span>
+        </div>
+        <p>In this verse, the phrase 'all have learned their prayer and praise' catches our attention, as it clearly indicates that the creatures know and realize their worship and praise, and are not just machines that work unconsciously.</p>
+        <p>Imam al-Razi says: "This verse indicates that these creatures are aware of their prayer and praise, which requires that they are sane and know God Almighty." [The Keys of the Unseen].</p>
+        <p>The highest Qur'anic evidence of the consciousness of living beings is evident in amazing stories, such as the story of the ant that warned its people, the hoopoe that came to Solomon with news that he did not know, the bees that God inspired him, and other stories that will be discussed in detail in the following chapters.</p>
+        <p>The Almighty says: "And We made with David the mountains to praise him and the birds, and We were the doers" [Al-Anbiya: 79], and the Almighty says: "O mountains, praise with him and the birds" [Shebaa: 10].</p>
+        <p>These verses depict the mountains and birds responding to God's command and joining David in his praise, which indicates their awareness and consciousness. That the praise of the mountains and birds with Dawud (peace be upon him) was real praise, not just an echo of his voice.</p>
+        <p>Al-Alusi said: "It is narrated that if he (peace be upon him) praised, the mountains would praise like him with a voice that could be heard from them. It is not far-fetched to say that the Almighty first created understanding in them, so He called them as those with understanding are called and commanded them."</p>
+        <p>"Some of them said: Some of them said that the Almighty lowered the mountains to the status of rational beings who, if He commands them, they obey and obey, and if He calls them, they hear and answer, in order to indicate that there is no animal or inanimate object that is not subject to His will and is not opposed to His will." (Ruh al-Ma'ani in Tafsir al-Qur'an al-Alusi).</p>
+
+        <h3>The Nations of Animals and Birds as portrayed in the Qur'an</h3>
+        <p>One of the most wonderful revelations of the Qur'an about the consciousness of living beings is its depiction of animals and birds as integrated nations, with their systems and societies, similar in their organization and communication to human nations.</p>
+        <div class="box box-verse">
+            <span class="box-title">Verse</span>
+            <span class="verse-text">"And there is not a single animal on earth, nor a bird that flies on its wings, except nations like yourselves, for we have not omitted anything in the Book, and then to their Lord they will be gathered"</span>
+            <span class="verse-ref">[Al-An'am: 38]</span>
+        </div>
+        <p>Consider with me this wondrous phrase: It places animals and birds in the rank of nations, i.e. organized groups that live according to a specific system and a common goal, and adds that they are "like us", i.e. similar to us in many aspects, including consciousness, perception and communication.</p>
+        <p>Imam Ibn Kathir says: "And what he said: {There is not a single animal on earth, nor a bird that flies on its wings, except nations like you}," said Mujahid: That is, categorized varieties known by their names. Qatadah said: The birds are a nation, the humans are a nation, and the jinn are a nation. Al-Sadi said: "Except nations like you," meaning: the creation of people like you.</p>
+        <p>And what he says: {We have not omitted anything in the Book} i.e.: All of them are known to Allah, and He does not forget any of them from His provision and management, whether it is land or sea; as he says: {There is no animal in the earth but Allah has its sustenance, and He knows its resting place and depot, all in a clear book} [Hud: 6] i.e.: articulated with their names, numbers and locations, and confined to their movements and stillnesses. [Tafsir Ibn Kathir].</p>
+        <p>Imam al-Razi states: "The Almighty's saying: 'except nations like you' indicates that they have a mind and understanding, because a nation is a nation if it shares a common description: 'like you' means similar in that they are created, nurtured and managed." [The Keys of the Unseen].</p>
+        <p>This Qur'anic truth has been manifested in the discoveries of modern science, which have revealed complex social organizations in many creatures. Colonies of ants and bees, for example, function as a single unit organized with amazing precision, with a precise distribution of roles and tasks, and effective communication between its members. Scientists have also discovered that wolf, elephant and monkey societies have social and ethical rules, leadership and hierarchical systems, and sophisticated methods of communication, similar in many ways to human societies.</p>
+        <p>One of the most striking aspects of this verse is the phrase 'then to their Lord they will be gathered', which indicates that these beings will be gathered on the Day of Resurrection, reinforcing the idea that they are to some degree charged beings with consciousness and will.</p>
+        <p>Imam al-Qurtubi states: "In this verse there is proof that beasts are gathered for retribution, as stated in the hadith: 'Rights will be paid to their rightful owners on the Day of Resurrection, until the bald sheep is killed from the horny sheep'." [Al-Jami'ah ahkam al-Qur'an].</p>
+
+        <div class="box box-verse">
+            <span class="box-title">Hadith</span>
+            <p>Narrated Abu Huraira: Allah’s Messenger ( ﷺ ) said, “Once while a prophet amongst the prophets was taking a rest underneath a tree, an ant bit him. He, therefore, ordered that his luggage be taken away from underneath that tree and then ordered that the dwelling place of the ants should be set on fire. Allah sent him a revelation: — ‘Wouldn’t it have been sufficient to burn a single ant? (that bit you)"</p>
+            <span class="source">(from Sahih al-Bukhari, Book of Beginning of Creation (Book 59), Hadith   125)</span>
+        </div>
+        <p>Parallel version from Sahih Muslim: “An ant had bitten a Prophet (one amongst the earlier Prophets) and he ordered that the colony of the ants should be burnt. And Allah revealed to him: ‘Because of an ant’s bite you have burnt a community from among the communities which glorify Me'."</p>
+        <p>This hadith shows the principle of justice and mercy in Islam, even with small creatures. When the Prophet was stung by an ant, he ordered his house to be burned down, and God rebuked him for it, explaining that it was enough for him to punish only the ant that stung him, without destroying an entire nation of ants. This shows that Allah (SWT) has instilled animals with consciousness and awareness, and that they praise Him.</p>
+
+        <h3>Comparing the Islamic concept with other philosophical and scientific concepts</h3>
+        <p>The Islamic concept of the consciousness of living beings is characterized by unique characteristics that make it superior to other philosophical and scientific concepts, both ancient and contemporary.</p>
+        <p>In ancient Greek philosophy, Aristotle argued that animals lacked reason and conscious awareness, that they were merely living machines operating by instinct. This concept continued to dominate Western thought for centuries.</p>
+        <p>In the 17th century, the French philosopher Descartes confirmed this view, arguing that animals are "biological machines" that do not feel or think, and that their behavior is merely automatic responses to external stimuli. This "mechanistic" view of animals led to the justification of much animal cruelty in Western civilization.</p>
+        <p>Philosopher Tom Regan says: "Descartes' theory has led to a moral disaster with regard to the treatment of animals, encouraging them to be regarded as mere tools for human service, without regard for their feelings or well-being." [Animal Rights Book].</p>
+        <p>In contrast, fourteen centuries ago, the Quran presented an advanced view that recognized the consciousness and cognition of animals and established an ethical relationship with them, based on mercy and compassion.</p>
+        <p>In the twentieth century, studies of animal behavior and neuroscience began to reveal advanced cognitive abilities in many animals.</p>
+        <p>Dr. Franz de Waal, a renowned animal behaviorist, says: "Our view of animals has changed radically in recent decades. "We now realize that many animals possess advanced cognitive and emotional abilities beyond what we previously thought." [Are we smart enough to know how smart animals are?]</p>
+        <p>But even with these recent discoveries, contemporary scientific insight still falls short of capturing the full dimensions of the consciousness of living beings as presented in the Qur'an:</p>
+        <ul>
+            <li><strong>Holism:</strong> While contemporary science focuses on a few evolved animals (primates, dolphins, elephants), the Qur'an offers a holistic view that includes all living things, including insects and birds.</li>
+            <li><strong>Spiritual dimension:</strong> The Qur'anic concept goes beyond the physical dimension of animal consciousness to include spiritual dimensions, such as praising and worshipping God, a dimension not addressed by empirical scientific studies.</li>
+            <li><strong>Teleology and purpose:</strong> The Qur'an emphasizes that living beings were created with a purpose and goal, and that their consciousness is linked to this purpose, while evolutionary theory focuses only on adaptive functions.</li>
+            <li><strong>Relationship with man:</strong> The Islamic concept establishes a balanced ethical relationship between humans and other living beings, based on responsible succession, while the contemporary scientific view oscillates between exploitation on the one hand and absolute equality on the other.</li>
+        </ul>
+        <p>As contemporary science advances, we are witnessing a gradual approach to the Qur'anic vision of the consciousness of living beings. The "plant mind" theory developed by Stefano Mancuso, the "integrated information theory of consciousness" presented by Giulio Tononi, and other contemporary theories are getting closer and closer to recognizing that consciousness may be a fundamental property of the universe, and not just a by-product of biological evolution.</p>
+        <p>Thus, the miracle of the Holy Qur'an, which preceded modern science by centuries in presenting an integrated and balanced vision of the consciousness of living beings, a vision that combines philosophical depth, scientific accuracy, spiritual depth, and moral dimension.</p>
+
+        <h2>Research II: Qur'anic examples of the consciousness of living beings</h2>
+        
+        <h3>The story of the Hoopoe and Solomon: Exploratory and cognitive abilities</h3>
+        <p>One of the most prominent Qur'anic evidences of the consciousness and cognition of living beings is the story of the hoopoe with Solomon, peace be upon him, mentioned by Allah Almighty in Surat al-Naml:</p>
+        
+        <div class="box box-verse">
+            <span class="box-title">Verse</span>
+            <span class="verse-text">"And he inspected the birds and said, ‘Why do I not see the hoopoe—or is he among the absent? I will surely punish him with a severe punishment or slaughter him unless he brings me clear authorization. But the hoopoe stayed not long and said, ‘ I have encompassed [in knowledge] that which you have not encompassed, and I have come to you from Sheba with certain news. Indeed, I found [there] a woman ruling them, and she has been given of all things, and she has a great throne. I found her and her people prostrating to the sun instead of Allah, and Satan has made their deeds pleasing to them and averted them from [His] way, so they are not guided, ” [And I said:] ‘ Should they worship him rather than Allah, who brings forth the creation and then repeats it, and who arranges the [finite] management of it and has guidance for its affair? And they have not appraised Allah with true appraisal, while the earth entirely will be within His grip on the Day of Resurrection, and the heavens will be folded in His right hand. Exalted is He and high above what they associate with Him.”</span>
+            <span class="verse-ref">[Al-Naml 20-26]</span>
+        </div>
+
+        <p><strong>First: The Hoopoe's eloquence and wisdom</strong></p>
+        <p><strong>The eloquence of the initiation and the eloquence of the speech:</strong> Ibn al-Qayyim highlights that the Hoopoe initiated an excuse for Sulayman before he warned him of the punishment, and addressed him in a speech that motivated him to listen to him and accept him: This means that I have come to you with something that you have come to know so well that you have become aware of it, which is a great news of great importance, so he said: "I have come to you from Saba'a with a certain news. I have come to you from Saba'a with certain news, and the news is the news that has significance and the souls are looking forward to knowing it, then he described it as a certain news without doubt or uncertainty, this is a prelude between his telling the Prophet of God that news, which prepared the heart of the informant to receive the news, and made him completely eager to hear and know it, and this is a kind of ingenious opening and speech provocation." (Shifa' al-Alilil on matters of qadha, fate, wisdom and reasoning , by Ibn al-Qayyim al-Jawziyyah: Muhammad Badr al-Din Abu Firas al-Naasani al-Halabi, Dar al-Fikr).</p>
+        <p><strong>The beauty and eloquence of alliteration and quotation:</strong> Zamakhshari explained in his exegesis, "And what he says: (from Saba'a with news) is of the kind of speech that the modernists call Badi'a, which is one of the beauties of speech that relates to the verbal... The meaning would have been correct if he had replaced the news with news, but it is more correct, because the news has an increase that matches the description of the situation."</p>
+        <p><strong>Eloquent brevity:</strong> The Hoopoe's statement is concise and strong in meaning, as it contains eloquence, eloquence, simple words, abundant meaning, good style, and this is how the call to God is made.</p>
+        <p><strong>Logical progression in the order of the news:</strong> And how well this news moves... First, he told of his knowledge of what Solomon was not privy to, in order to protect himself from punishment, with the adornment of the knowledge he had obtained, so the hearer was eager to know it. Then he told us secondly about the attachment of that knowledge, which is that he is from Sheba, and that it is a certainty that is beyond doubt, so the hearer is even more eager to hear that news... Then he told what motivated him to seek this queen and invite her to believe in Allah and worship Him alone.</p>
+
+        <p><strong>Secondly: Aspects of the Hoopoe's wisdom</strong></p>
+        <p><strong>The balance between boldness and politeness:</strong> Ibn al-Qayyim mentioned that the hoopoe: "When he came, he spoke to Sulayman in a confident manner, and he did not despise himself, and knowledge and knowledge may be taken from the lowest, and he did not shy away from that: "I am aware of what you are not aware of, and this shows that he has a perfect knowledge of the incident, and that he is familiar with it and knows it from its various aspects." (Healing the Wounded in Matters of Judgment, Destiny, Wisdom and Reasoning).</p>
+        <p>Zamakhshari says: "Where did the hoopoe get the guidance to know God and the obligation to prostrate to Him, and deny prostration to the sun, adding it to Satan and decorating it? I said: It is not unlikely that God inspired him with this, just as He inspired him and other birds and other animals with the subtle knowledge that rational people are hardly guided to." (Al-Kashaf on the facts of the download and the eyes of the interpretation. Explanation of Surah Al-Naml, verse 24).</p>
+        <p><strong>His ability to perceive Sulayman's intentions:</strong> He knew that Sulayman's intention was to call for monotheism and faith in God, and this was a clear excuse that removed the punishment that Sulayman had threatened him with.</p>
+
+        <p><strong>Third: The Hoopoe's keenness to preach monotheism</strong></p>
+        <p><strong>Jealousy of monotheism and hatred of polytheism:</strong> The Hoopoe teaches us pure monotheism, as he was a monotheist of his Lord, as evidenced by his denial of Bilquis' worship of other than Allah, and his saying: "Allah, there is no god but Him, the Lord of the Great Throne. He uttered the greatest word in existence, "Allah", and the greatest sentence, the word "Tawhid", which includes the two pillars of negation and affirmation, thus teaching us the three types of Tawhid, the divinity in "Allah", the rabbiyyah in "Lord", and the names and attributes in the two attributes of "ability and knowledge" (He reveals the hidden things in the heavens and the earth and knows what you conceal and what you declare).</p>
+        <p><strong>Defending the truth and denouncing evil:</strong> He was jealous of God's religion when he saw the people whom God created to worship Him prostrating to the sun and went to tell Sulayman, peace be upon him, objecting to them.</p>
+        <p><strong>Presenting an argument and proofs:</strong> The Hoopoe, in the face of the issue of idolatry and worshiping other than Allah, made many arguments against them, and the greatest argument he made was (He showed that he was an arguer and had a strong argument. He said, "Do not worship Allah, who brings out the hidden things in the heavens and the earth).</p>
+        <p>From the above, we can summarize that the Hoopoe was very eloquent and eloquent, in his eloquent speech, his eloquent style, his careful brevity, his good choice of words and the order of his news. His wisdom was also evident in his realization of Sulayman's intentions, his knowledge of monotheism, and his keenness to provide a convincing excuse. His jealousy for monotheism was evident in his strong disapproval of sun worship and polytheism, and his endeavor to guide an entire kingdom to believe in the one God. Thus, the Hoopoe was an example of eloquence, wisdom, and jealousy for monotheism, and therefore deserved to be honored by the prohibition of killing him in Islam.</p>
+
+        <div class="box box-reflection">
+            <span class="box-title">The Hoopoe with Solomon</span>
+            <p>The Hoopoe with Solomon over Bilquis' palace: The wise hoopoe soars above the jeweled palace of Bilquis, filled with an intelligent and contemplative gaze. From his high altitude, the hoopoe observes the grandeur of the palace and its rich gardens, carrying a message of faith that he has discovered with the eye of awareness that does not lose sight of the signs of monotheism.</p>
+        </div>
+
+        <h3>The consciousness of the warning ant: Social and linguistic abilities</h3>
+        <p>Another Qur'anic evidence of the consciousness and awareness of living beings is the story of the ant with Solomon, peace be upon him:The story of the warning ant in the Holy Qur'an represents a wonderful scene of awareness and social communication in the world of creatures, as the Holy Qur'an depicts an ant addressing its people and directing them to survive unintended harm. This story in Surat al-Naml reveals the amazing linguistic and social abilities of these small creatures, which embodies the greatness of divine creation and the variety of ways of communication between creatures.</p>
+        <p><strong>The story in the Qur'an:</strong> The Almighty said: “And gathered for Solomon were his soldiers of the jinn and men and birds, and they were [marching] in rows. Until, when they came upon the valley of the ants, an ant said, ‘O ants, enter your dwellings that you not be crushed by Solomon and his soldiers while they perceive not. So [Solomon] smiled, amused at her speech, and said, ‘My Lord, enable me to be grateful for Your favor which You have bestowed upon me and upon my parents and to do righteousness of which You approve. And admit me by Your mercy into [the ranks of] Your righteous servants.’ " (Al-Naml: 17-19).</p>
+
+        <p><strong>I: The linguistic abilities of the warning ant</strong></p>
+        <p><strong>Eloquence and eloquence:</strong> Al-Baghawi says in his interpretation: "Enter your dwellings" and did not say: "Enter", because when he made them speak like human beings, he addressed them as rational beings." As for brevity, we observe it in what this ant combined in its speech of the types of speech, as it combined call, metaphor, alert, naming, command, text, and warning."</p>
+        <p><strong>The ant's awareness of discourse styles:</strong> The ant showed an excellent ability to choose the right words for the situation, combining call as a method of alerting, command as a method of guidance, and reasoning as a method of persuasion, all of which indicates its superior ability to formulate an integrated discourse.</p>
+        <p>Tafsir al-Qurtubi explains: "This is because the ant is like the pigeon and the sheep in its occurrence on the male and female, so they are distinguished by a sign, such as when they say: A male pigeon and a female pigeon, and he and she..." [Tafsir al-Qurtubi, Surah al-Naml].</p>
+        <p><strong>Accuracy and Contextualization:</strong> One of the wonders of the ant's speech is the accuracy of its choice of words, as its use of the word "destroy you" instead of any other synonym was successful: Modern science has proven that the reason for the use of this word is that the ant's body is made up of chitin, a hard, rigid substance that shatters and does not tear.</p>
+
+        <p><strong>Secondly: The social abilities of the warning ant</strong></p>
+        <p><strong>Collectivism and sense of responsibility:</strong> The ant's warning shows a high degree of collective awareness and a sense of responsibility towards its community, as its keenness to warn its kind from potential danger reveals a high social spirit and a sense of responsibility towards the group.</p>
+        <p>Dr. Abdul Daimer Al-Kahil says: "One of the wonders of the ant world is that it resembles human societies... These creatures, despite their small size, possess superior intelligence, and they carry out the process of fighting with great professionalism... A living bridge of ants, where the ants make a geometric pattern... This technique is very complex." [Abdul Permanent Al-Kahil's website for scientific miracles in the Qur'an and Sunnah].</p>
+        <p><strong>Leadership and crisis management skills:</strong> The ant demonstrated a superior ability to manage crises, as it did not only flee from potential danger, but also took the initiative to warn the entire ant community and guide them to the path of survival, reflecting a high level of leadership skills and responsibility.</p>
+        <p><strong>Communication and warning systems:</strong> Modern scientific studies have revealed an amazing correspondence with what the Holy Quran mentioned about the ability of ants to communicate, as it proved the existence of a language of understanding between ants through chemical signals called "pheromones".</p>
+
+        <p><strong>Third: The faith dimension in the ant's speech</strong></p>
+        <p><strong>Distinguishing between justice and injustice:</strong> One of the deep meanings in the ant's speech is its distinction between intentional and unintentional action by saying: "She did not accuse Sulayman and his soldiers of injustice or bad intentions, but rather attributed the matter to lack of feeling and realization, and this shows her wisdom and understanding of human nature.</p>
+        <p>Tafsir al-Qurtubi says: "And her saying: And they are not aware of it. That is, because of Sulayman's justice and virtue and the virtue of his soldiers, they do not destroy an ant and above except when they do not feel it." [Tafsir al-Qurtubi, Surah al-Naml].</p>
+        <p><strong>Awareness of the status and greatness of Sulayman, peace be upon him:</strong> The ant's speech revealed its awareness of Sulayman's greatness, status, and kingship, as it mentioned his proper name directly without an adjective, which indicates its knowledge of his person and status.</p>
+
+        <p><strong>Fourth: Scientific miracles in the description of the ant</strong></p>
+        <p><strong>Feminization of the warning ant:</strong> One of the scientific miracles in the Holy Qur'an is the expression of the feminine word for the ant that spoke: "An ant said," because modern scientific discoveries have proven that it is the sterile female ants who carry out the burdens of the ant kingdom, such as collecting food, caring for the young, and defending the kingdom. Hamid Shaker Al Ani says in his article "The Linguistic Manifesto of the Ant": "The Qur'an mentions the word ant in the feminine gender: It has been scientifically proven that the sterile female ant is the one who carries out the burdens of the kingdom, such as collecting food, caring for the young, defending the kingdom, and going out of the hive to work. As for the male ants, they appear only at the time of pollination and have no role whatsoever except in pollinating the queens."</p>
+        <p><strong>Amazing social organization:</strong> Scientific studies reveal an amazing social organization in the ant kingdom, which is consistent with the Quran's description of ants as an organized society. Ants are insects that live under the soil and in organized groups, so they are known as social insects, and are considered the second largest insect group in terms of the evolution of social behavior. In some species that live in the Amazonian forests, the ant kingdom can reach depths of (5 meters) and breadth (7 meters), in which the ants create hundreds of chambers and tunnels.</p>
+        <p>The story of the warning ant in the Holy Quran shows a number of deep connotations about the capabilities of this small creature, and reveals aspects of scientific and linguistic miracles in the Quranic discourse. The ant showed advanced linguistic abilities in building a coherent and eloquent speech, as well as distinguished social skills in leading its community and warning it of potential danger. This story alerts us to the need to contemplate the world of creatures, and reminds us that God Almighty has deposited in all His creatures wonders of order and abilities that testify to His greatness and marvelous workmanship. It also tells us that small creatures have languages, wisdom, and the ability to communicate and organize socially, setting an example of cooperation, solidarity, and concern for the common good.</p>
+
+        <div class="box box-reflection">
+            <span class="box-title">The kingdom of ants</span>
+            <p>The kingdom of ants and the ant's warning to Solomon's procession: In a grandiose and majestic scene, the procession of the Prophet Solomon - his army of humans, jinns and birds - marches up the hill, a small ant stands and warns its people about the approach of the procession, in a scene that expresses collective awareness and divine care for small beings.</p>
+        </div>
+
+        <h3>Bees and Divine Revelation: Inspirational and Constructive Abilities</h3>
+        <p>Another Qur'anic evidence of the consciousness and realization of living beings is God's revelation to the bees:</p>
+        <div class="box box-verse">
+            <span class="box-title">Verse</span>
+            <span class="verse-text">"And your Lord inspired the bee, saying, “Take for yourselves among the mountains, houses, and in the trees and [in] what people construct. Then eat from all the fruits and follow the ways of your Lord laid down [for you]. From their bellies emerges a drink, varying in colors, in which there is healing for people. Indeed in that is a sign for people who reflect "</span>
+            <span class="verse-ref">(al-Nahl, 68-69)</span>
+        </div>
+        <p>Imam al-Tabari says: "And your Lord inspired the bees: That is to say, He inspired them, put them in their minds and taught them... He feminized the verb in saying: 'Take', 'Eat' and 'Follow' because it is plural: Nahla, like dates and dates" (Tafsir al-Tabari).</p>
+        <p>Imam al-Razi states: "Revelation is inspiration, and what is meant by inspiration is that the Almighty determined in themselves these wondrous deeds that the rational human beings are incapable of" (Keys of the Unseen).</p>
+        <p>God's revelation to the bees is a symbol of the divine inspiration that guided them to build their cells and their miraculous engineering, testifying to the greatness of the Creator who inspired the smallest of His creatures.</p>
+        <p><strong>Stories from the predecessors about bees:</strong> It is narrated from Abu al-Dardaa (may Allah be pleased with him) that he said, "Learn before you become black, for if you become black, the time for jurisprudence is gone, and if you do not learn, be like bees, heavy in suffering, great in help." (Jama'at Bayan al-'Ilm wa Fadlh al-'Ilm wa Fadlh by Ibn 'Abd al-Barr). Ibn Abi al-Dunya narrated in al-Ayyal on the authority of 'Umar ibn al-Khattab (may Allah be pleased with him) that he said: "A believer is like a bee, it eats good and lays good, and if it falls on a stick it does not break it" (al-Ayyal by Ibn Abi al-Dunya).</p>
+
+        <h3>The staff of Moses: The miraculous transformation of an inanimate object into a sentient organism</h3>
+        <p>There is no doubt that the stick of Moses, peace be upon him, represents a great sign, as it embodies a unique case of the transformation of an inanimate object into a living, conscious being by the power of God, transcending the limits of natural laws, and recorded in the eternal book of God.</p>
+        <p>The Holy Qur'an recounts this great miracle in multiple places:</p>
+        <div class="box box-verse">
+            <span class="box-title">Verse</span>
+            <span class="verse-text">"So he threw it down, and thereupon it was a snake, moving swiftly.”" [Taha: 20]</span>
+            <span class="verse-text">"And when he saw it stir as if it were a jinn, he turned away in flight and did not return. [Allah said], 'O Moses, approach and fear not. Indeed, you are of those who are secure.'" Surah al ‑ Qaṣaṣ 28:31</span>
+        </div>
+        <p>What is notable in these verses is that the stick was not only transformed into a mere moving object, but into a full-fledged living being with consciousness, will, and purposeful movement. Sometimes it is described as a "serpent" (a large snake) and sometimes as a "jan" (a fast-moving snake), and in both cases its movement and behavior indicate that there is a consciousness and a will behind this movement.</p>
+        <p>What makes this miracle even more miraculous is that the stick was transformed into a real snake with full characteristics and properties, including the ability to swallow. The Almighty says, describing Moses' confrontation with Pharaoh's magicians: "Then Moses threw his staff, and at once it devoured what they falsified" [Al-Shu'araa: 45].</p>
+        <p>Ibn Kathir says: "Moses threw his staff, and it caught what they were spinning," meaning that it snatched and gathered it from every spot and swallowed it, leaving nothing of it.</p>
+        <p>The amazing thing about this miracle is that it was not a permanent transformation, but rather it was shifting back and forth between inanimate objects and animals at God's command, which opens a new horizon in our understanding of the relationship between inanimate objects and living beings, and the possibility of the existence of forms of latent consciousness in inanimate objects that may manifest in special circumstances.</p>
+        <p>Perhaps one of the most important lessons learned from the miracle of Moses' stick in the context of the consciousness of living beings is that life and consciousness are a gift from God, and that the boundaries we draw between the inanimate and the living, or between different levels of consciousness, are ultimately inadequate human boundaries.</p>
+        <p>This great miracle opens our eyes to the fact that consciousness may exist in latent forms even in what we consider inanimate, and that God's ability to manifest and activate this consciousness is not limited by the limits of nature as we know it.</p>
+
+        <h3>Saleh's camel: A divine miracle</h3>
+        <p>In the heart of the Hajar Desert, Saleh's camel stood witness to a unique divine miracle - an exceptional animal that transcended the limits of nature in its creation and consciousness.</p>
+        <div class="box box-verse">
+            <span class="box-title">Verse</span>
+            <span class="verse-text">"He said, ‘This is a she ‑ camel. For her is a drink, and for you is a drink — on a known day. And do not touch her with harm, lest a punishment from a tremendous day seize you." [Surah Ash ‑ Shu ‘ ar ā’ (26:155 – 156)]</span>
+        </div>
+        <p>The abilities of this miraculous camel exceeded the usual limits - it emerged from a deaf rock by a divine miracle, drank the entire water of the well in a day, and gave enough milk for an entire tribe.</p>
+        <p>The story of Saleh's camel is an amazing example of direct divine intervention that raises the level of consciousness of a living being, becoming a witness to a heavenly message and testing the faith of an entire people - until the fate of a nation became linked to how it dealt with a creature from the animal world.</p>
+
+        <h3>The bear that comes out at the end of time: A sign of God in the consciousness of beings</h3>
+        <p>The Islamic perspective on the consciousness of living beings is based on a fundamental and astonishing truth: All creatures - from the smallest insect to the largest whale - were not created in vain, but are conscious and aware beings who praise their Creator and fulfill their mission in the universe with awareness and purpose, even if the degrees of this awareness vary. Within the framework of this deep understanding, the end-time dabba comes as a great sign that shows God's ability to grant beings forms of consciousness and realization beyond what we can imagine.</p>
+        
+        <p><strong>The Dabba in the Qur'an:</strong> God Almighty mentions the animal in the Holy Qur'an by saying: "And when the Word [of judgment] is fulfilled against them, We will bring forth for them a creature from the earth speaking to them, [saying] that the people were, of Our verses, not certain [in faith].” (Al-Naml: 82).</p>
+        <p>This Qur'anic text carries deep connotations about the nature and mission of this animal; it is not just an ordinary animal, but a being charged with a specific divine mission: It speaks to the people and tells them the truth about their unbelief in God's signs.</p>
+
+        <p><strong>Characteristics of the animal from the perspective of object consciousness:</strong></p>
+        <p><strong>The ability to speak and communicate:</strong> The ability of the animal to speak represents the highest degree of consciousness of beings, as speech requires deep perception and understanding of meanings and intentions. This is not strange in Islamic law, as the hoopoe spoke to Solomon, peace be upon him, and the ant spoke to its people, as stated in the words of Almighty God: "O you ants, enter your dwellings, and Solomon and his soldiers will not destroy you while they do not know it" (Al-Naml: 18).</p>
+        <p><strong>Awareness of the divine mission:</strong> This confirms that God Almighty has given it a level of cognition that enables it to understand the nature of its mission and its importance in the overall divine context.</p>
+
+        <p><strong>Prophetic Hadiths about the Daba'ah:</strong> Imam Muslim reported from Hudhayfah ibn Usaid (may Allah be pleased with him) that the Prophet (peace be upon him) said, "The Hour will not be until you see ten signs... He mentioned the Dabbah." In the narration of AL-Tirmidhi narrated by Abu Huraira (may Allah be pleased with him), the Prophet (peace be upon him) said: "The Daba'ah will come out with the stick of Moses and the ring of Solomon; it will clear the face of the believer with the stick and seal the nose of the disbeliever with the ring."</p>
+        <p>These hadiths show that the Daba has miraculous abilities and a deep awareness of the nature of faith and disbelief, and the ability to distinguish between believers and disbelievers, which confirms that it is an honored being with a high level of consciousness and awareness.</p>
+
+        <p><strong>The Dabba in the context of cosmic consciousness:</strong></p>
+        <p><strong>Praise and worship:</strong> All creatures praise God, as the Almighty says: "The seven heavens, the earth, and whoever is in them ۚ There is nothing but praise, but you do not understand their praise" (Al-Israa'a: 44). The animal, as one of God's creatures, praises and worships Him, but in a way that goes beyond what we understand from the usual forms of worship.</p>
+        <p><strong>Witnessing to people:</strong> This requires a deep awareness of people's deeds and their state of faith. Its ability to distinguish between believers and disbelievers shows a level of divine insight and wisdom embedded in it.</p>
+        <p>The emergence of the animal challenges the limited materialistic understanding of consciousness, which limits it to humans and some higher beings. Islam emphasizes that consciousness has different forms and types, and that God is capable of granting any of His creatures any level of consciousness and awareness.</p>
+        <p><strong>The wisdom of its appearance:</strong> The appearance of the Dabba at the end of time comes when corruption is widespread and disbelief is widespread, serving as the final argument against people. Her speaking to people is the last reminder of God's revelations before the Hour.</p>
+        <p><strong>Preparing for the End Times:</strong> The reminder of the end-time tank invites us to be spiritually and faithfully prepared, and to strengthen our relationship with God before the great signs come.</p>
+        <p>The end-time tank is a great sign of God's ability to grant beings levels of consciousness and realization beyond our limited human understanding. It reminds us that the universe is full of secrets and wonders, that every creature has a role and a mission, and that God is the wise Creator who manages things very wisely.</p>
+        <p>Let us always remember that "There is not a single animal on earth except that Allah has its sustenance, and He knows its resting place and its depository ۚ all in a clear book" (Hud: 6).</p>
+
+        <h3>Nations of Animals and Birds</h3>
+        <p>The Qur'an tells us that animals and birds are nations like us, with their own societies, systems and communication: "And there is no creature on [or within] the earth or bird that flies with its wings except [that they are] communities like you. We have not neglected in the Register a thing. Then unto their Lord they will be gathered " (Al-An'am 38).</p>
+        <p>Imam Ibn Kathir says: "Mujahid said: That is: categorized varieties that are known by their names. Qatadah said: The birds are a nation, the humans are a nation, and the jinn are a nation. Al-Sadi said: "Except for nations like you," meaning: the creation of those like you." (Tafsir Ibn Kathir).</p>
+
+        <div class="box box-reflection">
+            <span class="box-title">Nations of animals and birds</span>
+            <p>In a majestic painting of nature, flocks of birds soar in enchanting harmony in the sky, herds of elephants march rhythmically through green valleys, while swarms of bees and ants are active with geometric precision on the ground. Deer, rabbits, and lions gather peacefully in the forests, each group surrounded by a subtle aura that symbolizes the collective consciousness and divine order in every living thing.</p>
+        </div>
+
+        <h2>Section III: Animals that have spoken to humans</h2>
+        <p><strong>The wolf that spoke to the shepherd:</strong> The Speaking Wolf (Sahih al ‑ Bukh ā r ī 3663 / 56:677). Narrated Abu Huraira: While a shepherd was with his flock, a wolf attacked and took one sheep. The shepherd chased the wolf until he rescued it. The wolf then said, ‘You have saved her from me. But who will guard her on the Day of the wild beasts, when there will be no shepherd for her except me?’ The people exclaimed, “Glorified be Allah! A wolf speaks!” The Prophet ( ﷺ ) said, “I believe in this, and so do Abu Bakr and ‘Umar.”</p>
+        
+        <p><strong>The cow that spoke to its owner:</strong> Imam Bukhari and Muslim narrated from Abu Huraira. The Prophet (peace be upon him) said: “While a man was riding a cow, it turned towards him and said, ‘I have not been created for this purpose, I have been created for ploughing.’ The Prophet added: ‘I, Abu Bakr, and ʿ Umar believe in this story." This hadith appears in Sahih al-Bukhari, Book Agriculture (No. 2324 / Vol. 3, Book 39, Hadith 517).</p>
+        
+        <p><strong>The story of the camel that complained to the Prophet (peace be upon him):</strong> Abu Dawud narrated on the authority of Abdullah bin Ja'far (may Allah be pleased with them both): "The Messenger of Allah (peace be upon him) had me ride behind him one day and confided something to me that I would not tell anyone. He entered a garden belonging to a man from the Ansār, and there was a camel in it. When it saw him, it sighed deeply and its eyes shed tears. The Prophet ﷺ approached it and wiped its ear (i.e., the back of its ear), and it became still. He then said: Whose camel is this? A young man from the Ansār said: "It is mine, O Messenger of Allah." The Prophet ﷺ said: "Will you not fear Allah regarding this beast which Allah has entrusted to you? It has complained to me that you starve it and overwork it."" (Sunnah Abu Dawud).</p>
+        
+        <p><strong>The story of the palm tree trunk that fell in love with the Prophet (peace be upon him):</strong> Al-Bukhari narrated from Jabir bin Abdullah (may Allah be pleased with them both): “The mosque was roofed with date ‑ palm trunks, and the Prophet ﷺ used to stand by one of them to deliver the sermon. When the pulpit was made for him, we heard that trunk emitting a sound like that of a pregnant she ‑ camel. The Prophet ﷺ then came, placed his hand upon it, and it became still." "Sahih al ‑ Bukhari 918". Imam al-Nawawi says: "This hadith is an apparent miracle for the Prophet (peace be upon him), and it is one of the signs of his prophethood, and it is proof that it is permissible to create life, reason and discrimination in inanimate objects" (Al-Nawawi's commentary on Sahih Muslim).</p>
+
+        <h2>Research IV: Recent scientific discoveries about animal intelligence</h2>
+        <p>Modern science has come to confirm what the Holy Qur'an told more than fourteen centuries ago about the consciousness and perception of living beings, and reveals the amazing abilities of animals and birds in communication, learning, remembering, planning, and solving issues.</p>
+        
+        <div class="box box-science">
+            <span class="box-title">Communicating in complex languages</span>
+            <p>Scientific studies have proven that many animals communicate in complex languages:</p>
+            <ul>
+                <li><strong>Dolphins:</strong> They communicate in a complex whistling language that includes specific names for each individual, and can exchange detailed information about food, dangers, and directions (according to the University of St. Andrews 2021 study).</li>
+                <li><strong>Chimpanzees:</strong> They can learn and communicate in sign language, as proven by American scientist Beatrix Gardner's experiments with Washoe, who learned more than 350 signs and was able to form simple sentences Washoe was the first non-human primate to learn to use American Sign Language (ASL) to communicate with humans, as part of a research project led by Beatrix Gardner and her husband Robert Allen Gardner at the University of Nevada in 1966.</li>
+                <li><strong>Parrots:</strong> Not only can they mimic human speech, they can understand its meaning and use it in appropriate contexts. Studies have shown that Alex, an African gray parrot, understood concepts such as "bigger," "smaller," "different," and "the same," and knew more than 100 words (Harvard University, study by Dr. Erin Pieperberg, 2018).</li>
+                <li><strong>Bees:</strong> Communicate through complex dances known as the "waggle dance", in which a worker bee transmits precise information about the location, direction, distance, and quality of nectar. Austrian scientist Carl von Frisch was awarded the Nobel Prize for his discovery of this language (Max Planck Institute for Behavioral Biology (2019)).</li>
+            </ul>
+            <p>Dr. Franz de Waal, a renowned animal behaviorist, says: "The more we study animal languages, the more we discover how complex and rich they are. "Communication between animals is not simple signaling as we previously thought, but rather sophisticated communication systems that in some ways resemble human languages" (Are We Smart Enough to Know How Smart Animals Are, 2016).</p>
+        </div>
+
+        <p><strong>Learning and remembering:</strong> Scientific studies have shown animals' amazing abilities to learn and remember:</p>
+        <ul>
+            <li><strong>Elephants:</strong> They have an amazing memory that enables them to remember roads and paths for decades, remember the faces of humans they have interacted with, and recognize their family members even after a long separation. A study conducted by Dr. Richard Byrne of Imperial College London found that elephants remember the location and condition of more than 30 members of their family (Journal of the Royal Society 2020).</li>
+            <li><strong>Ravens:</strong> Experiments conducted by Dr. Joanna Gabriel of Cambridge University found that crows remember the faces of humans who have hurt them, teach their young to avoid those people, remember where food has been hidden for months, and know when it has gone bad (Science 2019).</li>
+            <li><strong>Sea octopus:</strong> A study conducted by Dr. Jennifer Mather of Loma Linda University found that octopuses can solve complex puzzles and remember the solutions for long periods of time, and can recognize and distinguish specific people (Nature (2018)).</li>
+        </ul>
+        <p>"I used to overestimate the loyalty and longevity of humans and underestimate the intelligence and sensitivity of other animals," says biologist and ecologist Carl Safina. (Carl Safina, Beyond Words: What Animals Think and Feel).</p>
+
+        <p><strong>Planning and Problem Solving:</strong> Scientific studies have revealed animals' amazing planning and problem-solving abilities:</p>
+        <ul>
+            <li><strong>Ravens:</strong> American scientist Sarah Brosnan's experiments have shown that crows can use three tools in succession to reach food, demonstrating their ability to plan and think sequentially (University of Washington, 2022).</li>
+            <li><strong>Chimpanzees:</strong> Dr. Jane Goodall has found in her longitudinal studies that chimpanzees plan ahead to catch their prey, build customized tools to extract ants from their nests, and modify these tools as needed (Jane Goodall Institute, 2019).</li>
+            <li><strong>Octopus:</strong> A study published in Science showed that octopuses can open sealed bottles, solve complex mechanical puzzles, and use coconut shells as armor, demonstrating their ability to solve problems and think creatively (Science, 2021).</li>
+        </ul>
+        <p>Philosopher and scientist Peter Singer says: "The ability of animals to plan and solve issues demonstrates a level of consciousness and cognition that goes beyond simple instincts. They think, analyze, and reason, albeit in ways that differ from our human thinking" (Animal Liberation, updated edition 2019).</p>
+
+        <div class="box box-reflection">
+            <span class="box-title">Contemporary animal intelligence</span>
+            <p>A dolphin sends out transparent underwater wave circuits, while a crow uses its intelligence to extract its food with a stick from a hole. Above, a bee performs its famous dance atop a bright flower, relaying messages to other bees. The scene is full of amazement and inspiration, emphasizing that consciousness and creativity are distributed in all of God's creations.</p>
+        </div>
+
+        <p><strong>Self-awareness and empathy:</strong> Studies have shown advanced levels of self-awareness and empathy in many animals:</p>
+        <ul>
+            <li><strong>Mirror test:</strong> Several species of animals passed the mirror test (recognizing oneself in a mirror), such as chimpanzees, orangutans, dolphins, elephants, crows and pigs, indicating the presence of self-awareness (Dr. Gordon Gallup, New York University 2020).</li>
+            <li><strong>Empathy:</strong> Dr. Franz de Waal's study found that chimpanzees and bonobos exhibit advanced empathic behaviors, such as consoling grieving individuals, helping the sick, and sharing food with those in need (Journal of Animal Behavior, 2019).</li>
+            <li><strong>Grieving for the dead:</strong> Dr. Eleanor Sherick of University College London has documented that elephants exhibit complex mourning behaviors when a member of their herd dies, including staying near the body, touching it in a farewell-like manner, and visiting its bones after a long time (Journal of Animal and Human Behavior (2021).</li>
+        </ul>
+        <p>Dr. Marc Bekoff, a renowned animal behaviorist, says: "It's time to recognize that animals don't just have feelings, they have a rich and complex emotional life, and there is a great similarity between our emotions and theirs. When animals express their emotions, they flow like water from a faucet. Animals' emotions are raw, unfiltered, and uncontrolled. Their joy is the purest and most contagious of joys, and their sorrow is the deepest and most destructive." (The Emotions of Animals, 2018).</p>
+
+        <h2>Fifth research: The theological and educational implications of believing in the consciousness of living beings</h2>
+        
+        <p><strong>Deepening faith in God:</strong> When a Muslim realizes that all living beings praise and worship God, and that they have the consciousness and awareness to do so, his faith in God increases. Imam al-Ghazali says: "Reflection is a worship that captivates the heart, keeps it from forgetting, and deepens the embers of longing for God, and it is one of the highest educational issues in the path to God, because it pushes the heart with security and awakens it with fear." (Imam al-Ghazali, Ihya al-Din). (Imam al-Ghazali, Ihya' al-'Ulum al-Din, Book of Worship, Chapter of Contemplation).</p>
+        
+        <p><strong>Animal welfare:</strong> A Muslim who believes that animals are conscious and aware beings, who feel and suffer, is compassionate and kind to them. The Messenger of Allah said: "Allah has written charity on everything, so if you kill, do it well, and if you slaughter, do it well, and let one of you sharpen his blade, and let him slaughter his carcass." (Sahih Muslim, n.d.). Abdullah ibn 'Umar (may Allah be pleased with them both) reported that the Messenger of Allah (peace be upon him) said: "A woman was tormented by a cat that she locked up until it died, so she went into the fire, neither did she feed and water it when she locked it up, nor did she let it eat from the grass of the earth." (Agreed upon).</p>
+        
+        <p><strong>Respecting and preserving the environment:</strong> A Muslim who believes that living beings are part of an integrated ecosystem, and that they praise and worship God, respects and preserves this system. The Almighty says: "And cause not corruption upon the earth after its reformation. And invoke Him in fear and aspiration. Indeed, the mercy of Allah is near to the doers of good.” " (Al-A'raf 56). A Muslim who is aware of the guidance of the Qur'an and Sunnah realizes that every living creature in this universe has the right to life and has a role in this integrated ecosystem, and it is his duty to maintain this balance and not tamper with it.</p>
+        
+        <p><strong>Humility and breaking the ego:</strong> A person who thinks that he is the only sane and perceptive person in the universe becomes arrogant and conceited. On the other hand, a person who believes that living beings have consciousness and awareness is humble and recognizes his or her own worth.</p>
+
+        <h2>The sixth research: An Interactive Journey into the World of Consciousness of Living Beings</h2>
+        
+        <p><strong>Steps into other worlds:</strong> On a warm spring morning, I sat on an old stone bench in front of our country house. Everything was quiet, except for the sound of birds chirping, splashing from the surrounding trees like drops of celestial music. I closed my eyes for a moment, and when I opened them, I saw a small bird with grayish-blue feathers standing a few feet away from me. The bird looked directly at me, its head tilted slightly as if studying my facial expression. We stayed like that for a few moments - me and the bird - in a silent dialog that transcends species and language. There was something curious in its eyes, as if it were wondering: "Who are you and why are you sitting in my kingdom?"</p>
+        <p>These moments of cross-border communication between humans and other living beings open a window to a world of consciousness different from our own, but no less profound or beautiful. They are moments that awaken in us the questions: How do these creatures see the world, what do they think, and how can we connect with them on a deeper level?</p>
+        <p>In this interactive journey, we will try to explore the world of consciousness of living beings, not only through reading, but through meditation, experience and direct interaction.</p>
+
+        <h3>Whispers from the World of Birds</h3>
+        <p>You can experience for yourself the connection with the bird world through this simple activity:</p>
+        <div class="box box-note">
+            <span class="box-title">Activity: Observe bird language</span>
+            <ul>
+                <li>Choose a quiet place in a garden or park, and sit quietly for 20-30 minutes early in the morning.</li>
+                <li>Listen carefully to different bird sounds and try to distinguish between them.</li>
+                <li>Do you notice repeating patterns? Do the tones differ at certain times?</li>
+                <li>Observe how other birds respond to a particular call.</li>
+                <li>Record your observations in a notebook, and after several days of observation, you will begin to decipher some of the "phrases" of bird language, such as warning calls, mating calls, and food cues.</li>
+            </ul>
+        </div>
+        <p>The birds we see every day - from simple sparrows to clever crows - have complex communication systems that in some ways resemble our human languages. The Holy Qur'an says on the tongue of Sulayman, peace be upon him: "And he said, 'O mankind, we have learned the logic of the birds'" [Al-Naml: 16]. This "language" that God taught Solomon is not fiction, but a scientific fact that scientists are discovering the details of day by day.</p>
+
+        <h3>Friendships Across Species</h3>
+        <p>Omar was a nomadic shepherd, spending his days traveling through the valleys with his flock of sheep and goats. One day, while resting under the shadow of a large rock, he spotted an injured young fox limping badly. Out of compassion, he left him some food and a little water in a small bowl, and then left. The next day, he returned to the same area and found the fox waiting for him. This strange relationship continued for weeks, until the fox completely recovered from its injury. Surprisingly, the fox did not disappear after his recovery, but continued to visit Omar regularly. "He would come almost every evening, sit at a safe distance, and watch me make tea or prepare dinner," says Omar. "Then he started bringing me strange gifts - a colorful feather, a shiny stone, a special twig. It's like he's expressing his gratitude in his own way." A year later, on a very cold night, Omar was sleeping in his tent when he heard a scratching sound on the canvas. He opened the tent door to find the fox standing there, with three young foxes behind him. "He came to introduce me to his new family," Omar says with a smile. "It's like he's telling me: These are my children, I want you to know them." This story reminds us of the ability of organisms to communicate emotionally and socially, not only within their own species, but even with humans. It is not an isolated case; Islamic history and heritage is full of similar stories.</p>
+
+        <div class="box box-note">
+            <span class="box-title">Activity: Build a bridge with an animal</span>
+            <ul>
+                <li>Choose an animal that you can safely interact with (a house cat, a bird in your garden, a turtle, or even an ant).</li>
+                <li>Set aside time every day (10-15 minutes) to communicate with it quietly without sudden movements.</li>
+                <li>Observe their body language and responses to your presence.</li>
+                <li>Talk to them in a calm, low voice.</li>
+                <li>Record changes in their behavior as the days go by.</li>
+            </ul>
+            <p>With time and patience, you will notice an evolution in the animal's response to you, and perhaps begin a unique bond.</p>
+        </div>
+        <p>The Prophet (peace be upon him) reminds us: "Have mercy on those on earth, and those in heaven will have mercy on you." This compassion is not just a slogan, but a way of life that opens up a deep connection with the creatures around us. Some of us may not have sophisticated devices, but we can always regain our innate ability to listen to nature through simple exercises.</p>
+
+        <div class="box box-note">
+            <span class="box-title">Activity: Deep Listening</span>
+            <ul>
+                <li>Choose a quiet natural spot - under a tree, by a stream, or in a flowering garden.</li>
+                <li>Sit or lie quietly and close your eyes.</li>
+                <li>Focus your attention first on distant sounds, then gradually move on to nearby sounds.</li>
+                <li>Pay attention to very subtle sounds - the rustle of leaves, the whisper of a breeze, the distant murmur of water.</li>
+                <li>Continue this exercise for 20 minutes.</li>
+            </ul>
+            <p>With regular practice, you will begin to discover a rich sound world that has always been around you, but that you were not paying attention to.</p>
+        </div>
+        <p>God Almighty says: "There is nothing but praise, but you do not understand their praise" [Al-Israa: 44]. This "praise" may be found in sound frequencies that are not picked up by our ears, or in electromagnetic pulses that are not detected by our senses, or in the harmony and harmony of the creatures' work with each other.</p>
+
+        <h3>Messages from ants</h3>
+        <p>The story of Khaled, a young entomologist, who had an amazing experience with ants. He says: "In our lab, we've been studying a colony of harvest ants for a couple of years. One day, I noticed a strange behavior - a group of ants started moving crumbs and small debris to form a pattern on the lab surface. Hours later, we realized that the pattern looked a lot like an arrow pointing to the water source we had relocated two days earlier! The ants were trying to tell us something, they were communicating with us in their own way. From that day on, we started noticing other patterns of communication - how they leave special chemical marks at exits that we regularly open, and how they organize traffic in their tunnels with enviable efficiency better than the traffic systems in our cities."</p>
+        <p>The story of the ant in the Quran takes on new meaning in light of these scientific observations. When it said: "O you ants, enter your dwellings, lest Solomon and his soldiers destroy you while they do not know it" [Al-Naml: 18]. Let's get closer to the world of ants with this simple activity:</p>
+
+        <div class="box box-note">
+            <span class="box-title">Activity: Ant Mapping</span>
+            <ul>
+                <li>Observe an ant colony near your home for a week.</li>
+                <li>Use a pen and paper to map out their usual routes.</li>
+                <li>Place a drop of honey (or any food that appeals to them) in a new location, and watch how they convey the information.</li>
+                <li>Note how long it takes them to organize a new route.</li>
+                <li>Use a magnifying glass to see the details of their communication up close.</li>
+            </ul>
+            <p>You'll be amazed at the accuracy and efficiency of their social and communication system!</p>
+        </div>
+        <p>Dr. Deborah Gordon, a scientist of ant social behavior, says: "Ant colonies operate through a network of simple local interactions... An ant colony is like a brain in that there is no centralized control." He points out that the ant's organizational system is built on simple local interactions, such as communication via antennae, rather than a single "leader" or controller. He likens an ant colony to a brain; all of its neurons operate without a centralized authority, as ants do. This powerful example represents the emerging collective intelligence paradigm that arises from the cooperation of thousands of small entities without a single supervisor. (Dr. Deborah Gordon, interview with the Wu Tsai Neuroscience Institute (Stanford University), November 2023.</p>
+
+        <h3>Lessons from animal wisdom</h3>
+        <p>I have often pondered the behavior of the sloth, a slow creature that spends most of its life hanging in trees in complete silence. At first glance, it seems like a lazy creature but a deeper reflection reveals a hidden wisdom. Sloths are ideally designed to live with the least amount of energy. Unlike many animals that expend tremendous energy running, jumping, and chasing, the sloth has chosen a slow and deliberate strategy. It consumes fewer calories, needs less food, and lives in peace with its surroundings, content with its basic needs. In this hectic time, where we are all running in a whirlwind of work, speed, and accomplishment, perhaps we need to stop and reflect on the lesson of the sloth: Sometimes slowness is wisdom, and contentment is true wealth. Sloths live hundreds of years, while fast-moving animals often live only a few years. There is wisdom in slowness and stillness."</p>
+        <p>Every animal, no matter how simple, holds a unique lesson that we can learn from:</p>
+        <ul>
+            <li>The bee: Teaches us organized teamwork and dedication to the community.</li>
+            <li>The turtle: Patience, perseverance, and self-protection.</li>
+            <li>Elephant: Teaches us the power of memory, family ties, and loyalty.</li>
+            <li>Wolf: Teaches us cooperation in hunting and the value of extended family.</li>
+        </ul>
+
+        <div class="box box-note">
+            <span class="box-title">Activity: Your Teacher Animal</span>
+            <ul>
+                <li>Choose an animal that you feel particularly attracted to.</li>
+                <li>Research its behaviors and characteristics.</li>
+                <li>Reflect on the lessons you can learn from the way he lived.</li>
+                <li>Write them down and make them part of your daily meditations.</li>
+                <li>Try to apply one lesson inspired by your teaching animal in your daily life.</li>
+            </ul>
+        </div>
+        <p>Allah says: "And in the earth are signs for those who believe" [Dhariyat: 20]. Contemplating the creatures around us and drawing lessons from their behavior takes us on a deep spiritual and intellectual journey that increases our certainty, wisdom, and humility.</p>
+
+        <h3>Experiences and activities for the whole family</h3>
+        <p>To bring children and families closer to the world of consciousness of living beings, I suggest these simple interactive activities:</p>
+        
+        <p><strong>Miniature Butterfly Garden:</strong> Aisha, a science teacher, found a great way to introduce her children and students to the world of butterflies. She says: "We planted butterfly-attracting plants in the corner of the school garden - basil, lavender and chrysanthemums. "Within a few weeks, the butterflies started coming. We set up a small camera to record their activity, and we discovered a fascinating world - how a butterfly tests a flower's nectar with its feet before absorbing it with its proboscis, how they communicate with each other by flapping their wings in different ways, and how they lay their eggs neatly under leaves to protect them. Even more amazing was watching the caterpillars turn into cocoons and then into butterflies. The children followed this journey with fascination every day, recording their observations. Over time, they began to distinguish butterfly species, predict their behavior, and understand their needs."</p>
+
+        <div class="box box-note">
+            <span class="box-title">Family activity: Create a butterfly garden</span>
+            <ul>
+                <li>Choose a sunny corner of your garden or balcony.</li>
+                <li>Plant butterfly-attracting plants suitable for your area.</li>
+                <li>Place a shallow water dish with small stones sticking out of it (for butterflies to stand on while drinking).</li>
+                <li>Place a paper plate to observe butterflies and other visitors every day.</li>
+                <li>Record your observations and photos in a special notebook.</li>
+            </ul>
+            <p>This activity teaches patience, careful observation, and attention to small creatures.</p>
+        </div>
+
+        <p><strong>Interactive Bird Feeding Station:</strong> Abdul Aziz, a birdwatching enthusiast, says: "My children and I designed a bird feeding station with special features - platforms of different heights, different types of food (seeds, fruits, flower sap). We installed a small camera to record the activity, and recorded our daily observations: Which type of bird prefers which type of food, which birds eat first, and which ones wait their turn? Over time, we noticed that some birds began to recognize us and come to the window when they saw us. Some of them started responding to certain sounds we made. In the winter, when food became scarce, the birds started bringing their 'friends' to our station. The children were fascinated by this communicative behavior and the birds' ability to recognize and gradually trust us."</p>
+
+        <h2>Summary of the chapter</h2>
+        <p>In this chapter, we reviewed the Qur'anic and Prophetic evidence of the consciousness and cognition of living beings, and showed that this consciousness and cognition is real and not metaphorical, and that it manifests itself in amazing mental and cognitive abilities, such as the ability to communicate, learn, remember, plan, and solve issues.</p>
+        <p>We learned about the story of the hoopoe and Solomon, the awareness and eloquence of the ants, the nations of animals and birds, God's revelation to the bees, and stories from the lives of the Salaf and the Companions confirming these facts, and we linked this to modern scientific discoveries about the intelligence of animals.</p>
+        <p>We have seen how the Holy Quran is consistent with modern science in proving the consciousness and cognition of living beings, and how these beings have various mental and cognitive abilities that differ from our human abilities, but are no less important and complex in some aspects.</p>
+        <p>We also considered the faith and educational implications of believing in the consciousness of living beings, and how this belief can affect a Muslim's life and behavior, by deepening his faith in God, promoting animal welfare, respecting and preserving the environment, humility, and breaking his ego.</p>
+        <p style="text-align: center; margin-top: 50px; font-weight: bold; color: var(--primary-color);">God knows best.</p>
+
+        <!-- Chapter Navigation -->
+        <div class="chapter-navigation">
+            <a href="index.html" class="nav-btn btn-home">
+                <i class="fas fa-home"></i> Back to Home
+            </a>
+            <a href="chapter7.html" class="nav-btn btn-next">
+                Next Chapter <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -4,33 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hymns of the Universe - Symphony of Conscious Existence</title>
-    <meta name="description" content="A groundbreaking journey exploring consciousness from atoms to galaxies, bridging Quranic wisdom and modern science by Dr. Jimeel Al-Soqayya.">
-    <meta name="keywords" content="consciousness, universe, Quran, science, Islam, philosophy, quantum physics, artificial intelligence">
-    <meta name="author" content="Dr. Jimeel Al-Soqayya">
-    
-    <!-- SEO for Languages -->
-    <link rel="alternate" hreflang="en" href="https://www.universe-melodies.com/en/" />
-    <link rel="alternate" hreflang="ar" href="https://www.universe-melodies.com/" />
-    <link rel="canonical" href="https://www.universe-melodies.com/en/" />
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Hymns of the Universe - Symphony of Conscious Existence" />
-    <meta property="og:description" content="A groundbreaking journey exploring consciousness from atoms to galaxies" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.universe-melodies.com/en/" />
-    <meta property="og:image" content="https://www.universe-melodies.com/hymns-universe-cover.jpg" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="ar_AR" />
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Hymns of the Universe" />
-    <meta name="twitter:description" content="A groundbreaking journey exploring consciousness from atoms to galaxies" />
-    <meta name="twitter:image" content="https://www.universe-melodies.com/hymns-universe-cover.jpg" />
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="style-en.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -40,10 +15,10 @@
     </div>
 
     <!-- Language Switcher -->
-    <div class="language-switcher">
-        <a href="/" class="lang-btn">
-            <i class="fas fa-globe"></i>
-            <span>العربية</span>
+    <div style="position: fixed; top: 80px; right: 20px; z-index: 999;">
+        <a href="../index.html" style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;">
+            <i class="fas fa-globe" style="font-size: 16px;"></i>
+            <span>النسخة العربية</span>
         </a>
     </div>
 
@@ -55,210 +30,450 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About the Author</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="about.html">About Author</a></li>
                 <li><a href="contents.html">Table of Contents</a></li>
-                <li><a href="../index.html">Arabic Version</a></li>
             </ul>
             <div class="mobile-menu-toggle">☰</div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <div class="hero-book-cover">
-                    <img src="../hymns-universe-cover.jpg" alt="Hymns of the Universe Book Cover" loading="lazy">
+    <section class="hero" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); min-height: 95vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+        <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(118, 75, 162, 0.2) 0%, transparent 50%);"></div>
+        <div class="container hero-content" style="position: relative; z-index: 2;">
+            <div class="hero-text" style="text-align: center;">
+                <div class="hero-book-cover" style="text-align: center; margin-bottom: 2.5rem;">
+                    <img src="../hymns-universe-cover-en.jpg" onerror="this.src='../book-cover.jpg'" alt="Hymns of the Universe Book Cover" style="max-width: 450px; width: 90%; height: auto; border-radius: 20px; box-shadow: 0 30px 90px rgba(102, 126, 234, 0.4), 0 0 50px rgba(118, 75, 162, 0.3); animation: float 3s ease-in-out infinite; border: 3px solid rgba(255,255,255,0.1);">
                 </div>
-                <h1 class="hero-title">Hymns of the Universe</h1>
-                <h2 class="hero-subtitle">The Symphony of Conscious Existence in the Holy Quran and Modern Science</h2>
-                <p class="hero-author">Dr. Jimeel Al-Soqayya</p>
-                <div class="hero-buttons">
-                    <a href="contents.html" class="btn btn-primary">
-                        <i class="fas fa-book-open"></i> Start Reading
-                    </a>
-                    <a href="#about-book" class="btn btn-secondary">
-                        <i class="fas fa-info-circle"></i> About the Book
-                    </a>
+                <h1 class="hero-title" style="font-size: 3.5rem; font-weight: 900; background: linear-gradient(135deg, #fff 0%, #e0e7ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; text-shadow: 0 5px 15px rgba(0,0,0,0.3);">Hymns of the Universe</h1>
+                <h2 class="hero-subtitle" style="font-size: 1.6rem; color: rgba(255,255,255,0.95); margin-bottom: 1rem; font-weight: 500; line-height: 1.6;">The Symphony of Conscious Existence<br>in the Holy Quran and Modern Science</h2>
+                <p class="hero-author" style="font-size: 1.3rem; color: rgba(255,255,255,0.8); margin-bottom: 2.5rem; font-weight: 600;">Dr Jameel Alsoqayya</p>
+                <div class="hero-buttons" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="contents.html" class="btn btn-primary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 2.5rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700; text-decoration: none; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); transition: all 0.3s ease; display: inline-block;">📖 Start Reading</a>
+                    <a href="#download" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 1rem 2.5rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease; display: inline-block;">📥 Download PDF</a>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">⬇</div>
+        <div class="scroll-indicator" style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); font-size: 2rem; color: rgba(255,255,255,0.5); animation: bounce 2s infinite;">⬇</div>
     </section>
 
-    <!-- About the Book Section -->
-    <section class="section" id="about-book" style="background: white;">
-        <div class="container">
-            <h2 class="section-title">A Journey Beyond Consciousness</h2>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <p style="font-size: 1.2rem; color: #555; text-align: center; line-height: 1.9;">
-                    After years of deep research and contemplation at the intersection of Islamic scripture and modern science, 
-                    I present to you an unprecedented intellectual journey that will redefine your relationship with the universe.
-                </p>
-                <p style="font-size: 1.15rem; color: #666; text-align: center; margin-top: 1.5rem; line-height: 1.8;">
-                    <strong style="color: #667eea;">Hymns of the Universe</strong> is not just a book—it's a symphony that has been playing 
-                    since the dawn of creation, waiting for conscious minds to perceive its melodies.
-                </p>
+    <style>
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateX(-50%) translateY(0); }
+        50% { transform: translateX(-50%) translateY(10px); }
+    }
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(102, 126, 234, 0.5) !important;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.3) !important;
+    }
+    
+    html { scroll-behavior: smooth; }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .book-description > div {
+        animation: fadeInUp 0.6s ease-out;
+    }
+    
+    @media (max-width: 768px) {
+        .hero h1 { font-size: 2.5rem !important; }
+        .hero h2 { font-size: 1.2rem !important; }
+    }
+    </style>
+</head>
+<body>
+
+    <!-- About Book Section -->
+    <section class="about-book" style="background: linear-gradient(to bottom, #f8f9ff 0%, #ffffff 50%, #fff5f8 100%); padding: 5rem 0;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="section-title" style="font-size: 2.8rem; color: #667eea; font-weight: 800; margin-bottom: 1rem;">✨ About the Book</h2>
+                <div class="title-decoration" style="width: 100px; height: 4px; background: linear-gradient(90deg, transparent, #667eea, #764ba2, transparent); margin: 0 auto;"></div>
+            </div>
+            <div class="book-intro" style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: start;">
+                <div class="book-cover">
+                    <div class="book-3d">
+                        <img src="../hymns-universe-cover-en.jpg" onerror="this.src='../book-cover.jpg'" alt="Hymns of the Universe Book Cover" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+                    </div>
+                </div>
+                <div class="book-description">
+                    <!-- Main Title -->
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <h3 style="color: #667eea; margin-bottom: 0.8rem; font-size: 1.5rem; font-weight: 800; line-height: 1.4;">Hymns of the Universe</h3>
+                        <h4 style="color: #764ba2; margin-bottom: 0.5rem; font-size: 1.2rem; font-weight: 600;">The Symphony of Conscious Existence in the Holy Quran and Modern Science</h4>
+                        <p style="color: #555; font-size: 1.05rem; font-weight: 500; font-style: italic;">An extraordinary journey through the secret of consciousness… from atoms to galaxies, and from sleep and anesthesia to the Barzakh and the Hereafter</p>
+                    </div>
+
+                    <!-- Introduction -->
+                    <div style="background: linear-gradient(135deg, #f8f9ff 0%, #fff5f8 100%); padding: 2rem; border-radius: 15px; border-left: 5px solid #667eea; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);">
+                        <p style="font-size: 1.05rem; line-height: 1.9; color: #333; text-align: justify;">
+                            In an encyclopedic work, <strong style="color: #667eea;">Dr Jameel Alsoqayya</strong> takes us on an unprecedented intellectual and spiritual journey to understand the secret of consciousness in the universe: how it pulsates in the atoms of matter and the cells of life, how it manifests in the glorification, prostration, and submission of creatures to Allah, how the Quranic texts and Sunnah depict the universe's feelings and humility, and then builds solid bridges between this faith-based understanding and the latest scientific theories in neurophysics, quantum physics, and modern consciousness theories.
+                        </p>
+                    </div>
+
+                    <!-- What Will You Discover -->
+                    <div style="background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #667eea; margin-bottom: 1.5rem; font-size: 1.3rem; text-align: center; font-weight: 700; border-bottom: 3px solid #667eea; display: inline-block; padding-bottom: 0.5rem;">✨ What Will You Discover in This Journey?</h4>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.5rem;">
+                            <div style="background: linear-gradient(135deg, #667eea15, transparent); padding: 1.2rem; border-radius: 10px; border-left: 4px solid #667eea;">
+                                <strong style="color: #667eea; font-size: 1.05rem;">🧠 Consciousness in Sleep, Anesthesia, and Wakefulness</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">Quranic and scientific readings of consciousness levels and their transformations, and what modern neuroscience reveals about "perception disconnection" during sleep and anesthesia.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #764ba215, transparent); padding: 1.2rem; border-radius: 10px; border-left: 4px solid #764ba2;">
+                                <strong style="color: #764ba2; font-size: 1.05rem;">🌙 The Barzakh and the Hereafter</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">Quranic and hadith scenes addressing consciousness after death and on the Day of Resurrection, with a rigorous methodology combining text and scientific contemplation.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #667eea15, transparent); padding: 1.2rem; border-radius: 10px; border-left: 4px solid #667eea;">
+                                <strong style="color: #667eea; font-size: 1.05rem;">🌟 The Universe's Glorification, Submission, and Prostration</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">From Quranic evidence to prophetic applications, with beautiful scenes of mountains humbling, shadows prostrating, and the tears of heaven and earth—with a balanced view that resolves the debate of "literal or metaphorical" through a scientific doctrinal approach.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #764ba215, transparent); padding: 1.2rem; border-radius: 10px; border-left: 4px solid #764ba2;">
+                                <strong style="color: #764ba2; font-size: 1.05rem;">💚 The Universe's Feelings and Consciousness of Beings</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">The hoopoe, the ant, the bee, the whale, the elephant… Quranic testimonies connected to modern discoveries in animal and plant intelligence and cellular behavior.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #667eea15, transparent); padding: 1.2rem; border-radius: 10px; border-left: 4px solid #667eea;">
+                                <strong style="color: #667eea; font-size: 1.05rem;">✨ Prophets' Experiences with the Conscious Universe</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">From mountains glorifying with David to pebbles singing between the fingers of the Prophet ﷺ, with epistemic analysis of the dimensions of these experiences and their contemporary lessons.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #764ba215, transparent); padding: 1.2rem; border-radius: 10px; border-left: 4px solid #764ba2;">
+                                <strong style="color: #764ba2; font-size: 1.05rem;">🔬 The Scientific Perspective on Consciousness</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">A critical panorama of theories such as biocentrism, panpsychism, Integrated Information Theory (IIT), and their connections to quantum mechanics interpretations.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #667eea15, transparent); padding: 1.2rem; border-radius: 10px; border-left: 4px solid #667eea;">
+                                <strong style="color: #667eea; font-size: 1.05rem;">🤖 Artificial Intelligence and Future Consciousness</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">Will machines develop extraordinary perceptual consciousness? Technical and ethical scenarios, and philosophical dialogues between humans and machines.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #764ba215, transparent); padding: 1.2rem; border-radius: 10px; border-left: 4px solid #764ba2;">
+                                <strong style="color: #764ba2; font-size: 1.05rem;">🌌 The Seven Heavens and Multiple Universes</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">Comparison between texts and contemporary physical hypotheses to understand the multiplicity of universes, within a vision that does not antagonize science but dialogues with it.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #667eea15, transparent); padding: 1.2rem; border-radius: 10px; border-left: 4px solid #667eea;">
+                                <strong style="color: #667eea; font-size: 1.05rem;">⚛️ From Atoms to Galaxies</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">A unified cosmic glorification, and features of "fine-tuning" and exquisite design in laws, constants, and biological systems.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #764ba215, transparent); padding: 1.2rem; border-radius: 10px; border-left: 4px solid #764ba2;">
+                                <strong style="color: #764ba2; font-size: 1.05rem;">💫 Hymns of Healing and the Power of the Word</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">The Quranic and prophetic foundation for healing souls and bodies, with practical applications supported by contemporary studies on the impact of dhikr and glorification.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Why This Book is Special -->
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2.5rem; border-radius: 15px; margin-bottom: 2rem; color: white; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);">
+                        <h4 style="color: white; margin-bottom: 1.5rem; font-size: 1.3rem; text-align: center; font-weight: 700;">⭐ Why This Book is Special?</h4>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                            <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">📚</div>
+                                <strong style="display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">Unique Comprehensiveness</strong>
+                                <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; opacity: 0.95;">Covers the entire path of consciousness—from the physiology of sleep and anesthesia to otherworldly consciousness, and from atomic pulsation to galactic hymns.</p>
+                            </div>
+
+                            <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔗</div>
+                                <strong style="display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">Integration of Science and Faith</strong>
+                                <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; opacity: 0.95;">No contradiction between the truths of revelation and rigorous discoveries; rather, harmony that opens broader horizons for understanding and meaning.</p>
+                            </div>
+
+                            <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎯</div>
+                                <strong style="display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">Precise Methodology</strong>
+                                <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; opacity: 0.95;">Extensive scientific documentation and disciplined critical discussion of theories, with clear methodological boundaries between "transmitted knowledge" and "empirical knowledge."</p>
+                            </div>
+
+                            <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">✍️</div>
+                                <strong style="display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">Captivating Style</strong>
+                                <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; opacity: 0.95;">Language that brings together mind and heart; presents evidence and awakens wonder, transforming the reader from "observer" to "witness" in the orchestra of existence.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Final Message -->
+                    <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #667eea05, #764ba205); border-radius: 15px; margin-bottom: 2rem;">
+                        <p style="font-size: 1.15rem; line-height: 1.9; color: #333; font-weight: 500; margin-bottom: 1.5rem;">
+                            <strong style="color: #667eea; font-size: 1.2rem;">Hymns of the Universe:</strong> A grand journey that connects the verses of revelation with the signs of the horizons, to understand how existence glorifies from atoms to galaxies… and how that opens your heart and mind to the meaning of consciousness, life, and the Hereafter.
+                        </p>
+                    </div>
+
+                    <!-- Final Quote -->
+                    <blockquote class="book-quote" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-left: none; padding: 2rem; margin: 2rem 0 0 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
+                        <p style="font-size: 1.15rem; line-height: 2; text-align: center; margin: 0; position: relative; z-index: 1; font-weight: 500; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+                            "The universe is not static; it is engaged, since eternity, in an eternal performance of the symphony of existence… hymns of glorification, anthems of humility, and echoes of eternal love all directed toward "The One, The Unique," toward the Creator of Majesty."
+                        </p>
+                    </blockquote>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Key Topics Section -->
-    <section class="section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
-        <div class="container">
-            <h2 class="section-title">What You'll Discover</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-atom"></i>
-                    <h3>Consciousness: From Atom to Galaxy</h3>
-                    <p>Explore the profound concept of consciousness across all levels of existence, from subatomic particles to cosmic structures.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <i class="fas fa-praying-hands"></i>
-                    <h3>The Glorifying Universe</h3>
-                    <p>Discover how all creation—from mountains to molecules—praises Allah in ways we don't fully comprehend.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>Quantum Consciousness</h3>
-                    <p>Delve into the intersection of quantum physics and awareness, exploring theories that bridge science and spirituality.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3>Seven Heavens & Multiverse</h3>
-                    <p>Examine the Quranic concept of seven heavens alongside modern theories of parallel universes and multidimensional reality.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <i class="fas fa-robot"></i>
-                    <h3>Artificial Intelligence & Consciousness</h3>
-                    <p>Philosophical and ethical reflections on whether machines will ever possess true consciousness.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <i class="fas fa-dna"></i>
-                    <h3>Intelligent Design in Nature</h3>
-                    <p>Witness the conscious-like behavior of biological molecules and the fine-tuning of universal constants.</p>
-                </div>
+    <!-- Key Features -->
+    <section class="features" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 5rem 0;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="section-title" style="font-size: 2.8rem; color: white; font-weight: 800; margin-bottom: 1rem;">🌟 Journey Through the Chapters</h2>
+                <div class="title-decoration" style="width: 100px; height: 4px; background: linear-gradient(90deg, transparent, white, transparent); margin: 0 auto;"></div>
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-top: 1.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">Explore the rich content of this encyclopedic work through 15 comprehensive chapters</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Quran Verse Section -->
-    <section class="section" style="background: white;">
-        <div class="container">
-            <div class="quran-container">
-                <div class="quran-verse">
-                    ﴿تُسَبِّحُ لَهُ السَّمَاوَاتُ السَّبْعُ وَالْأَرْضُ وَمَن فِيهِنَّ ۚ 
-                    وَإِن مِّن شَيْءٍ إِلَّا يُسَبِّحُ بِحَمْدِهِ وَلَٰكِن لَّا تَفْقَهُونَ تَسْبِيحَهُمْ﴾
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <!-- Chapter 1 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">🌌</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter One</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">Introduction to the Conscious Universe</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">The universe as a living entity glorifying its Creator; continuity of consciousness from sleep to Barzakh</p>
+                    <a href="chapter1.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
                 </div>
-                <div class="quran-translation">
-                    "The seven heavens and the earth and whatever is in them glorify Him. 
-                    And there is not a thing except that it glorifies [Allah] by His praise, 
-                    but you do not understand their [way of] glorifying."
-                    <span class="verse-ref">(Quran 17:44)</span>
+                
+                <!-- Chapter 2 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">✨</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter Two</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">Praising and Worshiping the Universe</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">Everything in the universe glorifies Allah - exploring literal vs. metaphorical interpretations</p>
+                    <a href="chapter2.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Chapters Overview -->
-    <section class="section" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white;">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">15 Chapters of Profound Exploration</h2>
-            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-                <p style="font-size: 1.2rem; line-height: 1.8; color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
-                    From the mysteries of sleep and anesthesia to the realms of Barzakh and the Hereafter, 
-                    from atomic particles to galactic clusters—this book bridges rigorous Quranic insights 
-                    with cutting-edge scientific discoveries.
-                </p>
-                <ul style="text-align: left; list-style: none; padding: 0; display: inline-block; max-width: 700px;">
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                        <i class="fas fa-star" style="color: #667eea; margin-right: 10px;"></i>
-                        <strong>Chapter 1:</strong> Introduction to the Conscious Universe
-                    </li>
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                        <i class="fas fa-star" style="color: #667eea; margin-right: 10px;"></i>
-                        <strong>Chapter 2:</strong> The Glorification and Worship of the Universe
-                    </li>
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                        <i class="fas fa-star" style="color: #667eea; margin-right: 10px;"></i>
-                        <strong>Chapter 3:</strong> The Universe's Submission to Allah
-                    </li>
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                        <i class="fas fa-star" style="color: #667eea; margin-right: 10px;"></i>
-                        <strong>Chapter 4:</strong> The Prostration and Humility of the Cosmos
-                    </li>
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                        <i class="fas fa-star" style="color: #667eea; margin-right: 10px;"></i>
-                        <strong>Chapter 5:</strong> Emotions and Feelings of the Universe
-                    </li>
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                        <i class="fas fa-star" style="color: #667eea; margin-right: 10px;"></i>
-                        <strong>Chapter 6-15:</strong> Deep dives into living consciousness, prophetic experiences, scientific theories, AI, multiverse, intelligent design, and healing vibrations
-                    </li>
-                </ul>
+                
+                <!-- Chapter 3 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">🙏</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter Three</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">The Universe's Silence and Submission to God</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">The submission of the heavens and earth to Allah's command, and the story of presenting the trust to creatures</p>
+                    <a href="chapter3.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
+                </div>
+                
+                <!-- Chapter 4 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">🕌</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter Four</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">The Prostration of the Universe</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">The prostration of the sun, moon, stars, trees, and animals, and manifestations of cosmic humility to Allah</p>
+                    <a href="chapter4.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
+                </div>
+                
+                <!-- Chapter 5 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">💚</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter Five</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">The Feelings and Emotions of the Universe</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">The crying of heaven and earth, the trembling of mountains from fear of Allah, and the conscious universe's feelings</p>
+                    <a href="chapter5.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
+                </div>
+                
+                <!-- Chapter 6 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">🦅</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter Six</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">The Consciousness of Living Things</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">Stories of the ant and hoopoe with Solomon, and scientific discoveries about animal intelligence</p>
+                    <a href="chapter6.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
+                </div>
+                
+                <!-- Chapter 7 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">👑</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter Seven</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">The Prophets' Experiences with the Conscious Universe</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">Interactions of prophets with conscious creation: mountains speaking to David, staff of Moses, and more</p>
+                    <a href="chapter7.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
+                </div>
+                
+                <!-- Chapter 8 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">📿</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter Eight</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">Experiences of the Conscious Universe in the Islamic Tradition</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">Islamic heritage perspectives on cosmic consciousness: companions' experiences and scholars' views</p>
+                    <a href="chapter8.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
+                </div>
+                
+                <!-- Chapter 9 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">🔬</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter Nine</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">The Scientific Perspective of the Conscious Universe</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">Modern theories: quantum consciousness, biocentrism, panpsychism, and cosmic interconnection</p>
+                    <a href="chapter9.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
+                </div>
+                
+                <!-- Chapter 10 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">🤖</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter Ten</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">Will AI Develop Consciousness?</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">Exploring whether machines can develop perceptual consciousness: philosophical and ethical reflections</p>
+                    <a href="chapter10.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
+                </div>
+                
+                <!-- Chapter 11 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">🌠</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter Eleven</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">Seven Heavens and the Multiverse</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">Quranic and scientific perspectives on multiple universes, dimensions, and the seven heavens</p>
+                    <a href="chapter11.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
+                </div>
+                
+                <!-- Chapter 12 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">⚛️</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter Twelve</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">From the Atom to the Galaxy</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">The journey of consciousness from the infinitesimal atom to the sprawling galaxy in cosmic harmony</p>
+                    <a href="chapter12.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
+                </div>
+                
+                <!-- Chapter 13 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">🎯</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter Thirteen</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">Intelligent Design in the Universe</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">Manifestations of divine wisdom and precision in the cosmos, from molecules to galaxies</p>
+                    <a href="chapter13.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
+                </div>
+                
+                <!-- Chapter 14 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">🧠</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter Fourteen</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">The Conscious Universe Between Islamic Philosophy and Modern Scientific Theories</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">Convergence points between Islamic vision and contemporary Western theories of consciousness</p>
+                    <a href="chapter14.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
+                </div>
+                
+                <!-- Chapter 15 -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">💫</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">Chapter Fifteen</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">Healing Hymns and Pulses of Praise</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">The power of words and praise in healing: integrating spiritual medicine with modern science</p>
+                    <a href="chapter15.html" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">Read Chapter →</a>
+                </div>
+                
+                <!-- Conclusion -->
+                <div class="feature-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">🎊</div>
+                    <h3 style="color: white; font-size: 1.1rem; margin-bottom: 0.5rem;">Conclusion</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4; color: white;">Concluding Hymns for the Symphony of Conscious Existence</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: rgba(255,255,255,0.95);">Final reflections on this cosmic journey, bringing together science, philosophy, and faith</p>
+                    <a href="conclusion.html" style="display: inline-block; margin-top: 0.8rem; color: white; font-weight: 600; text-decoration: none; border-bottom: 2px solid white;">Read Conclusion →</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Call to Action -->
-    <section class="section" style="background: white; text-align: center;">
-        <div class="container">
-            <h2 class="section-title">Begin Your Journey</h2>
-            <p style="font-size: 1.3rem; color: #666; max-width: 600px; margin: 0 auto 2rem;">
-                15 chapters • Years of research • An extraordinary intellectual odyssey
-            </p>
-            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                <a href="contents.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2.5rem;">
-                    <i class="fas fa-book-reader"></i> Read Now - Free
-                </a>
-                <a href="about.html" class="btn btn-secondary" style="font-size: 1.2rem; padding: 1rem 2.5rem; background: white; color: #667eea; border: 2px solid #667eea;">
-                    <i class="fas fa-user"></i> Meet the Author
-                </a>
+    <section class="cta" id="download" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 5rem 0; text-align: center;">
+        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 2rem;">
+            <div class="cta-content">
+                <h2 style="font-size: 2.8rem; color: white; font-weight: 800; margin-bottom: 1.5rem;">🚀 Start Your Journey Now</h2>
+                <p style="font-size: 1.3rem; color: rgba(255,255,255,0.9); margin-bottom: 3rem; line-height: 1.8;">Read the entire book for free or download it to your device<br>An extraordinary scientific and spiritual journey awaits you</p>
+                <div class="cta-buttons" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <a href="introduction.html" class="btn btn-large btn-primary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.2rem 3rem; border-radius: 50px; font-size: 1.3rem; font-weight: 700; text-decoration: none; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4); transition: all 0.3s ease; display: inline-block;">📖 Read Introduction</a>
+                    <a href="contents.html" class="btn btn-large btn-secondary" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 1.2rem 3rem; border-radius: 50px; font-size: 1.3rem; font-weight: 700; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease; display: inline-block;">📚 Table of Contents</a>
+                </div>
+                <p class="cta-note" style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-top: 2rem;">📖 Completely Free • No Registration Required • Available to Everyone</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p style="margin-bottom: 1rem; font-size: 1.1rem;">
-                © 2025 Dr. Jimeel Al-Soqayya. All rights reserved.
-            </p>
-            <p style="margin-bottom: 1rem;">
-                <a href="mailto:jsoqayya@gmail.com">
-                    <i class="fas fa-envelope"></i> jsoqayya@gmail.com
-                </a>
-            </p>
-            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.6);">
-                <a href="/" style="color: rgba(255,255,255,0.8);">النسخة العربية</a> | 
-                <a href="index.html" style="color: rgba(255,255,255,0.8);">English Version</a>
-            </p>
+    <footer class="footer" style="background: #1a1a2e; color: white; padding: 3rem 0 1rem 0;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                    <h3 style="color: #667eea; margin-bottom: 1rem;">🌌 Hymns of the Universe</h3>
+                    <p style="opacity: 0.8;">The Symphony of Conscious Existence in the Holy Quran and Modern Science</p>
+                    <p style="margin-top: 1rem; font-weight: bold; color: #667eea;">🌐 www.universe-melodies.com</p>
+                </div>
+                <div>
+                    <h4 style="color: #667eea; margin-bottom: 1rem;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html" style="color: white; opacity: 0.8; text-decoration: none;">Home</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: white; opacity: 0.8; text-decoration: none;">About Author</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="contents.html" style="color: white; opacity: 0.8; text-decoration: none;">Table of Contents</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #667eea; margin-bottom: 1rem;">Chapters</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="chapter1.html" style="color: white; opacity: 0.8; text-decoration: none;">Worlds of Consciousness</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="chapter2.html" style="color: white; opacity: 0.8; text-decoration: none;">Universe's Feelings</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="chapter3.html" style="color: white; opacity: 0.8; text-decoration: none;">Beings' Consciousness</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #667eea; margin-bottom: 1rem;">Contact</h4>
+                    <p style="opacity: 0.8;">📧 For inquiries and feedback</p>
+                    <p style="opacity: 0.8;">📚 Available free for everyone</p>
+                </div>
+            </div>
+            <div style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>&copy; 2024 Hymns of the Universe - Dr Jameel Alsoqayya | All Rights Reserved</p>
+                <p style="margin-top: 0.5rem;">🌐 <strong>www.universe-melodies.com</strong> | This website was created to spread knowledge for free</p>
+            </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
-            const menu = document.querySelector('.nav-menu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        });
+    <script src="../script.js"></script>
+</body>
+</html>
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
+<style>
+@media (max-width: 992px) {
+    .book-intro {
+        grid-template-columns: 1fr !important;
+    }
+    .hero-book-cover img {
+        max-width: 350px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem !important;
+    }
+    .features-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+</style>
+</head>
+<body>
+
+<script src="../script.js"></script>
 </body>
 </html>

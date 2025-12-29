@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Three: The Universe's Silence and Submission to God</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fafafa;
+            --text-color: #2d3436;
+            --primary-color: #2c3e50;
+            --accent-color: #8e44ad; /* لون بنفسجي للفصل الثالث لتمييزه */
+            
+            /* Box Colors */
+            --box-desc-bg: #e3f2fd;
+            --box-desc-border: #1565c0;
+            
+            --box-verse-bg: #e8f5e9;
+            --box-verse-border: #2e7d32;
+            
+            --box-science-bg: #fffde7;
+            --box-science-border: #fbc02d;
+            
+            --box-note-bg: #f3e5f5;
+            --box-note-border: #7b1fa2;
+
+            --box-reflection-bg: #ffebee;
+            --box-reflection-border: #c62828;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 80px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 4px solid var(--accent-color);
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            border-left: 8px solid var(--accent-color);
+            padding-left: 20px;
+            background: linear-gradient(90deg, #f5f6fa 0%, #ffffff 100%);
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #37474f;
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: #546e7a;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 1.5rem;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Box Styling */
+        .box {
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 6px;
+            border-left-width: 6px;
+            border-left-style: solid;
+            position: relative;
+        }
+
+        .box-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Description Box */
+        .box-desc { background-color: var(--box-desc-bg); border-left-color: var(--box-desc-border); }
+        .box-desc .box-title { color: var(--box-desc-border); }
+
+        /* Verse/Hadith Box */
+        .box-verse { background-color: var(--box-verse-bg); border-left-color: var(--box-verse-border); }
+        .box-verse .box-title { color: var(--box-verse-border); }
+        .verse-text {
+            font-family: 'Merriweather', serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1b5e20;
+            text-align: center;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .verse-ref {
+            display: block;
+            text-align: right;
+            font-size: 0.9rem;
+            color: #388e3c;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        /* Scientific Box */
+        .box-science { background-color: var(--box-science-bg); border-left-color: var(--box-science-border); }
+        .box-science .box-title { color: #f57f17; }
+
+        /* Note/Quote Box */
+        .box-note { background-color: var(--box-note-bg); border-left-color: var(--box-note-border); }
+        .box-note .box-title { color: var(--box-note-border); }
+
+        /* Reflection Box */
+        .box-red { background-color: var(--box-reflection-bg); border-left-color: var(--box-reflection-border); }
+        .box-red .box-title { color: var(--box-reflection-border); }
+
+        /* Table of Contents */
+        .toc-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid #eee;
+        }
+        .toc-table th, .toc-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .toc-table th {
+            background-color: var(--primary-color);
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+        .toc-table tr:nth-child(even) { background-color: #f9f9f9; }
+
+        .source {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #616161;
+            font-style: italic;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 30px; }
+            h1 { font-size: 2.2rem; }
+            .box { padding: 20px; }
+        }
+    /* Enhanced Box Styling */
+        .box {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            transition: all 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+        }
+
+        /* Navigation Buttons */
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 3px solid var(--accent-color);
+            gap: 20px;
+        }
+        .nav-btn {
+            flex: 1;
+            padding: 18px 35px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            text-transform: uppercase;
+        }
+        .btn-home {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+        }
+        .btn-next {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        .btn-next:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(245, 87, 108, 0.4);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Switch Button -->
+    <div style="position: fixed; top: 80px; right: 20px; z-index: 9999;">
+        <a href="../chapter3.html" style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;">
+            <span>🌐</span>
+            <span>النسخة العربية</span>
+        </a>
+    </div>
+
+    <!-- Language Switcher -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <a href="../chapter3.html" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); display: inline-flex; align-items: center; gap: 8px; font-family: 'Montserrat', sans-serif;">
+            <i class="fas fa-language"></i> العربية
+        </a>
+    </div>
+
+    <div class="container">
+        <h1>Chapter Three<br>The Universe's Silence and Submission to God</h1>
+
+        <div class="box box-desc">
+            <span class="box-title">Description</span>
+            <p>This chapter deals with the concept of the Qunut of the universe and its comprehensive submission to God, highlighting how all the creatures of the universe, from atoms to galaxies, are subject to God's will and follow His laws and rules in an integrated cosmic system. The chapter distinguishes between two types of qunut: The compulsory qunut, which includes all natural creatures that are subject to a fixed divine order, and the optional qunut of the human being, who is charged with the responsibility of trust and has the optional will to obey or disobey. The chapter reviews the Qur'anic evidence of the universe's submission to God, such as "And he has those in the heavens and the earth, all of whom are obedient to him" and "They said, "We came obediently," explaining how the atoms and parts of the universe obey the command of their Creator. The chapter highlights the educational and faith-based impact of man's feeling of being part of a cosmic system that is submissive to God, and the impact of this on self-discipline and the removal of ego and a sense of loneliness. It aims to show man's responsibility as a successor on earth and the need to harmonize with the rhythm of the universe and consciously bear the trust, thus achieving tranquility and inner strength and enhancing the sense of belonging to the great cosmic system.</p>
+        </div>
+
+        <h3>Table of contents</h3>
+        <table class="toc-table">
+            <thead>
+                <tr>
+                    <th>Topic title</th>
+                    <th>Page number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Introduction: Symphony of Cosmic Submission</td><td>3</td></tr>
+                <tr><td>Exhibit I: The Essence of the Cosmic Serenity</td><td>4</td></tr>
+                <tr><td>Research II: Patterns of Cosmic Qunut: Between Choice and Compulsion</td><td>8</td></tr>
+                <tr><td>Exhibit III: The Presentation of the Trust to the Heavens, Earth and Mountains: Reflections on Cosmic Consciousness</td><td>10</td></tr>
+                <tr><td>Exhibit IV: Manifestations of Cosmic Silence in the Qur'anic Scenes</td><td>17</td></tr>
+                <tr><td>Fifth research: Faith and Educational Implications of the Qunut of the Universe</td><td>21</td></tr>
+                <tr><td>The sixth research: The Qunut of the Universe in the Balance of Contemporary Science</td><td>23</td></tr>
+                <tr><td>Recent discoveries that support the concept of cosmic silence</td><td>26</td></tr>
+                <tr><td>Chapter Seven: Reflections and Applications: A Journey with the Cosmic Silence</td><td>29</td></tr>
+                <tr><td>Conclusion: Toward an Integral Vision of the Universe</td><td>31</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Introduction: The Symphony of Cosmic Submission</h2>
+        <p>In the vast space of the universe, hidden melodies flow from every atom and every galaxy, melodies of submission and supplication, played by beings of all shapes and sizes in a harmonious cosmic symphony. It is the symphony of cosmic silence that manifests itself in the silence of the heavens, the whispering of the earth, and the groaning of the mountains, where all creatures stand in the sanctuary of servitude, bowing to the majesty of their Creator.</p>
+        <p>In this chapter, we will sail into the depths of this amazing cosmic reality, where there is not a single atom in this existence except that it is submissive to God, subject to His authority, and surrendered to His will. We will contemplate the concept of cosmic qunut and its manifestations, and we will realize how the entire universe stands in a state of perpetual servitude, testifying to the Creator's oneness and greatness, and appearing before Him in reverence and reverence.</p>
+        
+        <div class="box box-verse">
+            <span class="box-title">Verse</span>
+            <span class="verse-text">' And to Him belongs whoever is in the heavens and the earth, all of them are obedient to Him'</span>
+            <span class="verse-ref">[Al-Rum: 26]</span>
+        </div>
+
+        <div class="box box-red">
+            <span class="box-title">A cosmic painting showing a symphony of cosmic submission</span>
+            <p>In an unrecognizable silence, the stars play the melodies of Qunut, the mountains kneel in reverence, and the waves roar with hymns of obedience. Every atom in this existence is in the hands of its Creator, not wavering, not hesitating, but prostrating... As you were born.</p>
+            <p>"For Allah, those in the heavens and the earth prostrate voluntarily and involuntarily, and their shadows."</p>
+        </div>
+
+        <p>This noble verse opens a wide door for us to understand the nature of the relationship between the Creator and His creatures, and reveals to us a fundamental truth that runs through the veins of the universe: The truth of absolute submission and complete obedience to the will of God Almighty.</p>
+
+        <h2>Part I: The Essence of Cosmic Qunut</h2>
+        <h3>The concept and reality of Qunut</h3>
+        <p>Qunut in language is derived from the root "qunut", which revolves around the meanings of obedience, submission and permanence.</p>
+        <p><strong>Raghib al-Isfahani said:</strong> "Qunut: Obedience with submission, the origin of which is prolonged prostration, then it was used for all obedience."</p>
+        <p>Ibn Manzoor mentioned in the "Arabic tongue" that the word "qanut" has several meanings, which can be summarized as follows:</p>
+        <ul>
+            <li><strong>Obedience and reverence:</strong> It is constant obedience to God with submission and acknowledgment of servitude, as in the words of Almighty God: "And the devout and the devout".</li>
+            <li><strong>Standing up in prayer and prolonging the prayer:</strong> Qunut refers to standing up in prayer, especially prolonging it, including Qunut al-Witr.</li>
+            <li><strong>Silence and abstinence:</strong> It is reported that qunut means refraining from speaking in prayer, as in the saying: "And stand up to God with reverence."</li>
+            <li><strong>Supplication:</strong> Qunut is also used for supplication, especially in prayer, which is known as the Qunut supplication.</li>
+        </ul>
+        <p><strong>In legal terminology:</strong> Qunut is continuous obedience coupled with submission, reverence and humiliation to the Almighty. Ibn al-Qayyim says: "Qunut in the words of the Arabs: It is a state of deep servitude.</p>
+        <p>It is a state of deep servitude in which the highest meanings of submission and surrender to the Almighty are manifested.</p>
+        <p>Qunut is mentioned in the Holy Qur'an with multiple meanings, including:</p>
+        <ul>
+            <li><strong>Obedience</strong>, as in the saying: <em>Allah has those in the heavens and the earth, all of whom are obedient to Him</em> [Al-Rum: 26].</li>
+            <li><strong>Reverence</strong>, as in the words of the Almighty: <em>"Stand up to God in reverence"</em> (al-Baqarah 238)</li>
+            <li><strong>Perpetual worship</strong>, as in the saying: <em>"Who is the one who is watchful during the night, prostrate and standing, fearing the last days and hoping for the mercy of his Lord?"</em> (Al-Zimr 9)</li>
+            <li><strong>Sincerity</strong>, as in the words of the Almighty: <em>'Honor God without any form of polytheism'</em> (al-Hajj 31).</li>
+        </ul>
+        <p>These meanings all revolve around one axis, which is humiliation and submission to God Almighty, and absolute submission to His command, whether in worship, transactions, morals, or other aspects of life.</p>
+
+        <h3>Qur'anic connotations of the Qunut of the Universe</h3>
+        <p>There are many verses in the Qur'an that emphasize the universe's supplication to Allah, including:</p>
+        
+        <div class="box box-verse">
+            <span class="verse-text">"They said, 'Allah has taken a son, praise be to Him, but He has all that is in the heavens and the earth, and all are subject to Him.'"</span>
+            <span class="verse-ref">[Al-Baqarah: 116]</span>
+        </div>
+        <p>This verse is a decisive response to those who claim that Allah has taken a son, for Allah, the Almighty, disowns Himself from that, and shows that everything in the heavens and the earth belongs to Him and is devoted to Him, that is, completely submissive to Him, which negates the claim of sonship to Allah, the Almighty.</p>
+
+        <div class="box box-verse">
+            <span class="verse-text">"He has those in the heavens and the earth who have submitted to Him voluntarily and involuntarily, and to Him they will return"</span>
+            <span class="verse-ref">[Al-Imran: 83]</span>
+        </div>
+        <p>This verse shows that everything in the heavens and the earth has surrendered to Allah, that is, surrendered and submitted to Him, whether voluntarily by choice or involuntarily by compulsion.</p>
+
+        <div class="box box-verse">
+            <span class="verse-text">"Other than the religion of Allah, do they seek, and to Him belong those in the heavens and the earth, voluntarily and involuntarily, and to Him they shall return"</span>
+            <span class="verse-ref">[Al-Imran: 83]</span>
+        </div>
+        <p>This verse condemns those who seek a religion other than the religion of Allah, even though everything in the heavens and the earth has surrendered and submitted to Allah.</p>
+
+        <div class="box box-verse">
+            <span class="verse-text">"Who is the one who is watchful during the night, prostrate and standing, fearing the end and seeking the mercy of his Lord"</span>
+            <span class="verse-ref">[Al-Zamar: 9]</span>
+        </div>
+        <p>This verse describes the true believer as being devoted to God at all times, prostrating and standing, fearing the punishment of the Hereafter and hoping for the mercy of his Lord.</p>
+        <p>These and other verses emphasize that the universe's reverence for Allah is an established fact, and that every atom in this existence is subject to Allah, submitting to His command and will.</p>
+
+        <h3>Cosmic Qunut: Its manifestations and effects</h3>
+        <p>The universe's supplication to the Almighty means that every atom in this existence submits to God, surrenders to His command and submits to His will. This cosmic supplication manifests itself in multiple manifestations, including:</p>
+        
+        <ul>
+            <li><strong>Submission to God in cosmic systems and laws:</strong> The universe runs according to a precise order and laws established by Allah, and no creature can deviate from them. The sun rises and sets, the night follows the day, the seasons alternate, the planets rotate in their orbits, the rains fall, and the winds blow, all according to a precise divine order that is neither disturbed nor disturbed. The Almighty said: <em>"Neither the sun should set the moon, nor the night precedes the day, nor the day precedes the night, and all are in an ark."</em> (Yus 40)</li>
+            <li><strong>Obedience to God's command in origination and formation:</strong> The contentment of the universe is also evident in its immediate response to God's command when it is created and formed. The Almighty said: <em>"Then He ascended to the sky while it was smoke, and He said to it and to the earth, 'Come willingly or unwillingly,' and they said, 'We have come willingly'"</em> (Faslat 11). The heavens and the earth immediately responded to God's command, choosing to come voluntarily rather than involuntarily, which is a perfect example of their obedience to God.</li>
+            <li><strong>Responding to God's command in harnessing and humbling:</strong> The universe is harnessed by God's command to serve man, and this is a manifestation of his obedience and submission. The Almighty said: <em>"And He has harnessed for you what is in the heavens and what is in the earth, all from Him"</em> [Al-Jathiyah: 13]. The sun, moon, stars, winds, seas, rivers, mountains, and animals are all harnessed by God to serve man, and this is a perfect manifestation of his obedience to God Almighty.</li>
+            <li><strong>Wisdom and perfection in creation:</strong> The silence of the universe is also manifested in the wisdom and mastery that appears in God's creation: <em>"The workmanship of God, who has perfected all things"</em> [Al-Naml: 88]. The universe reflects in its composition, construction and organization the height of perfection and creativity, and this is evidence of the perfection of its obedience and submission to the will of its Creator.</li>
+            <li><strong>The testimony of the organs of the body:</strong> Another manifestation of the silence of the universe is the testimony of the organs of the body against its owner on the Day of Resurrection. The Almighty said: <em>"Today we seal their mouths, their hands will speak to us, and their feet will testify to what they have been doing"</em> [Yus: 65]. The organs of the body speak and testify to the truth, and submit to the command of Allah, and this is one of the perfection of their obedience to Him.</li>
+        </ul>
+
+        <h2>Research II: Patterns of Cosmic Qunut: Between Choice and Compulsion</h2>
+        <h3>Optional Qunut and Compulsory Qunut: Philosophy of existence</h3>
+        <p>The universe's supplication to God can be divided into two main types: The optional and the compulsory. This division reflects the nature of the relationship between the Creator and the creature, and shows the difference between costly and non-costly creatures.</p>
+        
+        <h4>Optional Qunut:</h4>
+        <p>This is the qunut that is done by the creature's choice and will, such as the qunut of a believer who chooses to obey and worship God willingly and voluntarily. This type of qunut is the one that results in reward and punishment, because it stems from free choice and conscious will.</p>
+        <p>Allah Almighty says: <em>"We have guided him along the path, whether he is thankful or disbelieving"</em> [Human: 3].</p>
+        <p>Allah has guided man and shown him the path of good and the path of evil, leaving him to choose freely and willingly, either to be thankful, believing and devout to Allah, or to be disobedient, disobedient and rebellious.</p>
+        <p>It is characterized by the fact that it is based on knowledge and awareness, as the believer is aware of God and praises Him with awareness and consciousness. This is what makes his qunut of special value and importance, because it stems from a conscious choice, not from compulsion.</p>
+
+        <h4>Compulsory qunut:</h4>
+        <p>This is the qunut that is forced by God, such as the qunut of the disbeliever who is subject to God's cosmic laws against his will, and the qunut of inanimate objects, plants, and animals that do not have the option of disobeying God's command. This type of qunut does not entail reward or punishment, because it is not the result of free choice.</p>
+        <p>Allah says: <em>"And to Him belongs those in the heavens and the earth who prostrate themselves voluntarily and involuntarily, and their shadows in the morning and evening"</em> [Al-Ra'd: 15].</p>
+        <p>The believer prostrates to God voluntarily and by choice, while the unbeliever and the creatures that are not mandated to prostrate to God involuntarily and forcibly, i.e. they are subject to God's cosmic laws and cannot deviate from them.</p>
+
+        <h3>Islam, voluntarily and involuntarily:</h3>
+        <div class="box box-verse">
+            <span class="verse-text">"And to Him belong those in the heavens and the earth, voluntarily and involuntarily, and to Him they shall return."</span>
+            <span class="verse-ref">(Al-Imran, 83)</span>
+        </div>
+        <p>This verse shows that everything in the heavens and the earth has surrendered to Allah, i.e. surrendered and submitted to Him:</p>
+        <ul>
+            <li><strong>Voluntary Islam:</strong> This is the surrender of the creature to God by choice and will, such as the surrender of the believers in God and the angels. These people have surrendered to God in both His legal and cosmic commands; they obey God's legal commands by choice, and they are subject to His cosmic commands by nature.</li>
+            <li><strong>Reluctant Islam:</strong> This is the surrender of a creature to God against its will, such as the surrender of infidels and hypocrites, as well as inanimate objects, plants, and animals. These are subject to God's cosmic commands by necessity, and cannot deviate from them, although the disbelievers and hypocrites do not surrender to God's legal commands by choice.</li>
+        </ul>
+
+        <div class="box box-note">
+            <span class="box-title">Imam Ibn Kathir says</span>
+            <p>"That is, all are His slaves and in His grip and under His compulsion and authority, the believers surrender to His legal command voluntarily, and the disbelievers surrender to His cosmic command forcibly."</p>
+            <span class="source">(Ibn Kathir, Tafsir al-Quran al-Azim, c/2, p. 66)</span>
+        </div>
+
+        <div class="box box-note">
+            <span class="box-title">Imam Ibn Taymiyyah said</span>
+            <p>"All creatures are obedient to their Lord, and the obedience is of two kinds: Obedience by the slave's choice, which is his obedience to God and his religious command, and obedience without his choice, which is his submission to what God has decreed for him."</p>
+            <span class="source">(Ibn Taymiyyah, "Total Fatwas", C/8, p. 173)</span>
+        </div>
+
+        <p>This universal, universal Islam, whether voluntarily or involuntarily, is what the verse refers to: <em>"The religion before God is Islam"</em> [Al-Imran: 19].</p>
+        <p>Islam, in its general sense of surrendering to God and submitting to His command, is the religion of the entire universe, from which no creature is left behind.</p>
+
+        <h2>Exhibit III: The Presentation of the Trust to the Heavens, Earth and Mountains: Reflections on Cosmic Consciousness</h2>
+        <h3>The story of the presentation of the trust: Between Text and Interpretation</h3>
+        <div class="box box-verse">
+            <span class="verse-text">"We offered the trust upon the heavens, the earth, and the mountains, but they refused to bear it, and were afraid of it, and man bore it, for he was unjust and ignorant."</span>
+            <span class="verse-ref">Al-Ahzab 72</span>
+        </div>
+
+        <h3>What is honesty?</h3>
+        <p>This verse tells a great story of the Qur'an, which is the story of the offering of the trust to the heavens, the earth and the mountains, and their refusal to carry it, and man's carrying it. Interpreters have differed on the meaning of the trust on many sayings, the most famous of which are:</p>
+        <ul>
+            <li><strong>It is the legal requirements:</strong> This is the opinion of the general public, which is that the Umnah is the legal duties, rulings, and charges that Allah has assigned to His servants.</li>
+            <li><strong>It is obedience:</strong> This is the opinion of Mujahid, Qadadah and Al-Dahhak, that the trust is obedience to Allah in His commands and prohibitions.</li>
+            <li><strong>It is prayer:</strong> According to Atta'ah, it is the prayer, because it is the pillar of the religion and its most important pillars.</li>
+            <li><strong>It is the covenant:</strong> According to al-Zajjar, it is the covenant that Allah took upon the children of Adam to worship Him and not to have anything in common with Him.</li>
+            <li><strong>It is the knowledge of God:</strong> This is the saying of some Sufis, that the trust is the knowledge of God Almighty and the recognition of His oneness and His sovereignty.</li>
+        </ul>
+        <p>The most likely - and God knows best - is the first opinion, which is that the ummanah includes all the legal duties and responsibilities that man has assumed, on top of which is the tawhid of God, the greatest of which is believing in God Almighty and fulfilling His rights, then the rights of the servants and creatures.</p>
+        <p>Sheikh Tantawi Jawhari, the author of the Tafsir al-Jawahir, says that the discourse is addressed to people in general: "All that you have been entrusted with, whether in word or deed, money or knowledge, and, in general, all the blessings that man has that benefit himself and others," and that the discourse is addressed to people in general.</p>
+        <p>Similarly, in Surah al-Mu'minun, the word "trusts" and "covenant" is mentioned in Surah al-Mu'minun: <em>Those who are faithful to their trusts and their covenant</em> (Al-Mu'minoon: 8).</p>
+
+        <h3>God offered the trust to the heavens, the earth, and the mountains</h3>
+        <p>As for God's offer of the trust to the heavens, the earth and the mountains, there have been statements regarding it, whether the offer is metaphorical, real or a parable:</p>
+        <p><strong>1- The offer is real, including Al-Hassan Al-Basri and others:</strong><br>
+        They said: The show is real, meaning that He showed the heavens, the earth and the mountains the trust and its neglect, which is reward and punishment, i.e., He showed them this, so they did not bear the weight of it, and they were afraid, and said, "I seek neither reward nor punishment: This is something we cannot bear, and we are obedient and obedient to Him in what they are commanded and harnessed to do.<br>
+        But the scholars said: It is well known that inanimate objects do not understand or answer, so life must be estimated, according to the latter view. This offer is an offer of choice, not obligation.<br>
+        Al-Nahhas said: This saying is the one on which the people of interpretation are based.<br>
+        Perhaps the refusal of the heavens, the earth and the mountains to accept the trust is based, as Ibn 'Abbas said, on the fear of failing to fulfill it, because they are predisposed to obedience and are satisfied with the mission they have been given in life.</p>
+        
+        <p><strong>2- The show is a metaphor, and the reason for this is that the heavens, the earth and the mountains here are its people and the meaning:</strong><br>
+        We offered the trust and its negligence to the people of the heavens and the people of the earth, angels, men and jinns, and they refused to bear its weight, as in <em>{ask the village}</em> [Yusuf: 82], i.e. its people. This is a metaphor.<br>
+        Some people said: The verse is a metaphor - in another way - meaning that if we measure the weight of the trust with the power of the heavens, the earth and the mountains, we see that they are not able to bear it, and that if they spoke, they would refuse and be afraid. This is as you say:<br>
+        You want to compare the strength of the camel to the weight of the burden, and you see that it falls short of it.</p>
+
+        <p><strong>3- Al-Qaffal and others said:</strong><br>
+        The offer in this verse is a parable, meaning that the heavens, the earth and the mountains, despite their great size, if they were so large that they could be charged, it would be difficult for them to adopt the laws, because of the reward and punishment in them.<br>
+        This is like saying: <em>{If we had sent down this Qur'an on a mountain}</em> [Al-Hashr 21/59] and then he said: <em>{And those examples we set for people}</em> (same verse).<br>
+        Al-Qaffal said: If it is established that the Almighty strikes parables, and we receive news that can only be taken as a parable, it must be taken as such.</p>
+        <p>In any case, the point of the verse is to illustrate the greatness and heaviness of the obligations and to alert mankind.</p>
+
+        <p>Exegetes have also differed on the meaning of the verse: "They refused to carry it and were afraid of it", according to two main statements:</p>
+        <p><strong>The first statement:</strong> This means that Allah Almighty offered the trust to the heavens, the earth and the mountains, and chose between accepting and rejecting it, but they chose to reject it because of the great responsibility and the weight of the responsibility. This is the appearance of the Qur'anic text and is the opinion of the majority of the Salaf.</p>
+        <p><strong>The second argument:</strong> That the refusal and pity are metaphorical, and are meant to show the greatness and heaviness of the trust, and that if it were offered to these great creatures, they would refuse to carry it and would be afraid of it. This is the opinion of some late commentators.</p>
+        <p><strong>Al-Shinqiti (may Allah have mercy on him) said:</strong> "In this verse, Allah has mentioned that He offered the trust, which is the charges with their subsequent reward and punishment, to the heavens, the earth and the mountains, and that they refused to carry it and were afraid of it, i.e.: This offer, refusal and pity are all true, and Allah has created for the heavens, the earth and the mountains a perception that He knows, and we do not know, and with that perception, they realized the offer of the trust to them, and they refused and feared, i.e.: She feared." ("Light of Manifestation" 36/139).</p>
+        <p>The most likely - and God knows best - is the first statement, because it is the apparent text, and the principle in Sharia texts is that they should be taken at face value unless there is evidence to the contrary. There is nothing that prevents God from creating in these creatures a perception and consciousness with which they understand the discourse and choose what they deem appropriate for them.</p>
+
+        <h3>Man is the bearer of trust: Between Injustice and Ignorance</h3>
+        <p>After the heavens, the earth and the mountains refused to carry the trust, man carried it. The Almighty said: "And man bore it, for he was unjust and ignorant."</p>
+        <p>Interpreters have differed on the description of man as "unjust and ignorant":</p>
+        <ul>
+            <li><strong>The first statement:</strong> That the description is an admonishment, meaning that man wronged himself by carrying the trust and responsibility with his helplessness and weakness, and ignorance of the consequences of the matter and what it entails. This is the opinion of some commentators.</li>
+            <li><strong>The second saying:</strong> The description is for praise, meaning that man is strong and courageous, bearing what the heavens, earth and mountains could not bear. This is the opinion of some commentators.</li>
+            <li><strong>The third saying:</strong> The description is a statement of fact, i.e. that it is in man's nature to be unjust and ignorant, as evidenced by the saying: 'He was unjust and ignorant', meaning that this description was fixed for him before he carried the trust. This is the most likely, because it is consistent with the apparent text, which is the use of the word "was," which indicates that man was characterized by injustice and ignorance before he took the trust.</li>
+        </ul>
+
+        <div class="box box-note">
+            <span class="box-title">Narration by Ibn Mas'ud</span>
+            <p>Al-Naqash narrated on the authority of Ibn Mas'ud that he said: The heavens, the earth and the mountains were invited to it, but they did not approach it, and said: "We cannot bear it." Adam came without being invited, moved the rock, and said: "If I were ordered to carry it, I would carry it." They said to him: "Carry it: He carried it up to his knees and then put it down, and said, "By Allah, if I wanted to increase it, I would increase it: He carried it up to his loins, then put it down, and said, "By Allah, if I wanted to increase it, I would increase it." They said, "Carry it," so he carried it until he put it on his shoulders: Stay there, for it is in your neck and in the neck of your progeny until the Day of Resurrection.</p>
+            <span class="source">(Tafsir al-Baghawi - Surat al-Ahzab)</span>
+        </div>
+
+        <p>The word "unjust" is an exaggerated form of unjust, and the word "ignorant" is an exaggerated form of ignorance, indicating the severity of these two qualities. Injustice is the misplacement of something, and ignorance is the lack of knowledge. By nature, man is inclined to oppress himself and others, and he is ignorant of the consequences and realities of things.</p>
+
+        <div class="box box-red">
+            <span class="box-title">Man is the bearer of trust</span>
+            <p>Man stood alone in the sanctuary of the universe, the heavens withdrew, the earth turned away, and the mountains were silent... The heavens withdrew, the earth turned away, and the mountains were silent. But man, this apparently weak being, powerful by choice, said: "I am for it." And the universes walked around him, witnessing this covenant.</p>
+        </div>
+
+        <p>Exegetes differ on the meaning of the words: 'And man bore it', according to two opinions:</p>
+        <ul>
+            <li><strong>The first statement:</strong> That the meaning of man here is Adam, peace be upon him, which is the opinion of some commentators.</li>
+            <li><strong>The second opinion:</strong> That the meaning of man is gender, i.e. the race of human beings. This is the most likely, because the context speaks of man as "ignorant and ignorant," and this description does not apply to Adam, peace be upon him.</li>
+        </ul>
+        <p>Therefore, man's bearing of the trust is neither absolutely praiseworthy nor absolutely reprehensible, but is praiseworthy in one way and reprehensible in another:</p>
+        <ul>
+            <li>It is praiseworthy in the sense that God Almighty has distinguished man with reason, will, and the ability to discriminate and choose, which qualifies him to carry the trust.</li>
+            <li>It is reprehensible in the sense that man is ignorant, oppresses himself and others, and is ignorant of the consequences of things.</li>
+        </ul>
+        <p>This is why humanity was divided into believers, hypocrites and polytheists in the verse immediately following the verse of trust: "May Allah punish the hypocrites and the hypocrites and the polytheists and the polytheists, and may Allah repent on the believers and the believing men and women, and may Allah be forgiving and merciful" (Al-Ahzab, 73).</p>
+
+        <h3>Reflections on the cosmic scene: Signs and Signals</h3>
+        <p>When contemplating the scene of the presentation of the trust to the heavens, the earth and the mountains, their refusal to carry it, their fear of it, and then man's carrying it, several profound connotations and references can be drawn:</p>
+        <ul>
+            <li><strong>Amazing cosmic awareness:</strong> The heavens, the earth and the mountains, which humans see as mere inanimate objects, have a consciousness and awareness that qualifies them to understand the divine speech, respond to it, and make decisions. This cosmic awareness opens wide horizons for understanding the relationship between man and the universe, and establishes a new vision of existence that goes beyond the narrow materialistic view.</li>
+            <li><strong>The wisdom and insight of beings:</strong> The heavens, the earth, and the mountains showed great wisdom and insight when they refused to carry the trust and were afraid of it. This reveals an aspect of the characteristics of a conscious universe that has wisdom, insight, and a deep understanding of things.</li>
+            <li><strong>Human advantage and challenge:</strong> This reveals a unique characteristic of man, namely his ability to endure, charge, and choose, despite all the weaknesses, injustice, and ignorance in his nature. It is this feature that made him qualified to be God's successor on earth and to carry the trust that the heavens, earth and mountains refused to carry.</li>
+            <li><strong>The logic of the mountains:</strong> The scene reveals the deep logic and wise philosophy of the mountains, which chose to remain in their innate nature, which is absolute submission to God's will and cosmic commands, without self-will or independent choice. This logic is reflected in their position that carrying the trust means leaving this nature and entering the world of responsibility, choice, and accountability, which their nature does not tolerate.</li>
+            <li><strong>The relationship between freedom and responsibility:</strong> The scene highlights the close relationship between freedom and responsibility, as trust means assignment and choice, which requires freedom and will, and entails responsibility and accountability. This is why man - with his mind and will - is the only creature qualified to carry this trust, and can be held accountable for its performance or loss.</li>
+        </ul>
+
+        <h3>The offer of trust and the option of choice: The Mystery of the Divine Offer</h3>
+        <p>One of the issues raised by some thinkers is: If the heavens, the earth, and the mountains refused to carry the trust and were afraid of it, why is it not mentioned that man was given the choice to carry it as well? How could man carry it when he was not offered a choice?</p>
+        <p>To answer this question, we can say:</p>
+        <ol>
+            <li><strong>The choice is implied:</strong> The Qur'an does not explicitly state that man has a choice in carrying the trust, but this choice is implied in the words: 'And man bore it', meaning that he chose to carry it by his own choice and will, and was not forced to do so. This is consistent with man's nature of choice and will.</li>
+            <li><strong>The first covenant:</strong> Man's bearing of the trust can be understood in the light of the first covenant that God took upon the children of Adam before their existence in this worldly life, as the Almighty said: <em>"When your Lord took from the children of Adam from their backs their offspring and testified to them against themselves, 'Am I not your Lord,' they said, 'Yes, we bear witness'"</em> [Al-A'raf: 172]. It may be that the carrying of the trust is linked to this covenant, and that man chose to carry it in that situation.</li>
+            <li><strong>Human nature:</strong> Man's carrying of the trust may be related to his innate nature, which makes him naturally ready to accept the assignment and responsibility. Man is conditioned to recognize God's sovereignty and acknowledge His oneness, as the Almighty said: <em>"So set your face to the righteous religion, the nature of God on which He has imprinted mankind; there is no alteration of the creation of God, and that is the righteous religion"</em> (Al-Rum 30).</li>
+            <li><strong>Transfiguration and honesty in the balance of knowledge:</strong> Some scholars believe that carrying the trust is related to the manifestation of the Almighty in the mirror of man, as man is the only creature that can be a manifestation of the perfect divine names and attributes. <strong>Bediuzzaman Nursi says:</strong> "Man is a reflective mirror of the Divine Names, and the greatest reflective mirror of them, as he is the collector of their meanings and includes some of their truths, and the whole universe is a great mirror of these names, while man is a mirror of all of them in a more specific and clear way" (Source: Messages of Light).</li>
+            <li><strong>Existential confusion:</strong> There is another philosophical reading that sees man's carrying of the trust as an expression of the existential confusion in which man lives, as he is a contradictory being, combining greatness and lowliness, strength and weakness, knowledge and ignorance. It is this confusion that led him to carry the trust without fully appreciating its consequences, hence he is described as "ignorant and unknowing".</li>
+        </ol>
+
+        <div class="box box-red">
+            <span class="box-title">Come willingly</span>
+            <p>In one of the first moments of creation, God addressed the sky while it was smoke, and the earth while it was in the process of formation, and said to them: "Come willingly or unwillingly." They did not hesitate, they did not protest, and they said together, in complete cosmic surrender: "We came willingly." These are not words... They did not hesitate, they did not need to, and they said together, in complete cosmic surrender, "We have come obediently."</p>
+            <p>In this majestic stillness, the universe was built on the tune of obedience, and the atoms and planets marched in the procession of the trust, but man ... alone chose to carry it.</p>
+        </div>
+
+        <h2>Exhibit IV: Manifestations of Cosmic Silence in the Qur'anic Scenes</h2>
+        <h3>The response of the universe at the beginning of its creation: The speech of the heavens and the earth</h3>
+        <p>One of the most wonderful Qur'anic scenes depicting the universe's supplication and submission to God is the scene of the response of the heavens and the earth to God's command at the beginning of their creation. The Almighty said:</p>
+        <div class="box box-verse">
+            <span class="verse-text">"Then He ascended to the sky while it was smoke, and He said to it and to the earth, 'Come willingly or unwillingly,' and they said, 'We have come willingly'"</span>
+            <span class="verse-ref">(Faslat 11)</span>
+        </div>
+        <p>This verse depicts a great scene of the first creation, in which the sky was smoke, i.e. a diffuse gaseous substance, and the earth was in the stage of formation. At this early stage, God addressed the heavens and the earth in the form of a command coupled with a choice: "Come willingly or willingly against your will," meaning that you come into existence and take the form I want for you, whether by your own choice or by compulsion.</p>
+        <p>The response of heaven and earth was immediate and positive: They said, "We have come willingly," meaning that they chose to obey and submit to God's command out of consent and acceptance, not out of coercion and compulsion. This indicates the awareness of heaven and earth, their ability to understand and respond to the divine discourse, and to choose voluntary obedience instead of coercion.</p>
+        
+        <p>Exegetes have differed on the meaning of the words: "They said, 'We have come to us willingly'" in two ways:</p>
+        <ul>
+            <li><strong>The first statement:</strong> That the saying is true, i.e., God spoke to the heavens and the earth and they actually said it. This is the appearance of the text, and it is the opinion of the majority of the Salaf.</li>
+            <li><strong>The second saying:</strong> The saying is metaphorical, meaning that they quickly responded to God's command and submitted to His will, as it is said, "The wall says so," meaning that it indicates it. This is the opinion of some commentators.</li>
+        </ul>
+        <p>The most likely statement is the first one, because it is the apparent text, and the principle in Sharia texts is that they should be taken at face value unless there is evidence to the contrary. There is nothing that prevents God from speaking the heavens and the earth, as He is capable of all things.</p>
+        <p><strong>Imam Ibn Kathir says:</strong> "That is, they responded and obeyed His command, responded to His will, and hastened to obey Him." (Ibn Kathir, "Tafsir al-Quran al-Azim", C/7, p. 156).</p>
+        <p><strong>Imam al-Tabari says:</strong> "So they answered: We have come to our Lord in obedience to your command, submitting to your will, we obey your command, and we submit to your will." (Al-Tabari, "Jama' al-Bayan fi Tafsir al-Quran," C/21, p. 439.)</p>
+
+        <h3>The testimony of the organs of the body: The organs speak.</h3>
+        <p>The Almighty says: <em>"On the Day of Judgment, their tongues, hands and feet will testify against them for what they did"</em> (Al-Nur 24)</p>
+        <p>The Almighty says: <em>"Today we seal their mouths, their hands will speak to us, and their feet will testify to what they used to earn"</em> (Yusuf 65)</p>
+        <p>He said: <em>"And they said to their flesh, 'Why have you testified against us?' They said, 'God, who gave birth to all things, and He created you the first time, and to Him you will return'"</em> (Chapter 21).</p>
+        <p>These verses depict a wondrous scene on the Day of Judgment, where the organs of the body speak and testify to what they did in the world. This indicates that these organs have a kind of consciousness and realization, and that they memorize their actions and will testify to them on the Day of Resurrection.</p>
+        <p>The scene includes a dialog between man and his organs, as man denounces the testimony of his organs against him, and asks them: "Why have you testified against us?" They answer that God has spoken to them, and that He is the One who has spoken everything.</p>
+        <p>The cosmic unity in submission to God includes all creatures from the smallest atom to the largest galaxy, and the organs of the human body are an integral part of this submissive universe, as they obey God compulsively and do not have the option of disobedience, while man alone has the will and the choice between obedience and disobedience.</p>
+        <p>This wondrous paradox will be revealed on the Day of Judgment when the organs testify against their owner, as they were the instruments of his deeds but had no choice in them, and this reveals the comprehensive cosmic system of preservation and recording that includes the entire universe in preserving and recording human deeds.</p>
+        <p>As part of the great cosmic system, the organs of the body preserve and record all their actions as part of the great cosmic system, which shows God's absolute justice and wisdom in making the witness from man's soul and organs.</p>
+        <p>In the Sahih, it is narrated from Anas bin Malik (may Allah be pleased with him) who said: "We were with the Messenger of Allah (peace be upon him) and he laughed and said: 'Do you know what I am laughing at?' We said: Allah and His Messenger know. He said: 'From the slave's conversation with his Lord, saying: "Lord, did you not draw me from injustice?" He said: "Yes, you did. ' He said: 'I do not authorize myself except by my own witness. ' He said: 'It is enough for you to be your own judge today, and for the scribes to be your witnesses. He said: Then his corners will be sealed, and it will be said to his corners: "Let them speak, , and they will speak their deeds, and then they will not speak. "Far be it from you, for you I was struggling'" (Muslim, "Sahih Muslim", Book of Asceticism and Ruqaqiq, Hadith No. 2969).</p>
+        <p>This scene raises several philosophical and scientific questions:</p>
+        <ul>
+            <li>How do organs memorize actions? Modern science reveals that living cells retain genetic and cellular memory, and that human tissues retain traces of actions and habits.</li>
+            <li>What is the nature of consciousness in the organs, is it independent of the consciousness of its owner, or is it part of the total consciousness of the body, but separated from it on the Day of Judgment?</li>
+            <li>What is the relationship between man and his organs? Is it a relationship of use and exploitation, or is it a relationship of integration and cooperation, and what is man's responsibility towards his organs?</li>
+        </ul>
+        <p>These and other questions open wide horizons for reflection on the nature of cosmic consciousness and the relationship of man to his body and the universe around him. These questions have made me wonder what God's intentions are, and what secret He has placed in these organs so that they retain this memory that testifies against their owner.</p>
+
+        <h3>Islam is the religion of the universe: The Unity of Divine Laws</h3>
+        <div class="box box-verse">
+            <span class="verse-text">"Indeed, the religion in the sight of Allah is Islam"</span>
+            <span class="verse-ref">(Al-Imran 19)</span>
+        </div>
+        <div class="box box-verse">
+            <span class="verse-text">"Is there any other religion than the religion of Allah that they seek?"</span>
+            <span class="verse-ref">(Al-Imran 83)</span>
+        </div>
+        <p>For to Him belongs whoever is in the heavens and the earth, voluntarily and involuntarily, and to Him they shall return.</p>
+        <p>Islam, in its general sense, is surrender to God, submission to His command, and submission to His will. This comprehensive meaning of Islam is the religion of the entire universe, from the atom to the galaxy. Every creature in this universe is a "Muslim" in the sense that it is subject to God's cosmic laws and runs according to His will and decree.</p>
+        <p>The sun is a Muslim, the moon is a Muslim, the stars are Muslims, the trees, the animals, and the inanimate objects are all Muslims, because they are all subject to God's law and will, and cannot deviate from it. This is the meaning of "Islam involuntarily" mentioned in the verse.</p>
+        <p>As for man, he is the only creature that has the choice to be a Muslim voluntarily and by choice, or to be a disbeliever by choice, although he remains a Muslim involuntarily in terms of his submission to the cosmic and biological laws that govern his existence.</p>
+        <p>This unity in the religion of the universe reflects the unity of the Creator and the unity of the source. The laws that govern the movement of the planets are the same laws that govern the movement of atoms, and they are the same laws that govern the movement of life and death.</p>
+
+        <h2>Fifth research: Faith and Educational Implications of the Qunut of the Universe</h2>
+        <p>Believing in the universe's reverence and submission to God has profound faith and educational implications in the life of a Muslim:</p>
+        <ul>
+            <li><strong>Sensing the greatness of the Creator:</strong> When a Muslim realizes that this great universe, with all its galaxies, stars and planets, is subject to God and submissive to His command, he feels the greatness of the Creator, His ability and His tyranny, which increases his reverence and glorification of God.</li>
+            <li><strong>Feeling of belonging and accompaniment:</strong> The believer feels that he is not alone in his worship of God, but that he is part of a great cosmic procession that includes all creatures, all of whom share with him in servitude, submission and reverence to God. This feeling removes the feeling of loneliness and alienation, and fills the heart with reassurance and peace.</li>
+            <li><strong>Discipline and compliance:</strong> When a Muslim sees that the entire universe is disciplined by God's command and compliant with His laws, he is ashamed to be the only dissonant voice in this harmonic cosmic symphony. This prompts him to discipline himself and comply with God's commands voluntarily and by choice.</li>
+            <li><strong>Humility and breaking the ego:</strong> The universe's obedience to God teaches man humility and breaking the ego and arrogance. If these great creatures are submissive to God, then how can the weak man be arrogant towards his Lord?</li>
+            <li><strong>Trust and Reliance:</strong> When a believer realizes that the entire universe is in God's grip and under His control, he trusts God and relies on Him, knowing that nothing happens in this universe except with His permission and will.</li>
+        </ul>
+
+        <h2>The sixth research: The Qunut of the Universe in the Balance of Contemporary Science</h2>
+        <p><strong>Physical laws as a manifestation of cosmic submission</strong></p>
+        <p>Modern science reveals to us that the universe is governed by precise and strict physical laws, from the laws of gravity and motion to the laws of quantum mechanics and relativity. These laws allow no room for chaos or absurdity, but govern the movement of every atom and every galaxy with extreme precision.</p>
+        <p>Scientists call these laws the "Laws of Nature", but in the believer's perspective they are "God's Sunnahs" in His universe. The universe's absolute submission to these laws is a scientific manifestation of the concept of "cosmic qunut". Matter, energy, space and time are all subject to these laws and cannot deviate from them.</p>
+        <p>Albert Einstein said: "The most incomprehensible thing about the universe is that it is comprehensible." He meant that the universe is subject to precise mathematical laws that the human mind can discover and understand. This submission to laws is the essence of cosmic qunut.</p>
+
+        <h3>Cosmic Constants: Fine-Tuning or Conscious Submission?</h3>
+        <p>Cosmologists have discovered that the universe relies on a set of fundamental physical constants, such as the speed of light, the gravitational constant, Planck's constant, and others. These constants have very precise values, and if they changed by a very small amount, the universe as we know it would not have arisen and life would not have been possible.</p>
+        <p>This "fine-tuning" of the universe poses a major dilemma for materialists: How can these constants be so precise by chance? But from a faith perspective, this control is evidence of the universe's submission to the will of a wise and expert Creator, who set these constants to make the universe habitable.</p>
+        <p><strong>Biological intelligence and innate guidance:</strong> In the world of living organisms, we see manifestations of innate guidance that resembles conscious qunut. Migratory birds travel thousands of miles to precise destinations without maps or compasses. Bees build their hexagonal hives with baffling engineering precision. Ants organize their colonies in complex social systems. Plants turn towards the light and extend their roots towards the water.</p>
+        <p>This innate guidance, which scientists call "instinct" or "genetic programming," is in the Qur'anic view a form of "private revelation" or "innate inspiration" that guides creatures to fulfill their function in life. The Almighty says: <em>"And your Lord revealed to the bees that they should take houses from the mountains, and from the trees, and from what they erect"</em> [Al-Nahl: 68].</p>
+
+        <h3>Recent discoveries that support the concept of cosmic silence</h3>
+        <div class="box box-science">
+            <span class="box-title">Quantum Entanglement</span>
+            <p>Quantum physics has revealed the phenomenon of "quantum entanglement," where two particles are linked in such a way that the state of one affects the state of the other instantly, no matter how far apart they are. This phenomenon indicates a deep interconnectedness between parts of the universe, and suggests that the universe behaves as a single coherent unit, which is consistent with the concept of the universe's submission to a single system.</p>
+        </div>
+
+        <div class="box box-science">
+            <span class="box-title">The Holographic Universe</span>
+            <p>Some modern physical theories suggest that the universe may be like a "hologram," where information is distributed throughout every part of it. This means that every part of the universe contains information about the whole, which reinforces the idea of cosmic unity and comprehensive submission.</p>
+        </div>
+
+        <div class="box box-science">
+            <span class="box-title">Water Memory</span>
+            <p>Some controversial experiments suggest that water may have a "memory" that retains the traces of substances dissolved in it, or even the traces of words and emotions directed at it. If these hypotheses are proven correct, they will be strong evidence that inanimate objects are affected by moral influences, which brings us closer to understanding the concept of the influence of the universe by dhikr and tasbih.</p>
+        </div>
+
+        <p>Although science does not use religious terms such as "qunut" or "submission," its discoveries reveal a strictly organized, interconnected and fine-tuned universe, governed by uniform laws and directed towards specific goals (such as the emergence of life and consciousness). This scientific picture is fully consistent with the faith vision of a universe submissive to God and subject to His will.</p>
+
+        <h2>Chapter Seven: Reflections and Applications: A Journey with the Cosmic Silence</h2>
+        <p><strong>Harmony with the rhythm of the universe:</strong> Man can live in harmony with the rhythm of the universe by aligning his will with God's will, just as the universe aligns its movement with God's laws. This harmony is achieved through obedience, worship, and compliance with God's commands, thus man becomes part of the great cosmic symphony.</p>
+        <p><strong>Conscious bearing of the trust:</strong> Man's bearing of the trust requires him to be responsible for his choices and actions. He must use his freedom of choice to achieve goodness, justice and reform on earth, and not to spread corruption and injustice. This conscious bearing of the trust is the essence of "optional qunut".</p>
+        <p><strong>From Involuntary Islam to Voluntary Islam:</strong> The journey of faith is a transition from the state of "involuntary Islam" (submission to biological and cosmic laws) to the state of "voluntary Islam" (conscious submission to God's command). In this transition, man achieves his true humanity and rises to the rank of succession.</p>
+        <p><strong>Contemplating the signs of Qunut in the horizons and the souls:</strong> The believer is invited to contemplate the signs of God in the universe and in himself, to see in them the manifestations of Qunut and submission. The sunrise, the stillness of the night, the beating of the heart, the movement of the breath, all are verses that speak of submission to the Creator.</p>
+        
+        <div class="box box-reflection">
+            <span class="box-title">Practical Exercises</span>
+            <ul>
+                <li><strong>Qunut Meditation:</strong> Sit in a quiet place, close your eyes, and imagine the entire universe in a state of prostration to God. Imagine the galaxies, stars, planets, mountains, trees, and seas, all bowing in reverence to the Creator. Feel that you are part of this great scene, and bow your heart and soul to God.</li>
+                <li><strong>Listening to the silence of the universe:</strong> In the moments of silence, try to listen to the "voice of silence" in the universe. It is not an audible voice, but a feeling of the deep stillness that envelops existence, a stillness pulsating with the meaning of submission and obedience.</li>
+                <li><strong>Dialogue with the organs:</strong> Talk to your organs (your hand, your eye, your heart) and thank them for their service to you, and remind them that they are soldiers of God subject to His command. Ask them to testify for you and not against you on the Day of Resurrection.</li>
+            </ul>
+        </div>
+
+        <h2>Conclusion: Toward an Integral Vision of the Universe</h2>
+        <p>At the conclusion of this chapter, we find ourselves before an integrated vision of the universe as a "mosque" or "sanctuary" in which all creatures practice their rituals of servitude to God. There is no separation between the "religious" and the "cosmic," nor between the "unseen" and the "visible." Everything is from God and to God.</p>
+        <p>The concept of the Qunut of the universe can be a bridge for integration between science and religion, and to reconcile the Qur'anic vision of the universe with contemporary scientific discoveries. The immutable physical laws, the wondrous cosmic constants, and the natural intelligence in biological systems all point to the universe's silence and submission to God.</p>
+        <p><strong>Dialogue between humans and the universe is a civilizational necessity:</strong> In an era of environmental crises, global warming, and environmental pollution, dialogue between humans and the universe becomes an urgent civilizational necessity. This dialogue requires respecting the sacredness of the universe, listening to its voice, learning from its wisdom, and participating in its praise.</p>
+        <p>The universe's reverence and submission to God is not just a religious or philosophical topic, but a comprehensive vision of existence that establishes a balanced relationship between man and the universe, between matter and spirit, and between the Creator and the created. This integrative vision is what the world needs today, in light of the divisions, conflicts and crises that threaten the future of humanity.</p>
+        <p>In the next chapter, we will deal with the subject of the prostration of the universe and its submission to God, another aspect of the universe's awareness and realization that complements what we have discussed in this chapter about the prostration of the universe and its submission to God.</p>
+        <p style="text-align: center; margin-top: 50px; font-weight: bold; color: var(--primary-color);">God knows best and is the wisest</p>
+
+        <!-- Chapter Navigation -->
+        <div class="chapter-navigation">
+            <a href="index.html" class="nav-btn btn-home">
+                <i class="fas fa-home"></i>
+                <span>Back to Home</span>
+            </a>
+            <a href="chapter4.html" class="nav-btn btn-next">
+                <span>Next Chapter</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

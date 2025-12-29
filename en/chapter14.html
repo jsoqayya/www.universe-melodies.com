@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Fourteen: The Conscious Universe Between Islamic Philosophy and Modern Scientific Theories</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+        :root {
+            /* Philosophical/Deep Palette */
+            --primary-color: #2e1a47; /* Deep Purple for Philosophy */
+            --secondary-color: #4a3b69; /* Muted Purple */
+            --accent-color: #d4a373; /* Antique Gold/Beige */
+            --text-main: #333333;
+            --bg-color: #fcfbf9; /* Warm off-white */
+            
+            /* Boxes */
+            --box-quran-bg: #e8f5e9;
+            --box-quran-border: #2e7d32;
+            --box-science-bg: #e3f2fd;
+            --box-science-border: #1565c0;
+            --box-quote-bg: #fff3e0;
+            --box-quote-border: #ef6c00;
+            --box-reflection-bg: #f3e5f5;
+            --box-reflection-border: #7b1fa2;
+            --box-desc-bg: #f5f5f5;
+            --box-desc-border: #616161;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.9;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            border-top: 8px solid var(--primary-color);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+            line-height: 1.3;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.8em;
+            font-weight: 700;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 25px;
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        h2 {
+            font-size: 2.2em;
+            border-left: 6px solid var(--secondary-color);
+            padding-left: 20px;
+            background: linear-gradient(90deg, #f3e5f5 0%, #ffffff 100%);
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 60px;
+        }
+
+        h3 {
+            font-size: 1.6em;
+            color: var(--secondary-color);
+            font-weight: 700;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        h4 {
+            font-size: 1.3em;
+            color: #5e35b1; /* Deep Violet */
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.15em;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            font-size: 1.15em;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Table of Contents */
+        .toc-container {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            font-size: 1.1em;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Boxes */
+        .box {
+            padding: 30px;
+            margin: 35px 0;
+            border-radius: 6px;
+            border-left-width: 6px;
+            border-left-style: solid;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .desc-box {
+            background-color: var(--box-desc-bg);
+            border-left-color: var(--box-desc-border);
+            font-style: italic;
+            color: #424242;
+        }
+        .desc-box::before {
+            content: "Chapter Overview";
+            display: block;
+            font-weight: 700;
+            color: var(--box-desc-border);
+            text-transform: uppercase;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .quran-box {
+            background-color: var(--box-quran-bg);
+            border-left-color: var(--box-quran-border);
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.2em;
+            color: #1b5e20;
+        }
+        .quran-box::before {
+            content: "Quranic Verse";
+            display: block;
+            font-weight: 700;
+            color: var(--box-quran-border);
+            text-transform: uppercase;
+            font-size: 0.75em;
+            margin-bottom: 10px;
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .science-box {
+            background-color: var(--box-science-bg);
+            border-left-color: var(--box-science-border);
+            color: #0d47a1;
+        }
+        .science-box::before {
+            content: "Scientific Insight / Theory";
+            display: block;
+            font-weight: 700;
+            color: var(--box-science-border);
+            text-transform: uppercase;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .quote-box {
+            background-color: var(--box-quote-bg);
+            border-left-color: var(--box-quote-border);
+            font-style: italic;
+            color: #e65100;
+        }
+        .quote-box::before {
+            content: "Philosophical Quote";
+            display: block;
+            font-weight: 700;
+            color: var(--box-quote-border);
+            text-transform: uppercase;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .reflection-box {
+            background-color: var(--box-reflection-bg);
+            border-left-color: var(--box-reflection-border);
+            color: #4a148c;
+        }
+        .reflection-box::before {
+            content: "Reflection / Experience";
+            display: block;
+            font-weight: 700;
+            color: var(--box-reflection-border);
+            text-transform: uppercase;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .image-placeholder {
+            background-color: #fafafa;
+            border: 2px dashed #bdbdbd;
+            padding: 30px;
+            color: #757575;
+            margin: 40px 0;
+            font-size: 1em;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e0e0e0;
+            margin: 60px 0;
+        }
+
+        /* Chapter Navigation */
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 2px solid #e5e7eb;
+            gap: 20px;
+        }
+
+        .nav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+        }
+
+        .btn-home {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-next {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+        }
+
+        .btn-next:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .chapter-navigation {
+                flex-direction: column;
+            }
+            .nav-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Switch Button -->
+    <div style="position: fixed; top: 80px; right: 20px; z-index: 9999;">
+        <a href="../chapter14.html" style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;">
+            <span>🌐</span>
+            <span>النسخة العربية</span>
+        </a>
+    </div>
+
+    <!-- Language Switcher -->
+    <a href="../chapter14.html" style="position: fixed; top: 20px; right: 20px; z-index: 1000; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-language"></i>
+        العربية
+    </a>
+
+<div class="container">
+
+    <h1>Chapter Fourteen<br>The Conscious Universe Between Islamic Philosophy and Modern Scientific Theories</h1>
+
+    <div class="box desc-box">
+        <strong>Chapter Description:</strong> This chapter presents an in-depth comparative study between contemporary Western theories and Islamic philosophy on the concept of cosmic consciousness, beginning by analyzing the levels of consciousness in creatures from an Islamic perspective, from the consciousness of angels and humans to that of animals, plants, and inanimate objects, while exploring the levels of consciousness in the human psyche and the internal components of the human mind, heart, and soul. He goes on to review the manifestations of cosmic consciousness in the experience of faith through the phenomena of inspiration, revelation, true vision, karamat (miracles) and paranormal, showing how these experiences reflect the human connection to the greater cosmic consciousness. It then presents an intellectual journey with the experiences of contemporary Muslim thinkers in understanding the conscious universe, from Muhammad Iqbal and his dynamic philosophy of life to Sayyid Hussein Nasr and the concept of sacred science, from Taha Abdul Rahman and the theory of credit to Malik Badri and reflection as a gateway to cosmic consciousness, from Muhammad Rateb al-Nabulsi and the living, praised universe to Ali Izetbegovic and consciousness between matter and spirit. The chapter explores contemporary Western theories of cosmic consciousness, from Panpsychism and Integrated Information Theory to Quantum Mind Theory and Ecological Consciousness Theory, with a detailed analysis of their philosophical arguments and scientific applications. He provides a comprehensive critical comparison between these two perspectives, showing points of convergence such as the universality and hierarchy of consciousness and cosmic interconnectedness, and points of divergence in reference, purpose, and spiritual dimension, while exploring the possibilities for future integration and dialog. Finally, he presents personal and practical experiences in the study of cosmic consciousness, from contemplative practices combining Western techniques and Qur'anic reflection to scientific observations on the consciousness of nature and plants. This chapter proves that the concept of cosmic consciousness represents a unique meeting point between science and faith, where contemporary Western theories discover what the Qur'an pointed out centuries ago about the praise of everything in the universe, while the Islamic vision adds the spiritual, ethical and teleological dimension that makes understanding cosmic consciousness more integrated, holistic and meaningful.
+    </div>
+
+    <div class="toc-container">
+        <h3>Table of contents</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Topic title</th>
+                    <th>Page number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>The first research: Levels of Consciousness in Creatures from an Islamic Perspective</td><td>5</td></tr>
+                <tr><td>Research II: Manifestations of Cosmic Consciousness in the Faith Experience</td><td>9</td></tr>
+                <tr><td>Chapter Three: Experiences of the Conscious Universe by Contemporary Muslim Philosophers</td><td>11</td></tr>
+                <tr><td>Finding Four: The Concept of Cosmic Consciousness in Contemporary Western Philosophy</td><td>26</td></tr>
+                <tr><td>Research Paper V: A Critical Comparison between Western Theories and the Islamic Vision</td><td>33</td></tr>
+                <tr><td>Awareness of the Last Day: Quranic Scenes and Images</td><td>21</td></tr>
+                <tr><td>Fourth research: The Concept of a Conscious Universe in the Qur'anic Conceptualization</td><td>26</td></tr>
+                <tr><td>Fifth article: The Conscious Universe between the Qur'anic Conceptualization and Modern Science</td><td>33</td></tr>
+                <tr><td>Research VI: Experiments in the Study of Cosmic Consciousness: Between the West and Islam</td><td>34</td></tr>
+                <tr><td>Chapter Seven: Future Prospects: Toward a deep dialog between different visions of cosmic consciousness</td><td>36</td></tr>
+                <tr><td>Conclusion: Cosmic Consciousness as a point of convergence between science and faith</td><td>37</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>When I was fourteen years old, I meditated for the first time on God's saying:</p>
+    
+    <div class="box quran-box">
+        "The seven heavens and the earth and all who are in them glorify Him. There is not a single thing that does not glorify His praise—but you simply do not comprehend their glorification. Indeed, He is Most Forbearing, All-Forgiving."<br>
+        [Al-Israa: 44]
+    </div>
+
+    <p>I paused for a long time, wondering: How do inanimate objects praise? Does a stone have a consciousness? Does a tree have a cognition?<br>
+    These questions have haunted me for many years, and the more I read in the Islamic tradition and contemporary philosophy, the more I found myself confronted with an amazing world of ideas about what I now call "cosmic consciousness" - a concept that goes beyond limiting consciousness to humans or higher living beings, and extends to every atom in existence.</p>
+
+    <hr>
+
+    <h2>The first research: Levels of Consciousness in Creatures from an Islamic Perspective</h2>
+    
+    <h3>Hierarchy of consciousness in creatures</h3>
+    <p>The Islamic vision presents a gradual conceptualization of consciousness in creatures, where the levels of consciousness and cognition vary among different creatures according to their nature and function in the system of creation.</p>
+    
+    <div class="box quran-box">
+        "And there is no creature on [or within] the earth or bird that flies with its wings except [that they are] communities like you. We have not neglected in the Record a thing. Then to their Lord they will be gathered."<br>
+        [Al-An'am: 38]
+    </div>
+
+    <p>When contemplating the legitimate texts, a hierarchy of consciousness in creatures can be deduced, as follows:</p>
+
+    <h4>(a) Consciousness of Angels</h4>
+    <div class="box quran-box">
+        "They said, ‘Exalted are You; we have no knowledge except what You have taught us. Indeed, it is You who is the Knowing, the Wise."<br>
+        [Al-Baqarah: 32]
+    </div>
+    <div class="box quran-box">
+        "And when your Lord said to the angels, ‘Indeed, I will place on the earth a successive authority.’ They said, ‘Will You place upon it one who causes corruption therein and sheds blood, while we declare Your praise and sanctify You?’ Allah said, ‘Indeed, I know that which you do not know."<br>
+        [Al-Baqarah: 30]
+    </div>
+
+    <h4>(b) Human Consciousness</h4>
+    <p>Man is an honored creature, created by God in the best form, and distinguished by his intellect, will, and ability to choose. Allah made him a caliph in the earth, taught him all the names, and gave him what is in the heavens and the earth.</p>
+    <div class="box quran-box">
+        "And We have certainly honored the children of Adam and carried them on land and sea and provided them with good and lawful provisions, and preferred them over much of what We have created, with definite preference."<br>
+        [Al-Israa: 70]
+    </div>
+    <p>Man has an evolved consciousness that enables him to know and believe in God, to know himself and the universe around him, and to realize truth, goodness, and beauty. But this consciousness varies among people, depending on their knowledge, faith, and purity of heart.</p>
+    <div class="box quran-box">
+        "Is one who is obedient during the night, prostrating and standing in prayer, fearful of the Hereafter and hopeful of the mercy of his Lord—[like one] who does not? Say: ‘Are those who know equal to those who do not know?’ It is only those of understanding who will remember."<br>
+        Surah Az ‑ Zumar (39:9)
+    </div>
+
+    <h4>(c) Animal consciousness</h4>
+    <p>Animals have a kind of consciousness and realization that enables them to know their Creator and praise Him, and to know what benefits them and what harms them.</p>
+    <div class="box quran-box">
+        "And there is no creature on or within the earth or bird that flies with its wings except that they are communities like you. We have not neglected in the Register a thing. Then unto their Lord they will be gathered."<br>
+        [Al-An'am: 38]
+    </div>
+    <p>In the Sunnah, it is mentioned that animals have some kind of consciousness and realization, as in the story of the Prophet's camel that parked in the place where the Prophet's Mosque was built, the story of the camel that complained to the Prophet, the story of the wolf that spoke to the shepherd, and others.</p>
+
+    <h4>(d) Plant Consciousness</h4>
+    <p>Plants have a kind of consciousness and realization that enables them to know their Creator, praise Him, and know what benefits them and what harms them.</p>
+    <div class="box quran-box">
+        “And the stars and the trees prostrate themselves.”<br>
+        [Al-Rahman: 6]
+    </div>
+    <p>The Sunnah of the Prophet indicates that plants have some kind of consciousness and realization, as in the story of the stump bowing to the Prophet (peace be upon him), the story of the peace of the stone on the Prophet (peace be upon him), and others.</p>
+
+    <h4>(e) Consciousness of inanimate objects</h4>
+    <p>Inanimate objects have a kind of consciousness and realization that enables them to know their Creator, praise Him, and obey His command.</p>
+    <div class="box quran-box">
+        "And there are some of the stones which fall down from fear of Allah. And Allah is not unaware of what you do."<br>
+        [Al-Baqarah: 74]
+    </div>
+    <p>The Sunnah of the Prophet indicates that inanimate objects have some kind of consciousness and realization, as in the story of the delivery of the stone to the Prophet (peace and blessings be upon him) before the mission, the story of Mount Uhud that shook with joy for the Prophet (peace and blessings be upon him and his companions), the story of the pulpit that bowed to the Prophet (peace and blessings be upon him), and others.</p>
+
+    <h3>Levels of consciousness in the human psyche</h3>
+    <p>The Islamic vision provides an integrated conceptualization of the levels of consciousness in the human psyche, represented by three main levels:</p>
+
+    <h4>(a) The evil self</h4>
+    <p>This is the self that is inclined to lusts and pleasures, and pushes its owner into sins and misdeeds. God Almighty says in the words of the dear woman:</p>
+    <div class="box quran-box">
+        "And I do not acquit myself. Indeed, the soul is ever inclined to evil, except those upon whom my Lord has mercy. Indeed, my Lord is Forgiving and Merciful."<br>
+        Surah Yūsuf (12:53)
+    </div>
+    <p>The owner of this self is at a low level of consciousness, obscured from the realities of existence, preoccupied with lusts and pleasures, and oblivious to the remembrance and worship of God.</p>
+
+    <h4>(b) The blameful nafs</h4>
+    <p>This is the self that blames its owner for negligence and sins, and pushes him to repentance and repentance.</p>
+    <div class="box quran-box">
+        “And I swear by the reproaching soul to the certainty of resurrection.”<br>
+        [Al-Qiyamah: 2]
+    </div>
+    <p>The owner of this soul is at an intermediate level of consciousness, oscillating between vigilance and obliviousness, between turning to God and turning away from Him, between obedience and disobedience.</p>
+
+    <h4>(c) The reassured soul</h4>
+    <p>This is the soul that is reassured by Allah, settled in obedience to Him, and satisfied with His decree and destiny.</p>
+    <div class="box quran-box">
+        'O you who are the tranquilized soul * Return to your Lord in contentment and satisfaction'<br>
+        [Al-Fajr: 27-28]
+    </div>
+    <p>The owner of this soul is in a high level of consciousness, awake in heart, present with God, occupied with His remembrance and worship, and sensing His greatness and majesty.</p>
+
+    <h3>Mind, Heart and Soul in the Islamic Vision</h3>
+    <p>The Islamic vision provides an integrated conceptualization of man's internal components that shape his consciousness and perception, which are represented by four main components:</p>
+
+    <h4>(a) The mind</h4>
+    <p>The mind is the instrument of thought, consideration and reasoning, and it is the basis of the mandate, by which man distinguishes between truth and falsehood, good and evil.</p>
+    <div class="box quran-box">
+        "In the creation of the heavens and the earth and the difference of night and day are signs for those who have the intellect"<br>
+        [Al-Imran: 190]
+    </div>
+    <p>In the Islamic vision, reason is not just a biological function of the brain, but a moral power, deposited in man, that enables him to think, reflect and reason. This power is capable of growth and development through knowledge, reflection and contemplation, as well as atrophy and regression through ignorance, inattention and rejection.</p>
+
+    <h4>(b) The Heart</h4>
+    <p>In the Islamic vision, the heart is the center of spiritual awareness and perception, the place of faith and knowledge, through which man communicates with his Lord and receives guidance and inspiration from Him.</p>
+    <div class="box quran-box">
+        "And indeed, the Qur’an is the revelation of the Lord of the worlds. The Faithful Spirit [i.e. Gabriel] has brought it down upon your heart. To make you among the Warners"<br>
+        Surah ash ‑ Shu‘arā ʾ (26:192–194)
+    </div>
+    <p>The heart is susceptible to guidance and misguidance, to light and darkness, to life and death. The Prophet (peace and blessings of Allah be upon him) says: "In the body, there is one thing, if it is good, the whole body is good, and if it is bad, the whole body is bad, and that is the heart" (Agreed upon).</p>
+
+    <h4>(c) The Soul</h4>
+    <div class="box quran-box">
+        "And they ask you about the soul. Say, ‘The soul is of the affair of my Lord, and mankind have not been given of knowledge except a little.’"<br>
+        [Al-Israa': 85]
+    </div>
+    <p>The soul is from the command of God, and it is from the unseen world, which is known only to God. Therefore, man's knowledge of it is limited to what is mentioned in the legal texts and what can be deduced from them.</p>
+
+    <hr>
+
+    <h2>Research II: Manifestations of Cosmic Consciousness in the Faith Experience</h2>
+    
+    <h3>Inspiration and revelation</h3>
+    <p>One of the manifestations of cosmic consciousness in the faith experience is the phenomenon of inspiration and revelation, which is represented by the believer receiving knowledge and truths, not through the senses or rational reasoning, but through the heart and soul.</p>
+    <div class="box quran-box">
+        “So be mindful of Allah. And Allah teaches you. And Allah is Knowing of all things.”<br>
+        [Al-Baqarah: 282]
+    </div>
+    <div class="box quran-box">
+        “And those who strive for Us – We will surely guide them to Our ways. And indeed, Allah is with the doers of good.”<br>
+        [Al-Ankabut: 69]
+    </div>
+    <p>Inspiration in the Islamic view is what God sheds in the heart of the believer in terms of knowledge, knowledge and guidance, which is a kind of faithful discernment, which is realized by the strength of faith and the purity of the heart. The Prophet (peace be upon him) said: "Fear the intuition of the believer, for he looks by the light of God" (narrated by al-Tirmidhi).</p>
+    <p>Revelation is the revelation of some unseen truths to the believing heart, as a result of its serenity and closeness to God. It is not a revelation, and its infallibility should not be believed, but it is subject to the legal scale, and what agrees with the Book and the Sunnah is accepted, and what contradicts them is rejected.</p>
+
+    <h3>True vision</h3>
+    <p>One of the manifestations of cosmic consciousness in the faith experience is the phenomenon of true vision, which is represented by the believer's vision during sleep of things that are true, realized in reality, or have a correct interpretation. The Prophet (peace and blessings of Allah be upon him) says: "A true vision is one of the forty-six parts of prophecy" (agreed upon). And he says: "If the time draws near, a Muslim's vision will not lie, and the most truthful of them will be the most truthful of them" (agreed upon).</p>
+    <p>In the Islamic view, a true vision is what God shows the believer in his sleep, which has an interpretation in reality. It is a type of inspiration and part of prophecy, as it gives insight into unseen matters. It is explained in the light of cosmic consciousness that when the human soul is separated from the body during sleep, it connects to the cosmic consciousness and is privy to certain unseen realities that it cannot see in the waking state.</p>
+    <div class="box quran-box">
+        "Allah takes away the souls at the time of their death and those that have not died in their sleep, and He holds the one that has already died and sends the other to an appointed time."<br>
+        [Al-Zamar: 42]
+    </div>
+    <p>Sleep is a minor death, in which the soul is partially separated from the body, allowing it to communicate with the unseen world and gain access to some of its truths.</p>
+
+    <h3>Karamat and paranormal</h3>
+    <p>One of the manifestations of cosmic awareness in the faith experience is the phenomenon of karamat and paranormal, which is the violation of the usual laws of nature, with God's permission, at the hands of some saints and righteous people.</p>
+    <p>In the Islamic view, a karamah is a supernatural event that God shows at the hands of one of His saints, in order to honor and support him. It is not a miracle, because a miracle is reserved for the prophets and is accompanied by a claim of prophethood and a challenge to the opponents, while a dignity appears at the hands of a righteous guardian, without a claim of prophethood and without a challenge.</p>
+    <p>Some dignities are mentioned in the Holy Qur'an, including the dignity of Mary, peace be upon her, as Zacharias found sustenance with her:</p>
+    <div class="box quran-box">
+        "When Zacharias entered the sanctuary and found sustenance with her, he said, 'O Mary, where did you get this from?"<br>
+        [Al-Imran: 37]
+    </div>
+    <p>Among them is the honor of the companions of the cave, who remained in their cave for three hundred years and increased nine years:</p>
+    <div class="box quran-box">
+        "They remained in their cave for three hundred years and increased nine years"<br>
+        [Al-Kahf: 25]
+    </div>
+    <p>The Muslim's faith experience constitutes a vast field for the manifestation of esoteric knowledge, which goes beyond the senses to the ranks of the heart and soul, and appears in the forms of inspiration, vision, and dignity. These are not sources of legislation, but spiritual revelations that indicate the believer's interaction with the unseen, and the high level of his perception when his heart is purified and his certainty is strengthened. All of this is from the overflow of 'My strength is only in Allah'.</p>
+
+    <hr>
+
+    <h2>Chapter Three: Experiences of the Conscious Universe by Contemporary Muslim Philosophers</h2>
+    <p>In this paper, I will attempt to review the concept of cosmic consciousness in contemporary Islamic philosophy, seeking to explore how contemporary Muslim thinkers offer interpretations and interpretations of the idea of a conscious swimming universe, based on my conviction that this concept opens wide horizons for understanding ourselves, the universe around us, and the relationship of all to the Great Creator.</p>
+
+    <h3>1. Muhammad Iqbal and the Conscious Universe: From Individual Consciousness to Cosmic Consciousness</h3>
+    <p>The thinker and poet Muhammad Iqbal (1877-1938) is one of the most prominent Muslim thinkers who offered a profound vision of cosmic consciousness in a contemporary context. In his book Renewing Religious Thought in Islam, Iqbal presents a philosophy that combines Islamic spirituality with contemporary thought.</p>
+    <p>Muhammad Iqbal developed an integrated philosophical theory of cosmic consciousness and spiritual existence in the universe through his revolutionary concept of Khudi, which translates as "self", "ego", or "self-consciousness". Iqbal argues that consciousness - or Khudi - is not limited to humans, but is "a universal, multi-dimensional reality, beginning with the simplest creature and ending with a perfect human being." (Muhammad Iqbal's concept of Khudi, Wikipedia).</p>
+    
+    <div class="box quote-box">
+        In Iqbal's philosophy, the universe is not just a mechanical machine, but a "structure of events and organized behavior" that reflects divine consciousness.<br>
+        (Malook, Saad. "Making Sense of Muhammad Iqbal's Metaphysics of Egohood", PhilArchive)
+    </div>
+
+    <p>This conceptualization makes the entire universe a conscious entity in varying degrees, as "there is an ascending gradation of ego in the universe that varies in degree among creatures." This concept goes beyond the materialistic view of the universe to present a spiritual vision where everything in the universe carries a degree of consciousness and spirituality.</p>
+    <p>Iqbal distinguishes between two types of consciousness in his philosophical universe: "The Supreme Ego, which represents the Creator, and the finite egos, which includes all creatures. This limited ego "emanates from the higher ego as light emanates from the sun," creating a cosmic web of interconnected consciousness.</p>
+    
+    <div class="box reflection-box">
+        In one of my personal meditations in front of a flowing waterfall, I recalled Iqbal's quote: "Movement is the essence of existence, and stillness is death." I saw in the flow of water an expression of the life and consciousness of the universe that is manifested in every movement and stillness.
+    </div>
+
+    <h3>Sayed Hussein Nasr: Harmony with the Universe</h3>
+    <p>Seyed Hussein Nasr (born 1933) is one of the most prominent contemporary thinkers who developed a comprehensive vision of cosmic consciousness and the urgent need to restore harmony between humans, nature, and the universe. Nasr based his environmental philosophy on the fundamental concept of "reacralization of nature" as a radical solution to the contemporary environmental crisis.</p>
+    
+    <div class="box quote-box">
+        In his influential lecture In the Beginning Was Consciousness, Nasr asserts that "all the scriptures of different religions reveal that the origin of the universe and man is determined in each case as a conscious reality and actually constitutes consciousness understood at the highest level as the Absolute Consciousness, which is transcendent and yet the source of all consciousness in the cosmic sphere including our own."
+    </div>
+
+    <p>In Nasr's vision, the re-sanctification of nature requires a return to what he calls "sacred science" (Scientia Sacra). Sacred science "never separates nature from human intimacy, because nature is seen as sacred in it" (The Eco-Philosophy of Seyyed Hossein Nasr). This contrasts with modern science, which separates mind and spirit, while Nasr argues that true knowledge requires both.</p>
+
+    <h3>Fazlur Rahman and Conscious Existence in the Universe</h3>
+    <p>Fazlur Rahman (1919-1988) is considered one of the most important contemporary interpreters of the Holy Quran. In his groundbreaking book, Major Themes of the Quran, he presented a deep philosophical vision about cosmic consciousness and conscious existence in the universe. In Fadlur Rahman's analysis of the Qur'anic view of the universe, he emphasizes that "all of nature is one coherent and stable structure, with no gaps, fractures, or imbalances. It operates according to its own laws which God has deposited in it, and is therefore independent; but it is not tyrannical, because in itself it has no justification for its existence and cannot explain itself."</p>
+    
+    <div class="box quote-box">
+        Fadl al-Rahman repeatedly emphasizes that "the seven heavens and the earth and everything in them praise God... This all-encompassing praise reflects a cosmic consciousness that permeates all levels of existence."
+    </div>
+
+    <h3>Taha Abdul Rahman: Fiduciary Consciousness</h3>
+    <p>The Moroccan philosopher Taha Abdel Rahman (b. 1944) is one of the most prominent contemporary thinkers who sought to establish an authentic Islamic philosophy that confronts the challenges of the age. He succeeded in developing an integrated intellectual project known as "credit philosophy" that offers a philosophical alternative to Western modernity from a contemporary Islamic perspective.</p>
+    <p>In Taha Abdel Rahman's thought, fiduciaryism constitutes a comprehensive ethical theory based on the concept of "honesty" as a basic principle governing man's relationship with God, the universe, and others. Taha Abdel Rahman develops a distinct concept of cosmic consciousness within the framework of his fiduciary theory, linking this consciousness to man's moral responsibility towards the universe.</p>
+    <p>In this conceptualization, cosmic consciousness goes beyond a mere cognitive perception of the universe to become a responsible consciousness that sees the universe as a partner in moral responsibility and a moral entity that praises God. This concept permeates Taha's entire philosophical project, as he believes that the universe is not just deaf matter, but an entity full of signs and signs that point to the Creator and call upon man to be aware of his cosmic responsibility.</p>
+
+    <h3>Muhammad Rateb al-Nabulsi: The Living, Swimming Universe</h3>
+    <p>The Syrian thinker and preacher Muhammad Rateb al-Nabulsi (b. 1938) offers a contemporary understanding of cosmic consciousness from a scientific and faith-based perspective. In his encyclopedia "Scientific Miracles in the Qur'an and Sunnah", Nabulsi connects modern scientific discoveries with the concept of cosmic praise.</p>
+    <p>Nabulsi's ideas about the "living, praising universe" are based on his deep understanding of the Qur'anic verse "The seven heavens, the earth, and everything in them praise Him, but you do not understand their praise." He believes that all components of the universe praise God in a way that we do not realize, making the universe a living, conscious entity that testifies to the oneness of its creator.</p>
+
+    <h3>Ali Izzet Begovic: Cosmic Consciousness Between Matter and Spirit</h3>
+    <p>Alija Izetbegovic (1925-2003) is one of the most prominent contemporary Muslim thinkers who developed a distinct philosophical vision about the nature of human consciousness and its relationship with the universe, combining political experience with theoretical depth in the face of Western materialist and existentialist philosophical currents.</p>
+    <p>Begovic conceptualizes man as a dual-natured being, with a physical dimension that links him to nature and its physical and biological laws, and a spiritual dimension that elevates him to the realms of meaning and moral and aesthetic values. This duality is not a contradiction that needs to be resolved by eliminating one of its two sides, but rather a basic fact of human formation that requires balance and integration.</p>
+
+    <hr>
+
+    <h2>Finding Four: The Concept of Cosmic Consciousness in Contemporary Western Philosophy</h2>
+    
+    <h3>My Journey with Western Philosophy of Consciousness</h3>
+    <p>To be honest, I didn't expect to find myself in that place. A huge bookstore in the center of the city, with people moving around me like ants. I was looking for something... I don't know what exactly. And suddenly! I found David Chalmers' "The Conscious Mind" in front of me. Strange... How did it appear in front of me like that? I picked it up and started reading randomly. I took the book to a quiet corner and started flipping through it. I stopped at a page where Chalmers wrote his famous phrase "The Hard Problem of Consciousness": I stopped at one sentence that changed everything: "How and in what way do physical processes in the brain lead to subjective experiences?"</p>
+    <p>I read it once. Twice. Three times. This guy is asking a question I've been asking for years! But... Don't we Muslims have the answer for centuries?</p>
+
+    <h3>Panpsychism: Consciousness as a fundamental characteristic of reality</h3>
+    <p>The theory of universal consciousness is not entirely new. It has roots in ancient philosophies, from Thales and Plato in Greece to Spinoza and Leibniz in modern Europe. But it has seen a remarkable revival in recent decades, especially with the work of philosophers such as Thomas Nagel, David Chalmers and Galen Strawson.</p>
+    
+    <div class="box quote-box">
+        "The subjectivity of consciousness is an irreducible feature of reality, and it is a mistake to ignore it: It deserves an essential place in any rational conception of the world, along with matter, energy, time, space, and numbers."<br>
+        (Thomas Nagel, The View From Nowhere)
+    </div>
+
+    <p>Nagel argues that subjective experience (consciousness) is not just a byproduct of matter or the brain, but an essential and indispensable part of reality, and that any objectivist worldview must give consciousness a central place alongside known physical elements such as matter, energy, space, time, and numbers.</p>
+
+    <h3>Integrated Information Theory</h3>
+    <p>Integrated information theory posits that consciousness is the result of information integration in a complex system, and that the level of consciousness in this system can be measured by the amount of information integration in the system, expressed by the symbol Φ. The more integrated the information in the system, the higher the level of consciousness in the system.</p>
+    <p>The theory is based on several key concepts:
+        <ul>
+            <li><strong>Internal differentiation:</strong> The ability of a system to distinguish between multiple different states.</li>
+            <li><strong>Internal integration:</strong> The ability of a system to integrate information from its various parts into a coherent whole.</li>
+            <li><strong>Self-awareness:</strong> Consciousness is a system's self-awareness of itself and the world, from within the system itself.</li>
+        </ul>
+    </p>
+
+    <h3>Quantum Mind Theory</h3>
+    <p>This theory proposes that quantum mechanical phenomena, such as quantum entanglement and quantum superposition, play an essential role in the functioning of the brain and the emergence of consciousness. Specifically, it posits that microtubules within neurons act as quantum computers, performing operations beyond the capabilities of conventional computing. The core idea of the theory is that consciousness is not the result of neurochemical reactions in the brain but may have a quantum basis.</p>
+    
+    <div class="box science-box">
+        The exciting aspect of quantum mind theory is that it suggests a connection between human consciousness and the universe as a whole. Penrose and Hameroff argue that consciousness is not a localized phenomenon confined to the brain, but is connected to the quantum structure of the universe.
+    </div>
+
+    <h3>Environmental Consciousness Theory</h3>
+    <p>A few years ago, I read an influential book called Mind in Life by philosopher Evan Thompson, in which he develops the concept of Embodied Cognition. Thompson argues that cognition is not a process that occurs only in the brain, but is embodied in the whole body and pervasive in the interaction between the organism and its environment. This idea is the basis of the theory of ecological consciousness, which holds that consciousness is not limited to individual organisms, but is a property of entire ecosystems, and that organisms share a kind of "collective consciousness" with their environment.</p>
+
+    <hr>
+
+    <h2>Research Paper V: A Critical Comparison between Western Theories and the Islamic Vision</h2>
+    
+    <h3>Points of convergence</h3>
+    <p>During my study of contemporary Western theories of cosmic consciousness and the Islamic view of it, I found several important points of convergence:</p>
+    <ul>
+        <li><strong>The universality of consciousness:</strong> Contemporary theories, especially the theory of universal consciousness, agree with the Islamic view that consciousness is pervasive throughout the universe, not limited to humans or higher animals.</li>
+        <li><strong>Gradualism of consciousness:</strong> Contemporary theories, especially Integrated Information Theory, agree with the Islamic view that consciousness is gradual and varies among beings, and that each being has a type of consciousness commensurate with its nature and complexity.</li>
+        <li><strong>Cosmic interconnectedness:</strong> Contemporary theories, especially quantum mind theory and ecological consciousness theory, agree with the Islamic view that the universe is interconnected and integrated, and that human consciousness is connected to the larger cosmic consciousness.</li>
+    </ul>
+
+    <h3>Points of difference</h3>
+    <p>Despite the important points of convergence, there are fundamental differences between Western theories and the Islamic vision:</p>
+    <ul>
+        <li><strong>Reference and source:</strong> The Islamic vision is based on revelation (Qur'an and Sunnah), while contemporary theories are based on human philosophical and scientific references.</li>
+        <li><strong>Purpose and goal:</strong> The Islamic vision believes that the goal of cosmic consciousness is to know and worship God, while contemporary theories often avoid talking about a goal or objective for cosmic consciousness.</li>
+        <li><strong>The spiritual and moral dimension:</strong> The Islamic vision emphasizes the spiritual and moral dimension of cosmic consciousness, while contemporary theories focus on the material and cognitive dimensions.</li>
+    </ul>
+
+    <h3>Possibilities for integration</h3>
+    <p>Despite the differences, I see promising potential for integration and dialog between Western theories and the Islamic vision:</p>
+    <ul>
+        <li><strong>Mutual cognitive enrichment:</strong> The Islamic view can benefit from the scientific concepts and tools developed by Western theories, and vice versa.</li>
+        <li><strong>Addressing mutual deficiencies:</strong> The Islamic vision can address the spiritual and moral shortcomings of Western theories, and Western theories can provide scientific and methodological frameworks for the Islamic vision.</li>
+        <li><strong>Building bridges for dialog:</strong> A shared interest in cosmic consciousness can open a space for dialog between different cultures and perspectives to reach a deeper understanding of human existence and its relationship with the universe.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Research VI: Experiments in the Study of Cosmic Consciousness: Between the West and Islam</h2>
+    
+    <p>I would like to share with you how I viewed consciousness earlier in my journey with the study of cosmic consciousness. I started my research journey influenced by the materialist view of consciousness, which sees it as a product of neural interactions in the brain. But as I delved deeper into the study, I encountered questions for which I could not find convincing answers in a purely materialistic framework.</p>
+    <p>How does consciousness arise from matter? Why do we feel pain, joy, and love? How does our individual consciousness relate to the larger universe? Why do I dream? How does my brain produce a whole world of images, sounds and feelings during sleep? Why do dreams seem so real when they happen? Why do I remember my childhood as "me"?</p>
+    <p>These questions led me to search for answers in different philosophies, including the aforementioned contemporary Western theories and the Islamic vision of cosmic consciousness. To my surprise, I found a depth and comprehensiveness in the Islamic vision that I did not find in Western theories.</p>
+    
+    <div class="box reflection-box">
+        One night during Ramadan, after reciting verses from Surat al-Naml, I stopped at the following statement: "Until they came to the valley of the ants, an ant said, 'O you ants, enter your dwellings, and Solomon and his soldiers will not destroy you while they do not know it'" [al-Naml: 18].<br>
+        It was like hearing it for the first time: This ant has consciousness and awareness, communicates with its people, understands causal relationships, and makes a preventive decision! I realized then that the Qur'an had established the principle of consciousness in non-human beings fourteen centuries ago, while contemporary Western philosophy has only recently begun to introduce it, and still suffers from strong resistance from mainstream materialism.
+    </div>
+
+    <h3>Contemplative Practices and Experiences</h3>
+    <p>As part of my research into cosmic consciousness, I engaged in various meditative experiences, combining practices from contemporary Western theories with Islamic insights:</p>
+    <ul>
+        <li><strong>Open Awareness Meditation:</strong> A technique developed by contemplative neuroscience researchers that involves open attention to moment-to-moment experience, without a specific focus.</li>
+        <li><strong>Qur'anic reflection:</strong> It is an authentic Islamic practice based on deep meditation on the signs of God in the horizons and the souls, with the aim of sensing the greatness and wisdom of the Creator.</li>
+    </ul>
+    <p>I found the combination of the two to be a rich and profound experience. Open awareness meditation helps to refine attention and calm the mind, which prepares the soul for deep Qur'anic reflection, which adds a spiritual and moral dimension to the experience.</p>
+
+    <h3>Consciousness of nature: Between science and personal experience</h3>
+    <p>During my research visits, I visited a lab that specializes in studying "plant intelligence." I was skeptical at first about the idea that plants have "intelligence," but what I saw amazed me. Researchers presented meticulous scientific experiments showing that plants respond to stimuli, communicate with each other, remember past experiences, and learn from them. I saw plants distinguish between relatives and others, and respond to sound and music.</p>
+    <p>Once again, I found myself confronted with an amazing convergence between modern scientific discoveries and Qur'anic references, such as the saying: 'And the star and the trees prostrate themselves' [Al-Rahman: 6].</p>
+
+    <hr>
+
+    <h2>Chapter Seven: Future Prospects: Toward a deep dialog between different visions of cosmic consciousness</h2>
+    
+    <h3>Opportunities for scientific and philosophical convergence</h3>
+    <p>I believe that the future holds promising opportunities for convergence between contemporary Western theories and the Islamic vision of cosmic consciousness, especially with the increasing scientific interest in this topic and the openness of some Western researchers to the spiritual and philosophical dimensions of consciousness. This openness represents an opportunity for Muslim thinkers to present the Islamic vision of cosmic consciousness and participate in the global scientific and philosophical dialog on this topic.</p>
+
+    <h3>Future areas of research</h3>
+    <p>I see several promising areas for future research on the topic of cosmic consciousness, from a perspective that combines science, philosophy, and the Islamic vision:</p>
+    <ul>
+        <li><strong>The study of consciousness in non-human beings:</strong> From plants to animals to complete ecosystems, and linking this to the Qur'anic and Prophetic references to the praise of these beings.</li>
+        <li><strong>Developing models of consciousness that transcend dualism:</strong> Models that transcend the dualism of matter and spirit, offering an integrative understanding of human and cosmic consciousness.</li>
+        <li><strong>Exploring the relationship between consciousness and energy:</strong> Exploring the idea that consciousness may be a form of energy, with its own laws and dynamics, and linking this to the concept of "light" in the Islamic vision.</li>
+        <li><strong>Studying the impact of Islamic worship on consciousness:</strong> Examining the impact of prayer, fasting, remembrance and recitation on human states of consciousness, using modern scientific techniques.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Conclusion: Cosmic Consciousness as a point of convergence between science and faith</h2>
+    <p>In conclusion, I believe that the concept of cosmic consciousness represents a unique meeting point between science and faith, and between contemporary Western philosophy and the Islamic vision.</p>
+    <p>Contemporary Western theories, such as the theory of universal consciousness, integrated information theory, quantum mind theory, and ecological consciousness theory, are discovering - willingly or unwillingly - what the Qur'an pointed out fourteen centuries ago: That the entire universe is alive, conscious and swimming.</p>
+    <p>The Islamic view of cosmic consciousness, based on the Qur'an and the Sunnah, adds a spiritual, ethical and teleological dimension to these theories, making them more integrated and comprehensive. While modern science has created theories that explain "how" cosmic consciousness works, the Islamic vision tells us "why" this consciousness exists, and what its purpose and meaning are.</p>
+    
+    <p>I conclude with a verse that, in my view, summarizes the essence of cosmic consciousness as presented by the Islamic vision:</p>
+    <div class="box quran-box">
+        "Praise be to God what is in the heavens and what is in the earth, the Almighty, the Holy, the Almighty, the Wise"<br>
+        [Al-Jumu'ah: 1]
+    </div>
+    <p>In this verse, we find the answer to the "what" of cosmic consciousness (the praise of everything in the heavens and the earth), the "why" it exists (for praise and worship), and the "to whom" it is directed (to Allah, the Holy King, the Almighty, the Dear and Wise).</p>
+    <p style="text-align: center; margin-top: 50px; font-weight: bold; color: var(--primary-color);">God knows best and is the wisest.</p>
+
+    <div class="chapter-navigation">
+        <a href="index.html" class="nav-btn btn-home">
+            <i class="fas fa-home"></i> Back to Home
+        </a>
+        <a href="chapter15.html" class="nav-btn btn-next">
+            Next Chapter <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

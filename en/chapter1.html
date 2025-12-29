@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter One: Introduction to the Conscious Universe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fdfbf7;
+            --text-color: #2c3e50;
+            --primary-color: #1a5276;
+            --accent-color: #d4ac0d;
+            --box-desc-bg: #eaf2f8; 
+            --box-desc-border: #3498db;
+            --box-science-bg: #fef9e7; 
+            --box-science-border: #f1c40f;
+            --box-scene-bg: #fdedec; 
+            --box-scene-border: #e74c3c;
+            --verse-bg: #e8f8f5;
+            --verse-border: #1abc9c;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-left: 6px solid var(--accent-color); /* Left border for LTR */
+            padding-left: 15px;
+            background: linear-gradient(to right, transparent, #fafafa);
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #5d6d7e;
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+            text-align: justify;
+        }
+
+        /* Colored Boxes */
+        .box {
+            padding: 30px;
+            margin: 35px 0;
+            border-radius: 12px;
+            border-left-width: 6px; /* Left border for LTR */
+            border-left-style: solid;
+            position: relative;
+        }
+        .box-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .box-desc { background-color: var(--box-desc-bg); border-left-color: var(--box-desc-border); }
+        .box-desc .box-title { color: var(--primary-color); }
+
+        .box-science { background-color: var(--box-science-bg); border-left-color: var(--box-science-border); }
+        .box-science .box-title { color: #d35400; }
+
+        .box-scene { background-color: var(--box-scene-bg); border-left-color: var(--box-scene-border); }
+        .box-scene .box-title { color: #c0392b; }
+
+        /* Verse Styling */
+        .verse-container {
+            background-color: var(--verse-bg);
+            border: 2px solid var(--verse-border);
+            padding: 25px;
+            margin: 30px 40px;
+            border-radius: 0 20px 0 20px;
+            text-align: center;
+            position: relative;
+        }
+        .verse-text {
+            font-family: 'Merriweather', serif;
+            font-size: 1.3rem;
+            color: #148f77;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.6;
+        }
+        .verse-ref {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 10px;
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        /* Quote / Hadith Styling */
+        .quote-box {
+            background-color: #fcfcfc;
+            border-left: 5px solid #7f8c8d; /* Left border */
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            font-weight: 500;
+            color: #34495e;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .source {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #95a5a6;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+        }
+
+        /* Table of Contents Style */
+        .toc-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .toc-table th, .toc-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left; /* Left align */
+        }
+        .toc-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .toc-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        ul { margin-left: 20px; }
+        li { margin-bottom: 10px; }
+
+        @media (max-width: 768px) {
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            .verse-container { margin: 20px 10px; }
+        }
+    /* Enhanced Box Styling */
+        .box {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            transition: all 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+        }
+
+        /* Navigation Buttons */
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 3px solid var(--accent-color);
+            gap: 20px;
+        }
+        .nav-btn {
+            flex: 1;
+            padding: 18px 35px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            text-transform: uppercase;
+        }
+        .btn-home {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+        }
+        .btn-next {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        .btn-next:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(245, 87, 108, 0.4);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Switch Button -->
+    <div style="position: fixed; top: 80px; right: 20px; z-index: 9999;">
+        <a href="../chapter1.html" style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;">
+            <span>🌐</span>
+            <span>النسخة العربية</span>
+        </a>
+    </div>
+
+    <!-- Language Switcher -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <a href="../chapter1.html" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); display: inline-flex; align-items: center; gap: 8px; font-family: 'Montserrat', sans-serif;">
+            <i class="fas fa-language"></i> العربية
+        </a>
+    </div>
+
+    <div class="container">
+        <h1>Chapter One<br>Introduction to the Conscious Universe</h1>
+
+        <!-- Chapter Description Box -->
+        <div class="box box-desc">
+            <span class="box-title">Chapter Description</span>
+            <p>This chapter is a comprehensive introduction to the concept of the "conscious universe." It discusses the relationship between human consciousness and the different stages of consciousness (wakefulness, sleep, dreams, anesthesia), reviews scientific, philosophical, and Quranic explanations of the nature and dimensions of the universe, with deep reflections on the origin of the universe, existence, creation, purgatory and rebirth, and highlights the harmony between scientific and religious understanding in formulating an integrative vision of the conscious universe.</p>
+        </div>
+
+        <h3>Table of contents</h3>
+        <table class="toc-table">
+            <thead>
+                <tr>
+                    <th>Topic Title</th>
+                    <th>Page number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Preface Why the Conscious Universe?</td><td>3</td></tr>
+                <tr><td>First research: Sleep and consciousness between the Qur'an and scientific theories</td><td>4</td></tr>
+                <tr><td>SECTION TWO: Consciousness in anesthesiology:</td><td>13</td></tr>
+                <tr><td>Research III: Consciousness in the Afterlife and the Last Day</td><td>19</td></tr>
+                <tr><td>Consciousness in the afterlife: Qur'anic and Hadith evidence</td><td>20</td></tr>
+                <tr><td>Awareness on the Last Day: Quranic Scenes and Images</td><td>21</td></tr>
+                <tr><td>Fourth research: The Concept of the Conscious Universe in the Qur'anic Conceptualization</td><td>25</td></tr>
+                <tr><td>Fifth research: The Conscious Universe between the Qur'anic Conceptualization and Modern Science</td><td>26</td></tr>
+                <tr><td>The Theory of Cosmic Interconnectedness (Gaia Hypothesis): A Scientific Vision of Interconnected Consciousness</td><td>27</td></tr>
+                <tr><td>Quantum Consciousness Theory</td><td>28</td></tr>
+                <tr><td>Chapter Six: An Integrated View of the Conscious Universe</td><td>29</td></tr>
+                <tr><td>Conclusion of Chapter One: An Introduction to the Conscious Universe</td><td>30</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Note Box -->
+        <div class="box box-science">
+            <span class="box-title">Note</span>
+            <p>This chapter is the basic beginning of the journey of exploring the Conscious Universe, and will be the basis for understanding the later chapters in the book.</p>
+        </div>
+
+        <h2>Introduction</h2>
+        <p>In a world where scientific and technological development is accelerating, and knowledge and discoveries are proliferating, a fundamental truth remains absent from many minds and hearts: this universe with all its components, from the smallest atoms to the largest galaxies: This universe, with all its components, from the smallest atoms to the largest galaxies, is a living, conscious, and aware organism that praises its Creator and testifies to His oneness.</p>
+        
+        <div class="verse-container">
+            <div class="verse-text">"The seven heavens, the earth, and whoever is in them, and there is nothing but praise His praise, but you do not understand their praise, for He was wise and forgiving"</div>
+            <span class="verse-ref">(Al-Israa' 44)</span>
+        </div>
+
+        <p>In this introductory chapter, I will begin our journey with you in the world of the conscious universe, exploring its concept and dimensions, and reflecting on its profound implications for our understanding of existence and our relationship with the Creator and the universe around us.</p>
+
+        <h2>Why Conscious Universe?</h2>
+        <p><strong>The importance of the topic:</strong> Some may wonder: Why are we interested in the idea of a conscious universe? Why is it important to know that the stone is reverent or the tree is prostrate or the sky is crying? How does this relate to our daily life and our faith journey?</p>
+        <p>The answer lies in the fact that our understanding of the universe shapes our understanding of ourselves and our relationship with the Creator. When we realize that we are not alone in this vast universe, and that every atom of existence joins us in praising and worshipping God, it changes our entire outlook on life.</p>
+
+        <div class="quote-box">
+            The Muslim philosopher Muhammad Iqbal says: "Humanity today needs three things: The spiritual interpretation of the universe, the liberation of the individual's soul, and the establishment of fundamental principles of universal importance that guide the development of human society on a spiritual basis."
+            <span class="source">(Renewing Religious Thought in Islam)</span>
+        </div>
+
+        <h2>Research I: Sleep and Consciousness between the Qur'an and Scientific Theories</h2>
+        <p>The miracle of the Qur'an is evident in its treatment of the phenomenon of sleep from a perspective that goes beyond the simple understanding of the era in which it was revealed, as it provides a profound vision that carries subtle references that are in harmony with the latest scientific theories for understanding consciousness.</p>
+
+        <div class="verse-container">
+            <div class="verse-text">"Allah takes away the souls at the time of their death and those that have not died in their sleep, and He holds the one that has already died and sends the other to a named time, for there are signs in this for people who think"</div>
+            <span class="verse-ref">(Al-Zamar: 42)</span>
+        </div>
+
+        <h3>Sleep: A temporary death and a threshold for altered consciousness</h3>
+        <p>The verse offers a unique insight that links sleep and death as two different levels of a single phenomenon, namely, the "death of the soul," meaning its arrest and restraint from acting. This similarity yet difference between the two states suggests that sleep is not just an absence of consciousness, but a shift in its nature and a change in its pattern.</p>
+
+        <div class="quote-box">
+            As al-Qurtubi says in his tafsir: "The death of the souls in the state of sleep is the removal of sense and the creation of oblivion and affliction in the place of perception, and in the state of death is the creation of death and the total removal of sense"
+            <span class="source">(Al-Qurtubi, Al-Jami'ah al-Qur'an, 15/259)</span>
+        </div>
+
+        <p>This Qur'anic understanding of sleep as an intermediate state between full consciousness and total absence is surprisingly consistent with the latest findings of contemporary neuroscience research. Researchers revealed in Nature Neuroscience (2023) that during sleep, the brain does not cease activity, but rather enters into different patterns of activity that allow it to process information in a different way than in the waking state, which they called "Altered Consciousness" rather than unconsciousness (Massimini & Tononi, 2023).</p>
+
+        <h3>The neurological dimensions of death and transmission</h3>
+        <p>The Qur'anic description of sleep as a process of "tawfi" and then "sending" the soul back to sleep is fascinating. Recent neurological studies have shown that the process of sleep does indeed involve a temporary disconnection of areas of consciousness in the cerebral cortex from sensory reception centers, known as Perceptual Disconnection.</p>
+
+        <h3>Mechanisms for disconnecting and enhancing the senses during sleep</h3>
+        <p>During sleep, the brain segregates and reduces sensory input through a mechanism known as sensory gating. The thalamic reticular nucleus is the cell responsible for reducing the amount of sensory stimuli reaching the cortex by about 50%, which helps initiate and maintain sleep, while a parallel mechanism called sensory gating selectively enhances certain stimuli that are considered important or dangerous (e.g., a baby's voice or the sound of an alarm clock). At the same time, a parallel mechanism called sensory gaining selectively enhances certain stimuli deemed important or dangerous (such as a baby's voice or an alarm), enabling the brain to receive them partially consciously during sleep and wake up when necessary.</p>
+
+        <div class="box box-science">
+            <span class="box-title">Sleep Mechanisms</span>
+            <ul>
+                <li><strong>Sensory gating:</strong> Master separation minimizes unnecessary inputs, protecting the sleep architecture.</li>
+                <li><strong>Sensory gaining:</strong> Selective enhancement of important inputs, ensuring the safety of the sleeper.</li>
+            </ul>
+            <p>The balance between these two mechanisms establishes and maintains sleep, without losing one's ability to respond to significant changes in the environment.</p>
+            <span class="source">Anton Coenen, Journal of Sleep Research (2024): "Sensory gating protects sleep, sensory gaining protects the sleeper"</span>
+        </div>
+
+        <h3>Resetting synapses during NREM sleep (Cirelli & Tononi, 2021)</h3>
+        <p>In the silent journey of the night, when the soul sinks into the depths of deep sleep, something like scientific magic happens in our brain, as revealed by a groundbreaking study published in 2021 in the journal Seminars in Cell and Developmental Biology.</p>
+        <p>Chiara Cirelli and Giulio Tononi offer a fascinating explanation of why deep sleep is the fountain from which the brain regenerates, in their study "Why and how selectivity reduces sleep-dependent synaptic strength".</p>
+        <p>This study reveals that sleep is not just a passive rest, but an intelligent and selective regulation process that precisely rebalances the strength of synapses, which is reduced after being elevated during wakefulness by learning and intense daily activity, restoring the brain to its optimal efficiency in memory and learning.</p>
+        <p>During active waking hours, synapses strengthen through a mechanism known as LTP, generating an electrical overload that drains energy and hinders new storage and learning, as if the brain becomes overloaded with information.</p>
+        <p>But in deep NREM sleep, especially during the "slow rhythm" phase, a complex neural cleaning process begins, where these synapses are wisely reduced to a stable and energy-efficient level, without erasing the important changes and precious memories the brain has acquired while awake.</p>
+        <p>This subtle selective reduction of synapses, mediated by specialized molecular signals such as Homer1a and Arc, preserves the brain's enormous learning capacity and prevents destructive synaptic saturation.</p>
+        <p>Thus, sleep manifests a miraculous resetting of synaptic strength that improves cognitive performance and restores the brain's purity and capacity to receive new knowledge, as if the brain is reborn with each dawn (Cirelli & Tononi, 2021).</p>
+
+        <h3>Multiple States of Consciousness and Integrated Information Theory</h3>
+        <p>In recent years, the "Integrated Information Theory of Consciousness" (IIT) proposed by Giulio Tononi has evolved into one of the most important theories explaining human consciousness.</p>
+        <p>This theory proposes that consciousness is formed from the integration of information in complex systems, and that it can exist in varying degrees rather than as a binary state of being or not being.</p>
+        <p>This graded view of consciousness is consistent with the Qur'anic reference to sleep as a state of "partial death" of the soul, not its total absence. Empirical evidence indicates that the Φ (information integration) scale decreases significantly during sleep or anesthesia, but never reaches zero, confirming the existence of some form of partial consciousness even in deep sleep.</p>
+        <p>This formulation is based on Integrated Information Theory (IIT), which posits that the level of consciousness is determined by the amount of "information integration" Φ.</p>
+        <p>"Based on a study published in 2024 (Onoda & Akama), the use of the Φ measure of information integration in the brain shows a clear decrease during deep sleep, but without ever reaching zero, proving the existence of some kind of partial consciousness even in the deepest stages of sleep."</p>
+        <p class="source">Neuroscience of Consciousness (Oxford University Press), titled: "Exploring Complex and Integrated Information During Sleep"</p>
+
+        <h3>Sleep and Spiritual Consciousness</h3>
+        <p>The Qur'anic understanding of sleep goes beyond the physical neurological dimension to include a deeper spiritual dimension. According to this understanding, sleep is not just a physiological rest, but a spiritual journey in which the "self" is temporarily freed from the constraints of the physical body.</p>
+        <p>In Mind and Cosmos (2012), philosopher Thomas Nagel argues that a materialist explanation does not provide a sufficient explanation for the phenomenon of consciousness, and posits that there are "fundamental dimensions or principles" that transcend neuroscientific knowledge.</p>
+        <p>The question arises: Where does the psyche "go" during sleep, and what is the nature of the consciousness it experiences?</p>
+        <p>Consciousness during sleep does not "go" somewhere else, but rather changes in nature and complexity through shifts in neural activity. During NREM (non-rapid eye movement) sleep, activity in the frontal cortex and visual cortex decreases, reducing self-awareness and contact with the outside world, but information processing continues in other forms.</p>
+        <p>In REM sleep (rapid eye movement sleep - the stage in which dreams occur) brain activity is similar to waking, but consciousness becomes variable in nature - rich in visual and sensory content but poor in self-awareness and memory.</p>
+        <p>Recent research shows that 30% of people report conscious experiences even upon awakening from deep sleep, confirming that consciousness shifts and does not disappear completely. The brain continues to consolidate memories, process emotions, and reorganize information; sleep is a different state of consciousness, not a complete absence of consciousness.</p>
+        <p class="source">(Tononi, G., & Massimini, M. (2008). Why does consciousness fade in early sleep? Annals of the New York Academy of Sciences)</p>
+
+        <div class="quote-box">
+            This modern scientific view converges with what Ibn Abbas (may Allah be pleased with them both) referred to in the interpretation of the verse: "In the son of Adam there is a soul and a spirit between them like a sunbeam, the soul being the mind and discernment, and the spirit being the breath and movement, so if a slave falls asleep, Allah arrests his soul but not his spirit"
+            <span class="source">(quoted by Al-Qurtubi in his Tafsir)</span>
+        </div>
+
+        <h3>Conscious sleep and the meeting of souls</h3>
+        <p>One of the most interesting phenomena in contemporary sleep research is what is known as Lucid Dreaming, a state in which the sleeper is aware that they are dreaming, and can sometimes control the course of the dream.</p>
+        <p>A groundbreaking study (Konkoly et al., 2021, Current Biology) has shown that lucid dreamers are able to perceive questions, use them for temporary memory, and answer during sleep, using eye signals or muscle contractions. 29 correct answers were recorded from 6 participants in an experiment involving 36 individuals, confirming the existence of a unique pattern of consciousness: A fusion between REM sleep and the ability to self-recognize and live interaction.</p>
+
+        <div class="quote-box">
+            This unique state of consciousness is reminiscent of al-Tabari's interpretation of the verse: "It is mentioned that the souls of the living and the dead meet in a dream, and they become acquainted with each other as God wills, and when they all want to return to their bodies, God catches the souls of the dead and locks them up, and sends the souls of the living to return to their bodies for a certain time"
+            <span class="source">(Tafsir al-Tabari, 21/293)</span>
+        </div>
+
+        <p>This interpretation provides a fascinating insight into the possibility of "souls meeting" during sleep, which may explain some of the phenomena recorded by contemporary research on "Shared Consciousness Experiences" that sometimes occur between some people during sleep.</p>
+        <p>However, scientific truth requires us to recognize that the mainstream scientific consensus is cautious about the existence of "shared consciousness" or "Dream Telepathy" as a real, scientifically demonstrable phenomenon, the magical idea that thoughts or feelings can be transferred directly from one mind to another during sleep without physical intermediaries.</p>
+        <p>Despite efforts in parapsychological research, controlled experiments have failed to produce reproducible results and rigorous scientific verification in relation to the phenomenon of "dream synesthesia", making these phenomena more of a question and possibility than a proven scientific fact.</p>
+        <p>Despite the richness of American soap operas and Hollywood movie productions with dream encounters and seance experiences that capture the imagination and arouse emotions, these appealing dramatic visualizations are unfortunately not based on documented scientific experiments or empirical evidence that can be examined and scrutinized.</p>
+        <p>Thus, we find ourselves facing an exciting epistemological challenge, where the scientific secrets of sleep intersect with the aspirations of the human soul towards a deeper understanding of the nature of consciousness and communication between souls, in a continuous search for truth between what is scientifically proven and what remains in the realm of possibilities and dreams.</p>
+
+        <h3>The journey of the soul and the geography of consciousness</h3>
+        <p>The concept of the "journey of the soul" during sleep, which is included in the Qur'anic expression, "He takes the souls" and then "He sends the other".</p>
+        <p>It is still scientifically within the framework of experiments that did not prove to us the greatness of the secret of consciousness in sleep and the afterlife, but what came scientifically through the journey of consciousness between sleep and wakefulness includes the journey of the soul during sleep, as it manifests scientifically as a transition through a complex geography of different areas of consciousness, as the journey begins from the frontal cortex that gradually loses 40-50% of its activity, which frees the soul from the limitations of self-awareness and critical perception.</p>
+        <p>The journey continues through the visual bed, which becomes a "closed portal" in deep sleep and then an "open portal to dream worlds" in REM sleep, drawing a moving map of consciousness across different stages of sleep (Nature Neuroscience, 2024).</p>
+        <p>The brain's virtual network is a permanent "rest stop" on the journey of the psyche, maintaining a kind of inner awareness and self-reflection even in the depths of sleep (Baars, 2023).</p>
+        <p>The geography of consciousness is illustrated by Integrated Information Theory, which measures the "density of consciousness" via the index φ (phi), showing how the map of consciousness shrinks in deep sleep and expands in the dream world (Massimini, 2024).</p>
+        <p>Parts of the hippocampus act as "refueling stations" on the journey of the psyche, remaining active to process memories and prepare the psyche for the next day's journey (Nature, 2024).</p>
+        <p>Advanced technologies are mapping the journey of the psyche across 256 electrodes, revealing intricate pathways of consciousness that flow like rivers through the topography of the sleeping brain (Sleep Research, 2024).</p>
+        <p>Neurotransmitters are the "fuel for the journey" as serotonin and noradrenaline drop as signals to get going, while acetylcholine oscillates to paint the contours of strange dream worlds (Current Biology, 2023).</p>
+        <p>Pioneering experiments show that some souls retain the ability to communicate even from the depths of sleep, confirming that the journey is not a complete interruption but a transition between different states of consciousness (ScienceDirect, 2024).</p>
+        <p>The journey of the psyche through the geography of consciousness reveals that sleep is not an absence but a journey of exploration through different regions of human experience, as the psyche travels through diverse landscapes of shifting and renewed consciousness (Nature Neuroscience, 2024).</p>
+
+        <h3>Sleep and cosmic consciousness: The psyche's window into the dimensions of cosmic reality</h3>
+        <p>In light of our understanding of the conscious universe, we can view the process of sleep as more than just a natural physiological state, but as a window through which the human psyche looks out to a wider dimension of cosmic consciousness. The absence of sensory limitations imposed by the physical body increases the ability of the psyche to connect with deeper levels of cosmic consciousness, as if sleep were a bridge between the world of testimony and the vast realms of the unseen.</p>
+        <p>In this nocturnal journey that we take every day, there is a profound truth that human consciousness is not confined to the boundaries of the physical body, but is part of a larger cosmic tapestry. Recent scientific research has revealed that sleep is divided into two main types: REM sleep and non-REM sleep. And that sleep cannot be considered a loss of consciousness, but rather a change in the state of consciousness, as there are three states of consciousness: wakefulness, slow sleep, and fast sleep.</p>
+        <p>Indeed, startling discoveries confirm that the brain remains active and reacts strongly to sounds even during sleep, suggesting that sleep is not a state of complete inactivity, but a shift in the pattern of conscious activity to other frequencies of existence.</p>
+        <p>From a deeper metaphysical perspective, sleep is understood as a temporary state in which the essence returns to the metaphysical realm, giving it the ability to reach levels of consciousness that differ from the physical state.</p>
+        <p>It is as if the psyche takes off its physical garments to put on robes of light and energy, enabling it to travel in worlds unbounded by the familiar laws of physics. This interpretation is entirely consistent with our understanding of sleep as a gateway to cosmic consciousness, where the boundaries between the self and the universe dissolve and the soul becomes part of the great cosmic symphony.</p>
+        <p>In the rich Islamic and Sufi traditions, dreams and visions have a special place, as dreams and visions are considered an important source of spiritual guidance and behavioral direction.</p>
+        <p>Sufis, in their deep wisdom, believed that shared dreams are a means of spiritual communication between people, and that there is a real possibility of communicating through dreams with the higher spiritual realms. For Sufis, knowledge is the key to understanding and interpreting dreams (for them, dreams are spiritual messages with deep meanings that transcend the material plane of existence and point to higher cosmic realities.</p>
+        <p>In modern times, advanced scientific theories support this deep understanding. The theory of quantum consciousness suggests that consciousness is fundamentally based on quantum processes and that microtubules in brain cells are shaped into fractal patterns that allow quantum processes to occur.</p>
+        <p>Recent research also reveals that lucid dreams represent an independent state of consciousness, distinct from sleep and wakefulness. They show unique brain patterns that resemble the effects of psychotropic drugs, suggesting that advanced states of consciousness can be accessed through sleep.</p>
+        <p>Understanding sleep as a gateway to cosmic consciousness opens up limitless possibilities for spiritual growth and conscious evolution. When we keep a record of our dreams and visions, we are able to decipher spiritual messages from the higher realms. When we meditate before bed, we prepare ourselves to enter deeper states of consciousness, where the boundaries between the self and the infinite universe dissolve.</p>
+        <p>In this silent nocturnal journey, the soul is freed from the shackles of the physical senses and is able to communicate with the higher levels of cosmic consciousness, opening up unlimited horizons of knowledge, understanding and wisdom. It reminds us that our human consciousness is not imprisoned in the cage of the body, but is part of a greater cosmic fabric, and that sleep is one of the magical ways through which we connect to this cosmic consciousness, where the soul becomes a star in the sky of infinite consciousness, dancing to the tunes of the great universe.</p>
+
+        <h3>Developing our spiritual abilities:</h3>
+        <p>Understanding sleep as a gateway to cosmic consciousness opens up extraordinary ways to develop our deepest spiritual capacities, as the quiet hours of the night become a workshop for the soul on its journey towards transcendence and growth.</p>
+        <p>By paying conscious attention to the messages in our dreams, we develop our intuition and inner insight, and dreams become a spiritual compass that guides us to hidden truths and deep meanings that were previously hidden from our waking consciousness.</p>
+        <p>We can use the precious pre-sleep state as a bridge to deep meditative states, where the first moments of relaxation become a golden gateway to deepen our meditative practice and dive into the depths of inner silence.</p>
+        <p>In this blessed state of deep relaxation, the soul finds the perfect opportunity for spiritual healing and balance, cleansed of the day's impurities and renewed by the pure energy of the universe.</p>
+        <p>Sleep, in this profound sense, transforms from a mere physical rest to an integrated spiritual experience, where the soul harmonizes with the subtle rhythms of the universe and draws from the spring of eternal wisdom.</p>
+        <p>Thus, every night becomes a precious opportunity to develop our spiritual abilities and expand our horizons of consciousness, starting with ablution, praying two rak'ahs, reciting the bedtime dhikr, and sleeping on the right side according to the year, so that we wake up every morning wiser, more insightful, and in harmony with the higher existence.</p>
+        <p>In this sacred nighttime journey, the soul discovers that sleep is not the end of the day, but the beginning of a new journey into the realms of spirit and infinite consciousness.</p>
+        <p>Imam al-Ghazali described the state of sleep as "the small door to the realm of the kingdom," arguing that the sleeper is partially freed from the barriers of the physical world to get closer to the reality of spiritual existence (al-Ghazali, Ihya al-'Ulum al-Din, 4/386).</p>
+
+        <h3>Consciousness between separation and connection</h3>
+        <p>The verse reveals a divine wisdom in making sleep and death the two ends of a continuum of states of consciousness, making the succession of sleep and wakefulness a daily recurring verse that reminds man of the reality of death and resurrection (al-Ghazali, Ihya al-Din, 4/38).</p>
+        <p>This understanding coincides with what Muslim commentators have pointed out about the wisdom of alternating between sleep and wakefulness, and its role in reminding humans of the limitations of their physical existence and the possibility of other states of consciousness beyond the daily sensory perception.</p>
+
+        <h3>Sleep as a dialog between soul and body</h3>
+        <p>As the Quran points out at the end of the verse: 'There are signs in this for those who think', reflecting on the phenomenon of sleep can open wide horizons of knowledge that combine science and faith, and lead to a deeper understanding of human consciousness and its role in the cosmic system.</p>
+        <p>Sleep, as described in the Holy Qur'an, represents a unique state of soul-body dialog, where the soul is partially freed from the shackles of matter without being completely separated from it. It is an isthmus between two worlds, and a window through which the human soul looks out on a wider horizon of consciousness.</p>
+
+        <h2>Research II: Consciousness in Anesthesiology</h2>
+        <p>As a consultant anesthesiologist for more than twenty years, I deal daily with one of the most mysterious human phenomena: consciousness, as we manage and modify it in operating rooms using advanced drugs and techniques, but the deeper question remains: What exactly is consciousness and how do our medications affect it?</p>
+        <p>In twenty years spent between the walls of operating rooms, I have witnessed the greatest mystery of existence - the mystery of human consciousness ebbing and flowing, disappearing and reappearing, in a cosmic dance between the soul and the body. Every day, I stand before the miracle of creation with the keys of consciousness in my hand, opening and closing them with God's permission, and I realize more than ever that this consciousness is not just a chemical product of the brain, but a divine breath that swims in a conscious universe that praises God.</p>
+
+        <h3>A journey through the levels of consciousness</h3>
+        <p>At the beginning of my career, I viewed anesthesia as a purely technical process - injecting a drug and waiting for unconsciousness. But over time, I realized that I was witnessing a daily miracle.</p>
+        <p>I well remember a 40-year-old patient who was undergoing surgery to remove a benign tumor. As I injected her with Propofol, I watched her eyes tell the story of moving from one world to another. At first, an anxious look filled with fear of the unknown, then gradually, a deep peace washed over her features, as if her soul had begun a journey to other worlds.</p>
+        <p>The gradual stages of diminishing consciousness remind me of a gradual sunset, where the light disappears layer by layer.</p>
+        <p>First the ability to concentrate and think logically disappears, then short-term memory fades, and finally the lamp of apparent consciousness goes out, but something remains illuminated in the depths - something that BIS devices cannot measure, a spirit that continues its silent praise to its Creator.</p>
+
+        <h3>My Journey with the Mystery of Consciousness</h3>
+        <p>When I first started working as an anesthesiologist, I saw it as simple: An injection of propofol, and the patient goes from full consciousness to deep sleep. But over the years, after thousands of cases, I realized that what we do is much more complicated than it seems to the naked eye.</p>
+        <p>I remember well a case of a woman in her 50s who had undergone a cholecystectomy. Her vitality remained stable throughout the surgery, and her depth of anesthesia indices (BIS) were within the ideal range.</p>
+        <p>But after she woke up, she described to me how she heard parts of the surgical team's conversations, even though she felt no pain and her BIS was in the ideal range.</p>
+        <p>This case and others made me realize that consciousness is not just an "on/off switch," but a complex, multi-layered state.</p>
+        <p>The practice of anesthesiology is, in essence, the practice of temporarily controlling human consciousness - the most mysterious phenomenon in human existence. As we deal with consciousness on a daily basis as anesthesiologists, we address what Australian philosopher David Chalmers called "The Hard Problem of Consciousness: How does personal subjective experience arise from physical and chemical interactions in the brain?" (The Hard Problem of Consciousness)</p>
+
+        <h3>Consciousness in anesthesiology: A Simplified Medical Perspective</h3>
+        <p>In the clinical practice of anesthesiology, we deal with consciousness from two basic aspects:</p>
+        <ul>
+            <li><strong>Consciousness as Arousal:</strong> Is related to the activity of the brain stem and thalamus. During my years of practice, I learned how to assess this aspect through eye movements, body movements, and response to simple commands. I can say that this aspect is the easiest to treat medically.</li>
+            <li><strong>Consciousness as Awareness:</strong> Linked to the integrated activity of the cerebral cortex. This aspect is more complex and difficult to measure. My experience tells me that many patients may be "outwardly calm" but still have a degree of internal awareness.</li>
+        </ul>
+
+        <h3>How do anesthetics work on the brain?</h3>
+        <p>When I inject a patient with an anesthetic drug, there is a complete "reorganization" of brain activity:</p>
+        <ul>
+            <li><strong>Propofol:</strong> One of the most commonly used drugs in my practice. It acts primarily on GABA-A receptors, increasing their inhibitory activity, reducing communication between different brain regions. I've noticed that its rapid and predictable effect makes it a favorite of most anesthesiologists, but it also shows great variability in response between patients.</li>
+            <li><strong>Inhalational drugs (sevoflurane):</strong> Over my years of practice, I've become more familiar with how to set the proper depth with these gases. These substances act on roughly the same GABA receptors, but in a more gradual and adjustable manner.</li>
+            <li><strong>Ketamine:</strong> It's fundamentally different in its mechanism of action, acting on NMDA receptors. In my use, especially in burn cases or patients who are chronically taking opioids, I've noticed that it produces a unique state of "dissociative anesthesia" - where the patient appears disconnected from their surroundings but with some degree of brain activity still going on.</li>
+        </ul>
+
+        <h3>How do we measure consciousness during anesthesia?</h3>
+        <p>In my two decades of practicing anesthesia, I've seen the methods of monitoring consciousness evolve considerably:</p>
+        <ul>
+            <li><strong>Bispectral Index (BIS):</strong> One of the most common tools I use. A small device attached to the patient's forehead, it analyzes the brain's electrical activity and gives a value between 0-100. I remember how revolutionary it was when we started using it compared to relying solely on clinical signs.</li>
+            <li><strong>Patient State Index (PSI):</strong> Another index based on slightly different principles. I noticed that some patients show a different response between the two indices, emphasizing that monitoring consciousness is still an imperfect science.</li>
+            <li><strong>Entropy:</strong> Is a measure of the diversity and complexity of brain signals. In some advanced centers, it is used as an additional measure, especially in complex cases.</li>
+        </ul>
+
+        <h3>Sacred moments in the operating room</h3>
+        <p>In every operation, I witness a sacred moment when the patient fully surrenders.</p>
+        <p>I remember an elderly woman who needed an emergency operation. Just before the anesthesia, she grabbed my hand and said: "Doctor, I put myself in your hands and my Lord's hands. Do whatever you see fit, I am at peace." At that moment, I felt the weight of divine responsibility on my shoulders - not just a doctor, but a custodian of God's precious deposit, the deposit of consciousness and soul.</p>
+        <p>These experiences have taught me that my role is not just to follow medical protocols, but to be a mediator in a sacred journey between the soul and the body, between consciousness and unconsciousness, between this world and the next.</p>
+        <p>Every injection I give is with God's permission, and every awakening I witness is a miracle that reminds me of the greatness of the Creator.</p>
+
+        <h3>Unwanted awareness during anesthesia: A constant challenge</h3>
+        <p>One of the rare but very concerning complications in my practice is "awareness during anesthesia". In about one or two cases per thousand procedures, the patient may remember sounds or sensations during the procedure. Most of the cases I have encountered have been patients undergoing emergency operations, with very low blood pressure, or with a history of substance abuse.</p>
+        <p>The experience that shook me the most was with a fifty-year-old patient who was undergoing open-heart surgery. All indications of anesthesia were deep enough, but after the operation, he told me in startling detail about a conversation between the surgeon and his assistant. At first, I thought he was delirious, but when I checked with the surgeon, every word he said was true.</p>
+        <p>This experience opened my eyes to the fact that consciousness is deeper and more complex than we realize. The patient was not only conscious, but he was in a state of peace, which he described as "like I was floating above my body, observing everything without fear or pain." This makes me believe that consciousness is not just electrical activity in the brain, but the soul's window to the universe.</p>
+
+        <h3>Modern theories of consciousness and their impact on practice</h3>
+        <p>As science has advanced, our theories about consciousness have evolved in a way that has influenced my clinical practice:</p>
+        <ul>
+            <li><strong>Integrated Information Theory:</strong> Proposes that consciousness arises from the complex integration of information between brain regions. I realized the importance of this theory when I noticed that propofol not only reduced brain activity, but also disrupted the connections between different brain regions, making the brain more like a collection of "isolated islands."</li>
+            <li><strong>Universal Workspace Theory:</strong> It holds that information becomes "conscious" when it is spread across a vast network of brain regions. This understanding helped me explain why ketamine has a different effect than propofol - the former allows some brain connections to persist despite the absence of an apparent response.</li>
+        </ul>
+
+        <h3>Individualized responses: Why are patients different?</h3>
+        <p>Perhaps the most interesting thing that has intrigued me during my years of work is the wide variation in patients' response to anesthesia. Some personal observations:</p>
+        <ul>
+            <li>Patients with red hair typically require higher doses of anesthesia (a known genetic correlation).</li>
+            <li>Patients who are addicted to alcohol or narcotics show a clear resistance to anesthesia.</li>
+            <li>Older people require much lower doses, with a longer response time.</li>
+            <li>Some patients wake up "calmly" while others may go through a period of irritability or confusion.</li>
+        </ul>
+        <p>These differences have taught me that anesthesia is not "one size fits all," but rather a medical art that requires constant customization.</p>
+
+        <h3>Lessons from the operating room: Humility before the Great Mystery</h3>
+        <p>Every day in the operating room teaches me a new lesson in humility before the greatness of creation. The more I learn about technology, the more I believe that there is a greater power running this conscious universe. We doctors are just tools in God's hands, helping to heal the bodies of His servants, but true healing comes from God alone.</p>
+        <p>I remember a very complicated operation for a child born with a congenital heart defect. The chances of success were slim, and the prognosis was grim. But by the grace of God, the operation was a great success, and today the child is playing and having fun like a normal child. At that moment I realized that all our medical knowledge is just a drop in the ocean of God's infinite wisdom.</p>
+        <p>I also remember a seven-year-old girl who needed a tonsillectomy. When the anesthesia kicked in, she whispered to me: "Uncle, doctor, I see very beautiful colors." At that moment, I realized that what we call "unconsciousness" might actually be an opening to other levels of perception, levels we rarely access in the normal waking state.</p>
+
+        <h3>From the operating room: When Consciousness Remains</h3>
+        <p>I remember a patient in his forties, of robust build, who had undergone emergency surgery.</p>
+        <p>Despite relatively high doses of propofol and sevoflurane, his response indices remained high. While monitoring the BIS index, we noticed that it was between 50-55 (the ideal value is between 40-60). After the procedure, he told me that he "felt like he was there" even though he felt no pain.</p>
+        <p>This case and others have taught me that the measures of consciousness we use, despite their sophistication, still have certain limitations. This is why we rely on a combination of digital assessment and clinical experience.</p>
+
+        <h3>The future of our understanding of consciousness in anesthesia</h3>
+        <p>In the coming years, I look forward to exciting developments in our field:</p>
+        <ul>
+            <li><strong>More accurate indicators to measure consciousness:</strong> New technologies combining EEG analysis, physiologic markers and artificial intelligence may allow us to better measure different levels of consciousness.</li>
+            <li><strong>Personalized anesthesia:</strong> As our understanding of genetic and physiological differences advances, we may be able to more accurately customize anesthesia protocols for each patient, reducing complications and improving outcomes.</li>
+            <li><strong>Exploring alternative states of consciousness:</strong> A deeper study of ketamine-induced states, for example, may open a new window into understanding the mechanisms of consciousness and treating psychiatric conditions such as treatment-resistant depression.</li>
+        </ul>
+
+        <h3>The bridge between anesthesia and sleep: An integrative view</h3>
+        <p>A comparison between the mechanisms of anesthesia and the mechanisms of natural sleep reveals striking similarities and differences that shed light on the nature of human consciousness. According to a comparative study by Nemri and Frankson (2023):</p>
+        <ul>
+            <li><strong>Similarities:</strong> Both involve modulation of thalamic activity and reduced functional integration between cortical regions.</li>
+            <li><strong>Differences:</strong> Sleep is a self-regulated process that maintains a physiological cycle, while anesthesia is an imposed external modification that overrides natural regulatory mechanisms.</li>
+        </ul>
+        <p>What is particularly interesting is that both the Qur'an (in verse 42 of Surah Al-Zumer) and the latest neurological theories point to an intrinsic similarity between sleep and death, with a difference in degree and reversibility.</p>
+        <p>Anesthesia can be seen as an artificial state that lies midway between deep sleep and temporary death, making it a unique window to explore the nature of human consciousness</p>
+
+        <h3>Reflections on the edge of science and philosophy</h3>
+        <p>After two decades in the operating room, I find myself daily confronted with a startling contradiction: We are good at managing consciousness clinically, but our deep understanding of what it is is still limited.</p>
+        <p>I remember a patient who once woke up and asked me: "Doctor, where were you when you were asleep?" A simple question that summarizes the deepest mysteries of human consciousness.</p>
+        <p>Anesthesiology stands at the intersection of neuroscience, philosophy and spirituality. We deal daily with the line between presence and absence, perception and non-perception. Despite all the modern technologies, I am still amazed every time I see a patient fall into a deep sleep after a single injection, only to return to full consciousness a few hours later, as if returning from a mysterious journey about While the science of anesthesia has advanced tremendously, consciousness remains a complex phenomenon that we deal with in practice without fully understanding what it is.</p>
+        <p>As Miller's book eloquently summarizes: "We are good at managing consciousness clinically, but the biggest scientific challenge remains in understanding how the brain produces consciousness, and exactly how our drugs disrupt it."</p>
+        <p>This epistemological tension - between our practical ability to manipulate consciousness and our limited theoretical understanding of it - is what makes anesthesia such an interesting medical field. Contemporary research reminds us that we are still at the beginning of the journey to understand this profound phenomenon. Consciousness - in and out of anesthesia - remains an exciting intersection of neuroscience, physics, philosophy, philosophy, and perhaps even spirituality, forming one of the deepest mysteries of human existence.</p>
+
+        <h3>Anesthesia as worship and praise</h3>
+        <p>At the end of each workday, I stand in silence inside the empty operating room, reflecting on the miracles I have witnessed. Each patient I anesthetized was a new journey in understanding the mysteries of consciousness and the soul. Every awakening I witnessed was a reminder of God's ability to raise the dead.</p>
+        <p>Anesthesia, for me, is not just a profession, but a cult. Every time I inject an anesthetic drug, I remember and pray to God to protect the patient and ease their journey through the different realms of consciousness. Every time I witness a patient's return to consciousness, I thank God for this daily miracle that never ceases to amaze me.</p>
+        <p>Consciousness is a great divine blessing, and we anesthesiologists are its custodians. We guard it while its owner is away on his anesthetic journey, and we welcome its return as we would welcome a dear guest back from a long journey. In all this, we realize that we are part of a great conscious universe that praises the praise of its Lord, as the Almighty says: "There is nothing but praise, but you do not understand their praise."</p>
+        <p>In twenty years of witnessing the mysteries of consciousness, I have learned that the greatest praise we can give to God is to understand His creation and respect His secrets, and to treat each patient as if he were a verse of God's cosmic revelations, reading them with reverence and dealing with them with a deep appreciation of the greatness of their creator.</p>
+        <p>This is the testimony of a doctor who lived for more than twenty years in the presence of the greatest mysteries of existence, and came away with a deeper belief that consciousness is the human window to cosmic consciousness, and that the medical profession is a sacred trust that we carry towards a deeper understanding of God's signs in His creation.</p>
+
+        <h2>Research III: Consciousness in the Afterlife and the Last Day</h2>
+        <h3>Consciousness in the Qur'anic Perspective</h3>
+        <p>The phenomenon of consciousness in the Qur'an is not limited to the worldly life, but extends to all stages of human existence, including the life of the purgatory and the Last Day. The Qur'an describes these stages and what happens in them at length, emphasizing the persistence of consciousness.</p>
+
+        <div class="verse-container">
+            <div class="verse-text">"When death comes to one of them, he will say , ' Lord, bring me back* so that I may do good in what I have left behind. ' No, it is a word that he says, and behind them is a barzakh until the Day of Resurrection ."</div>
+            <span class="verse-ref">[Al-Mu'minunun: 99-100]</span>
+        </div>
+
+        <p>This verse shows the continuing consciousness of the dying, who asks to return to the world when he sees the truth, and then refers to the barzakh as a stage between the worldly life and the resurrection, a stage that has its own life and nature of consciousness.</p>
+
+        <h3>Consciousness in the isthmus: Qur'anic and Hadith evidence</h3>
+        <p><strong>The life of the isthmus: The Land of Altered Consciousness</strong></p>
+        <p>In language, a barzakh is the barrier between two things, and in legal terminology it is between death and resurrection. The Qur'an and Sunnah emphasize that this stage is not the absence or annihilation of consciousness, but rather an extension of it in a different form.</p>
+
+        <div class="verse-container">
+            <div class="verse-text">"And do not think that those who are killed in the way of Allah are dead, but are alive with their Lord, rejoicing in what Allah has given them of His favor, and rejoicing in those who have not joined them from behind, that there is no fear for them, nor are they grieving"</div>
+            <span class="verse-ref">[Al-Imran: 169-170]</span>
+        </div>
+
+        <p>Here is an accurate description of the state of consciousness of the martyrs in Al-Barzakh, they are "alive", "prospering" and "rejoicing"</p>
+        <p>This detailed journey confirms the continued consciousness of the soul after leaving the body, and its ability to perceive, observe, and respond.</p>
+
+        <h3>Manifestations of stolen consciousness: The questioning of the two kings and the torment and bliss of the grave</h3>
+        <p>One of the most prominent manifestations of consciousness in the barzakh is the questioning of the deceased by the two angels, which is evidence of his continued consciousness and ability to answer.</p>
+        <div class="quote-box">
+            The Prophet (peace and blessings of Allah be upon him) said: "When a man is laid in his grave, and his companions have gone away, so that he hears the sound of their slippers, two angels come to him..."
+            <span class="source">(Agreed upon)</span>
+        </div>
+        <div class="quote-box">
+            The Messenger of Allah (peace and blessings of Allah be upon him) said: "When one of you dies, his seat is presented to him in the morning and evening, if he was from the people of Paradise, he is from the people of Paradise, and if he was from the people of the Fire, he is from the people of the Fire, and it is said: 'This is your seat until Allah resurrects you on the Day of Resurrection'"
+            <span class="source">(Agreed upon)</span>
+        </div>
+
+        <div class="verse-container">
+            <div class="verse-text">"The fire will be presented to them day and night, and on the day of the Hour, send the family of Pharaoh into the severest punishment"</div>
+            <span class="verse-ref">[Ghafir: 46]</span>
+        </div>
+        <p>This presentation to the fire morning and evening emphasizes their continued awareness and realization of the torment in the purgatory before the Day of Resurrection.</p>
+
+        <h3>Communicative consciousness in purgatory: The connection of souls to the living</h3>
+        <p>Some texts indicate that there is a kind of conscious communication between the world of purgatory and the world of this world.</p>
+        <p>In Sahih al-Bukhari, it is recorded that the Prophet addressed the dead polytheists of Badr three days after they were buried, saying: "O so-and-so, O so-and-so, did you find what your Lord promised you to be true, for I have found what my Lord promised me to be true." Umar said: "O Messenger of Allah, how do you speak to bodies that have no souls in them?" He said: "By Allah, whom I myself hold in my hand, you can hear what I say, but they cannot answer."</p>
+        <p>Muslim has narrated in his Sahih from the Prophet (peace and blessings of Allah be upon him ): "The souls of the martyrs are in the hollows of green birds, traveling in Paradise wherever they wish, and then resting in lamps suspended from the throne." This description shows the souls' consciousness, movement and mobility, which is different from our earthly consciousness, which is bound to the physical body.</p>
+        
+        <div class="quote-box">
+            Ibn al-Qayyim (may Allah have mercy on him) said: "The souls of the dead meet, visit and reminisce. If the soul of the living person falls asleep, it meets and talks with the soul of the dead person, and if the living person wakes up, his soul returns to him"
+            <span class="source">(The Book of the Soul)</span>
+        </div>
+        <p>This explains the phenomenon of seeing the dead in a dream, which the Prophet (peace be upon him) mentioned in several hadiths.</p>
+
+        <h3>Awareness on the Last Day: Quranic Scenes and Images</h3>
+        <p>The Qur'an presents detailed paintings of the scenes of consciousness on the Last Day, beginning with the resurrection, continuing through Hashr, and ending with the reward. At each stage, consciousness manifests itself in different ways and to varying degrees.</p>
+
+        <p><strong>Resurrection: Awakening from sleep</strong></p>
+        <p>One of the most marvelous images in the Holy Qur'an is the sight of people waking up from their graves in astonishment, saying:</p>
+        <div class="verse-container">
+            <div class="verse-text">"They said, ' O woe is us, who has resurrected us from our sleep, this is what the Merciful promised, and the messengers are true'"</div>
+            <span class="verse-ref">[Yus: 52]</span>
+        </div>
+        <p>In this scene, the Qur'an likens death to slumber and resurrection to awakening, emphasizing the persistence of consciousness despite its apparent interruption. In this awakened consciousness after the resurrection, memory and perception return to man to remember his earthly life and the promised resurrection.</p>
+        
+        <div class="quote-box">
+            The Prophet (peace be upon him) described the process of re-creation on the Day of Resurrection: "Every son of Adam wears out except the tailbone, from which he was created and in which he rides." In a narration: "Nothing in man wears out except for one bone, which is the tailbone, and it is from it that creation will be mounted on the Day of Resurrection"
+            <span class="source">(Agreed upon)</span>
+        </div>
+        <p>This hadith shows that God Almighty keeps a small part of the human being that does not perish, which is the origin of creation, and from it, the human being is reconstructed with full consciousness, memory and personality, to be the same as the one who lived in the world.</p>
+
+        <p><strong>The Hashr scene: The fullness and presence of consciousness</strong></p>
+        <p>After the resurrection, the scene of Hashr comes, where the creatures are gathered on one level. The Almighty said:</p>
+        <div class="verse-container">
+            <div class="verse-text">"On the day when we say to Hell, 'Are you full,' and it says, 'Is there anything more?"</div>
+            <span class="verse-ref">[Q: 30]</span>
+        </div>
+        <p>This shows awareness even in the Fire, as it addresses its Lord and answers His question.</p>
+        <p>The Prophet (peace and blessings of Allah be upon him) described how the people will be brought forth "barefoot, naked and naked" (agreed upon), and the Prophet (peace and blessings of Allah be upon him) described how they will be on that day: "Sweat stings them and the call to prayer" (narrated by al-Bukhari). In this scene, people are in a state of full consciousness, realizing what is happening around them, and sensing the anguish and distress.</p>
+
+        <div class="verse-container">
+            <div class="verse-text">"You were in a state of ignorance of this, but We have removed your hood from you, so your sight is sharp today."</div>
+            <span class="verse-ref">[Q: 22]</span>
+        </div>
+        <p>On the Day of Resurrection, man's perception will be sharper, stronger and more comprehensive, and he will see what he was oblivious to in the world.</p>
+
+        <p><strong>The testimony of the wings: Awareness of the organs</strong></p>
+        <p>One of the most marvelous manifestations of awareness on the Last Day is what the Qur'an describes as the testimony of the human body.</p>
+        <div class="verse-container">
+            <div class="verse-text">"Today we seal their mouths, their hands will speak to us, and their feet will bear witness to what they have been doing."</div>
+            <span class="verse-ref">[Yus: 65]</span>
+        </div>
+        <div class="verse-container">
+            <div class="verse-text">"And they said to their flesh, 'Why have you testified against us?' They said, 'God, who created all things, and He created you the first time, and to Him you will return.'"</div>
+            <span class="verse-ref">[Faslat: 21]</span>
+        </div>
+        <p>In this marvelous scene, the organs of the body are transformed from mere instruments of the soul into conscious entities capable of speech and testimony. This reveals that every part of the human being carries a kind of consciousness and realization, and that this consciousness manifests itself in a completely different way on the Last Day.</p>
+
+        <div class="quote-box">
+            It is narrated in Sahih Muslim on the authority of Anas ibn Malik (may Allah be pleased with him): "We were with the Messenger of Allah (peace be upon him) and he laughed and said: 'Do you know what I am laughing at? Allah and His Messenger know. He said: The slave is talking to his Lord, he says: 'O Lord, did you not drag me out of injustice?' He said: 'He says: Yes. He said: He says: 'Yes: I do not authorize myself except by my own witness. He says: He says: 'Yes: It is enough that you yourself are a witness to yourself today, and the scribes are witnesses. He said: Then he will be sealed in his mouth, and his corners will be told: Say: Then he will be left alone to speak. He said: Then he will be left alone to speak, and he will say: 'Far be it from me, for you I was fighting for you.'"
+        </div>
+
+        <p><strong>The symbolic slaughter of death: Embodiment of abstract consciousness</strong></p>
+        <div class="quote-box">
+            The scene of the slaughter of death, which was described by the Prophet (peace be upon him) by saying: "Death is brought like a salted ram, and it stands between Paradise and Hell, and it is said: 'O people of Paradise, do you recognize this?' They look up and say: 'Yes, this is death. And it will be said, 'O people of Hell, do you recognize this?' They will look up and say, 'Yes, this is death. Then it is ordered to be slaughtered. Then it is said: 'O people of Paradise, eternal and deathless, and O people of Hell, eternal and deathless'"
+            <span class="source">(Agreed upon)</span>
+        </div>
+        <p>In this scene, death - an abstract event - is transformed into a tangible object that is seen and recognized and then slaughtered, signaling the immortality of the people of Paradise and the people of Hell. This reflects a radical shift in the nature of consciousness and perception on the Last Day, where abstract meanings are materialized and become tangible and visible.</p>
+
+        <p><strong>The wrath of hell: The consciousness of hell</strong></p>
+        <p>One of the most striking images presented in the Qur'an is that of Hell being enraged, gasping, and distinguished by its wrath.</p>
+        <div class="verse-container">
+            <div class="verse-text">"When they see them from a distant place, they hear them sighing and exhaling"</div>
+            <span class="verse-ref">[Al-Furqan: 12]</span>
+        </div>
+        <div class="verse-container">
+            <div class="verse-text">"When they are thrown into it, they hear it gasping, and it bubbles * It is almost torn with anger. Whenever a wave is thrown into it, its guardians ask them, 'Did not a warning come to you?'"</div>
+            <span class="verse-ref">[Al-Malik: 7-8]</span>
+        </div>
+        <p>This marvelous image of Hell, which is almost bursting with anger at the unbelievers, reflects a kind of consciousness even in non-human creatures, and this is consistent with the concept of a conscious universe, which we will discuss in later chapters.</p>
+        <div class="quote-box">
+            Al-Tirmidhi has narrated that the Prophet (peace be upon him) said: "The fire complained to its Lord and said: 'Lord, I ate each other, so He gave it permission to breathe two breaths: A breath in winter and a breath in summer, which is the harshest heat you find, and the harshest cold you find.'"
+        </div>
+
+        <p><strong>The Full Circle of Consciousness</strong></p>
+        <p>In our journey with consciousness in Istanbul and the Last Day, we see that human consciousness is not a temporary phenomenon that ends with the death of the body, but a constant essence that goes through multiple and varied stages, from this worldly life to Istanbul to the Last Day</p>
+        <p>In each of these stages, consciousness takes on a different form and expands in scope, until it reaches its peak of perfection on the Last Day.</p>
+        <div class="verse-container">
+            <div class="verse-text">"You were in a state of ignorance of this, but We have lifted your veil from you, and your sight is sharp today"</div>
+            <span class="verse-ref">[Q: 22]</span>
+        </div>
+        <p>This integrated vision of consciousness is evident in God's words: "God takes away the souls at the time of their death and those that have not died in their sleep, and He holds the one that has already died and sends the other to an appointed time, for there are signs in this for people who think" [Al-Zamar: 42].</p>
+        <p>The human soul goes through multiple states of consciousness: The consciousness of waking, the consciousness of sleep, the consciousness of purgatory, and the consciousness of the Last Day. In each state, it has its own distinctive manifestations and characteristics.</p>
+        <p>The Qur'an makes it clear that this consciousness continues and grows, until the soul awakens to its great awakening on the Day of Resurrection, to realize the full realities of existence and witness its eternal destiny: Either in permanent bliss or permanent torment.</p>
+        <div class="quote-box">
+            Ibn al-Qayyim (may Allah have mercy on him) says in his book Al-Ruh: "The soul is more perfect after death and before resurrection, and in the hereafter it is more perfect than in the hereafter. In Paradise, after entering it, it is more perfect than before entering it. It is still ascending and ascending to endless perfection, just as the people of misery are still descending and descending."
+        </div>
+        <p>With this deep Qur'anic understanding of consciousness, the picture of man and the reality of his existence is complete, and the purpose of his creation and destiny is clear. God's mercy and wisdom are evident in His creation of man, his succession on earth, his testing in this world, and his reward in the hereafter, in an integrated system of continuous awareness that is not interrupted by the interruption of this worldly life, but continues and integrates to reach its destined end in God's eternal knowledge.</p>
+
+        <h2>Fourth Research: The Concept of a Conscious Universe in the Qur'anic Conceptualization</h2>
+        <p><strong>Praise and worship of the universe</strong></p>
+        <p>The Holy Qur'an is replete with many verses that emphasize the fact that the universe praises and worships God.</p>
+        <div class="verse-container">
+            <div class="verse-text">"Do you not see that Allah praises those in the heavens and the earth, and the birds that fly, each knowing his prayer and his praise, and Allah is aware of what they do"</div>
+            <span class="verse-ref">(Al-Nur 41)</span>
+        </div>
+        <p>Meditation on this verse and others reveals important truths:</p>
+        <ul>
+            <li><strong>The universality of praise:</strong> Everything in the universe praises God, without exception.</li>
+            <li><strong>The reality of praise:</strong> This praise is real, not just a sign of forced submission to God's laws.</li>
+            <li><strong>Consciousness of the praisers:</strong> Those who praise God are aware of their prayer and praise, which indicates their awareness and realization.</li>
+            <li><strong>Variety of praise:</strong> Each creature has its own tasbih, which suits its nature and composition.</li>
+        </ul>
+
+        <p><strong>The feelings and sensations of the universe</strong></p>
+        <div class="verse-container">
+            <div class="verse-text">"If We had placed this Qur'an on a mountain, you would have seen it trembling and cracking from the fear of Allah."</div>
+            <span class="verse-ref">(Al-Hashr 21)</span>
+        </div>
+        <p>The mountain - which is one of the hardest and toughest components of the earth - is capable of reverence and fear, and even cracking for fear of God. This shows the ability of these creatures to feel, sense and be affected.</p>
+        <p>Feelings of fear and reverence in the mountains may cause them to crack, while the hearts of human beings are enveloped in ran and become harder than stones.</p>
+        <div class="verse-container">
+            <div class="verse-text">"Then your hearts hardened after that, and they are like stones or harder. And of the stones there are some of them that do not have rivers flowing out of them. And there are some of them that do not crack and water comes out of them. And there are some of them that do not fall down out of fear of Allah. And Allah is not oblivious to what you do."</div>
+            <span class="verse-ref">(Al-Baqarah 74)</span>
+        </div>
+        <p>The Qur'an also describes the response of the heavens and the earth to God's command</p>
+        <div class="verse-container">
+            <div class="verse-text">"Then He ascended to the sky while it was smoke, and He said to it and to the earth, 'Come willingly or unwillingly,' and they said, 'We have come willingly'"</div>
+            <span class="verse-ref">(Faslat 11)</span>
+        </div>
+        <p>The heavens and the earth hear, understand, respond to, and converse with God's words. All of this indicates their awareness and realization.</p>
+
+        <h2>Fifth Research: The Conscious Universe between the Qur'anic Conceptualization and Modern Science</h2>
+        <h3>Scientific theories approaching the Qur'anic conceptualization</h3>
+        <p>Some have long believed that there is a conflict between faith and science, between what revelation tells us and what scientific experiments reveal. But the truth is that this conflict is often illusory, resulting from an inadequate understanding of either religion, science, or both.</p>
+        <p>On the subject of a conscious universe, we find that modern science, especially in the fields of quantum physics, neuroscience and consciousness, is surprisingly close to the Qur'anic conceptualization of the universe. More than fourteen centuries ago, the Qur'an told us that everything in the universe praises God, that the heavens, the earth, and the mountains are afraid to carry the trust, that the earth speaks its news, and that the stones fall in fear of God.</p>
+        <p>Today, science is telling us that consciousness may be a fundamental property of the universe, that matter and energy may only be manifestations of universal consciousness, and that observation and perception play a pivotal role in shaping reality.</p>
+        <div class="quote-box">
+            The famous physicist Max Planck says: "As a lifelong scientist devoted to rigorous science and the study of matter, I can say that I am immune to being perceived as a bigot. From my research into the atom, I say: There is no 'matter' in itself. All matter arises and exists only thanks to a force that enables the particles of the atom to vibrate and binds them together as the smallest solar system in the universe. However, because there is no clearly intelligent or eternal force in the universe-humanity has not succeeded in inventing a perpetual motion machine-man must assume that behind this force is an intelligent conscious mind. This mind/soul is the origin of all matter."
+            <span class="source">(From a speech given in Florence in 1944 and preserved in the archives of the Max Planck Foundation)</span>
+        </div>
+
+        <h3>The Theory of Cosmic Interconnectedness (Gaia Hypothesis): A Scientific Vision of Interconnected Consciousness</h3>
+        <p>Within the framework of the convergence between modern science and the Qur'anic vision of the universe, contemporary scientific theories are emerging that emphasize the unity and interconnectedness of the cosmic system in a manner consistent with what the Qur'an told us more than fourteen centuries ago. Among these theories is what we can call the "theory of cosmic integration".</p>
+        <p>This theory argues that the earth, atmosphere, and ecosystems form an integrated system that works in perfect harmony, as if it were a single organism. Scientific studies have shown that the Earth responds to environmental changes with complex self-regulatory mechanisms that maintain the balance of temperatures, atmospheric composition, water and mineral cycles in a way that preserves and sustains life.</p>
+        <p>This theory, despite its novelty in Western science, is fully consistent with the Qur'anic vision, which tells us that the earth is a living, conscious organism that responds to the command of its Lord and interacts with the human beings who live on it.</p>
+        <div class="verse-container">
+            <div class="verse-text">"And the earth we have stretched it out , and have cast therein anchors, and have planted therein every kind of bright flower. It is an insight and a reminder for every repentant servant"</div>
+            <span class="verse-ref">[Q: 7-8]</span>
+        </div>
+        <p>The eminent ecologist Thomas Berry said: "The universe is a communication between selves, not just an aggregation of things."</p>
+        <p>He points out that there is a deep relationship and organic partnership between beings, which is not only in a physical sense, but involves a shared consciousness and interaction.</p>
+
+        <h3>Cosmic interconnectedness: An Islamic Reading of Integrated Systems</h3>
+        <p>Recent scientific studies indicate that the Earth, atmosphere, and ecosystems together form an integrated system that works in perfect harmony, through a complex series of feedback mechanisms that maintain the balance of temperatures, atmospheric composition, and water and mineral cycles.</p>
+        <p>These discoveries are being made by sciences as diverse as Systems Ecology, Earth Systems Science and Climate.</p>
+        <p>This integrated vision of the universe, which combines faith and science, opens new horizons for understanding our relationship with nature and the Creator, and establishes a deep environmental ethic, based on respect for every component of the universe as part of a conscious system that praises its Creator.</p>
+
+        <h3>Quantum Consciousness Theory</h3>
+        <p>One of the most prominent scientific theories that comes close to the Quranic conceptualization of a conscious universe is the theory of "quantum consciousness" developed by British physicist and mathematician Roger Penrose and physician and neuroscientist Stuart Hameroff.</p>
+        <p>This theory proposes that consciousness arises at the quantum level in structures called "microtubules" within brain cells. Interestingly, this theory opens the door to the possibility that forms of consciousness can exist everywhere in the universe, not just in living organisms, as long as the right physical conditions are in place.</p>
+        <p>Says Hameroff: "Consciousness may exist to varying degrees in everything in the universe, from atoms to stars. What characterizes human consciousness is its complexity, not whether or not it exists.</p>
+        <p class="source">(Hameroff, Stuart and Penrose, Roger. "Consciousness in the Universe: Physics of Life Reviews, 2014, 11(1): 39-78)</p>
+
+        <h2>Chapter Six: An Integrated View of the Conscious Universe</h2>
+        <p><strong>Between Revelation, Science, and Spiritual Experience</strong></p>
+        <p>By combining what revelation tells us, what science reveals, and what spiritual experience offers, we can build an integrated vision of the conscious universe. We see the universe as an integrated unity, in which all praise God and recognize His oneness.</p>
+        <div class="quote-box">
+            The contemporary Islamic philosopher and scientist Sayyid Hussein Nasr says: In his book Man and Nature: "Man's destiny calls him to fulfill his role as God's successor on earth, protector of the natural order, and witness to the truth that 'all nature speaks of God and the destruction of the natural environment is a failure of our humanity.'"
+        </div>
+
+        <p><strong>Changing the view of the universe and life</strong></p>
+        <p>A conscious understanding of the universe helps us transcend the purely materialistic view that has dominated Western thought for centuries, which sees the universe as a soulless and unconscious machine. This materialistic view has led to the alienation of man from his natural surroundings, the unjust exploitation of the earth's resources, and deep ecological and spiritual crises.</p>
+        <p>In contrast, the Qur'anic vision of a conscious universe offers an alternative vision that restores man's harmony with nature, reminds him of his responsibility towards the earth and its inhabitants, and deepens his sense of belonging to an integrated cosmic system in which all are in harmony in praising and glorifying the Creator.</p>
+        <div class="quote-box">
+            Nobel Peace Prize winner and environmentalist Wangari Maathai says: From Replenishing the Earth: How Our View of Nature Determines How We Treat It:
+            "It is possible to live in a forest and not really see it, or to live in the countryside and not appreciate and be inspired by the nature that surrounds us. For unless we see it, smell it, or touch it, we tend to forget it, and our souls wither." (Chapter Four, p. 55)
+            "Recognizing the spiritual and ecological importance of trees calls for a collective effort to appreciate and protect the natural world. To truly care for the environment, individuals must interact with it directly, ensuring that future generations cherish and protect sacred landscapes and ecosystems." (Conclusion of Chapter 4, p. 22)
+        </div>
+
+        <p><strong>The Impact of Understanding the Conscious Universe on Our Lives</strong></p>
+        <p>Understanding the Conscious Universe is not just theoretical knowledge, it is a vision that changes our lives, our behavior, and our relationship with everything around us. When we realize that everything in the universe is alive and conscious, we will treat nature with greater respect, connect with the creatures around us with deeper sensitivity, and feel a sense of unity and harmony with the whole universe.</p>
+        <p>In The Alchemy of Happiness, al-Ghazali quotes the Prophet as saying: "Whoever knows himself knows his Lord."</p>
+        <p>He then goes on to explain the wisdom behind this saying: If you do not know yourself, how can you know your Lord? If you say, "I know myself! You only know the apparent body..."</p>
+        <p>We can add: "Whoever knows the universe, knows himself and knows his Lord." The Creator, the universe, and man are an integrated triangular relationship, one of which cannot be understood in isolation from the other two.</p>
+
+        <h2>Conclusion of Chapter One: An Introduction to the Conscious Universe</h2>
+        <p>At the conclusion of this introductory chapter, we find ourselves in front of an amazing cosmic truth revealed by the Holy Qur'an more than fourteen centuries ago: The entire universe is a living, conscious organism that praises its Creator, testifies to His oneness, submits to His command, and responds to Him with will and purpose.</p>
+        <p>In this chapter, we have dealt with the concept of consciousness in its many dimensions: Starting from consciousness during sleep and wakefulness, through the altered states of consciousness that appear in medical anesthesia, to consciousness in the afterlife and the Last Day. Through the Qur'anic texts and Hadiths, we have found that consciousness is a continuous and progressive phenomenon that transcends the physical limits of the brain and body.</p>
+        <p>I contemplate the power of the Prophet's hadith when the Prophet (peace be upon him) tells us that "if a servant is placed in his grave and his companions go away, he will hear the sound of their slippers." I feel this terrible situation and imagine myself alone in the darkness of the grave, hearing the footsteps of those I love as they walk away, leaving me in a new world that I am not yet familiar with.</p>
+        <p>Then I reflect on the verses of the testimony of the skin, hands and feet, the mountains that tremble and crack for fear of God, the heavens and the earth that answered, "We came obediently," the hellfire that is almost distinguishable from anger, and the hadith about the fire that complains to its Lord - all confirm to me beyond any doubt that consciousness is not a unique human characteristic, but a universal phenomenon that manifests in various forms in all the components of existence.</p>
+        <p>I marvel at the majestic scene of the resurrection, where people wake up from their graves in a state of full consciousness, saying in amazement and bewilderment: "O woe is us, who has resurrected us from our sleep," to which the believers reply: "This is what was promised by the Most Merciful, and the messengers are true.</p>
+        <p>I conjure up in my mind's eye the wondrous scene described by the Prophet (peace be upon him), when death is brought in the form of a ram and slaughtered between Paradise and Hell, so that the people of both places realize that eternity has been written for them. I stand stunned in front of the scene of the pronouncement of what the hands have earned, and that day when the cover will be revealed and the sight will become insightful.</p>
+        <p>In the operating room, when I inject the patient with anesthesia, I witness the miracle of consciousness shifting every day. It is a moment that makes me wonder about the reality of this consciousness that goes away and then comes back. How many times have I paused at the end of a surgical procedure, pondering the patient who minutes before was in another world, just as God passes away in his sleep. Where was his soul in those moments? Which valley of consciousness was it swimming in?</p>
+        <p>Our understanding of the phenomenon of cosmic consciousness changes our view of the entire existence and brings about a radical shift in our relationship with nature, the Creator, and ourselves. When I realize that every atom in this universe praises God, and that every creature testifies to His oneness, I feel a deep harmony with all of existence, and I feel the heavy responsibility of this great trust that the heavens, earth and mountains were afraid to carry, and man carried it.</p>
+        <p>When I reflect on the various stages of consciousness that my soul goes through - from wakefulness to sleep, to death, to the Barzakh, to the resurrection, the Hashr and the reckoning - I realize my truth, my destiny, the purpose of my creation, and the responsibility that is placed upon me. I realize that death is not the end of my consciousness, but rather a transition to another, more expansive and comprehensive stage.</p>
+        <p>Imam Ibn al-Qayyim says: "The soul is more perfect in the hereafter than it is after death and before resurrection, and more perfect in the hereafter than it is in the hereafter... It is still ascending and ascending to endless perfection." This progressive vision of consciousness is fully consistent with the comprehensive Quranic conceptualization that we have seen in many verses.</p>
+        <p>I often stand in front of majestic mountains, or contemplate the twinkling stars in the clear sky, or listen to the sound of rain falling on the thirsty earth, and ask myself: What do these creatures say in their praise? How do they express their fear, reverence and submission to their Creator? If I could understand their praise, what cosmic secrets would be revealed to me?</p>
+        <p>The Qur'anic vision of a conscious universe transcends the inadequate binaries that have dominated Western thought for centuries (matter/soul, mind/body, man/nature), and presents us with an integrated picture of existence, in which we see the deep interconnectedness of all its components. It is this integrated vision that establishes a balanced relationship between man and nature, between science and faith, and between this world and the hereafter.</p>
+        <p>This introductory chapter is the beginning of our journey into the world of the conscious universe, a journey that will take us in the coming chapters to broader and deeper horizons, to discover more secrets of existence, the secrets of the soul, and the secrets of the Creator. A journey in which we hear the hymns and praise of the universe, witness its reverence and fear, and contemplate its implications for our lives and destiny.</p>
+        <p>As Jalaluddin Rumi said: "All the atoms of the universe speak the divine secret, but a conscious mind and ears are needed to hear it."</p>
+        <p>Let this book be a call to awaken consciousness and awareness, open the vision to the realities of existence, and listen to the praise of atoms and galaxies in a harmonious cosmic symphony that testifies to the oneness and greatness of the Creator.</p>
+        <p>In our journey with the concept of consciousness, we will see how it extends from the smallest atoms to the largest galaxies, from daily sleep to death and rebirth, and from the prayer of birds to the testimony of the wings, in an integrated fabric that emphasizes that the entire universe is one system, created by God with destiny, and deposited in it secrets that indicate His unity and ability.</p>
+        <p>I will never forget that moment when I stood watching the sunrise on top of a majestic mountain, and I felt a deep sense of belonging to this universe, and I felt that the rocks under my feet, the sky above my head, and the breeze caressing my face - all swimming with my heart in complete harmony, as if every atom in existence was repeating with me: Glory be to God, Praise be to God, Glory be to God.</p>
+        <p>As the words of the Almighty reverberate: "There is nothing but praise, but you do not understand their praise." Cosmic awareness remains an ongoing invitation to reflect on the signs of God in the horizons and the souls, and an opportunity to discover the self and the universe at the same time.</p>
+        <p>In the end, I realize that the journey of my human consciousness is only a small chapter in the great story of cosmic consciousness, a story that begins from nothingness to existence, from this world to the isthmus, from the isthmus to the hereafter, and from mortality to survival, in an upward movement towards absolute perfection, which is not perceived by minds, is not limited by illusions, and is not surrounded by understandings.</p>
+        <p style="text-align: center; margin-top: 50px; font-weight: bold; color: var(--primary-color);">God knows best and is the wisest.</p>
+
+        <!-- Chapter Navigation -->
+        <div class="chapter-navigation">
+            <a href="index.html" class="nav-btn btn-home">
+                <i class="fas fa-home"></i>
+                <span>Back to Home</span>
+            </a>
+            <a href="chapter2.html" class="nav-btn btn-next">
+                <span>Next Chapter</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
