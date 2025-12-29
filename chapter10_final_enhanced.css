@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ترانيم الكون - سيمفونية الوجود الواعي</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Website URL Banner -->
+    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 0.8rem; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        🌐 <a href="https://www.universe-melodies.com" style="color: white; text-decoration: none;">www.universe-melodies.com</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>🌌 ترانيم الكون</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">الرئيسية</a></li>
+                <li><a href="introduction.html">المقدمة</a></li>
+                <li><a href="about.html">عن المؤلف</a></li>
+                <li><a href="contents.html">فهرس الكتاب</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">☰</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); min-height: 95vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+        <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(118, 75, 162, 0.2) 0%, transparent 50%);"></div>
+        <div class="container hero-content" style="position: relative; z-index: 2;">
+            <div class="hero-text" style="text-align: center;">
+                <div class="hero-book-cover" style="text-align: center; margin-bottom: 2.5rem;">
+                    <img src="book-cover.jpg" alt="غلاف كتاب ترانيم الكون" style="max-width: 450px; width: 90%; height: auto; border-radius: 20px; box-shadow: 0 30px 90px rgba(102, 126, 234, 0.4), 0 0 50px rgba(118, 75, 162, 0.3); animation: float 3s ease-in-out infinite; border: 3px solid rgba(255,255,255,0.1);">
+                </div>
+                <h1 class="hero-title" style="font-size: 3.5rem; font-weight: 900; background: linear-gradient(135deg, #fff 0%, #e0e7ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; text-shadow: 0 5px 15px rgba(0,0,0,0.3);">ترانيم الكون</h1>
+                <h2 class="hero-subtitle" style="font-size: 1.6rem; color: rgba(255,255,255,0.95); margin-bottom: 1rem; font-weight: 500; line-height: 1.6;">سيمفونية الوجود الواعي في القرآن الكريم والعلم الحديث</h2>
+                <p class="hero-author" style="font-size: 1.3rem; color: rgba(255,255,255,0.8); margin-bottom: 2.5rem; font-weight: 600;">د. جميل السقيا</p>
+                <div class="hero-buttons" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="contents.html" class="btn btn-primary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 2.5rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700; text-decoration: none; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); transition: all 0.3s ease; display: inline-block;">📖 ابدأ القراءة</a>
+                    <a href="#download" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 1rem 2.5rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease; display: inline-block;">📥 تحميل الكتاب PDF</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); font-size: 2rem; color: rgba(255,255,255,0.5); animation: bounce 2s infinite;">⬇</div>
+    </section>
+
+    <style>
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateX(-50%) translateY(0); }
+        50% { transform: translateX(-50%) translateY(10px); }
+    }
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(102, 126, 234, 0.5) !important;
+    }
+    
+    /* Additional Enhancements for Homepage */
+    .feature-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.3) !important;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.2rem !important;
+        font-weight: 700 !important;
+    }
+    
+    .feature-card h4 {
+        font-size: 1.1rem !important;
+        font-weight: 600 !important;
+    }
+    
+    .feature-card p {
+        font-size: 1rem !important;
+        font-weight: 500 !important;
+    }
+    
+    .feature-link {
+        display: inline-block;
+        margin-top: 1rem;
+        color: #667eea;
+        font-weight: 700;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .feature-link:hover {
+        color: #764ba2;
+        transform: translateX(-5px);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .hero h1 { font-size: 2.5rem !important; }
+        .hero h2 { font-size: 1.2rem !important; }
+        .section-title { font-size: 2rem !important; }
+    }
+    
+    /* Smooth Scroll */
+    html { scroll-behavior: smooth; }
+    
+    /* Loading Animation */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .book-description > div {
+        animation: fadeInUp 0.6s ease-out;
+    }
+    </style>
+
+    <!-- About Book Section -->
+    <section class="about-book" style="background: linear-gradient(to bottom, #f8f9ff 0%, #ffffff 50%, #fff5f8 100%); padding: 5rem 0;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="section-title" style="font-size: 2.8rem; color: #667eea; font-weight: 800; margin-bottom: 1rem;">✨ عن الكتاب</h2>
+                <div class="title-decoration" style="width: 100px; height: 4px; background: linear-gradient(90deg, transparent, #667eea, #764ba2, transparent); margin: 0 auto;"></div>
+            </div>
+            <div class="book-intro">
+                <div class="book-cover">
+                    <div class="book-3d">
+                        <img src="book-cover.jpg" alt="غلاف كتاب ترانيم الكون" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+                    </div>
+                </div>
+                <div class="book-description">
+                    <!-- العنوان الرئيسي -->
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <h3 style="color: #667eea; margin-bottom: 0.8rem; font-size: 1.5rem; font-weight: 800; line-height: 1.4;">ترانيم الكون</h3>
+                        <h4 style="color: #764ba2; margin-bottom: 0.5rem; font-size: 1.2rem; font-weight: 600;">سيمفونية الوجود الواعي في القرآن الكريم والعلم الحديث</h4>
+                        <p style="color: #555; font-size: 1.05rem; font-weight: 500; font-style: italic;">رحلة استثنائية عبر سرّ الوعي… من الذرّة إلى المجرّة، ومن النوم والتخدير إلى البرزخ والآخرة</p>
+                    </div>
+
+                    <!-- المقدمة -->
+                    <div style="background: linear-gradient(135deg, #f8f9ff 0%, #fff5f8 100%); padding: 2rem; border-radius: 15px; border-right: 5px solid #667eea; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);">
+                        <p style="font-size: 1.05rem; line-height: 1.9; color: #333; text-align: justify;">
+                            في عملٍ موسوعيّ يأخذنا <strong style="color: #667eea;">الدكتور حميل السقيا</strong> في رحلةٍ معرفية وروحية غير مسبوقة لفهم سِرّ الوعي في الكون: كيف ينبض في ذرات المادة وخلايا الحياة، وكيف يتجلّى في تسبيح المخلوقات وقنوتها وسجودها لله، وكيف تُصوّر النصوص القرآنية والسنة مشاعر الكون وخشوعه، ثم يعقد جسورًا رصينة بين هذا التصوّر الإيماني وبين أحدث النظريات العلمية في الفيزياء العصبية والكمّية ونظريات الوعي الحديثة.
+                        </p>
+                    </div>
+
+                    <!-- ماذا ستكتشف -->
+                    <div style="background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #667eea; margin-bottom: 1.5rem; font-size: 1.3rem; text-align: center; font-weight: 700; border-bottom: 3px solid #667eea; display: inline-block; padding-bottom: 0.5rem;">✨ ماذا ستكتشف في هذه الرحلة؟</h4>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.5rem;">
+                            <div style="background: linear-gradient(135deg, #667eea15, transparent); padding: 1.2rem; border-radius: 10px; border-right: 4px solid #667eea;">
+                                <strong style="color: #667eea; font-size: 1.05rem;">🧠 الوعي في النوم والتخدير واليقظة</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">قراءة قرآنية وعلمية لمستويات الوعي وتحولاته، وما يكشفه علم الأعصاب الحديث عن «انفصال الإدراك» أثناء النوم والتخدير.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #764ba215, transparent); padding: 1.2rem; border-radius: 10px; border-right: 4px solid #764ba2;">
+                                <strong style="color: #764ba2; font-size: 1.05rem;">🌙 البرزخ والآخرة</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">مشاهد قرآنية وحديثية تعالج الوعي بعد الموت ويوم القيامة بمنهجٍ رصين يجمع بين النص والتأمل العلمي.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #667eea15, transparent); padding: 1.2rem; border-radius: 10px; border-right: 4px solid #667eea;">
+                                <strong style="color: #667eea; font-size: 1.05rem;">🌟 تسبيح الكون وقنوته وسجوده</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">من الأدلة القرآنية إلى التطبيقات النبوية، مع لوحاتٍ بديعةٍ عن خشوع الجبال وسجود الظلال ودموع السماء والأرض—ورؤية متوازنة تحسم جدل «الحقيقي أم المجازي» بمنهج علمي عقدي.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #764ba215, transparent); padding: 1.2rem; border-radius: 10px; border-right: 4px solid #764ba2;">
+                                <strong style="color: #764ba2; font-size: 1.05rem;">💚 مشاعر الكون ووعي الكائنات</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">الهدهد والنملة والنحل والحوت والفيل… شواهد قرآنية موصولة باكتشافات حديثة في ذكاء الحيوان والنبات والسلوك الخلوي.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #667eea15, transparent); padding: 1.2rem; border-radius: 10px; border-right: 4px solid #667eea;">
+                                <strong style="color: #667eea; font-size: 1.05rem;">✨ تجارب الأنبياء مع الكون الواعي</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">من تسبيح الجبال مع داود إلى ترانيم الحصى بين أنامل المصطفى ﷺ، وتحليلٌ معرفي لأبعاد هذه التجارب ودروسها المعاصرة.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #764ba215, transparent); padding: 1.2rem; border-radius: 10px; border-right: 4px solid #764ba2;">
+                                <strong style="color: #764ba2; font-size: 1.05rem;">🔬 المنظور العلمي للوعي</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">بانوراما نقدية لنظريات مثل المركزية الحيوية، والوعي الشامل (Panpsychism)، والمعلومات المتكاملة (IIT)، وصلاتها بتأويلات ميكانيكا الكمّ.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #667eea15, transparent); padding: 1.2rem; border-radius: 10px; border-right: 4px solid #667eea;">
+                                <strong style="color: #667eea; font-size: 1.05rem;">🤖 الذكاء الاصطناعي ووعي المستقبل</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">هل تطوّر الآلات وعيًا إدراكيًا خارقًا؟ سيناريوهات تقنية وأخلاقية، وحوارات فلسفية بين الإنسان والآلة.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #764ba215, transparent); padding: 1.2rem; border-radius: 10px; border-right: 4px solid #764ba2;">
+                                <strong style="color: #764ba2; font-size: 1.05rem;">🌌 السماوات السبع والأكوان المتعددة</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">مقارنة بين النصوص والفرضيات الفيزيائية المعاصرة لفهم تعدد الأكوان، ضمن رؤية لا تُخاصم العلم بل تحاوره.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #667eea15, transparent); padding: 1.2rem; border-radius: 10px; border-right: 4px solid #667eea;">
+                                <strong style="color: #667eea; font-size: 1.05rem;">⚛️ من الذرّة إلى المجرّة</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">تسبيحٌ كونيّ موحَّد، ومعالم «الضبط الدقيق» والتصميم البديع في القوانين والثوابت والأنظمة الحيوية.</p>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #764ba215, transparent); padding: 1.2rem; border-radius: 10px; border-right: 4px solid #764ba2;">
+                                <strong style="color: #764ba2; font-size: 1.05rem;">💫 ترانيم الشفاء وقوة الكلمة</strong>
+                                <p style="margin: 0.5rem 0 0 0; color: #555; line-height: 1.7;">الأساس القرآني والنبوي لشفاءِ الأرواح والأجساد، وتطبيقات عملية مدعومة بدراسات معاصرة في أثر الذكر والتسبيح.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- لماذا هذا الكتاب مميز -->
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2.5rem; border-radius: 15px; margin-bottom: 2rem; color: white; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);">
+                        <h4 style="color: white; margin-bottom: 1.5rem; font-size: 1.3rem; text-align: center; font-weight: 700;">⭐ لماذا هذا الكتاب مميّز؟</h4>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                            <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">📚</div>
+                                <strong style="display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">شمولٌ فريد</strong>
+                                <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; opacity: 0.95;">يغطي مسار الوعي كاملًا—من فسيولوجيا النوم والتخدير إلى الوعي الأخروي، ومن خفق الذرّة إلى ترانيم المجرّة.</p>
+                            </div>
+
+                            <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔗</div>
+                                <strong style="display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">تكامل العلم والإيمان</strong>
+                                <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; opacity: 0.95;">لا تعارض بين حقائق الوحي والاكتشافات الرصينة؛ بل انسجامٌ يفتح آفاقًا أرحب للفهم والمعنى.</p>
+                            </div>
+
+                            <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎯</div>
+                                <strong style="display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">منهجية دقيقة</strong>
+                                <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; opacity: 0.95;">توثيق علمي موسّع ونقاش نقدي منضبط للنظريات، مع وضوح الحدود المنهجية بين «السماعيات» و«التجريبيات».</p>
+                            </div>
+
+                            <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">✍️</div>
+                                <strong style="display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">أسلوب آسر</strong>
+                                <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; opacity: 0.95;">لغة تجمع العقل والقلب؛ تعرض البرهان وتوقظ الدهشة، وتحوّل القارئ من «مشاهد» إلى «شاهد» في أوركسترا الوجود.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- خلاصة الرسالة -->
+                    <div style="background: linear-gradient(135deg, #fff5f8 0%, #f8f9ff 100%); padding: 2rem; border-radius: 15px; border: 3px solid #667eea; margin-bottom: 2rem; box-shadow: 0 6px 20px rgba(102, 126, 234, 0.15);">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <span style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 0.5rem 1.5rem; border-radius: 25px; font-weight: 700; font-size: 1.1rem; display: inline-block;">💎 خلاصة الرسالة</span>
+                        </div>
+                        <p style="text-align: center; font-size: 1.1rem; line-height: 1.9; color: #333; font-weight: 500; margin: 1.5rem 0;">
+                            حين تُدرك سجود الظلال، وخشوع الجبال، وتسبيح الذرّات… لن تبقى مجرّد ناظر، بل تصير <strong style="color: #667eea;">شاهدًا مشاركًا</strong> في سيمفونية الوجود.
+                        </p>
+                    </div>
+
+                    <!-- محتوى الكتاب -->
+                    <div style="background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; border: 2px dashed #667eea;">
+                        <h4 style="color: #667eea; margin-bottom: 1.5rem; text-align: center; font-size: 1.2rem; font-weight: 700;">📖 محتوى الكتاب الشامل</h4>
+                        <div style="text-align: center;">
+                            <p style="background: linear-gradient(135deg, #667eea15, #764ba215); padding: 1rem; border-radius: 10px; line-height: 1.9; color: #333;">
+                                <strong style="color: #667eea; font-size: 1.05rem;">طبعة عربية أصلية • رؤية قرآنية علمية متكاملة</strong><br>
+                                <span style="font-size: 0.95rem;">فصول شاملة في: <strong>تسبيح الكون</strong> • <strong>قنوت الوجود</strong> • <strong>سجود المخلوقات</strong> • <strong>مشاعر الكون</strong> • <strong>وعي الكائنات</strong> • <strong>تجارب الأنبياء</strong> • <strong>المنظور العلمي للوعي</strong> • <strong>الذكاء الاصطناعي</strong> • <strong>السماوات السبع والأكوان المتعددة</strong> • <strong>التصميم الذكي</strong> • <strong>الفلسفة الإسلامية والمعاصرة</strong> • <strong>ترانيم الشفاء</strong></span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- الرسالة الختامية -->
+                    <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #667eea05, #764ba205); border-radius: 15px; margin-bottom: 2rem;">
+                        <p style="font-size: 1.15rem; line-height: 1.9; color: #333; font-weight: 500; margin-bottom: 1.5rem;">
+                            <strong style="color: #667eea; font-size: 1.2rem;">ترانيم الكون:</strong> رحلةٌ كبرى تعقد المصافحة بين آيات الوحي وآيات الآفاق، لِتفهم كيف يُسبّح الوجود من الذرّة إلى المجرّة… وكيف يفتح ذلك قلبك وعقلك على معنى الوعي والحياة والآخرة.
+                        </p>
+                    </div>
+
+                    <!-- الاقتباس الأخير -->
+                    <blockquote class="book-quote" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-right: none; padding: 2rem; margin: 2rem 0 0 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><text y=\"50\" font-size=\"50\" opacity=\"0.1\" fill=\"white\">❝</text></svg>'); background-size: 100px; opacity: 0.1;"></div>
+                        <p style="font-size: 1.15rem; line-height: 2; text-align: center; margin: 0; position: relative; z-index: 1; font-weight: 500; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+                            "إن الكون ليس جامدًا، بل هو منشغلٌ، منذ الأزل، بعزفٍ أبديٍّ لسيمفونية الوجود… ترانيم تسبيح، وأناشيد خشوع، وأصداء حبٍّ سرمديٍّ تتجه جميعها نحو "الواحد الأحد"، نحو الخالق ذو الجلال."
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="features" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 5rem 0;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="section-title" style="font-size: 2.8rem; color: white; font-weight: 800; margin-bottom: 1rem;">🌟 رحلة عبر الفصول</h2>
+                <div class="title-decoration" style="width: 100px; height: 4px; background: linear-gradient(90deg, transparent, white, transparent); margin: 0 auto;"></div>
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-top: 1.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">استكشف المحتوى الثري لهذا العمل الموسوعي عبر 15 فصلاً شاملاً</p>
+            </div>
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <!-- الفصل الأول -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">🌌</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل الأول</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">مدخل إلى الكون الواعي</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">الكون ككائن حي يسبّح بحمد خالقه، واستمرارية الوعي من النوم إلى البرزخ</p>
+                    <a href="chapter1.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الفصل الثاني -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">✨</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل الثاني</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">تسبيح الكون وعبادته</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">كل شيء في الكون يسبح بحمد الله، بين الحقيقة الحرفية والمجازية</p>
+                    <a href="chapter2.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الفصل الثالث -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">🙏</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل الثالث</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">قنوت الكون وخضوعه لله</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">خضوع السماوات والأرض لأمر الله، وقصة عرض الأمانة على المخلوقات</p>
+                    <a href="chapter3.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الفصل الرابع -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">🕌</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل الرابع</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">سجود الكون وخشوعه</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">سجود الشمس والقمر والنجوم والشجر والدواب، ومظاهر الخشوع الكوني لله</p>
+                    <a href="chapter4.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الفصل الخامس -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">💚</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل الخامس</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">مشاعر الكون وانفعالاته</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">بكاء السماء والأرض، واهتزاز الجبال من خشية الله، ومشاعر الكون الواعي</p>
+                    <a href="chapter5.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الفصل السادس -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">🦅</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل السادس</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">وعي الكائنات الحية</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">قصص النملة والهدهد مع سليمان، واكتشافات علمية عن ذكاء الحيوانات</p>
+                    <a href="chapter6.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الفصل السابع -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">👨‍🦳</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل السابع</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">تجارب الأنبياء مع الكون الواعي</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">تسبيح الجبال مع داود، وحنين الجذع للنبي ﷺ، وتواصل الأنبياء مع المخلوقات</p>
+                    <a href="chapter7.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الفصل الثامن -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">📜</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل الثامن</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">التراث الإسلامي والكون الواعي</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">تجارب الصحابة والعلماء مع الطبيعة الحية، ونظرات المفكرين المسلمين</p>
+                    <a href="chapter8.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الفصل التاسع -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">🔬</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل التاسع</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">المنظور العلمي للكون الواعي</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">النظريات العلمية الحديثة: الوعي الكمي، البيومركزية، والترابط الكوني</p>
+                    <a href="chapter9.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الفصل العاشر -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">🤖</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل العاشر</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">الذكاء الاصطناعي والوعي</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">هل ستطور الآلات وعياً إدراكياً؟ تأملات فلسفية وأخلاقية حول الوعي المستقبلي</p>
+                    <a href="chapter10.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الفصل الحادي عشر -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">🌠</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل الحادي عشر</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">السماوات السبع والأكوان المتعددة</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">تكامل المنظور القرآني والعلمي في فهم تعدد الأكوان والسماوات</p>
+                    <a href="chapter11.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الفصل الثاني عشر -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">⚛️</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل الثاني عشر</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">من الذرة إلى المجرة</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">رحلة عبر مستويات الوجود: الوعي الذري، الخلوي، والكوني الشامل</p>
+                    <a href="chapter12.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الفصل الثالث عشر -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">🎯</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل الثالث عشر</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">التصميم الذكي في الكون</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">المعايرة الدقيقة للثوابت الكونية، والتعقيد البيولوجي، والمصمم الحكيم</p>
+                    <a href="chapter13.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الفصل الرابع عشر -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">🧩</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل الرابع عشر</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">الفلسفة الإسلامية والنظريات العلمية</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">مقارنة عميقة بين الرؤية الفلسفية الإسلامية والنظريات العلمية الحديثة</p>
+                    <a href="chapter14.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الفصل الخامس عشر -->
+                <div class="feature-card" style="background: rgba(255,255,255,0.95); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">💫</div>
+                    <h3 style="color: #667eea; font-size: 1.1rem; margin-bottom: 0.5rem;">الفصل الخامس عشر</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">ترانيم الشفاء ونبضات التسبيح</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">الطاقة الشفائية للكلمات، والشفاء بالقرآن، والدراسات العلمية للذكر والتسبيح</p>
+                    <a href="chapter15.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #667eea; font-weight: 600; text-decoration: none;">قراءة الفصل →</a>
+                </div>
+                
+                <!-- الخاتمة -->
+                <div class="feature-card" style="background: linear-gradient(135deg, rgba(255,215,0,0.2) 0%, rgba(255,255,255,0.95) 100%); padding: 1.8rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease; backdrop-filter: blur(10px); border: 2px solid gold;">
+                    <div class="feature-icon" style="font-size: 2.5rem; margin-bottom: 0.8rem;">🎯</div>
+                    <h3 style="color: #d4af37; font-size: 1.1rem; margin-bottom: 0.5rem;">الخاتمة</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 0.8rem; line-height: 1.4;">ترانيم الختام لسيمفونية الوجود الواعي</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #555;">خلاصة الرحلة، دعوة للتأمل، والانطلاق نحو آفاق جديدة من المعرفة والإيمان</p>
+                    <a href="conclusion.html" class="feature-link" style="display: inline-block; margin-top: 0.8rem; color: #d4af37; font-weight: 600; text-decoration: none;">قراءة الخاتمة →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta" id="download" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 5rem 0; text-align: center;">
+        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 2rem;">
+            <div class="cta-content">
+                <h2 style="font-size: 2.8rem; color: white; font-weight: 800; margin-bottom: 1.5rem;">🚀 ابدأ رحلتك الآن</h2>
+                <p style="font-size: 1.3rem; color: rgba(255,255,255,0.9); margin-bottom: 3rem; line-height: 1.8;">اقرأ الكتاب مجاناً بالكامل أو حمّله على جهازك<br>رحلة علمية روحية استثنائية في انتظارك</p>
+                <div class="cta-buttons" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <a href="introduction.html" class="btn btn-large btn-primary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.2rem 3rem; border-radius: 50px; font-size: 1.3rem; font-weight: 700; text-decoration: none; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4); transition: all 0.3s ease; display: inline-block;">📖 قراءة المقدمة</a>
+                    <a href="contents.html" class="btn btn-large btn-secondary" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 1.2rem 3rem; border-radius: 50px; font-size: 1.3rem; font-weight: 700; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease; display: inline-block;">📚 فهرس الكتاب</a>
+                </div>
+                <p class="cta-note" style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-top: 2rem;">📖 مجاني بالكامل • لا يحتاج تسجيل • متاح للجميع</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌌 ترانيم الكون</h3>
+                    <p>سيمفونية الوجود الواعي في القرآن الكريم والعلم الحديث</p>
+                    <p style="margin-top: 1rem; font-weight: bold; color: #667eea;">🌐 www.universe-melodies.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">عن المؤلف</a></li>
+                        <li><a href="contents.html">فهرس الكتاب</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>الفصول</h4>
+                    <ul>
+                        <li><a href="chapter1.html">عوالم الوعي</a></li>
+                        <li><a href="chapter2.html">مشاعر الكون</a></li>
+                        <li><a href="chapter3.html">وعي الكائنات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل</h4>
+                    <p>📧 للاستفسارات والملاحظات</p>
+                    <p>📚 متاح مجاناً للجميع</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ترانيم الكون - د. جميل السقيا | جميع الحقوق محفوظة</p>
+                <p>🌐 <strong>www.universe-melodies.com</strong> | تم إنشاء هذا الموقع لنشر العلم والمعرفة مجاناً</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
